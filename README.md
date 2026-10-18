@@ -57,4 +57,4 @@ No global packages, backend, API keys, CDN assets or third-party data services a
 
 This repository is an executable experimental apparatus. Local results establish functionality and reproducibility of replay; they are not evidence of general statistical superiority. Read the verification ledger before treating an implementation phase as validated. Follow the documented protocol and retain all observations when conducting a controlled study.
 
-For repeated cold-build measurements, use `BUILD_REPS=3 VERSIONS=14,22 npm run build`. Build ordering is fixed by version and track; inspect/order-balance separate invocation batches before making build-time claims. The dashboard also exposes build size/time and Lighthouse diagnostic batches without pooling them into runtime scenarios.
+For repeated cold-build measurements, use `BUILD_REPS=3 VERSIONS=14,22 npm run build`. Repeated build ordering rotates and reverses the version/track sequence; the complete order is retained under `benchmark/results/build-orders/`. The dashboard also exposes build size/time and Lighthouse diagnostic batches without pooling them into runtime scenarios.
