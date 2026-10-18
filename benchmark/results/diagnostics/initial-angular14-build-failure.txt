@@ -1,0 +1,359 @@
+
+added 3 packages in 8s
+v16.20.2
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'node-releases@2.0.59',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.20.2', npm: '8.19.4' }
+npm WARN EBADENGINE }
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated @babel/plugin-proposal-unicode-property-regex@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-unicode-property-regex instead.
+npm WARN deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+npm WARN deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm WARN deprecated @babel/plugin-proposal-dynamic-import@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-dynamic-import instead.
+npm WARN deprecated @babel/plugin-proposal-json-strings@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-json-strings instead.
+npm WARN deprecated @babel/plugin-proposal-export-namespace-from@7.18.9: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated @babel/plugin-proposal-logical-assignment-operators@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
+npm WARN deprecated @babel/plugin-proposal-class-static-block@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-static-block instead.
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+npm WARN deprecated acorn-import-assertions@1.9.0: package has been renamed to acorn-import-attributes
+npm WARN deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+npm WARN deprecated npmlog@6.0.2: This package is no longer supported.
+npm WARN deprecated read-package-json@5.0.2: This package is no longer supported. Please use @npmcli/package-json instead.
+npm WARN deprecated gauge@4.0.4: This package is no longer supported.
+npm WARN deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+npm WARN deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm WARN deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+npm WARN deprecated glob@8.0.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.18.10: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+
+added 862 packages in 47s
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+
+Error: node_modules/@types/node/ffi.d.ts:94:21 - error TS1139: Type parameter declaration expected.
+
+94     function dlopen<const T extends FunctionDefinitions = {}>(
+                       ~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:94:29 - error TS1005: ',' expected.
+
+94     function dlopen<const T extends FunctionDefinitions = {}>(
+                               ~~~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:95:13 - error TS1005: ')' expected.
+
+95         path: string | null,
+               ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:95:22 - error TS1005: ',' expected.
+
+95         path: string | null,
+                        ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:96:21 - error TS1109: Expression expected.
+
+96         definitions?: T,
+                       ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:97:5 - error TS1109: Expression expected.
+
+97     ): DynamicLibraryResult<T>;
+       ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:97:6 - error TS1128: Declaration or statement expected.
+
+97     ): DynamicLibraryResult<T>;
+        ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:21 - error TS1139: Type parameter declaration expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                        ~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:27 - error TS1434: Unexpected keyword or identifier.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                              ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:29 - error TS1068: Unexpected token. A constructor, method, accessor, or property was expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                ~~~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:37 - error TS1434: Unexpected keyword or identifier.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                        ~~~~~~~~~~~~~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:54 - error TS1068: Unexpected token. A constructor, method, accessor, or property was expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                         ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:60 - error TS1005: ')' expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                               ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:79 - error TS1005: ';' expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                                                  ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:81 - error TS1434: Unexpected keyword or identifier.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                                                    ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:82 - error TS1128: Declaration or statement expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                                                     ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:206:83 - error TS1128: Declaration or statement expected.
+
+206         getFunction<const T extends FunctionSignature>(name: string, signature: T): WrappedFunctionFromSignature<T>;
+                                                                                      ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:214:23 - error TS1005: ';' expected.
+
+214         getFunctions(): { [symbol: string]: WrappedFunction };
+                          ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:214:34 - error TS1005: ',' expected.
+
+214         getFunctions(): { [symbol: string]: WrappedFunction };
+                                     ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:214:43 - error TS1005: ';' expected.
+
+214         getFunctions(): { [symbol: string]: WrappedFunction };
+                                              ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:22 - error TS1109: Expression expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                         ~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:30 - error TS1005: ',' expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                 ~~~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:57 - error TS1005: ',' expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                                            ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:70 - error TS1005: ')' expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                                                         ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:72 - error TS1434: Unexpected keyword or identifier.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                                                           ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:73 - error TS1128: Declaration or statement expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                                                            ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:215:74 - error TS1128: Declaration or statement expected.
+
+215         getFunctions<const T extends FunctionDefinitions>(definitions: T): WrappedFunctionsFromDefinitions<T>;
+                                                                             ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:219:23 - error TS1005: ',' expected.
+
+219         getSymbol(name: string): bigint;
+                          ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:219:32 - error TS1005: ';' expected.
+
+219         getSymbol(name: string): bigint;
+                                   ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:223:21 - error TS1005: ';' expected.
+
+223         getSymbols(): Record<string, bigint>;
+                        ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:256:34 - error TS1005: ',' expected.
+
+256         registerCallback(callback: () => void): bigint;
+                                     ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:256:46 - error TS1109: Expression expected.
+
+256         registerCallback(callback: () => void): bigint;
+                                                 ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:256:47 - error TS1005: ';' expected.
+
+256         registerCallback(callback: () => void): bigint;
+                                                  ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:257:26 - error TS1109: Expression expected.
+
+257         registerCallback<const T extends FunctionSignature>(
+                             ~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:257:34 - error TS1005: ',' expected.
+
+257         registerCallback<const T extends FunctionSignature>(
+                                     ~~~~~~~
+
+
+Error: node_modules/@types/node/ffi.d.ts:257:59 - error TS1005: ',' expected.
+
+257         registerCallback<const T extends FunctionSignature>(
+                                                              ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:258:22 - error TS1005: ')' expected.
+
+258             signature: T,
+                         ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:259:21 - error TS1005: ';' expected.
+
+259             callback: CallbackFunctionFromSignature<T>,
+                        ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:260:9 - error TS1109: Expression expected.
+
+260         ): bigint;
+            ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:260:10 - error TS1128: Declaration or statement expected.
+
+260         ): bigint;
+             ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:273:35 - error TS1005: ',' expected.
+
+273         unregisterCallback(pointer: bigint): void;
+                                      ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:273:44 - error TS1005: ';' expected.
+
+273         unregisterCallback(pointer: bigint): void;
+                                               ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:273:50 - error TS1109: Expression expected.
+
+273         unregisterCallback(pointer: bigint): void;
+                                                     ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:277:28 - error TS1005: ',' expected.
+
+277         refCallback(pointer: bigint): void;
+                               ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:277:37 - error TS1005: ';' expected.
+
+277         refCallback(pointer: bigint): void;
+                                        ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:277:43 - error TS1109: Expression expected.
+
+277         refCallback(pointer: bigint): void;
+                                              ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:285:30 - error TS1005: ',' expected.
+
+285         unrefCallback(pointer: bigint): void;
+                                 ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:285:39 - error TS1005: ';' expected.
+
+285         unrefCallback(pointer: bigint): void;
+                                          ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:285:45 - error TS1109: Expression expected.
+
+285         unrefCallback(pointer: bigint): void;
+                                                ~
+
+
+Error: node_modules/@types/node/ffi.d.ts:500:1 - error TS1128: Declaration or statement expected.
+
+500 }
+    ~
+
+
+
+file:///home/kodcode/Desktop/angular/scripts/build.mjs:3
+function run(cmd,args,options={}){const r=spawnSync(cmd,args,{stdio:'inherit',...options});if(r.status!==0)throw Error(`${cmd} ${args.join(' ')} failed (${r.status})`);}
+                                                                                                                 ^
+
+Error: /home/kodcode/Desktop/angular/.runtimes/16.20.2/node_modules/.bin/node node_modules/@angular/cli/bin/ng.js build baseline --configuration production failed (1)
+    at run (file:///home/kodcode/Desktop/angular/scripts/build.mjs:3:114)
+    at file:///home/kodcode/Desktop/angular/scripts/build.mjs:15:32
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.23.2
