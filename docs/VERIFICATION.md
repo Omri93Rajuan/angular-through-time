@@ -24,3 +24,28 @@ This file distinguishes implemented capability from executed evidence. Final mat
 ## Measurement boundaries
 
 These local runs are smoke/acceptance checks on a working desktop. No claim of isolated hardware conditions, statistical significance, physical FPS, total browser memory or general version superiority. Full rate × mode × workload factorial runs remain an experiment the researcher can execute with the provided harness.
+
+## Full-matrix acceptance — completed
+
+Command: `EXPERIMENT_LABEL=full-matrix-smoke VERSIONS=14,15,16,17,18,19,20,21,22 REPS=1 TICKS=4 node benchmark/harness/run.mjs`
+
+Evidence: [`benchmark/results/runtime/2026-10-18T14-10-28.721Z/`](../benchmark/results/runtime/2026-10-18T14-10-28.721Z/).
+
+- 144/144 accepted samples: 9 versions × 2 tracks × 8 scenarios.
+- All 18 variants passed the common functional gate before measurements.
+- Every scenario's final checksum agreed across all 18 variants.
+- Chrome 148.0.7778.178; same executable hash throughout; 1440×1000 viewport; headless.
+- Experiment source commit `aa2799ee8078c94a1bd37c44d4edb1a4bd39347c`; source was clean at launch. Subsequent harness-order improvements do not change this single-repetition execution order.
+- All 18 final production builds succeeded before this batch. No builds ran concurrently with it.
+
+| Angular | Baseline build | Idiomatic build | Common functional gate | A–H, both tracks |
+|---|---|---|---|---|
+| 14 | Pass | Pass | Pass | Pass |
+| 15 | Pass | Pass | Pass | Pass |
+| 16 | Pass | Pass | Pass | Pass |
+| 17 | Pass | Pass | Pass | Pass |
+| 18 | Pass | Pass | Pass | Pass |
+| 19 | Pass | Pass | Pass | Pass |
+| 20 | Pass | Pass | Pass | Pass |
+| 21 | Pass | Pass | Pass | Pass |
+| 22 | Pass | Pass | Pass | Pass |

@@ -7,3 +7,16 @@
 `scripts/build.mjs` installs pinned local Node/npm pairs, resolves dependencies on first install then uses npm ci, clears build caches and records production build artifacts. `scripts/serve.mjs` serves only static files bound to loopback. `benchmark/harness/functional.mjs` gates measurements; `run.mjs` executes replay and stores raw JSON; `summarize.mjs` emits descriptive JSON/CSV. `dashboard/` is an independent dependency-free results explorer and never loads into measured apps.
 
 The terminal has no network API dependency. Timers only control delivery cadence; they never choose events. Initial state is paused to protect navigation measurements. UI controls and the harness use the same state transition code. No persistence is used, ensuring watchlist reset is repeatable.
+
+```mermaid
+flowchart LR
+  F[Seeded fixtures and event log] --> H[Independent Node harness]
+  T[Shared templates + version matrix] --> A[9 isolated apps × 2 tracks]
+  A --> B[Pinned runtime production builds]
+  B --> S[Loopback static server]
+  S --> C[One Chrome binary]
+  H -->|Playwright actions and controlled ticks| C
+  C -->|DOM assertions, timings, CDP| R[Raw JSON and CSV]
+  B -->|Build durations and asset hashes| R
+  R --> D[Descriptive summaries and dashboard]
+```

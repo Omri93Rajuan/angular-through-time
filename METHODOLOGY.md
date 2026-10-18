@@ -12,7 +12,7 @@ The idiomatic track compares a conservative set of stable architecture choices: 
 
 Seed 14022 produces 5,000 fictional assets, five sectors and integer-cent prices. Event seed 90210 plus logical tick produces unique changed IDs using a coprime stride. No wall-clock data choices. The browser receives the same ES5-compatible engine source as Node. Raw runtime samples contain replayable event logs. Checksums hash IDs, prices, base prices and volumes; UI state and all visible DOM prices are asserted independently.
 
-Modes are `mutation` (same array and records), `records` (same array, cloned changed records), and `array` (new array and all cloned records, including unchanged ones). Scenario F updates all 5,000 as well as replacing the array. Modes are explicit experimental variables. Workloads are 0/100/500/2000 changes; target rates 1/5/10 Hz. Initial milestone defaults to 5 Hz and record replacement. Do not combine different modes/rates in summaries.
+Modes are `mutation` (same array and records), `records` (same array, cloned changed records), and `array` (new array and all cloned records, including unchanged ones). Scenario F updates all 5,000 as well as replacing the array. Modes are explicit experimental variables. Workloads are 0/100/500/2000 changes; the optional WORKLOAD override selects these independently of scenario defaults, except A remains navigation and F remains 5,000 records; target rates 1/5/10 Hz. Initial milestone defaults to 5 Hz and record replacement. Do not combine different modes/rates in summaries.
 
 ## Scenarios
 
