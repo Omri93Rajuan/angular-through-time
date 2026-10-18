@@ -49,3 +49,26 @@ Evidence: [`benchmark/results/runtime/2026-10-18T14-10-28.721Z/`](../benchmark/r
 | 20 | Pass | Pass | Pass | Pass |
 | 21 | Pass | Pass | Pass | Pass |
 | 22 | Pass | Pass | Pass | Pass |
+
+## Balanced endpoint repetitions — completed
+
+Command: `EXPERIMENT_LABEL=balanced-endpoint-repetitions VERSIONS=14,22 REPS=4 TICKS=10 HZ=10 SCENARIOS=B,H node benchmark/harness/run.mjs`
+
+Evidence: [`benchmark/results/runtime/2026-10-18T14-24-28.363Z/`](../benchmark/results/runtime/2026-10-18T14-24-28.363Z/).
+
+- 32 accepted samples: 4 version/track variants × 4 repetitions × 2 scenarios.
+- Each variant occupied every execution position once.
+- Both endpoint versions and tracks produced identical final checksums for each scenario in every repetition.
+- Measurements preserve target-rate misses; accepted means correct output, not that 10 Hz was sustained.
+
+## Zero-change control — completed
+
+Command: `VERSIONS=22 TRACKS=baseline REPS=1 TICKS=3 HZ=1 WORKLOAD=0 MODE=mutation SCENARIOS=B node benchmark/harness/run.mjs`
+
+Evidence: [`benchmark/results/runtime/2026-10-18T14-29-26.459Z/`](../benchmark/results/runtime/2026-10-18T14-29-26.459Z/).
+
+The browser applied three logical ticks at a 1 Hz target without changing asset values; final checksum remained `ba2bdece`. This measures delivery/application-check overhead, not absence of JavaScript work.
+
+## Fresh root dependency installation — completed
+
+`npm ci --no-audit --no-fund` succeeded from the committed root lockfile (116 packages), without changing dependency pins.
