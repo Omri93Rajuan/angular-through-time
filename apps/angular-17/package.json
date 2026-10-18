@@ -1,0 +1,27 @@
+{
+  "name": "market-angular-17",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "ng build --configuration production"
+  },
+  "engines": {
+    "node": "20.19.5"
+  },
+  "dependencies": {
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1",
+    "zone.js": "0.14.10",
+    "@angular/common": "17.3.12",
+    "@angular/compiler": "17.3.12",
+    "@angular/core": "17.3.12",
+    "@angular/platform-browser": "17.3.12",
+    "@angular/platform-browser-dynamic": "17.3.12"
+  },
+  "devDependencies": {
+    "@angular/cli": "17.3.17",
+    "@angular-devkit/build-angular": "17.3.17",
+    "@angular/compiler-cli": "17.3.12",
+    "typescript": "5.4.5"
+  }
+}

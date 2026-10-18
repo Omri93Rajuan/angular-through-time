@@ -1,0 +1,12 @@
+file,experiment,version,track,rep,scenario,accepted
+"benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-A.json","2026-10-18T13-59-45.803Z",14,"baseline",0,"A",true
+"benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json","2026-10-18T13-59-45.803Z",14,"baseline",0,"B",true
+"benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-A.json","2026-10-18T13-59-45.803Z",14,"idiomatic",0,"A",true
+"benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json","2026-10-18T13-59-45.803Z",14,"idiomatic",0,"B",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-A.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"A",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"B",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"C",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"D",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"E",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"F",true
+"benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json","2026-10-18T14-02-16.428Z",22,"baseline",0,"G",true

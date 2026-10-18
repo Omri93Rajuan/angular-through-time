@@ -1,0 +1,27 @@
+{
+  "name": "market-angular-14",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "ng build --configuration production"
+  },
+  "engines": {
+    "node": "16.20.2"
+  },
+  "dependencies": {
+    "rxjs": "7.8.2",
+    "tslib": "2.8.1",
+    "zone.js": "0.11.8",
+    "@angular/common": "14.2.12",
+    "@angular/compiler": "14.2.12",
+    "@angular/core": "14.2.12",
+    "@angular/platform-browser": "14.2.12",
+    "@angular/platform-browser-dynamic": "14.2.12"
+  },
+  "devDependencies": {
+    "@angular/cli": "14.2.13",
+    "@angular-devkit/build-angular": "14.2.13",
+    "@angular/compiler-cli": "14.2.12",
+    "typescript": "4.8.4"
+  }
+}

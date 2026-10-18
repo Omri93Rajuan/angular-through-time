@@ -1,0 +1,9 @@
+{
+  "version": 22,
+  "track": "idiomatic",
+  "rep": 0,
+  "scenario": "A",
+  "accepted": false,
+  "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /M0042/. Input:\n\n'ASSET DETAILS\\n' +\n  '\\n' +\n  'Explore the market\\n' +\n  '\\n' +\n  'Select an asset to inspect its live price and sector.'\n",
+  "errors": []
+}

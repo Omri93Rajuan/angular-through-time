@@ -1,0 +1,46 @@
+{
+  "kind": "cold-build",
+  "version": 15,
+  "track": "baseline",
+  "durationMs": 11250.861984000003,
+  "environment": {
+    "node": "18.20.8",
+    "npm": "10.9.8",
+    "angular": "15.2.10",
+    "cli": "15.2.11",
+    "typescript": "4.9.5",
+    "os": "6.17.0-23-generic",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "cores": 16,
+    "memory": 16532312064,
+    "commit": null
+  },
+  "coldDefinition": "dist and Angular cache removed; dependencies installed; OS filesystem cache uncontrolled",
+  "builder": "@angular-devkit/build-angular:browser",
+  "assets": [
+    {
+      "file": "main.971c9d7532801502.js",
+      "bytes": 165521,
+      "gzip": 55959,
+      "brotli": 49949,
+      "sha256": "cbf03ceda768d3f095174370e3e19aaa0c534ad2c5f5486c7e1c9590dfd5813d"
+    },
+    {
+      "file": "runtime.f8b5ad77d599ee88.js",
+      "bytes": 894,
+      "gzip": 555,
+      "brotli": 510,
+      "sha256": "71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516"
+    },
+    {
+      "file": "scripts.64ee708414c1c2e8.js",
+      "bytes": 1382,
+      "gzip": 789,
+      "brotli": 697,
+      "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+    }
+  ],
+  "at": "2026-10-18T14:02:57.230Z"
+}

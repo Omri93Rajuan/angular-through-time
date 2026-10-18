@@ -1,0 +1,1871 @@
+{
+  "generatedAt": "2026-10-18T14:03:59.266Z",
+  "description": "Per-sample medians summarized across repetitions; experiments never pooled. No significance claims.",
+  "summaries": [
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "A",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "renderReadyMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-A.json"
+      ],
+      "values": [
+        932.9000000357628
+      ],
+      "n": 1,
+      "median": 932.9000000357628,
+      "q1": 932.9000000357628,
+      "q3": 932.9000000357628,
+      "iqr": 0,
+      "min": 932.9000000357628,
+      "max": 932.9000000357628
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        4.899999976158142
+      ],
+      "n": 1,
+      "median": 4.899999976158142,
+      "q1": 4.899999976158142,
+      "q3": 4.899999976158142,
+      "iqr": 0,
+      "min": 4.899999976158142,
+      "max": 4.899999976158142
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        63.09999996423721
+      ],
+      "n": 1,
+      "median": 63.09999996423721,
+      "q1": 63.09999996423721,
+      "q3": 63.09999996423721,
+      "iqr": 0,
+      "min": 63.09999996423721,
+      "max": 63.09999996423721
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        640.6149903744679
+      ],
+      "n": 1,
+      "median": 640.6149903744679,
+      "q1": 640.6149903744679,
+      "q3": 640.6149903744679,
+      "iqr": 0,
+      "min": 640.6149903744679,
+      "max": 640.6149903744679
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        170
+      ],
+      "n": 1,
+      "median": 170,
+      "q1": 170,
+      "q3": 170,
+      "iqr": 0,
+      "min": 170,
+      "max": 170
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        20
+      ],
+      "n": 1,
+      "median": 20,
+      "q1": 20,
+      "q3": 20,
+      "iqr": 0,
+      "min": 20,
+      "max": 20
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        36775252
+      ],
+      "n": 1,
+      "median": 36775252,
+      "q1": 36775252,
+      "q3": 36775252,
+      "iqr": 0,
+      "min": 36775252,
+      "max": 36775252
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        34967824
+      ],
+      "n": 1,
+      "median": 34967824,
+      "q1": 34967824,
+      "q3": 34967824,
+      "iqr": 0,
+      "min": 34967824,
+      "max": 34967824
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json"
+      ],
+      "values": [
+        16.69999999999891
+      ],
+      "n": 1,
+      "median": 16.69999999999891,
+      "q1": 16.69999999999891,
+      "q3": 16.69999999999891,
+      "iqr": 0,
+      "min": 16.69999999999891,
+      "max": 16.69999999999891
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "A",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "renderReadyMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-A.json"
+      ],
+      "values": [
+        996.6000000238419
+      ],
+      "n": 1,
+      "median": 996.6000000238419,
+      "q1": 996.6000000238419,
+      "q3": 996.6000000238419,
+      "iqr": 0,
+      "min": 996.6000000238419,
+      "max": 996.6000000238419
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        4.799999952316284
+      ],
+      "n": 1,
+      "median": 4.799999952316284,
+      "q1": 4.799999952316284,
+      "q3": 4.799999952316284,
+      "iqr": 0,
+      "min": 4.799999952316284,
+      "max": 4.799999952316284
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        57.5
+      ],
+      "n": 1,
+      "median": 57.5,
+      "q1": 57.5,
+      "q3": 57.5,
+      "iqr": 0,
+      "min": 57.5,
+      "max": 57.5
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        647.3888649448315
+      ],
+      "n": 1,
+      "median": 647.3888649448315,
+      "q1": 647.3888649448315,
+      "q3": 647.3888649448315,
+      "iqr": 0,
+      "min": 647.3888649448315,
+      "max": 647.3888649448315
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        64
+      ],
+      "n": 1,
+      "median": 64,
+      "q1": 64,
+      "q3": 64,
+      "iqr": 0,
+      "min": 64,
+      "max": 64
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        14
+      ],
+      "n": 1,
+      "median": 14,
+      "q1": 14,
+      "q3": 14,
+      "iqr": 0,
+      "min": 14,
+      "max": 14
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        51791376
+      ],
+      "n": 1,
+      "median": 51791376,
+      "q1": 51791376,
+      "q3": 51791376,
+      "iqr": 0,
+      "min": 51791376,
+      "max": 51791376
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        31347360
+      ],
+      "n": 1,
+      "median": 31347360,
+      "q1": 31347360,
+      "q3": 31347360,
+      "iqr": 0,
+      "min": 31347360,
+      "max": 31347360
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "version": 14,
+      "track": "idiomatic",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 3,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json"
+      ],
+      "values": [
+        16.700000000000728
+      ],
+      "n": 1,
+      "median": 16.700000000000728,
+      "q1": 16.700000000000728,
+      "q3": 16.700000000000728,
+      "iqr": 0,
+      "min": 16.700000000000728,
+      "max": 16.700000000000728
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "A",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "renderReadyMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-A.json"
+      ],
+      "values": [
+        946.5
+      ],
+      "n": 1,
+      "median": 946.5,
+      "q1": 946.5,
+      "q3": 946.5,
+      "iqr": 0,
+      "min": 946.5,
+      "max": 946.5
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "A",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lcpMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-A.json"
+      ],
+      "values": [
+        848
+      ],
+      "n": 1,
+      "median": 848,
+      "q1": 848,
+      "q3": 848,
+      "iqr": 0,
+      "min": 848,
+      "max": 848
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "A",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "cls",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-A.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        6.4000000059604645
+      ],
+      "n": 1,
+      "median": 6.4000000059604645,
+      "q1": 6.4000000059604645,
+      "q3": 6.4000000059604645,
+      "iqr": 0,
+      "min": 6.4000000059604645,
+      "max": 6.4000000059604645
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        71.05000001192093
+      ],
+      "n": 1,
+      "median": 71.05000001192093,
+      "q1": 71.05000001192093,
+      "q3": 71.05000001192093,
+      "iqr": 0,
+      "min": 71.05000001192093,
+      "max": 71.05000001192093
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        580.7200929051645
+      ],
+      "n": 1,
+      "median": 580.7200929051645,
+      "q1": 580.7200929051645,
+      "q3": 580.7200929051645,
+      "iqr": 0,
+      "min": 580.7200929051645,
+      "max": 580.7200929051645
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        233
+      ],
+      "n": 1,
+      "median": 233,
+      "q1": 233,
+      "q3": 233,
+      "iqr": 0,
+      "min": 233,
+      "max": 233
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        33
+      ],
+      "n": 1,
+      "median": 33,
+      "q1": 33,
+      "q3": 33,
+      "iqr": 0,
+      "min": 33,
+      "max": 33
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        49698472
+      ],
+      "n": 1,
+      "median": 49698472,
+      "q1": 49698472,
+      "q3": 49698472,
+      "iqr": 0,
+      "min": 49698472,
+      "max": 49698472
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        38416796
+      ],
+      "n": 1,
+      "median": 38416796,
+      "q1": 38416796,
+      "q3": 38416796,
+      "iqr": 0,
+      "min": 38416796,
+      "max": 38416796
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "B",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json"
+      ],
+      "values": [
+        16.69999999999891
+      ],
+      "n": 1,
+      "median": 16.69999999999891,
+      "q1": 16.69999999999891,
+      "q3": 16.69999999999891,
+      "iqr": 0,
+      "min": 16.69999999999891,
+      "max": 16.69999999999891
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        8.150000005960464
+      ],
+      "n": 1,
+      "median": 8.150000005960464,
+      "q1": 8.150000005960464,
+      "q3": 8.150000005960464,
+      "iqr": 0,
+      "min": 8.150000005960464,
+      "max": 8.150000005960464
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        66.25
+      ],
+      "n": 1,
+      "median": 66.25,
+      "q1": 66.25,
+      "q3": 66.25,
+      "iqr": 0,
+      "min": 66.25,
+      "max": 66.25
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "interactionMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        86.74999997019768
+      ],
+      "n": 1,
+      "median": 86.74999997019768,
+      "q1": 86.74999997019768,
+      "q3": 86.74999997019768,
+      "iqr": 0,
+      "min": 86.74999997019768,
+      "max": 86.74999997019768
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        2667.022269720745
+      ],
+      "n": 1,
+      "median": 2667.022269720745,
+      "q1": 2667.022269720745,
+      "q3": 2667.022269720745,
+      "iqr": 0,
+      "min": 2667.022269720745,
+      "max": 2667.022269720745
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        302
+      ],
+      "n": 1,
+      "median": 302,
+      "q1": 302,
+      "q3": 302,
+      "iqr": 0,
+      "min": 302,
+      "max": 302
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        152
+      ],
+      "n": 1,
+      "median": 152,
+      "q1": 152,
+      "q3": 152,
+      "iqr": 0,
+      "min": 152,
+      "max": 152
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        49676016
+      ],
+      "n": 1,
+      "median": 49676016,
+      "q1": 49676016,
+      "q3": 49676016,
+      "iqr": 0,
+      "min": 49676016,
+      "max": 49676016
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        48709322
+      ],
+      "n": 1,
+      "median": 48709322,
+      "q1": 48709322,
+      "q3": 48709322,
+      "iqr": 0,
+      "min": 48709322,
+      "max": 48709322
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "C",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json"
+      ],
+      "values": [
+        16.69999999999891
+      ],
+      "n": 1,
+      "median": 16.69999999999891,
+      "q1": 16.69999999999891,
+      "q3": 16.69999999999891,
+      "iqr": 0,
+      "min": 16.69999999999891,
+      "max": 16.69999999999891
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        40.64999997615814
+      ],
+      "n": 1,
+      "median": 40.64999997615814,
+      "q1": 40.64999997615814,
+      "q3": 40.64999997615814,
+      "iqr": 0,
+      "min": 40.64999997615814,
+      "max": 40.64999997615814
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        185
+      ],
+      "n": 1,
+      "median": 185,
+      "q1": 185,
+      "q3": 185,
+      "iqr": 0,
+      "min": 185,
+      "max": 185
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "interactionMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        912.9999999701977
+      ],
+      "n": 1,
+      "median": 912.9999999701977,
+      "q1": 912.9999999701977,
+      "q3": 912.9999999701977,
+      "iqr": 0,
+      "min": 912.9999999701977,
+      "max": 912.9999999701977
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        414.1644232760406
+      ],
+      "n": 1,
+      "median": 414.1644232760406,
+      "q1": 414.1644232760406,
+      "q3": 414.1644232760406,
+      "iqr": 0,
+      "min": 414.1644232760406,
+      "max": 414.1644232760406
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        3
+      ],
+      "n": 1,
+      "median": 3,
+      "q1": 3,
+      "q3": 3,
+      "iqr": 0,
+      "min": 3,
+      "max": 3
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        3927
+      ],
+      "n": 1,
+      "median": 3927,
+      "q1": 3927,
+      "q3": 3927,
+      "iqr": 0,
+      "min": 3927,
+      "max": 3927
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        3477
+      ],
+      "n": 1,
+      "median": 3477,
+      "q1": 3477,
+      "q3": 3477,
+      "iqr": 0,
+      "min": 3477,
+      "max": 3477
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        44356024
+      ],
+      "n": 1,
+      "median": 44356024,
+      "q1": 44356024,
+      "q3": 44356024,
+      "iqr": 0,
+      "min": 44356024,
+      "max": 44356024
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        24904714
+      ],
+      "n": 1,
+      "median": 24904714,
+      "q1": 24904714,
+      "q3": 24904714,
+      "iqr": 0,
+      "min": 24904714,
+      "max": 24904714
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "D",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json"
+      ],
+      "values": [
+        16.69999999999891
+      ],
+      "n": 1,
+      "median": 16.69999999999891,
+      "q1": 16.69999999999891,
+      "q3": 16.69999999999891,
+      "iqr": 0,
+      "min": 16.69999999999891,
+      "max": 16.69999999999891
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        9.599999994039536
+      ],
+      "n": 1,
+      "median": 9.599999994039536,
+      "q1": 9.599999994039536,
+      "q3": 9.599999994039536,
+      "iqr": 0,
+      "min": 9.599999994039536,
+      "max": 9.599999994039536
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        79.90000000596046
+      ],
+      "n": 1,
+      "median": 79.90000000596046,
+      "q1": 79.90000000596046,
+      "q3": 79.90000000596046,
+      "iqr": 0,
+      "min": 79.90000000596046,
+      "max": 79.90000000596046
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "interactionMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        93.5499999821186
+      ],
+      "n": 1,
+      "median": 93.5499999821186,
+      "q1": 93.5499999821186,
+      "q3": 93.5499999821186,
+      "iqr": 0,
+      "min": 93.5499999821186,
+      "max": 93.5499999821186
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        2524.6149962510676
+      ],
+      "n": 1,
+      "median": 2524.6149962510676,
+      "q1": 2524.6149962510676,
+      "q3": 2524.6149962510676,
+      "iqr": 0,
+      "min": 2524.6149962510676,
+      "max": 2524.6149962510676
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        0
+      ],
+      "n": 1,
+      "median": 0,
+      "q1": 0,
+      "q3": 0,
+      "iqr": 0,
+      "min": 0,
+      "max": 0
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        277
+      ],
+      "n": 1,
+      "median": 277,
+      "q1": 277,
+      "q3": 277,
+      "iqr": 0,
+      "min": 277,
+      "max": 277
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        77
+      ],
+      "n": 1,
+      "median": 77,
+      "q1": 77,
+      "q3": 77,
+      "iqr": 0,
+      "min": 77,
+      "max": 77
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        47817372
+      ],
+      "n": 1,
+      "median": 47817372,
+      "q1": 47817372,
+      "q3": 47817372,
+      "iqr": 0,
+      "min": 47817372,
+      "max": 47817372
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        39389946
+      ],
+      "n": 1,
+      "median": 39389946,
+      "q1": 39389946,
+      "q3": 39389946,
+      "iqr": 0,
+      "min": 39389946,
+      "max": 39389946
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "E",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json"
+      ],
+      "values": [
+        16.69999999999891
+      ],
+      "n": 1,
+      "median": 16.69999999999891,
+      "q1": 16.69999999999891,
+      "q3": 16.69999999999891,
+      "iqr": 0,
+      "min": 16.69999999999891,
+      "max": 16.69999999999891
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        69.69999998807907
+      ],
+      "n": 1,
+      "median": 69.69999998807907,
+      "q1": 69.69999998807907,
+      "q3": 69.69999998807907,
+      "iqr": 0,
+      "min": 69.69999998807907,
+      "max": 69.69999998807907
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        349.84999999403954
+      ],
+      "n": 1,
+      "median": 349.84999999403954,
+      "q1": 349.84999999403954,
+      "q3": 349.84999999403954,
+      "iqr": 0,
+      "min": 349.84999999403954,
+      "max": 349.84999999403954
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        9214.042200465088
+      ],
+      "n": 1,
+      "median": 9214.042200465088,
+      "q1": 9214.042200465088,
+      "q3": 9214.042200465088,
+      "iqr": 0,
+      "min": 9214.042200465088,
+      "max": 9214.042200465088
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        3
+      ],
+      "n": 1,
+      "median": 3,
+      "q1": 3,
+      "q3": 3,
+      "iqr": 0,
+      "min": 3,
+      "max": 3
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        1120
+      ],
+      "n": 1,
+      "median": 1120,
+      "q1": 1120,
+      "q3": 1120,
+      "iqr": 0,
+      "min": 1120,
+      "max": 1120
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        920
+      ],
+      "n": 1,
+      "median": 920,
+      "q1": 920,
+      "q3": 920,
+      "iqr": 0,
+      "min": 920,
+      "max": 920
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        51674244
+      ],
+      "n": 1,
+      "median": 51674244,
+      "q1": 51674244,
+      "q3": 51674244,
+      "iqr": 0,
+      "min": 51674244,
+      "max": 51674244
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        49126114
+      ],
+      "n": 1,
+      "median": 49126114,
+      "q1": 49126114,
+      "q3": 49126114,
+      "iqr": 0,
+      "min": 49126114,
+      "max": 49126114
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "F",
+      "hz": 5,
+      "mode": "array",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json"
+      ],
+      "values": [
+        16.700000000000728
+      ],
+      "n": 1,
+      "median": 16.700000000000728,
+      "q1": 16.700000000000728,
+      "q3": 16.700000000000728,
+      "iqr": 0,
+      "min": 16.700000000000728,
+      "max": 16.700000000000728
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "processingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        13.150000005960464
+      ],
+      "n": 1,
+      "median": 13.150000005960464,
+      "q1": 13.150000005960464,
+      "q3": 13.150000005960464,
+      "iqr": 0,
+      "min": 13.150000005960464,
+      "max": 13.150000005960464
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "presentationMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        104
+      ],
+      "n": 1,
+      "median": 104,
+      "q1": 104,
+      "q3": 104,
+      "iqr": 0,
+      "min": 104,
+      "max": 104
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "interactionMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        703.0999999940395
+      ],
+      "n": 1,
+      "median": 703.0999999940395,
+      "q1": 703.0999999940395,
+      "q3": 703.0999999940395,
+      "iqr": 0,
+      "min": 703.0999999940395,
+      "max": 703.0999999940395
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "throughput",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        245.9298608026173
+      ],
+      "n": 1,
+      "median": 245.9298608026173,
+      "q1": 245.9298608026173,
+      "q3": 245.9298608026173,
+      "iqr": 0,
+      "min": 245.9298608026173,
+      "max": 245.9298608026173
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "lateUpdates",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        3
+      ],
+      "n": 1,
+      "median": 3,
+      "q1": 3,
+      "q3": 3,
+      "iqr": 0,
+      "min": 3,
+      "max": 3
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "longTaskMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        763
+      ],
+      "n": 1,
+      "median": 763,
+      "q1": 763,
+      "q3": 763,
+      "iqr": 0,
+      "min": 763,
+      "max": 763
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "blockingMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        363
+      ],
+      "n": 1,
+      "median": 363,
+      "q1": 363,
+      "q3": 363,
+      "iqr": 0,
+      "min": 363,
+      "max": 363
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapPeakBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        55021616
+      ],
+      "n": 1,
+      "median": 55021616,
+      "q1": 55021616,
+      "q3": 55021616,
+      "iqr": 0,
+      "min": 55021616,
+      "max": 55021616
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "heapSteadyBytes",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        29248748
+      ],
+      "n": 1,
+      "median": 29248748,
+      "q1": 29248748,
+      "q3": 29248748,
+      "iqr": 0,
+      "min": 29248748,
+      "max": 29248748
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "version": 22,
+      "track": "baseline",
+      "scenario": "G",
+      "hz": 5,
+      "mode": "records",
+      "ticks": 4,
+      "metric": "frameIntervalMs",
+      "files": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json"
+      ],
+      "values": [
+        16.700000000000728
+      ],
+      "n": 1,
+      "median": 16.700000000000728,
+      "q1": 16.700000000000728,
+      "q3": 16.700000000000728,
+      "iqr": 0,
+      "min": 16.700000000000728,
+      "max": 16.700000000000728
+    }
+  ],
+  "failures": [],
+  "sampleCount": 11
+}
