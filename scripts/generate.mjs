@@ -13,7 +13,7 @@ const matrix=[
 const write=(p,s)=>{fs.mkdirSync(p.slice(0,p.lastIndexOf('/')),{recursive:true});fs.writeFileSync(p,typeof s==='string'?s:JSON.stringify(s,null,2)+'\n');};
 write('docs/versions.json',matrix);
 for(const v of matrix){
- const dir=`apps/angular-${v.major}`;
+ const dir=`v${v.major}`;
  let dependencies={'rxjs':'7.8.2','tslib':'2.8.1','zone.js':v.zone};
  for(const name of ['common','compiler','core','platform-browser','platform-browser-dynamic'])dependencies[`@angular/${name}`]=v.angular;
  write(`${dir}/package.json`,{name:`market-angular-${v.major}`,version:'0.1.0',private:true,...(v.major===14?{overrides:{browserslist:'4.26.3','node-releases':'2.0.27'}}:{}),scripts:{build:'ng build --configuration production'},engines:{node:v.node},dependencies,devDependencies:{'@angular/cli':v.cli,'@angular-devkit/build-angular':v.cli,'@angular/compiler-cli':v.angular,typescript:v.typescript}});

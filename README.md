@@ -4,6 +4,20 @@
 
 The project is an experimental apparatus, not a claim that one Angular release or architecture is universally faster.
 
+## Repository layout
+
+```text
+v14/ … v22/                 Version-pinned Angular applications (baseline and idiomatic)
+benchmark/                  Browser harness, raw results, audits, and summaries
+dashboard/                  Standalone results explorer
+docs/                       Version matrix and verification records
+packages/                   Deterministic market engine and benchmark contract
+scripts/                    Generation, builds, serving, and verification
+templates/                  Shared generated application sources
+```
+
+Each `v14/` through `v22/` directory contains that Angular version's independent dependencies, lockfile, build configuration, and generated application source. Benchmark and documentation locations remain unchanged.
+
 ## Market Terminal
 
 Market Terminal is a client-only monitoring interface for 5,000 fictional assets. Its seeded engine and deterministic event log make the same market updates replayable across versions. The UI includes search and filtering, sorting, watchlist and selected-asset details, summaries, and a price chart. It uses no real market feed, backend, credentials, CDN assets, or trading functionality.
