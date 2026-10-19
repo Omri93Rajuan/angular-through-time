@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {chromium} from 'playwright';
 import lighthouse from 'lighthouse';
+import puppeteer from 'puppeteer-core';
 import {launch} from 'chrome-launcher';
 import {serve} from '../../scripts/serve.mjs';
 import {parity} from './functional.mjs';
@@ -27,7 +28,7 @@ for (const [orderIndex, job] of jobs.entries()) {
   const artifacts=()=>fs.readdirSync(artifactRoot).filter(f=>f.endsWith('.js')).sort().map(file=>({file,sha256:hash(artifactRoot+'/'+file)}));
   const artifactSha256=artifacts();
   const {server, url} = await serve(`apps/angular-${version}/dist/${track}`);
-  let chrome;
+  let chrome, diagnosticBrowser, diagnosticResult;
   try {
     const browser = await chromium.launch({executablePath: chromePath, headless: true, args: ['--no-sandbox']});
     let functional;
@@ -44,15 +45,17 @@ for (const [orderIndex, job] of jobs.entries()) {
     }
     // Separate cold browser process for each diagnostic report; same executable throughout.
     chrome = await launch({chromePath, chromeFlags: ['--headless', '--no-sandbox', '--disable-dev-shm-usage']});
-    const result = await lighthouse(url, {
+    diagnosticBrowser=await puppeteer.connect({browserURL:`http://127.0.0.1:${chrome.port}`});
+    const diagnosticPage=await diagnosticBrowser.newPage();
+    const result = diagnosticResult = await lighthouse(url, {
       port: chrome.port, output: 'json', logLevel: 'error', onlyCategories: ['performance'],
       formFactor: 'desktop', screenEmulation: {mobile: false, width: 1440, height: 1000, deviceScaleFactor: 1, disabled: false},
       throttlingMethod: 'provided'
-    });
+    }, undefined, diagnosticPage);
     if (result.lhr.runtimeError) throw Error(JSON.stringify(result.lhr.runtimeError));
-    const connection=await chromium.connectOverCDP(`http://127.0.0.1:${chrome.port}`);
-    let finalState;
-    try{const diagnosticPage=connection.contexts().flatMap(c=>c.pages()).find(p=>p.url().startsWith(url));assert.ok(diagnosticPage,'Lighthouse page must remain inspectable');finalState=await diagnosticPage.evaluate(()=>window.market.state());assert.equal(finalState.tick,0);assert.equal(finalState.checksum,E.checksum(E.initial()));assert.equal(await diagnosticPage.locator('tbody tr').count(),5000);}finally{await connection.close();}
+    const finalState=await diagnosticPage.evaluate(()=>window.market.state());
+    assert.equal(finalState.tick,0);assert.equal(finalState.checksum,E.checksum(E.initial()));
+    assert.equal(await diagnosticPage.$$eval('tbody tr',rows=>rows.length),5000);
     assert.deepEqual(artifacts(),artifactSha256,'Static artifacts changed during diagnostics');
     const data = {
       experiment, ...job, orderIndex, provenance, artifactSha256, finalState, functional, functionalPassed: true,
@@ -67,9 +70,10 @@ for (const [orderIndex, job] of jobs.entries()) {
     console.log(version, track, rep, 'Lighthouse saved');
   } catch (error) {
     fs.mkdirSync('benchmark/results/diagnostic-failures', {recursive: true});
-    fs.writeFileSync(`benchmark/results/diagnostic-failures/${experiment}-${version}-${track}-${rep}.json`, JSON.stringify({experiment, ...job, accepted: false, error: String(error)}, null, 2));
+    fs.writeFileSync(`benchmark/results/diagnostic-failures/${experiment}-${version}-${track}-${rep}.json`, JSON.stringify({experiment, ...job, accepted: false, error: String(error), lhr:diagnosticResult?.lhr}, null, 2));
     throw error;
   } finally {
+    if (diagnosticBrowser) await diagnosticBrowser.disconnect();
     if (chrome) await chrome.kill();
     await new Promise(resolve => server.close(resolve));
   }

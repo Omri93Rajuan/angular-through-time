@@ -1,7 +1,7 @@
 import {balancedOrder} from './order.mjs';
 import fs from 'node:fs';import os from 'node:os';import {execFileSync} from 'node:child_process';import {createHash} from 'node:crypto';import {chromium} from 'playwright';import E from '../../packages/market-fixtures/engine.js';import {serve} from '../../scripts/serve.mjs';import {parity,reset,frames} from './functional.mjs';import assert from 'node:assert/strict';
 const versions=(process.env.VERSIONS||'14,22').split(',').map(Number),tracks=(process.env.TRACKS||'baseline,idiomatic').split(',');const repetitions=Number(process.env.REPS||3),ticks=Number(process.env.TICKS||10),hz=Number(process.env.HZ||5),mode=process.env.MODE||'records';
-if(![1,5,10].includes(hz)||!['mutation','records','array'].includes(mode)||ticks<1||repetitions<1)throw Error('Invalid experiment configuration');
+if(![1,5,10].includes(hz)||!['mutation','records','array'].includes(mode)||!Number.isInteger(ticks)||ticks<1||!Number.isInteger(repetitions)||repetitions<1)throw Error('Invalid experiment configuration');
 const workloadOverride=process.env.WORKLOAD===undefined?null:Number(process.env.WORKLOAD);if(workloadOverride!==null&&![0,100,500,2000].includes(workloadOverride))throw Error('Invalid workload override');
 const chrome=process.env.CHROME||'/opt/google/chrome/chrome';const stamp=new Date().toISOString().replaceAll(':','-');const output=`benchmark/results/runtime/${stamp}`;fs.mkdirSync(output,{recursive:true});
 async function interact(page,scenario,t){
