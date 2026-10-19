@@ -1,84 +1,115 @@
 # Angular Through Time
 
-An original, reproducible research project comparing Angular 14–22 through **Market Terminal**: a fictional 5,000-asset monitoring application. No trading, external market feed, invented performance data or unsupported speed claims.
+**Angular Through Time** is a reproducible research project comparing the same fictional Market Terminal application across Angular 14–22. It includes isolated Angular applications, a deterministic market-data simulator, browser benchmark tooling, saved raw observations, verification records, and a results dashboard.
 
-Two separately built tracks hold common functionality: a controlled baseline and a conservative idiomatic evolution. See [methodology](METHODOLOGY.md), [architecture](ARCHITECTURE.md), [exact versions](VERSION_MATRIX.md), [limitations](LIMITATIONS.md), [implementation plan](IMPLEMENTATION_PLAN.md) and [attribution](ATTRIBUTION.md). Actual executed status is recorded in [verification](docs/VERIFICATION.md).
+The project is an experimental apparatus, not a claim that one Angular release or architecture is universally faster.
+
+## Market Terminal
+
+Market Terminal is a client-only monitoring interface for 5,000 fictional assets. Its seeded engine and deterministic event log make the same market updates replayable across versions. The UI includes search and filtering, sorting, watchlist and selected-asset details, summaries, and a price chart. It uses no real market feed, backend, credentials, CDN assets, or trading functionality.
+
+## What is implemented and what is proposed
+
+The repository currently contains **18 buildable variants**: Angular 14–22, each with two separately built implementations:
+
+| Implemented variant | What it represents |
+|---|---|
+| `baseline` | A common NgModule, Zone.js, eager-change-detection application using the shared Market Terminal and webpack browser builder. |
+| `idiomatic` | A conservative, version-aware variant: standalone bootstrap from Angular 15, a revision-signal notification adapter from Angular 17, built-in `@for` loops from Angular 18, and zoneless scheduling in Angular 21–22. It remains a single component with eager derivations and the same webpack builder; it is not a fully signal-driven or default-CLI implementation. |
+
+The [research realignment](RESEARCH_REALIGNMENT.md) is a **design proposal**, not completed implementation or new experimental evidence. It recommends three separately identified future tracks:
+
+| Proposed track | Research question | Status |
+|---|---|---|
+| **Controlled Framework Evolution** | How does a fixed eager, Zone-based application change across framework/compiler releases under a common webpack policy? | Proposed; the existing baseline provides related historical evidence, but is not a newly validated controlled-v1 protocol. |
+| **Idiomatic Angular Evolution** | What does a stable, deliberately optimized architecture appropriate to each Angular version deliver? | Proposed; the existing `idiomatic` variant does not implement the proposed component graph, computed state, or granular reactive architecture. |
+| **Default Toolchain Evolution** | What do exact CLI-generated defaults deliver for build output, startup, runtime, and developer feedback? | Proposed; existing variants all use webpack, so default builder evolution is not measured. |
+
+Do not interpret existing `baseline`/`idiomatic` results as results for the three proposed tracks or as isolated feature effects.
 
 ## Quick start
 
-Use Linux with Node **22.23.2**, npm **10.9.8 or 11.6.2**, network access for the first install, and Google Chrome. Builds install their own exact supported Node/npm binaries under `.runtimes/`; do not run old Angular builds using the root Node runtime directly.
+Use Node **22.23.2** and a compatible npm version (the project was verified with npm **10.9.8** and **11.6.2**). The first setup/build needs network access to install dependencies and pinned per-version runtimes. Chrome is required for browser benchmarks.
 
 ```bash
 npm ci
 npm test
-# Production builds of the two endpoint versions, both tracks:
+
+# Build the endpoint versions (Angular 14 and 22), both implemented variants.
 npm run build
-# Local static terminal (not a development server):
+
+# Serve the Angular 22 baseline production build at http://127.0.0.1:4200
 npm run serve
-# http://127.0.0.1:4200
 ```
 
-The build script uses each application's lockfile through `npm ci`. `SKIP_INSTALL=1` skips installation only if the required dependencies already exist. The script removes dist and CLI caches before timing each compilation. Both tracks use webpack deliberately; v22 reports deprecation warnings.
+The build script installs version-specific Node/npm binaries under `.runtimes/` and uses each app's committed lockfile. Dependencies across all nine applications require several GB. `SKIP_INSTALL=1` skips app dependency installation only when those dependencies are already present. Builds clear the relevant `dist` output and Angular CLI cache before compiling.
 
-## Reproduce experiments
+## Build, benchmark, and inspect results
+
+Build all nine versions and both variants:
 
 ```bash
-# All 18 production variants (sequential builds):
 VERSIONS=14,15,16,17,18,19,20,21,22 npm run build
+```
 
-# Default: endpoint versions, both tracks, A–H, three repetitions, ten ticks at 5 Hz
-CHROME=/opt/google/chrome/chrome npm run bench
+The runtime harness expects built artifacts, Chrome, and installed root dependencies. The default run covers endpoint versions, both variants, scenarios A–H, three repetitions, and ten ticks at 5 Hz:
 
-# Targeted experiment:
-VERSIONS=14,22 TRACKS=baseline REPS=5 TICKS=30 HZ=10 MODE=records SCENARIOS=B,H npm run bench
+```bash
+CHROME=/path/to/chrome npm run bench
+```
 
-# All versions, both tracks:
-VERSIONS=14,15,16,17,18,19,20,21,22 REPS=3 npm run bench
+Example targeted run:
 
-# Separate Lighthouse diagnostic runs:
-VERSIONS=14,22 REPS=3 node benchmark/harness/lighthouse.mjs
+```bash
+VERSIONS=14,22 TRACKS=baseline REPS=5 TICKS=30 HZ=10 \
+  MODE=records SCENARIOS=B,H npm run bench
+```
 
+`MODE` accepts `mutation`, `records`, or `array`; scenario F always uses full-array replacement. `HZ` accepts 1, 5, or 10. `WORKLOAD` can override the record count with 0, 100, 500, or 2000; scenarios A and F retain their special behavior. `SCENARIOS` accepts comma-separated A–H. Use `HEADED=1` only when a visible browser run is intended, and report it separately.
+
+Summarize retained runtime results and open the dashboard:
+
+```bash
 npm run summarize
 node scripts/serve.mjs .
 # Open http://127.0.0.1:4200/dashboard/
 ```
 
-`MODE` is mutation, records or array; F always uses full-array replacement. `HZ` is 1, 5 or 10. `WORKLOAD=0`, `100`, `500` or `2000` overrides runtime scenario record counts; A stays initial navigation and F stays 5,000 records. Each profile is retained separately in summaries. `SCENARIOS` accepts comma-separated A–H. Set `HEADED=1` for visible browser runs (requires a display); record this as a separate experiment. The same Chrome executable, viewport and launch policy apply across a run. Keep other machine activity low; close unrelated workloads before publishing measurements. Build and browser measurements are separate and must not overlap for controlled results.
-
-The runtime harness fails closed if functional assertions, page errors, checksums or visible DOM values fail. Failed JSON remains in the result directory. Accepted update scenarios B–H retain event logs, raw timing series and artifact hashes. Navigation samples retain navigation observations and final checksums; historical navigation samples have no per-sample bundle hash. `metadata.json` records environment and source information, and `order.json` records execution order. Summaries include median, quartiles, IQR, min/max and n. CSV files expose summaries and raw sample locations; JSON contains full diagnostics. Lighthouse results retain the full LHR report. Build results list each emitted JS artifact once with uncompressed, gzip and Brotli sizes.
-
-## Development
-
-Edit `templates/` and `packages/market-fixtures/engine.js`, then `npm run generate`. Generated sources intentionally live in independent app directories for historical compiler compatibility. Regenerate the documentation matrix with `node scripts/matrix-doc.mjs`. Build and rerun functional gates after changes. The terminal starts paused; use Resume, Advance one tick or deterministic replay controls to exercise it.
-
-No global packages, backend, API keys, CDN assets or third-party data services are required. Dependencies are installed once per major, approximately several GB across all variants. Runtime isolation is by dependency directory and executable PATH, not a security sandbox or OS container.
-
-## Research status
-
-All nine versions have passed both production builds and the shared functional workflows, with 144 accepted A–H matrix samples. Endpoint repetition and zero-change control runs are also retained; see the verification ledger for exact commands and evidence.
-
-This repository is an executable experimental apparatus. Local results establish functionality and reproducibility of replay; they are not evidence of general statistical superiority. Read the verification ledger before treating an implementation phase as validated. Follow the documented protocol and retain all observations when conducting a controlled study.
-
-For repeated cold-build measurements, use `BUILD_REPS=4 VERSIONS=14,22 npm run build`. Repeated build ordering rotates and reverses the version/track sequence; the complete order is retained under `benchmark/results/build-orders/`. The dashboard also exposes build size/time and Lighthouse diagnostic batches without pooling them into runtime scenarios.
-
-## Verified continuation (2026-10-19)
-
-See [FINAL_REPORT.md](FINAL_REPORT.md) for the command ledger and measured evidence. All nine clean application installs passed `npm ci --engine-strict` on their recorded supported Node versions. Angular 14 pins `browserslist@4.26.3` and `node-releases@2.0.27` to retain Node 16 compatibility. The repaired endpoint cold-build batch is separate from historical builds; its emitted JavaScript hashes match the validated runtime artifacts.
-
-After provisioning runtimes with the build script, reproduce verification with:
+Lighthouse diagnostics are a separate experiment:
 
 ```bash
-node scripts/verify-installs.mjs
-SKIP_INSTALL=1 BUILD_REPS=4 VERSIONS=14,22 node scripts/build.mjs
-# Run browser measurements only after builds finish:
-VERSIONS=22 TRACKS=baseline REPS=1 TICKS=3 HZ=1 WORKLOAD=0 MODE=mutation SCENARIOS=B npm run bench
-VERSIONS=14,15,16,17,18,19,20,21,22 REPS=1 node benchmark/harness/lighthouse.mjs
-npm test
-node scripts/check-parity.mjs
-node scripts/verify-generated.mjs
-node scripts/audit-results.mjs
-npm run summarize
-node scripts/verify-dashboard.mjs
+VERSIONS=14,22 REPS=3 node benchmark/harness/lighthouse.mjs
 ```
 
-The saved zero-change test already passed and was audited rather than repeated. One Lighthouse observation per variant is diagnostic evidence only. Preserve raw results and compare only within the same experiment and workload profile.
+Build measurements are recorded separately from browser runtime measurements. Do not run builds and browser benchmarks concurrently when collecting controlled observations. The harness retains raw samples, event logs, execution order, environment metadata, failures, and provenance under `benchmark/results/`.
+
+## Research method and current evidence
+
+Each Angular application has pinned framework/toolchain dependencies and its own lockfile. Shared source is generated from `templates/`; the deterministic engine and benchmark contract are separate packages. Browser workflows are gated by functional checks, and benchmark replays retain checksums, raw timing observations, and environment metadata. See [methodology](METHODOLOGY.md), [architecture](ARCHITECTURE.md), [version matrix](VERSION_MATRIX.md), [verification ledger](docs/VERIFICATION.md), [final report](FINAL_REPORT.md), and [limitations](LIMITATIONS.md).
+
+The recorded verification includes successful builds and functional checks for all 18 variants, a 144-sample one-repetition matrix, a separate 32-sample four-repetition endpoint batch, a narrow three-tick zero-workload control, and separate Lighthouse diagnostics. These are local descriptive checks, not statistically conclusive comparisons. The matrix sample count is small; some accepted updates were late; serial backpressure prevents dropped events by policy and is not an independent-arrival capacity test. Machine load, thermal state, CPU governor, and OS cache were not fully controlled. See the reports for exact commands, retained failures, and provenance limits. No performance ranking or general superiority claim is supported.
+
+The proposed three-track design, feature ablations, stronger UI oracle, and default-toolchain study have **not** been implemented or measured. Do not mix future results with the historical samples; use distinct experiment and architecture identifiers.
+
+## Reproducibility and development
+
+Generated application sources are committed so they can be inspected without running the generator. To change shared templates or the engine:
+
+```bash
+# Edit templates/ and packages/market-fixtures/engine.js, then:
+npm run generate
+node scripts/verify-generated.mjs
+npm test
+```
+
+Regenerate the documented version matrix with `node scripts/matrix-doc.mjs`. Install and runtime artifacts under `.runtimes/`, `node_modules/`, `dist/`, and Angular caches are local and ignored. Benchmark result data, failed observations, audit files, previews, and verification records are intentionally retained; do not remove or rewrite them to make results appear cleaner.
+
+## Branch workflow
+
+`main` is the stable, verified state; `dev` is the integration branch. Create future work on `feature/<short-description>` from `dev`, then merge through review. Keep benchmark protocol changes and their result sets identifiable; do not rewrite published history or mix incompatible experiment revisions.
+
+## Attribution and license
+
+The project's research organization was methodologically inspired by [Janirr/angular-evolution-benchmark](https://github.com/Janirr/angular-evolution-benchmark). Market Terminal, its seeded engine, UI, protocol, and results are original work; no implementation, prose, interface, dataset, or result was copied. See [ATTRIBUTION.md](ATTRIBUTION.md) for details and source references.
+
+This project is distributed under the [MIT License](LICENSE). Angular and third-party dependencies remain subject to their respective licenses; production build notices are retained with the build outputs.
