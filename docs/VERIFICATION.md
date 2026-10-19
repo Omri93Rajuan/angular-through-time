@@ -84,3 +84,7 @@ Final replay audit: 189 accepted runtime samples, 861 update ticks, 330 late upd
 `npm ci --engine-strict --no-audit --no-fund` passed at the root; `npm test` passed all seven tests; source parity passed; scratch generation matched all 118 generated files without modifying them. See [FINAL_REPORT.md](../FINAL_REPORT.md) for exact commands, final dashboard validation and artifact links.
 
 Dashboard verification passed 576 filter selections against 1,589 summary rows, checked 257 raw links, and found no page errors. Desktop/mobile screenshots were reviewed. An initial verifier wait on native option visibility was corrected to attachment; its failed log is retained.
+
+## Repository layout migration
+
+The Angular applications now live at the repository root as `v14/` through `v22/`; before this refactor they were at `apps/angular-14/` through `apps/angular-22/`. Historical commit IDs and raw benchmark records intentionally retain their original provenance and are not rewritten. Commands in the historical records were run against the old layout; use the current scripts and root-level version directories when reproducing them from this checkout. This move does not change generated application contents, dependency pins, benchmark observations, or recorded hashes.

@@ -7,7 +7,7 @@ import {performance} from 'node:perf_hooks';
 import {gzipSync, brotliCompressSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 
-const provenance = {commit: spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim() || null, scriptSha256: createHash('sha256').update(fs.readFileSync('scripts/build.mjs')).digest('hex'), sourceDirty: !!spawnSync('git',['status','--porcelain','--','scripts','apps','benchmark/harness','packages','templates'],{encoding:'utf8'}).stdout.trim()};
+const provenance = {commit: spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim() || null, scriptSha256: createHash('sha256').update(fs.readFileSync('scripts/build.mjs')).digest('hex'), sourceDirty: !!spawnSync('git',['status','--porcelain','--','scripts','v14','v15','v16','v17','v18','v19','v20','v21','v22','benchmark/harness','packages','templates'],{encoding:'utf8'}).stdout.trim()};
 const experiment = 'build-' + new Date().toISOString().replaceAll(':', '-');
 const matrix = JSON.parse(fs.readFileSync('docs/versions.json'));
 const versions = (process.env.VERSIONS || '14,22').split(',').map(Number);
@@ -42,7 +42,7 @@ for (const v of matrix.filter(v => versions.includes(v.major))) {
     run('npm', ['install', '--prefix', runtime, '--no-audit', '--no-fund', `node@${v.node}`, `npm@${npmVersion}`]);
   }
   const env = {...process.env, PATH: bin + path.delimiter + process.env.PATH, NG_CLI_ANALYTICS: 'false', NG_BUILD_MAX_WORKERS: '2'};
-  const cwd = path.resolve(`apps/angular-${v.major}`);
+  const cwd = path.resolve(`v${v.major}`);
   if (output(path.join(bin, 'node'), ['--version'], {env}) !== 'v' + v.node) throw Error('Node pin mismatch');
   if (output(path.join(bin, 'npm'), ['--version'], {env}) !== npmVersion) throw Error('npm pin mismatch');
   if (!process.env.SKIP_INSTALL) run(path.join(bin, 'npm'), [fs.existsSync(path.join(cwd, 'package-lock.json')) ? 'ci' : 'install', '--no-audit', '--no-fund'], {cwd, env});

@@ -8,7 +8,7 @@ const selected=(process.env.VERSIONS||matrix.map(v=>v.major).join(',')).split(',
 const reports=[];
 fs.mkdirSync('benchmark/results/verification-logs',{recursive:true});
 for(const v of matrix.filter(v=>selected.includes(v.major))){
- const cwd=path.resolve(`apps/angular-${v.major}`),bin=path.resolve(`.runtimes/${v.node}/node_modules/.bin`);
+ const cwd=path.resolve(`v${v.major}`),bin=path.resolve(`.runtimes/${v.node}/node_modules/.bin`);
  const env={...process.env,PATH:bin+path.delimiter+process.env.PATH};
  const node=spawnSync(path.join(bin,'node'),['-v'],{env,encoding:'utf8'}).stdout.trim();
  if(node!=='v'+v.node)throw Error('Wrong Node runtime');
