@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import E from '../../packages/market-fixtures/engine.js';
 import os from 'node:os';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
@@ -9,6 +11,8 @@ import {serve} from '../../scripts/serve.mjs';
 import {parity} from './functional.mjs';
 import {balancedOrder} from './order.mjs';
 
+const hash = f => createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const provenance = {commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceDirty:!!execFileSync('git',['status','--porcelain','--','apps','scripts','benchmark/harness','package.json','package-lock.json'],{encoding:'utf8'}).trim(),harnessSha256:hash('benchmark/harness/lighthouse.mjs'),rootLockfileSha256:hash('package-lock.json')};
 const experiment = 'lighthouse-' + new Date().toISOString().replaceAll(':', '-');
 const chromePath = process.env.CHROME || '/opt/google/chrome/chrome';
 const base = (process.env.VERSIONS || '14,22').split(',').flatMap(version =>
@@ -19,6 +23,9 @@ fs.mkdirSync('benchmark/results/lighthouse-orders', {recursive: true});
 fs.writeFileSync(`benchmark/results/lighthouse-orders/${experiment}.json`, JSON.stringify(jobs, null, 2));
 for (const [orderIndex, job] of jobs.entries()) {
   const {version, track, rep} = job;
+  const artifactRoot=`apps/angular-${version}/dist/${track}`;
+  const artifacts=()=>fs.readdirSync(artifactRoot).filter(f=>f.endsWith('.js')).sort().map(file=>({file,sha256:hash(artifactRoot+'/'+file)}));
+  const artifactSha256=artifacts();
   const {server, url} = await serve(`apps/angular-${version}/dist/${track}`);
   let chrome;
   try {
@@ -43,13 +50,15 @@ for (const [orderIndex, job] of jobs.entries()) {
       throttlingMethod: 'provided'
     });
     if (result.lhr.runtimeError) throw Error(JSON.stringify(result.lhr.runtimeError));
-    let commit = null;
-    try { commit = execFileSync('git', ['rev-parse', 'HEAD'], {encoding: 'utf8'}).trim(); } catch {}
+    const connection=await chromium.connectOverCDP(`http://127.0.0.1:${chrome.port}`);
+    let finalState;
+    try{const diagnosticPage=connection.contexts().flatMap(c=>c.pages()).find(p=>p.url().startsWith(url));assert.ok(diagnosticPage,'Lighthouse page must remain inspectable');finalState=await diagnosticPage.evaluate(()=>window.market.state());assert.equal(finalState.tick,0);assert.equal(finalState.checksum,E.checksum(E.initial()));assert.equal(await diagnosticPage.locator('tbody tr').count(),5000);}finally{await connection.close();}
+    assert.deepEqual(artifacts(),artifactSha256,'Static artifacts changed during diagnostics');
     const data = {
-      experiment, ...job, orderIndex, functional, functionalPassed: true,
+      experiment, ...job, orderIndex, provenance, artifactSha256, finalState, functional, functionalPassed: true,
       environment: {
         chromePath, chromeSha256: createHash('sha256').update(fs.readFileSync(chromePath)).digest('hex'),
-        os: os.release(), cpu: os.cpus()[0].model, node: process.version, commit,
+        os: os.release(), cpu: os.cpus()[0].model, node: process.version, commit:provenance.commit,
         lighthouse: JSON.parse(fs.readFileSync('node_modules/lighthouse/package.json')).version
       },
       lhr: result.lhr
