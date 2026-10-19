@@ -1,0 +1,19 @@
+node:fs:560
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open 'benchmark/results/build-orders/build-2026-10-18T14-07-31.269Z.json'
+    at Object.openSync (node:fs:560:18)
+    at Object.readFileSync (node:fs:444:35)
+    at read (file:///home/kodcode/Desktop/angular/scripts/audit-results.mjs:7:29)
+    at file:///home/kodcode/Desktop/angular/scripts/audit-results.mjs:41:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:343:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:681:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'benchmark/results/build-orders/build-2026-10-18T14-07-31.269Z.json'
+}
+
+Node.js v22.23.2

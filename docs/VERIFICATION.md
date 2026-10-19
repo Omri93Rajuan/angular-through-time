@@ -72,3 +72,15 @@ The browser applied three logical ticks at a 1 Hz target without changing asset 
 ## Fresh root dependency installation — completed
 
 `npm ci --no-audit --no-fund` succeeded from the committed root lockfile (116 packages), without changing dependency pins.
+
+## Continuation audit — 2026-10-19
+
+The workspace, commits, logs and raw artifacts confirmed that the zero-workload control and original four-repetition endpoint builds had already completed. They were not restarted. Nine strict clean installs passed after repairing Angular 14's Node-16-incompatible transitive browserslist/node-releases resolution. A separate 16-build endpoint batch (`build-2026-10-19T08-27-42.151Z`) passed with identical JavaScript hashes to validated runtime samples.
+
+The separate Lighthouse batch `lighthouse-2026-10-19T08-34-40.295Z` produced 18 accepted reports and no run warnings. Its first attempt was rejected because Lighthouse closed its self-owned page; the corrected harness owns the measured page for final checksum/row-count checks. That rejection is preserved.
+
+Final replay audit: 189 accepted runtime samples, 861 update ticks, 330 late updates, zero discarded updates by serial policy, zero integrity errors and seven retained descriptive outlier flags. Two rejected runtime/diagnostic attempts remain visible. Historical smoke hash differences and the original full-build batch's missing order file are recorded as provenance limitations. Neither is retroactively repaired with invented evidence.
+
+`npm ci --engine-strict --no-audit --no-fund` passed at the root; `npm test` passed all seven tests; source parity passed; scratch generation matched all 118 generated files without modifying them. See [FINAL_REPORT.md](../FINAL_REPORT.md) for exact commands, final dashboard validation and artifact links.
+
+Dashboard verification passed 576 filter selections against 1,589 summary rows, checked 257 raw links, and found no page errors. Desktop/mobile screenshots were reviewed. An initial verifier wait on native option visibility was corrected to attachment; its failed log is retained.

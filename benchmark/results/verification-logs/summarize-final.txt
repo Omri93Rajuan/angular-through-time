@@ -1,0 +1,5 @@
+
+> angular-through-time@0.1.0 summarize
+> node benchmark/harness/summarize.mjs
+
+189 accepted samples; 2 failures; 1589 summary rows

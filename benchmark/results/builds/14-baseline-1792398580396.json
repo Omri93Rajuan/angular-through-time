@@ -1,0 +1,136 @@
+{
+  "kind": "cold-build",
+  "experiment": "build-2026-10-19T08-27-42.151Z",
+  "provenance": {
+    "commit": "abfbb18493798989ddd61af8ca9939caa421c1fb",
+    "scriptSha256": "d6f79e5b20a2227269d9321a12e50cc0c59e5d1678067fa3042546676cddcdb1",
+    "sourceDirty": false
+  },
+  "inputSha256": "482623216b57f3474981806e7db07c9076a1df43bd3146dff2b5d9bde53f2061",
+  "rep": 2,
+  "orderIndex": 10,
+  "version": 14,
+  "track": "baseline",
+  "durationMs": 11536.265058999998,
+  "environment": {
+    "node": "16.20.2",
+    "npm": "8.19.4",
+    "angular": "14.2.12",
+    "cli": "14.2.13",
+    "typescript": "4.8.4",
+    "os": "6.17.0-23-generic",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "logicalCpuCount": 16,
+    "memory": 16532312064,
+    "maxBuildWorkers": 2,
+    "commit": "abfbb18493798989ddd61af8ca9939caa421c1fb"
+  },
+  "coldDefinition": "dist and Angular cache removed; dependencies installed; OS filesystem cache uncontrolled",
+  "configuration": {
+    "version": 1,
+    "cli": {
+      "analytics": false,
+      "cache": {
+        "enabled": false
+      }
+    },
+    "projects": {
+      "baseline": {
+        "projectType": "application",
+        "root": "",
+        "sourceRoot": "src",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/baseline",
+              "index": "src/index.html",
+              "main": "src/baseline.ts",
+              "tsConfig": "tsconfig.baseline.json",
+              "scripts": [
+                "src/engine.js"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "assets": []
+            },
+            "configurations": {
+              "production": {
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "aot": true
+              }
+            },
+            "defaultConfiguration": "production"
+          }
+        }
+      },
+      "idiomatic": {
+        "projectType": "application",
+        "root": "",
+        "sourceRoot": "src",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/idiomatic",
+              "index": "src/index.html",
+              "main": "src/idiomatic.ts",
+              "tsConfig": "tsconfig.idiomatic.json",
+              "scripts": [
+                "src/engine.js"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "assets": []
+            },
+            "configurations": {
+              "production": {
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "aot": true
+              }
+            },
+            "defaultConfiguration": "production"
+          }
+        }
+      }
+    }
+  },
+  "lockfileSha256": "b8d4be55797beb491073796b08088c3d7eca1b9b603e5f7c10d90e395fb8f51b",
+  "builder": "@angular-devkit/build-angular:browser",
+  "assets": [
+    {
+      "file": "main.3a2e458e312d500f.js",
+      "bytes": 164169,
+      "gzip": 55427,
+      "brotli": 49420,
+      "sha256": "909ab6764332d60cc988f016b445abbb86623c49c46330baadd7d1112e3a97da"
+    },
+    {
+      "file": "runtime.f8b5ad77d599ee88.js",
+      "bytes": 894,
+      "gzip": 555,
+      "brotli": 510,
+      "sha256": "71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516"
+    },
+    {
+      "file": "scripts.64ee708414c1c2e8.js",
+      "bytes": 1382,
+      "gzip": 789,
+      "brotli": 697,
+      "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+    }
+  ],
+  "at": "2026-10-19T08:29:40.396Z"
+}

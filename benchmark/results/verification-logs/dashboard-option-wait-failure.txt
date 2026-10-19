@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#experiment option') to be visible[22m
+[2m    63 × locator resolved to 9 elements. Proceeding with the first one: <option value="lighthouse-2026-10-19T08-34-40.295Z">lighthouse-2026-10-19T08-34-40.295Z</option>[22m
+
+    at /home/kodcode/Desktop/angular/scripts/verify-dashboard.mjs:30:165 {
+  log: [
+    "  - waiting for locator('#experiment option') to be visible",
+    '    63 × locator resolved to 9 elements. Proceeding with the first one: <option value="lighthouse-2026-10-19T08-34-40.295Z">lighthouse-2026-10-19T08-34-40.295Z</option>'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.23.2

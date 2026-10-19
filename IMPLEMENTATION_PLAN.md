@@ -1,6 +1,6 @@
 # Implementation plan and verification ledger
 
-1. Inspect reference architecture and official version documentation; freeze protocol and exact version matrix.
+1. Inspect reference architecture and official version documentation; record protocol and exact version matrix.
 2. Implement deterministic shared engine and Angular 14/22 terminal slices with an external contract.
 3. Build slices with compatible runtimes, run shared functional tests, save actual production runtime samples.
 4. Expand to Angular 15–21 and gate each with the same workflows.
@@ -9,3 +9,5 @@
 7. Finish reproducibility docs and review limitations; preserve all failed results.
 
 See `docs/VERIFICATION.md` for executed commands and actual outcomes. Generated files alone do not establish compatibility or completion. All architecture/rate/mode combinations are not required for the initial milestone; distinguish implemented support from executed evidence.
+
+The continuation is recorded in [FINAL_REPORT.md](FINAL_REPORT.md). The protocol evolved during implementation; it was not preregistered. All requested acceptance and reproducibility checks are documented there separately from optional broader research.

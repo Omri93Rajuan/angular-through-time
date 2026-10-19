@@ -1,0 +1,91 @@
+[
+  {
+    "version": 14,
+    "node": "v16.20.2",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-14.txt",
+    "lockUnchanged": true,
+    "lockSha256": "b8d4be55797beb491073796b08088c3d7eca1b9b603e5f7c10d90e395fb8f51b",
+    "unsupported": []
+  },
+  {
+    "version": 15,
+    "node": "v18.20.8",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-15.txt",
+    "lockUnchanged": true,
+    "lockSha256": "8dd9c2b90a622bd70d93d3d19159daf7d09f51e7da5a0eb5d3e65f169748d0e5",
+    "unsupported": []
+  },
+  {
+    "version": 16,
+    "node": "v18.20.8",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-16.txt",
+    "lockUnchanged": true,
+    "lockSha256": "394f24c3a64ceec48521c9ef38444680ec004309700d605357dccd6cdab112e6",
+    "unsupported": []
+  },
+  {
+    "version": 17,
+    "node": "v20.19.5",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-17.txt",
+    "lockUnchanged": true,
+    "lockSha256": "55f66a3317142058b225ab0b7ebda9533d52534d03a4fc4abc6c01502ba5bb63",
+    "unsupported": [
+      {
+        "path": "node_modules/@napi-rs/lzma-linux-x64-gnu",
+        "version": "1.5.1",
+        "node": "^22.20 || ^24.12 || >=25",
+        "optional": true,
+        "installed": false
+      }
+    ]
+  },
+  {
+    "version": 18,
+    "node": "v22.23.2",
+    "exitCode": 1,
+    "log": "benchmark/results/verification-logs/npm-ci-18.txt",
+    "lockUnchanged": true,
+    "lockSha256": "4df000dae1f9bd864a1374dec23d2a1de2dede179e8c33455b853711ddb1f39d",
+    "unsupported": []
+  },
+  {
+    "version": 19,
+    "node": "v22.23.2",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-19.txt",
+    "lockUnchanged": true,
+    "lockSha256": "a14b198fcd3092f109e4b477f4d188b2b1f93d3a5ac7108958d998443e096c2b",
+    "unsupported": []
+  },
+  {
+    "version": 20,
+    "node": "v22.23.2",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-20.txt",
+    "lockUnchanged": true,
+    "lockSha256": "b0c1da01fac1219f21232226d75d65238474156d15795de8f346602fccbbd818",
+    "unsupported": []
+  },
+  {
+    "version": 21,
+    "node": "v22.23.2",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-21.txt",
+    "lockUnchanged": true,
+    "lockSha256": "583464520d80ed6c43295b030c70ef2eab706937b8bed3d35fa2480b3c1f4b43",
+    "unsupported": []
+  },
+  {
+    "version": 22,
+    "node": "v22.23.2",
+    "exitCode": 0,
+    "log": "benchmark/results/verification-logs/npm-ci-22.txt",
+    "lockUnchanged": true,
+    "lockSha256": "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87",
+    "unsupported": []
+  }
+]

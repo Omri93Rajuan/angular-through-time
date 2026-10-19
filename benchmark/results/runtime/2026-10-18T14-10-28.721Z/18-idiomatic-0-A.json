@@ -1,0 +1,94 @@
+{
+  "version": 18,
+  "track": "idiomatic",
+  "rep": 0,
+  "scenario": "A",
+  "functional": {
+    "passed": true,
+    "assertions": "5000 rows, search, sector, sorting, watchlist, details, all update modes, every displayed price, pause/resume, reset",
+    "checkedAt": "2026-10-18T14:17:09.090Z"
+  },
+  "accepted": true,
+  "navigation": {
+    "name": "http://127.0.0.1:33891/",
+    "entryType": "navigation",
+    "startTime": 0,
+    "duration": 740.6999999880791,
+    "initiatorType": "navigation",
+    "deliveryType": "",
+    "nextHopProtocol": "http/1.1",
+    "renderBlockingStatus": "non-blocking",
+    "contentType": "text/html",
+    "contentEncoding": "",
+    "workerStart": 0,
+    "workerRouterEvaluationStart": 0,
+    "workerCacheLookupStart": 0,
+    "workerMatchedSourceType": "",
+    "workerFinalSourceType": "",
+    "redirectStart": 0,
+    "redirectEnd": 0,
+    "fetchStart": 0.2999999523162842,
+    "domainLookupStart": 0.2999999523162842,
+    "domainLookupEnd": 0.2999999523162842,
+    "connectStart": 0.2999999523162842,
+    "secureConnectionStart": 0,
+    "connectEnd": 0.2999999523162842,
+    "requestStart": 0.8999999761581421,
+    "responseStart": 1.5999999642372131,
+    "firstInterimResponseStart": 0,
+    "finalResponseHeadersStart": 1.5999999642372131,
+    "responseEnd": 2.099999964237213,
+    "transferSize": 1110,
+    "encodedBodySize": 810,
+    "decodedBodySize": 810,
+    "responseStatus": 200,
+    "serverTiming": [],
+    "unloadEventStart": 0,
+    "unloadEventEnd": 0,
+    "domInteractive": 11.399999976158142,
+    "domContentLoadedEventStart": 250.89999997615814,
+    "domContentLoadedEventEnd": 250.89999997615814,
+    "domComplete": 740.6999999880791,
+    "loadEventStart": 740.6999999880791,
+    "loadEventEnd": 740.6999999880791,
+    "type": "navigate",
+    "redirectCount": 0,
+    "activationStart": 0,
+    "criticalCHRestart": 0,
+    "notRestoredReasons": null,
+    "confidence": {
+      "randomizedTriggerRate": 0.4994798,
+      "value": "low"
+    }
+  },
+  "observations": {
+    "longTasks": [
+      {
+        "start": 16.19999998807907,
+        "duration": 733,
+        "value": 0,
+        "hadRecentInput": false
+      },
+      {
+        "start": 749.5,
+        "duration": 93,
+        "value": 0,
+        "hadRecentInput": false
+      }
+    ],
+    "lcp": [
+      {
+        "start": 864,
+        "duration": 0,
+        "value": 0,
+        "hadRecentInput": false
+      }
+    ],
+    "cls": [],
+    "frames": []
+  },
+  "renderReadyMs": 854.8999999761581,
+  "checksum": "ba2bdece",
+  "kind": "navigation",
+  "coldDefinition": "new page, no-store HTTP, warm browser process and server; not OS cold"
+}

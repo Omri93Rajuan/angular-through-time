@@ -1,0 +1,8 @@
+/home/kodcode/Desktop/angular/.runtimes/22.23.2/node_modules/.bin/npm ci --engine-strict --no-audit --no-fund
+Node v22.23.2
+
+added 825 packages in 5s
+npm warn deprecated @angular/platform-browser-dynamic@22.0.0: @angular/platform-browser-dynamic is deprecated. Use `@angular/platform-browser` instead.
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated @ngtools/webpack@22.0.0: Angular's Webpack support is deprecated. Use the esbuild and Vite-based "@angular/build" package instead.
+npm warn deprecated @angular-devkit/build-angular@22.0.0: Angular's Webpack support is deprecated. Use the esbuild and Vite-based "@angular/build" package instead.

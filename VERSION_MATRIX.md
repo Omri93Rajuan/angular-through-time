@@ -15,3 +15,5 @@ Selected from the [official Angular matrix](https://angular.dev/reference/versio
 | 22 | 22.0.0 | 22.0.0 | 6.0.3 | 22.23.2 | 0.16.0 | 11.6.2 |
 
 Angular 14 uses Node 16, 15–16 use Node 18, 17 uses Node 20, and 18–22 use Node 22. Angular 22.0 requires TypeScript 6.0; historical compilers never consume that TypeScript source. The root harness uses Node 22.23.2. Validation evidence, not pin selection alone, establishes build status.
+
+Clean strict installs verified 2026-10-19: Angular 14 overrides browserslist to 4.26.3 and node-releases to 2.0.27 for Node 16 compatibility. Angular 17 skips an incompatible optional lzma binary dependency; it is absent from the installed tree. See benchmark/results/audits/installs.json.

@@ -1,6 +1,6 @@
 # Research protocol — Angular Through Time
 
-Protocol v1, prepared 2026-10-18 before accepting runtime samples. This is an exploratory local benchmark, not a published comparative conclusion.
+Protocol initiated 2026-10-18 and revised during implementation and validation on 2026-10-19; this is not a preregistered protocol. This is an exploratory local benchmark, not a published comparative conclusion.
 
 ## Questions and tracks
 
@@ -10,9 +10,9 @@ The idiomatic track compares a conservative set of stable architecture choices: 
 
 ## Dataset and delivery
 
-Seed 14022 produces 5,000 fictional assets, five sectors and integer-cent prices. Event seed 90210 plus logical tick produces unique changed IDs using a coprime stride. No wall-clock data choices. The browser receives the same ES5-compatible engine source as Node. Raw runtime samples contain replayable event logs. Checksums hash IDs, prices, base prices and volumes; UI state and all visible DOM prices are asserted independently.
+Seed 14022 produces 5,000 fictional assets, five sectors and integer-cent prices. Event seed 90210 plus logical tick produces unique targeted IDs using a coprime stride. No wall-clock data choices. The browser receives the same ES5-compatible engine source as Node. Raw runtime samples contain replayable event logs. Checksums hash IDs, prices, base prices and volumes; UI state and all visible DOM prices are asserted independently.
 
-Modes are `mutation` (same array and records), `records` (same array, cloned changed records), and `array` (new array and all cloned records, including unchanged ones). Scenario F updates all 5,000 as well as replacing the array. Modes are explicit experimental variables. Workloads are 0/100/500/2000 changes; the optional WORKLOAD override selects these independently of scenario defaults, except A remains navigation and F remains 5,000 records; target rates 1/5/10 Hz. Initial milestone defaults to 5 Hz and record replacement. Do not combine different modes/rates in summaries.
+Modes are `mutation` (same array and records), `records` (same array, cloned changed records), and `array` (new array and all cloned records, including unchanged ones). Scenario F updates all 5,000 as well as replacing the array. Modes are explicit experimental variables. Workloads are 0/100/500/2000 targeted records; the optional WORKLOAD override selects these independently of scenario defaults, except A remains navigation and F remains 5,000 records; target rates 1/5/10 Hz. Initial milestone defaults to 5 Hz and record replacement. Do not combine different modes/rates in summaries.
 
 ## Scenarios
 
@@ -31,7 +31,7 @@ Three update ticks with the scenario interaction warm each scenario before reset
 
 ## Timing boundaries
 
-Navigation readiness is captured by an independent MutationObserver at the first 5,000-row DOM followed by two animation frames. Event processing: browser `performance.now()` immediately before contract application through synchronous state/selector work. Presentation opportunity: from that same start through two requestAnimationFrame callbacks and matching tick DOM text. It is not a physical display timestamp. Interaction latency: before Playwright dispatch, through action completion and two frames, measured on the browser clock. This includes automation overhead and is NOT INP. Throughput counts accepted record changes divided by elapsed browser interval, including interactions. Delivery is late if beginning more than one target interval after its due time. Raw lateness is retained, not clamped away except negative early arrival.
+Navigation readiness is captured by an independent MutationObserver at the first 5,000-row DOM followed by two animation frames. Event processing: browser `performance.now()` immediately before contract application through synchronous state/selector work. Presentation opportunity: from that same start through two requestAnimationFrame callbacks and matching tick DOM text. It is not a physical display timestamp. Interaction latency: before Playwright dispatch, through action completion and two frames, measured on the browser clock. This includes automation overhead and is NOT INP. Throughput counts accepted targeted records divided by elapsed browser interval, including interactions. Delivery is late if beginning more than one target interval after its due time. Raw lateness is retained, not clamped away except negative early arrival.
 
 PerformanceObserver records LCP candidates, layout shifts with recent-input flags and long-task entries. Frame timestamps indicate callback intervals, not GPU/display FPS, especially headless. CDP JSHeapUsedSize samples before and after ticks provide experimental heap measurements; sampled peak can miss transient allocation peaks and is not total browser RSS. Lighthouse runs separately, desktop defaults, no throttling; its LCP/CLS/TBT are diagnostic lab measurements, not interchangeable with scenario runtime metrics.
 
@@ -46,3 +46,13 @@ Repeated cold builds use the same cyclic position-balancing policy and retain th
 ## Reporting and acceptance
 
 Keep every raw sample and failure. Accept only after functional assertions, final checksum, DOM values and page error checks pass. Fail closed on errors; do not silently exclude slow runs. Report median, quartiles, IQR, minimum, maximum and sample count within version/track/scenario/hz/mode/tick-count/experiment. Three repetitions are exploratory. No significance, causality or speedup claim without adequate design and analysis. Do not merge experiments with distinct hardware, binaries or source changes. Unmeasured metrics are null/missing, never fabricated zeros.
+
+## Audit and historical compatibility
+
+`node scripts/audit-results.mjs` replays every accepted update log, verifies checksums and timing arithmetic, checks build input/output consistency, and flags outliers using 1.5×IQR only within compatible groups with at least four samples. Flags remain in summaries; they are not automatic exclusions. The audit retains rejected runtime and diagnostic attempts. `node scripts/verify-dashboard.mjs` checks summary/raw membership and exercises dashboard selections against each batch independently.
+
+Event deltas can be zero, so a targeted record need not change its numerical value. Finite-window throughput divides N ticks by an interval containing N−1 scheduled gaps plus processing; it can exceed the requested rate and is not a sustained producer-capacity estimate. Zero dropped updates follows the serial delivery policy, even where deadlines are missed.
+
+Historical Angular 14 builds used a lockfile containing a Node-18-only transitive node-releases package under Node 16. The repaired lock pins compatible browserslist/node-releases versions. Clean strict installs then passed, followed by a new balanced four-repetition endpoint batch. Identical emitted JavaScript hashes link these outputs to existing functional runtime evidence; historical and repaired build timings remain separate. Angular 17's lock includes an incompatible optional lzma binary package that is skipped and absent from its installed dependency tree.
+
+The final Lighthouse batch runs sequentially after builds and independently of workload benchmarks. The harness owns the measured Puppeteer page, verifies its final initial checksum and 5,000 rows, and retains the full LHR and artifact hashes. An earlier attempt failed because Lighthouse closed its self-owned page; that rejected diagnostic is retained separately. One accepted observation per variant does not establish a ranking.

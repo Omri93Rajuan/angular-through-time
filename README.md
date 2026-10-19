@@ -45,7 +45,7 @@ node scripts/serve.mjs .
 
 `MODE` is mutation, records or array; F always uses full-array replacement. `HZ` is 1, 5 or 10. `WORKLOAD=0`, `100`, `500` or `2000` overrides runtime scenario record counts; A stays initial navigation and F stays 5,000 records. Each profile is retained separately in summaries. `SCENARIOS` accepts comma-separated A–H. Set `HEADED=1` for visible browser runs (requires a display); record this as a separate experiment. The same Chrome executable, viewport and launch policy apply across a run. Keep other machine activity low; close unrelated workloads before publishing measurements. Build and browser measurements are separate and must not overlap for controlled results.
 
-The runtime harness fails closed if functional assertions, page errors, checksums or visible DOM values fail. Failed JSON remains in the result directory. Every accepted runtime sample retains its event log, raw timing series and artifact hashes. `metadata.json` records environment and source information, and `order.json` records execution order. Summaries include median, quartiles, IQR, min/max and n. CSV files expose summaries and raw sample locations; JSON contains full diagnostics. Lighthouse results retain the full LHR report. Build results list each emitted JS artifact once with uncompressed, gzip and Brotli sizes.
+The runtime harness fails closed if functional assertions, page errors, checksums or visible DOM values fail. Failed JSON remains in the result directory. Accepted update scenarios B–H retain event logs, raw timing series and artifact hashes. Navigation samples retain navigation observations and final checksums; historical navigation samples have no per-sample bundle hash. `metadata.json` records environment and source information, and `order.json` records execution order. Summaries include median, quartiles, IQR, min/max and n. CSV files expose summaries and raw sample locations; JSON contains full diagnostics. Lighthouse results retain the full LHR report. Build results list each emitted JS artifact once with uncompressed, gzip and Brotli sizes.
 
 ## Development
 
@@ -59,4 +59,26 @@ All nine versions have passed both production builds and the shared functional w
 
 This repository is an executable experimental apparatus. Local results establish functionality and reproducibility of replay; they are not evidence of general statistical superiority. Read the verification ledger before treating an implementation phase as validated. Follow the documented protocol and retain all observations when conducting a controlled study.
 
-For repeated cold-build measurements, use `BUILD_REPS=3 VERSIONS=14,22 npm run build`. Repeated build ordering rotates and reverses the version/track sequence; the complete order is retained under `benchmark/results/build-orders/`. The dashboard also exposes build size/time and Lighthouse diagnostic batches without pooling them into runtime scenarios.
+For repeated cold-build measurements, use `BUILD_REPS=4 VERSIONS=14,22 npm run build`. Repeated build ordering rotates and reverses the version/track sequence; the complete order is retained under `benchmark/results/build-orders/`. The dashboard also exposes build size/time and Lighthouse diagnostic batches without pooling them into runtime scenarios.
+
+## Verified continuation (2026-10-19)
+
+See [FINAL_REPORT.md](FINAL_REPORT.md) for the command ledger and measured evidence. All nine clean application installs passed `npm ci --engine-strict` on their recorded supported Node versions. Angular 14 pins `browserslist@4.26.3` and `node-releases@2.0.27` to retain Node 16 compatibility. The repaired endpoint cold-build batch is separate from historical builds; its emitted JavaScript hashes match the validated runtime artifacts.
+
+After provisioning runtimes with the build script, reproduce verification with:
+
+```bash
+node scripts/verify-installs.mjs
+SKIP_INSTALL=1 BUILD_REPS=4 VERSIONS=14,22 node scripts/build.mjs
+# Run browser measurements only after builds finish:
+VERSIONS=22 TRACKS=baseline REPS=1 TICKS=3 HZ=1 WORKLOAD=0 MODE=mutation SCENARIOS=B npm run bench
+VERSIONS=14,15,16,17,18,19,20,21,22 REPS=1 node benchmark/harness/lighthouse.mjs
+npm test
+node scripts/check-parity.mjs
+node scripts/verify-generated.mjs
+node scripts/audit-results.mjs
+npm run summarize
+node scripts/verify-dashboard.mjs
+```
+
+The saved zero-change test already passed and was audited rather than repeated. One Lighthouse observation per variant is diagnostic evidence only. Preserve raw results and compare only within the same experiment and workload profile.

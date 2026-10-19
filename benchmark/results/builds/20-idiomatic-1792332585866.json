@@ -1,0 +1,128 @@
+{
+  "kind": "cold-build",
+  "experiment": "build-2026-10-18T14-07-31.269Z",
+  "rep": 0,
+  "version": 20,
+  "track": "idiomatic",
+  "durationMs": 8759.310611000008,
+  "environment": {
+    "node": "22.23.2",
+    "npm": "11.6.2",
+    "angular": "20.3.0",
+    "cli": "20.3.0",
+    "typescript": "5.9.3",
+    "os": "6.17.0-23-generic",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "cores": 16,
+    "memory": 16532312064,
+    "commit": "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+  },
+  "coldDefinition": "dist and Angular cache removed; dependencies installed; OS filesystem cache uncontrolled",
+  "configuration": {
+    "version": 1,
+    "cli": {
+      "analytics": false,
+      "cache": {
+        "enabled": false
+      }
+    },
+    "projects": {
+      "baseline": {
+        "projectType": "application",
+        "root": "",
+        "sourceRoot": "src",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/baseline",
+              "index": "src/index.html",
+              "main": "src/baseline.ts",
+              "tsConfig": "tsconfig.baseline.json",
+              "scripts": [
+                "src/engine.js"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "assets": []
+            },
+            "configurations": {
+              "production": {
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "aot": true
+              }
+            },
+            "defaultConfiguration": "production"
+          }
+        }
+      },
+      "idiomatic": {
+        "projectType": "application",
+        "root": "",
+        "sourceRoot": "src",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/idiomatic",
+              "index": "src/index.html",
+              "main": "src/idiomatic.ts",
+              "tsConfig": "tsconfig.idiomatic.json",
+              "scripts": [
+                "src/engine.js"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "assets": []
+            },
+            "configurations": {
+              "production": {
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "extractLicenses": true,
+                "aot": true
+              }
+            },
+            "defaultConfiguration": "production"
+          }
+        }
+      }
+    }
+  },
+  "lockfileSha256": "b0c1da01fac1219f21232226d75d65238474156d15795de8f346602fccbbd818",
+  "builder": "@angular-devkit/build-angular:browser",
+  "assets": [
+    {
+      "file": "main.4cee665b2e763bfb.js",
+      "bytes": 168481,
+      "gzip": 57489,
+      "brotli": 51401,
+      "sha256": "d12195e10d516c18c32de19baff721ad346592d2afa4bd19f46260b1c053f290"
+    },
+    {
+      "file": "runtime.ce17ae98a0b7fafd.js",
+      "bytes": 896,
+      "gzip": 554,
+      "brotli": 516,
+      "sha256": "54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9"
+    },
+    {
+      "file": "scripts.64ee708414c1c2e8.js",
+      "bytes": 1382,
+      "gzip": 789,
+      "brotli": 697,
+      "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+    }
+  ],
+  "at": "2026-10-18T14:09:45.866Z"
+}

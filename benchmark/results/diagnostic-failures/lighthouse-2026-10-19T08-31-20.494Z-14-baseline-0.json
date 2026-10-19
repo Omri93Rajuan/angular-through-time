@@ -1,0 +1,8 @@
+{
+  "experiment": "lighthouse-2026-10-19T08-31-20.494Z",
+  "version": 14,
+  "track": "baseline",
+  "rep": 0,
+  "accepted": false,
+  "error": "AssertionError [ERR_ASSERTION]: Lighthouse page must remain inspectable"
+}

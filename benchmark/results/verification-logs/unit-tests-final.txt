@@ -1,0 +1,56 @@
+
+> angular-through-time@0.1.0 test
+> node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs
+
+TAP version 13
+# Subtest: each variant occupies every position once per complete cycle
+ok 1 - each variant occupies every position once per complete cycle
+  ---
+  duration_ms: 1.56734
+  type: 'test'
+  ...
+# Subtest: quartiles interpolate and retain outliers
+ok 2 - quartiles interpolate and retain outliers
+  ---
+  duration_ms: 1.929674
+  type: 'test'
+  ...
+# Subtest: CLS excludes input shifts and separates distant windows
+ok 3 - CLS excludes input shifts and separates distant windows
+  ---
+  duration_ms: 0.302028
+  type: 'test'
+  ...
+# Subtest: 5000 fixed assets and distinct deterministic changes
+ok 4 - 5000 fixed assets and distinct deterministic changes
+  ---
+  duration_ms: 25.951565
+  type: 'test'
+  ...
+# Subtest: mutation identities differ but replay values agree
+ok 5 - mutation identities differ but replay values agree
+  ---
+  duration_ms: 37.045447
+  type: 'test'
+  ...
+# Subtest: unsupported workloads fail closed
+ok 6 - unsupported workloads fail closed
+  ---
+  duration_ms: 0.428376
+  type: 'test'
+  ...
+# Subtest: canonical fixture and golden replay checksum are stable
+ok 7 - canonical fixture and golden replay checksum are stable
+  ---
+  duration_ms: 13.170163
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 142.061726

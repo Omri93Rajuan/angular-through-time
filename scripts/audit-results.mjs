@@ -37,8 +37,25 @@ for(const dir of fs.readdirSync('benchmark/results/runtime')){
 const builds=new Map();
 for(const f of files('benchmark/results/builds')){const s=read(f);if(!s.experiment)continue;const key=s.experiment+'|'+s.version+'|'+s.track;if(!builds.has(key))builds.set(key,[]);builds.get(key).push({file:f,...s});}
 for(const [key,rows]of builds){const entry={key,n:rows.length,repetitions:rows.map(s=>s.rep).sort(),lockHashes:[...new Set(rows.map(s=>s.lockfileSha256))],artifactSignatures:[...new Set(rows.map(s=>signature(s.assets)))],commits:[...new Set(rows.map(s=>s.environment.commit))],durationMs:describe(rows.map(s=>s.durationMs))};report.buildBatches.push(entry);if(entry.lockHashes.length!==1||entry.artifactSignatures.length!==1)report.integrityErrors.push({key,error:'Build batch has mixed inputs or outputs'});for(const s of rows)collect(key+'|coldBuildMs',s.file,s.durationMs);}
+for(const experiment of new Set(report.buildBatches.map(b=>b.key.split('|')[0]))){
+ const orderFile='benchmark/results/build-orders/'+experiment+'.json';
+ if(!fs.existsSync(orderFile)){report.warnings.push({experiment,reason:'Historical build batch has no saved order; balance cannot be verified'});continue;}
+ const order=read(orderFile);
+ const actual=[...builds.values()].flat().filter(s=>s.experiment===experiment);
+ try{assert.equal(actual.length,order.length);for(const s of actual)assert.deepEqual({version:s.version,track:s.track,rep:s.rep},order[s.orderIndex]);
+  const variants=new Set(order.map(s=>s.version+'|'+s.track)).size;
+  if(order.length===variants*variants)for(const variant of new Set(order.map(s=>s.version+'|'+s.track))){const positions=order.flatMap((s,i)=>s.version+'|'+s.track===variant?[i%variants]:[]);assert.equal(new Set(positions).size,variants);}
+ }catch(error){report.integrityErrors.push({experiment,error:String(error)});}
+}
 for(const [key,values]of metricGroups){if(values.length<4)continue;const stats=describe(values.map(x=>x.value)),low=stats.q1-1.5*stats.iqr,high=stats.q3+1.5*stats.iqr;for(const s of values)if(s.value<low||s.value>high)report.outliers.push({key,...s,lowFence:low,highFence:high,n:values.length,handling:'Retained; small-n descriptive flag, not a rejection or significance test'});}
-for(const f of files('benchmark/results/lighthouse')){const s=read(f);try{assert.equal(s.functionalPassed,true);assert.ok(!s.lhr.runtimeError);for(const metric of ['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'])assert.ok(Number.isFinite(s.lhr.audits[metric].numericValue));report.lighthouse.push({file:f,experiment:s.experiment,version:s.version,track:s.track,rep:s.rep,lcpMs:s.lhr.audits['largest-contentful-paint'].numericValue,cls:s.lhr.audits['cumulative-layout-shift'].numericValue,tbtMs:s.lhr.audits['total-blocking-time'].numericValue,warnings:s.lhr.runWarnings||[]});}catch(error){report.integrityErrors.push({file:f,error:String(error)});}}
+for(const f of files('benchmark/results/lighthouse')){const s=read(f);try{assert.equal(s.functionalPassed,true);assert.ok(!s.lhr.runtimeError);assert.equal(s.finalState.tick,0);assert.equal(s.finalState.checksum,E.checksum(E.initial()));for(const metric of ['largest-contentful-paint','cumulative-layout-shift','total-blocking-time'])assert.ok(Number.isFinite(s.lhr.audits[metric].numericValue));report.lighthouse.push({file:f,experiment:s.experiment,version:s.version,track:s.track,rep:s.rep,lcpMs:s.lhr.audits['largest-contentful-paint'].numericValue,cls:s.lhr.audits['cumulative-layout-shift'].numericValue,tbtMs:s.lhr.audits['total-blocking-time'].numericValue,warnings:s.lhr.runWarnings||[]});}catch(error){report.integrityErrors.push({file:f,error:String(error)});}}
+for(const experiment of new Set(report.lighthouse.map(s=>s.experiment))){
+ const rows=report.lighthouse.filter(s=>s.experiment===experiment).map(s=>read(s.file));
+ try{const order=read('benchmark/results/lighthouse-orders/'+experiment+'.json');assert.equal(rows.length,order.length);assert.equal(new Set(rows.map(s=>s.orderIndex)).size,rows.length);
+  assert.equal(new Set(rows.map(s=>s.environment.chromeSha256)).size,1);assert.equal(new Set(rows.map(s=>JSON.stringify(s.provenance))).size,1);
+  for(const s of rows)assert.deepEqual({version:s.version,track:s.track,rep:s.rep},order[s.orderIndex]);
+ }catch(error){report.integrityErrors.push({experiment,error:String(error)});}
+}
 for(const f of files('benchmark/results/diagnostic-failures'))report.failures.push({file:f,...read(f)});
 report.totals={accepted:report.batches.reduce((n,b)=>n+b.accepted,0),rejected:report.failures.length,ticks:report.batches.reduce((n,b)=>n+b.ticks,0),lateUpdates:report.batches.reduce((n,b)=>n+b.lateUpdates,0),droppedUpdates:report.batches.reduce((n,b)=>n+b.droppedUpdates,0),integrityErrors:report.integrityErrors.length,outlierFlags:report.outliers.length,lighthouseReports:report.lighthouse.length};
 fs.mkdirSync('benchmark/results/audits',{recursive:true});fs.writeFileSync('benchmark/results/audits/results.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report.totals));if(report.integrityErrors.length)process.exitCode=1;

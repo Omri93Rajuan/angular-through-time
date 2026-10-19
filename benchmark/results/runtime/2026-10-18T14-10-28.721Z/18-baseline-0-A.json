@@ -1,0 +1,94 @@
+{
+  "version": 18,
+  "track": "baseline",
+  "rep": 0,
+  "scenario": "A",
+  "functional": {
+    "passed": true,
+    "assertions": "5000 rows, search, sector, sorting, watchlist, details, all update modes, every displayed price, pause/resume, reset",
+    "checkedAt": "2026-10-18T14:16:26.092Z"
+  },
+  "accepted": true,
+  "navigation": {
+    "name": "http://127.0.0.1:39555/",
+    "entryType": "navigation",
+    "startTime": 0,
+    "duration": 742.5,
+    "initiatorType": "navigation",
+    "deliveryType": "",
+    "nextHopProtocol": "http/1.1",
+    "renderBlockingStatus": "non-blocking",
+    "contentType": "text/html",
+    "contentEncoding": "",
+    "workerStart": 0,
+    "workerRouterEvaluationStart": 0,
+    "workerCacheLookupStart": 0,
+    "workerMatchedSourceType": "",
+    "workerFinalSourceType": "",
+    "redirectStart": 0,
+    "redirectEnd": 0,
+    "fetchStart": 0.2999999523162842,
+    "domainLookupStart": 0.2999999523162842,
+    "domainLookupEnd": 0.2999999523162842,
+    "connectStart": 0.2999999523162842,
+    "secureConnectionStart": 0,
+    "connectEnd": 0.2999999523162842,
+    "requestStart": 0.7999999523162842,
+    "responseStart": 1.2999999523162842,
+    "firstInterimResponseStart": 0,
+    "finalResponseHeadersStart": 1.2999999523162842,
+    "responseEnd": 1.699999988079071,
+    "transferSize": 1110,
+    "encodedBodySize": 810,
+    "decodedBodySize": 810,
+    "responseStatus": 200,
+    "serverTiming": [],
+    "unloadEventStart": 0,
+    "unloadEventEnd": 0,
+    "domInteractive": 10,
+    "domContentLoadedEventStart": 248.0999999642372,
+    "domContentLoadedEventEnd": 248.0999999642372,
+    "domComplete": 742.5,
+    "loadEventStart": 742.5,
+    "loadEventEnd": 742.5,
+    "type": "navigate",
+    "redirectCount": 0,
+    "activationStart": 0,
+    "criticalCHRestart": 0,
+    "notRestoredReasons": null,
+    "confidence": {
+      "randomizedTriggerRate": 0.4994798,
+      "value": "high"
+    }
+  },
+  "observations": {
+    "longTasks": [
+      {
+        "start": 14.599999964237213,
+        "duration": 737,
+        "value": 0,
+        "hadRecentInput": false
+      },
+      {
+        "start": 752.2999999523163,
+        "duration": 101,
+        "value": 0,
+        "hadRecentInput": false
+      }
+    ],
+    "lcp": [
+      {
+        "start": 872,
+        "duration": 0,
+        "value": 0,
+        "hadRecentInput": false
+      }
+    ],
+    "cls": [],
+    "frames": []
+  },
+  "renderReadyMs": 862,
+  "checksum": "ba2bdece",
+  "kind": "navigation",
+  "coldDefinition": "new page, no-store HTTP, warm browser process and server; not OS cold"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "version": 14,
+    "track": "baseline",
+    "rep": 0
+  },
+  {
+    "version": 14,
+    "track": "idiomatic",
+    "rep": 0
+  },
+  {
+    "version": 22,
+    "track": "baseline",
+    "rep": 0
+  },
+  {
+    "version": 22,
+    "track": "idiomatic",
+    "rep": 0
+  },
+  {
+    "version": 14,
+    "track": "idiomatic",
+    "rep": 1
+  },
+  {
+    "version": 22,
+    "track": "baseline",
+    "rep": 1
+  },
+  {
+    "version": 22,
+    "track": "idiomatic",
+    "rep": 1
+  },
+  {
+    "version": 14,
+    "track": "baseline",
+    "rep": 1
+  },
+  {
+    "version": 22,
+    "track": "baseline",
+    "rep": 2
+  },
+  {
+    "version": 22,
+    "track": "idiomatic",
+    "rep": 2
+  },
+  {
+    "version": 14,
+    "track": "baseline",
+    "rep": 2
+  },
+  {
+    "version": 14,
+    "track": "idiomatic",
+    "rep": 2
+  },
+  {
+    "version": 22,
+    "track": "idiomatic",
+    "rep": 3
+  },
+  {
+    "version": 14,
+    "track": "baseline",
+    "rep": 3
+  },
+  {
+    "version": 14,
+    "track": "idiomatic",
+    "rep": 3
+  },
+  {
+    "version": 22,
+    "track": "baseline",
+    "rep": 3
+  }
+]
