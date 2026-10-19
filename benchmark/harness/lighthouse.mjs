@@ -13,7 +13,7 @@ import {parity} from './functional.mjs';
 import {balancedOrder} from './order.mjs';
 
 const hash = f => createHash('sha256').update(fs.readFileSync(f)).digest('hex');
-const provenance = {commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceDirty:!!execFileSync('git',['status','--porcelain','--','apps','scripts','benchmark/harness','package.json','package-lock.json'],{encoding:'utf8'}).trim(),harnessSha256:hash('benchmark/harness/lighthouse.mjs'),rootLockfileSha256:hash('package-lock.json')};
+const provenance = {commit:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceDirty:!!execFileSync('git',['status','--porcelain','--','v14','v15','v16','v17','v18','v19','v20','v21','v22','scripts','benchmark/harness','package.json','package-lock.json'],{encoding:'utf8'}).trim(),harnessSha256:hash('benchmark/harness/lighthouse.mjs'),rootLockfileSha256:hash('package-lock.json')};
 const experiment = 'lighthouse-' + new Date().toISOString().replaceAll(':', '-');
 const chromePath = process.env.CHROME || '/opt/google/chrome/chrome';
 const base = (process.env.VERSIONS || '14,22').split(',').flatMap(version =>
@@ -24,10 +24,10 @@ fs.mkdirSync('benchmark/results/lighthouse-orders', {recursive: true});
 fs.writeFileSync(`benchmark/results/lighthouse-orders/${experiment}.json`, JSON.stringify(jobs, null, 2));
 for (const [orderIndex, job] of jobs.entries()) {
   const {version, track, rep} = job;
-  const artifactRoot=`apps/angular-${version}/dist/${track}`;
+  const artifactRoot=`v${version}/dist/${track}`;
   const artifacts=()=>fs.readdirSync(artifactRoot).filter(f=>f.endsWith('.js')).sort().map(file=>({file,sha256:hash(artifactRoot+'/'+file)}));
   const artifactSha256=artifacts();
-  const {server, url} = await serve(`apps/angular-${version}/dist/${track}`);
+  const {server, url} = await serve(`v${version}/dist/${track}`);
   let chrome, diagnosticBrowser, diagnosticResult;
   try {
     const browser = await chromium.launch({executablePath: chromePath, headless: true, args: ['--no-sandbox']});

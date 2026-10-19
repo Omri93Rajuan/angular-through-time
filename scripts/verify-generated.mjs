@@ -8,7 +8,8 @@ const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?
 try{
  for(const p of ['templates','packages/market-fixtures'])fs.cpSync(path.join(root,p),path.join(scratch,p),{recursive:true});
  execFileSync(process.execPath,[path.join(root,'scripts/generate.mjs')],{cwd:scratch});
- const files=[...walk(path.join(scratch,'apps')),...walk(path.join(scratch,'docs'))];
+ assert.ok(!fs.existsSync(path.join(scratch,'apps')),'Generator must not recreate the old apps/ directory');
+ const files=[...['v14','v15','v16','v17','v18','v19','v20','v21','v22'].flatMap(dir=>walk(path.join(scratch,dir))),...walk(path.join(scratch,'docs'))];
  for(const file of files){const relative=path.relative(scratch,file),actual=fs.readFileSync(path.join(root,relative),'utf8'),expected=fs.readFileSync(file,'utf8');if(file.endsWith('.json'))assert.deepEqual(JSON.parse(actual),JSON.parse(expected),relative);else assert.equal(actual,expected,relative);}
  console.log(`${files.length} generated files match a fresh scratch generation; workspace untouched.`);
 }finally{fs.rmSync(scratch,{recursive:true,force:true});}

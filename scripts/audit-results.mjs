@@ -27,7 +27,7 @@ for(const dir of fs.readdirSync('benchmark/results/runtime')){
     batch.lateUpdates+=s.lateUpdates;batch.droppedUpdates+=s.dropped;batch.maximumLatenessMs=Math.max(batch.maximumLatenessMs,...s.latencies.map(l=>l.lateMs));if(s.lateUpdates)batch.filesWithLateUpdates.push(f);
     profiles.add(`${s.count} records / ${s.hz} Hz / ${s.mode} / ${s.ticks} ticks`);
     for(const [metric,value]of Object.entries({presentationMs:quantile(s.latencies.map(l=>l.presentationMs),.5),processingMs:quantile(s.latencies.map(l=>l.processingMs),.5),throughput:s.throughputRecordsPerSecond,maximumLatenessMs:Math.max(...s.latencies.map(l=>l.lateMs))}))collect([dir,s.version,s.track,s.scenario,s.count,s.hz,s.mode,s.ticks,metric].join('|'),f,value);
-    if(s.artifactSha256)for(const a of s.artifactSha256){const p=`apps/angular-${s.version}/dist/${s.track}/${a.file}`;if(!fs.existsSync(p)||digest(p)!==a.sha256){report.warnings.push({file:f,reason:'Historical artifact differs from current dist; retain its recorded hash'});break;}}
+    if(s.artifactSha256)for(const a of s.artifactSha256){const p=`v${s.version}/dist/${s.track}/${a.file}`;if(!fs.existsSync(p)||digest(p)!==a.sha256){report.warnings.push({file:f,reason:'Historical artifact differs from current dist; retain its recorded hash'});break;}}
    }else{assert.equal(s.checksum,E.checksum(E.initial()));assert.ok(Number.isFinite(s.renderReadyMs)&&s.renderReadyMs>0);}
    batch.checksumsByScenario[s.scenario]??=[];if(!batch.checksumsByScenario[s.scenario].includes(s.checksum))batch.checksumsByScenario[s.scenario].push(s.checksum);
   }catch(error){report.integrityErrors.push({file:f,error:String(error)});}
