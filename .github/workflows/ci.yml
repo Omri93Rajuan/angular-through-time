@@ -1,0 +1,141 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validation:
+    name: Fast validation (Node 22.23.2)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - name: Check out source and comparison history
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up pinned root Node and npm download cache
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Pin npm and verify root runtime
+        run: |
+          npm install --global npm@11.6.2 --no-audit --no-fund
+          node --version
+          npm --version
+          node --input-type=module -e "import fs from 'node:fs'; import assert from 'node:assert/strict'; assert.equal(process.version, 'v' + JSON.parse(fs.readFileSync('package.json')).engines.node);"
+          test "$(npm --version)" = '11.6.2'
+      - name: Clean install from root lockfile
+        run: npm ci --engine-strict --no-audit --no-fund
+      - name: Unit tests
+        run: npm test
+      - name: Verify generated sources without rewriting workspace
+        run: node scripts/verify-generated.mjs
+      - name: Verify source parity and exact dependency pins
+        run: node scripts/check-parity.mjs
+      - name: Check syntax of every tracked JavaScript file
+        shell: bash
+        run: |
+          while IFS= read -r -d '' file; do
+            echo "Checking $file"
+            node --check "$file"
+          done < <(git ls-files -z '*.js' '*.mjs' '*.cjs')
+      - name: Check whitespace and unchanged tracked files
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --check
+          if [ -n "$PR_BASE_SHA" ]; then
+            git diff --check "$PR_BASE_SHA"...HEAD
+          else
+            git show --format= --check HEAD
+          fi
+          git diff --exit-code
+
+  production:
+    name: Angular ${{ matrix.angular }} production (both tracks)
+    needs: validation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      # Each matrix job has its own runner; never parallelize the two builds within it.
+      max-parallel: 2
+      matrix:
+        include:
+          - {angular: 14, node: '16.20.2', npm: '8.19.4'}
+          - {angular: 15, node: '18.20.8', npm: '10.9.8'}
+          - {angular: 16, node: '18.20.8', npm: '10.9.8'}
+          - {angular: 17, node: '20.19.5', npm: '10.9.8'}
+          - {angular: 18, node: '22.23.2', npm: '11.6.2'}
+          - {angular: 19, node: '22.23.2', npm: '11.6.2'}
+          - {angular: 20, node: '22.23.2', npm: '11.6.2'}
+          - {angular: 21, node: '22.23.2', npm: '11.6.2'}
+          - {angular: 22, node: '22.23.2', npm: '11.6.2'}
+    defaults:
+      run:
+        working-directory: v${{ matrix.angular }}
+    env:
+      NG_CLI_ANALYTICS: 'false'
+      NG_BUILD_MAX_WORKERS: '2'
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Set up version-specific Node and npm download cache
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: v${{ matrix.angular }}/package-lock.json
+      - name: Pin npm and verify compatibility matrix
+        env:
+          ANGULAR_MAJOR: ${{ matrix.angular }}
+          EXPECTED_NPM: ${{ matrix.npm }}
+        run: |
+          npm install --global "npm@$EXPECTED_NPM" --no-audit --no-fund
+          node --version
+          npm --version
+          test "$(npm --version)" = "$EXPECTED_NPM"
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const major = Number(process.env.ANGULAR_MAJOR);
+          const expected = JSON.parse(fs.readFileSync('../docs/versions.json')).find(v => v.major === major);
+          const pkg = JSON.parse(fs.readFileSync('package.json'));
+          assert.equal(process.version, 'v' + expected.node);
+          assert.equal(pkg.engines.node, expected.node);
+          assert.equal(fs.readFileSync('.nvmrc', 'utf8').trim(), expected.node);
+          assert.equal(pkg.dependencies['@angular/core'], expected.angular);
+          assert.equal(pkg.devDependencies['@angular/cli'], expected.cli);
+          assert.equal(pkg.devDependencies.typescript, expected.typescript);
+          const documented = fs.readFileSync('../VERSION_MATRIX.md', 'utf8').split('\n').find(line => line.startsWith(`| ${major} |`));
+          assert.equal(documented.split('|').at(-2).trim(), process.env.EXPECTED_NPM);
+          JS
+      - name: Clean install from application lockfile (including committed overrides)
+        id: install
+        run: npm ci --engine-strict --no-audit --no-fund
+      # Direct CLI calls validate compilation without creating research measurements.
+      - name: Build baseline production variant
+        run: node node_modules/@angular/cli/bin/ng.js build baseline --configuration production
+      - name: Build idiomatic production variant
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: node node_modules/@angular/cli/bin/ng.js build idiomatic --configuration production
+      - name: Verify installs and builds did not modify tracked files
+        if: ${{ always() }}
+        run: git diff --exit-code

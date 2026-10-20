@@ -1,5 +1,7 @@
 # Angular Through Time
 
+[![CI](https://github.com/Omri93Rajuan/angular-through-time/actions/workflows/ci.yml/badge.svg?event=pull_request)](https://github.com/Omri93Rajuan/angular-through-time/actions/workflows/ci.yml)
+
 **Angular Through Time** is a reproducible research project comparing the same fictional Market Terminal application across Angular 14–22. It includes isolated Angular applications, a deterministic market-data simulator, browser benchmark tooling, saved raw observations, verification records, and a results dashboard.
 
 The project is an experimental apparatus, not a claim that one Angular release or architecture is universally faster.
@@ -127,3 +129,11 @@ Regenerate the documented version matrix with `node scripts/matrix-doc.mjs`. Ins
 The project's research organization was methodologically inspired by [Janirr/angular-evolution-benchmark](https://github.com/Janirr/angular-evolution-benchmark). Market Terminal, its seeded engine, UI, protocol, and results are original work; no implementation, prose, interface, dataset, or result was copied. See [ATTRIBUTION.md](ATTRIBUTION.md) for details and source references.
 
 This project is distributed under the [MIT License](LICENSE). Angular and third-party dependencies remain subject to their respective licenses; production build notices are retained with the build outputs.
+
+## Continuous integration
+
+Pull requests targeting `dev` or `main` run [CI](.github/workflows/ci.yml); the workflow also supports manual dispatch once available on the default branch. Fast validation uses root Node 22.23.2 and npm 11.6.2 for a strict clean install, unit tests, scratch-generated source verification, source parity, tracked JavaScript syntax checks and whitespace checks.
+
+Nine production jobs use the exact Node/npm pairs in [VERSION_MATRIX.md](VERSION_MATRIX.md). Each installs from its existing lockfile with `npm ci --engine-strict`, retaining committed compatibility overrides, then compiles both baseline and idiomatic variants sequentially. At most two matrix jobs run at once on separate runners, with two Angular build workers per runner. Only npm downloads are cached; every job performs a clean install and checks that tracked files remain unchanged. Actions are pinned by commit and the workflow token has read-only repository access.
+
+CI checks correctness and compilation only. It does not run workload performance benchmarks or Lighthouse, create benchmark samples, or provide research-grade performance comparisons. Build failures remain visible per version; CI does not merge pull requests automatically.
