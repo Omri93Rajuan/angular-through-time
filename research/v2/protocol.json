@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "id": "market-v2-pilot-1",
+  "status": "pilot-only",
+  "confirmatoryApproved": false,
+  "primaryOutcome": "run-level p95 presentation opportunity milliseconds",
+  "secondaryOutcomes": ["run p50 presentation", "synchronous apply-call duration", "late updates", "completion", "interaction duration including automation"],
+  "delivery": "serial-lossless",
+  "deadline": "begin later than due plus one target interval",
+  "pilot": {"warmupTicks": 3, "ticks": 6, "hz": 5, "count": 100, "mode": "mutation", "minimumCompleteCycles": 1},
+  "proposedConfirmatory": {"warmupSeconds": 30, "measurementSeconds": 60, "minimumIndependentBlocks": 10, "relativePracticalDifference": 0.1},
+  "pendingDecisions": ["prioritized experiments and scenarios", "precision target and pilot-based sample size", "multiplicity policy", "hardware and environmental invalidity rules", "duration feasibility", "independent-arrival extension"],
+  "failurePolicy": "Preserve every attempt. Functional failure rejects performance. Correct late updates remain outcomes. Never exclude because slow.",
+  "uncertaintyUnit": "independent process/run blocks, never individual ticks",
+  "approval": "Main campaign requires explicit researcher approval of a frozen protocol and sample-size decisions; this runner only permits pilots."
+}
