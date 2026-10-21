@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "cli": {
+    "analytics": false,
+    "cache": {
+      "enabled": false
+    }
+  },
+  "projects": {
+    "idiomatic-v2": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/idiomatic-v2",
+            "index": "src/research/index.html",
+            "main": "src/research/idiomatic-v2/main.ts",
+            "tsConfig": "tsconfig.idiomatic-v2.json",
+            "scripts": [
+              "src/engine.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "assets": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "aot": true
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "m4-zone": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/m4-zone",
+            "index": "src/research/index.html",
+            "main": "src/research/m4-zone/main.ts",
+            "tsConfig": "tsconfig.m4-zone.json",
+            "scripts": [
+              "src/engine.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "assets": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "aot": true
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "idiomatic-v2-diagnostic": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/idiomatic-v2-diagnostic",
+            "index": "src/research/index.html",
+            "main": "src/research/idiomatic-v2-diagnostic/main.ts",
+            "tsConfig": "tsconfig.idiomatic-v2-diagnostic.json",
+            "scripts": [
+              "src/engine.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "assets": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "aot": true
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    },
+    "portable-default": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/portable-default",
+            "index": "src/research/index.html",
+            "main": "src/research/portable-default/main.ts",
+            "tsConfig": "tsconfig.portable-default.json",
+            "scripts": [
+              "src/engine.js"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "assets": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "aot": true
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
+  }
+}
