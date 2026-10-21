@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "track": "default-cli-v1",
+  "architectureRevision": "portable-components-1",
+  "version": 19,
+  "recipe": "exact-cli-generated-csr-css-no-routing",
+  "builder": "@angular-devkit/build-angular:application",
+  "changes": [
+    {
+      "file": "angular.json",
+      "scaffoldSha256": "310f1a65b3b57f20a1725afa543a67dc703d04f7a6ded063042661c078fbc996",
+      "adaptedSha256": "5ccc67ffd3fd44506ce887bfb9f06aec536d8f819131c39de28cd8c1f3dc5f86"
+    },
+    {
+      "file": "package.json",
+      "scaffoldSha256": "5b59e40f6e31b8112b644303945551ac20719a7621f7986b5b39225e7cd9e42b",
+      "adaptedSha256": "428f1bf435e52791236d5d2d8ebed8c95a3d2dc7e8ead0ee324589f4f3a961b4"
+    },
+    {
+      "file": "src/index.html",
+      "scaffoldSha256": "f8dbcf5f50ac6181722a8616e6e15c3a76448ae0807fed1a825c112432f56d0a",
+      "adaptedSha256": "d8ca60fb0a6981f7f014223a02dcdba4474955f228e4d40870cb37c6d2d57873"
+    },
+    {
+      "file": "src/main.ts",
+      "scaffoldSha256": "98f31b67b543962dfae3f3e55e5fbd56c77d1bc6835a5c317dd92fa7d4a022c8",
+      "adaptedSha256": "0ab2a5cf809cd584767a54753dfb2d5f762bb66add713ce99db2a55c98c463d2"
+    },
+    {
+      "file": "src/styles.css",
+      "scaffoldSha256": "c7295b915b6a250b910d30ff3b9d1991b6f43c9474d3afafc6cba59eee44383e",
+      "adaptedSha256": "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+    },
+    {
+      "file": ".nvmrc",
+      "scaffoldSha256": null,
+      "adaptedSha256": "08062faf0d7a2d22f5d7933c50e975dd1527034275597be7c1b3b9fd2b9d079a"
+    },
+    {
+      "file": "package-lock.json",
+      "scaffoldSha256": null,
+      "adaptedSha256": "d8fffc5876d2bbe5fb14d84f4a91779376baa0b877df86f7f5581ebf854efdc2"
+    },
+    {
+      "file": "src/engine.js",
+      "scaffoldSha256": null,
+      "adaptedSha256": "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+    },
+    {
+      "file": "src/research/AssetRow.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+    },
+    {
+      "file": "src/research/Chart.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+    },
+    {
+      "file": "src/research/Details.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "dedbce4034940949630778e78e9380f107cc84fe56a68036d58ce7ac613f91db"
+    },
+    {
+      "file": "src/research/Shell.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "cad78b580c0eac781d8606793f712e173f42a0b06b8bf8723de88d395f991e77"
+    },
+    {
+      "file": "src/research/Summary.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+    },
+    {
+      "file": "src/research/Table.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "f5076c993836b5e289c52605461a37b17f490cf6539650fe2ae64474392eed98"
+    },
+    {
+      "file": "src/research/Toolbar.html",
+      "scaffoldSha256": null,
+      "adaptedSha256": "52dd3d7757ddea2ad6594101c6a9ca2979d81c9f929a24a8962cd65589a553e7"
+    },
+    {
+      "file": "src/research/main.ts",
+      "scaffoldSha256": null,
+      "adaptedSha256": "1f39f6dbf4d6062f92663fc520cc177bfa6d3cc5a2d360ed1718ee7f971b08cc"
+    }
+  ],
+  "policy": "Preserve CLI builder/configurations/budgets/cache and bootstrap providers; replace payload, pin direct framework/toolchain dependencies, resolve a dedicated lock; Angular 14 compatibility overrides documented in root version matrix."
+}

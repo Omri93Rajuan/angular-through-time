@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "version": {
+    "major": 22,
+    "angular": "22.0.0",
+    "cli": "22.0.0",
+    "typescript": "6.0.3",
+    "node": "22.23.2",
+    "zone": "0.16.0"
+  },
+  "command": [
+    "/tmp/market-native-Cz2fDx/cli/bin/ng.js",
+    "new",
+    "market-native",
+    "--directory",
+    "app",
+    "--skip-install",
+    "--skip-git",
+    "--routing=false",
+    "--style=css",
+    "--interactive=false",
+    "--ssr=false"
+  ],
+  "scopeChoices": {
+    "routing": false,
+    "style": "css",
+    "ssr": false,
+    "interactive": false
+  },
+  "cliPackageSha256": "14f35b70a024791cdaa7cd377a9ffb07872d8d67cd6ae6c45d542ff9ce563a1a",
+  "exitCode": 0
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "version": {
+    "major": 16,
+    "angular": "16.2.12",
+    "cli": "16.2.16",
+    "typescript": "5.1.6",
+    "node": "18.20.8",
+    "zone": "0.13.3"
+  },
+  "command": [
+    "/tmp/market-native-KyzIma/cli/bin/ng.js",
+    "new",
+    "market-native",
+    "--directory",
+    "app",
+    "--skip-install",
+    "--skip-git",
+    "--routing=false",
+    "--style=css",
+    "--interactive=false"
+  ],
+  "scopeChoices": {
+    "routing": false,
+    "style": "css",
+    "ssr": false,
+    "interactive": false
+  },
+  "cliPackageSha256": "ba5021d5e2a6e8edbd953fa115f708668fe68c0efa4106718a227850f0a97618",
+  "exitCode": 0
+}

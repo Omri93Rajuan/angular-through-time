@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "version": {
+    "major": 15,
+    "angular": "15.2.10",
+    "cli": "15.2.11",
+    "typescript": "4.9.5",
+    "node": "18.20.8",
+    "zone": "0.12.0"
+  },
+  "command": [
+    "/tmp/market-native-NbNsT1/cli/bin/ng.js",
+    "new",
+    "market-native",
+    "--directory",
+    "app",
+    "--skip-install",
+    "--skip-git",
+    "--routing=false",
+    "--style=css",
+    "--interactive=false"
+  ],
+  "scopeChoices": {
+    "routing": false,
+    "style": "css",
+    "ssr": false,
+    "interactive": false
+  },
+  "cliPackageSha256": "5b70a1d697c6888c00ef3b2360ad92117f984a0164d4cbcff3c348f7d19445b6",
+  "exitCode": 0
+}
