@@ -19,3 +19,4 @@ test('oracle handles floor, zero work, ties and independent derived values', () 
   assert.equal(o.visible({onlyWatch:true,watch:[42]}).length,1);
   assert.throws(()=>o.apply({tick:0,changes:[]}));
 });
+test('display precision follows DecimalPipe rounded-zero convention',async()=>{const {decimal}=await import('./oracle.mjs');assert.equal(decimal(-.0001),'0.00');assert.equal(decimal(-.01),'-0.01');assert.equal(decimal(12345.25),'12,345.25');assert.equal(decimal(12345,0),'12,345');});

@@ -24,4 +24,5 @@ export class Oracle {
     return selected.sort((a,b) => (a[sortKey] < b[sortKey] ? -1 : a[sortKey] > b[sortKey] ? 1 : 0) * (ascending ? 1 : -1) || a.id - b.id);
   }
 }
-export const decimal = (n, digits = 2) => (Math.abs(n) < .5 * 10 ** -digits ? 0 : n).toLocaleString('en-US', {minimumFractionDigits:digits, maximumFractionDigits:digits});
+const formats=new Map([0,2].map(d=>[d,new Intl.NumberFormat('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})]));
+export const decimal = (n, digits = 2) => formats.get(digits).format(Math.abs(n) < .5 * 10 ** -digits ? 0 : n);

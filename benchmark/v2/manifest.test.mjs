@@ -1,0 +1,2 @@
+import fs from 'node:fs';import {test} from 'node:test';import assert from 'node:assert/strict';import {validateManifest} from './manifest.mjs';
+test('declared architectures reject relabeling and unstable feature cells',()=>{const m=JSON.parse(fs.readFileSync('research/v2/22-idiomatic-v2.json'));validateManifest(m);assert.throws(()=>validateManifest({...m,track:'idiomatic'}));assert.throws(()=>validateManifest({...m,version:{...m.version,major:16}}));assert.throws(()=>validateManifest({...m,publication:undefined}));});

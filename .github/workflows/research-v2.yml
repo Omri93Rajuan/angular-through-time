@@ -1,0 +1,54 @@
+name: Research v2 correctness
+on:
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: research-v2-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '22.23.2'
+          cache: npm
+      - run: npm install --global npm@11.6.2 --no-audit --no-fund
+      - run: npm ci --engine-strict --no-audit --no-fund
+      - run: npm test
+      - run: node scripts/verify-generated.mjs && node scripts/check-parity.mjs && node scripts/verify-research-generated.mjs
+      - run: node benchmark/v2/audit.mjs && git diff --check
+  browser:
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        angular: [14,15,16,17,18,19,20,21,22]
+    env:
+      VERSIONS: ${{ matrix.angular }}
+      CHROME: /usr/bin/google-chrome
+      NG_CLI_ANALYTICS: 'false'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '22.23.2'
+      - run: npm install --global npm@11.6.2 --no-audit --no-fund
+      - run: npm ci --engine-strict --no-audit --no-fund
+      - run: node scripts/setup-research.mjs
+      - run: node scripts/build-research.mjs
+      - run: node benchmark/v2/verify.mjs
+      - name: Preserve compilation and browser failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: research-v2-${{ matrix.angular }}
+          path: benchmark/results-v2/
