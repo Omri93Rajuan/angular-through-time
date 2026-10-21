@@ -39,7 +39,7 @@
     {
       "file": "package-lock.json",
       "scaffoldSha256": null,
-      "adaptedSha256": "47c01af1ea4f49c14bad6a81a5b00911f4e249f6665183d0ed18d2de548d209b"
+      "adaptedSha256": "6ce66632339ca73cfb07eb16d6fd549383c8d349c16a5242d3f2c0fdb4233898"
     },
     {
       "file": "src/engine.js",

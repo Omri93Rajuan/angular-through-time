@@ -14,6 +14,9 @@ try{
    for(const value of [`${row.version} / ${row.track}`,row.rep,number(row.statistics?.p50),number(row.statistics?.p95),row.lateUpdates??'Unavailable']){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}
    const td=document.createElement('td'),a=document.createElement('a');a.href='../'+row.file;a.textContent=row.accepted?'Accepted':'Rejected / incomplete';if(!row.accepted)td.className='failure';td.append(a);if(row.error)td.title=row.error;tr.append(td);byId('runs').append(tr);
   }
+  byId('native-builds').replaceChildren();for(const row of data.nativeBuilds.filter(r=>!byId('version').value||String(r.version)===byId('version').value)){
+   const tr=document.createElement('tr');for(const value of [`${row.version} / ${row.cache}`,row.builder,number(row.durationMs),row.emittedJSBytes??'Unavailable']){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}const td=document.createElement('td'),a=document.createElement('a');a.href='../'+row.file;a.textContent=row.accepted?(row.sourceCommit?'Compiled':'Compiled; commit unavailable'):'Failed';td.append(a);tr.append(td);byId('native-builds').append(tr);
+  }
   byId('pairs').replaceChildren();for(const pair of data.pairs.filter(p=>!byId('experiment').value||p.experiment===byId('experiment').value)){
    const p=document.createElement('p');p.textContent=`${pair.variants.join(' → ')}: ${number(pair.estimate)} ms; 95% exploratory interval ${pair.interval?pair.interval.map(number).join(' to ')+' ms':'unavailable'}; ${pair.n} complete blocks; ${pair.missingBlocks} missing. Experiment ${pair.experiment}.`;byId('pairs').append(p);
   }

@@ -85,23 +85,23 @@ class View {
 }
 
 @Component({selector:'tr[market-row]',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,host:{'[attr.data-id]':'a.id','[class.selected]':'isSelected'},imports:[CommonModule,],templateUrl:'./AssetRow.html'})
-class AssetRow extends View {@Input() id!:number;get a(){return this.s.entities[this.id]();}get isWatched(){return this.s.memberships[this.id]();}get isSelected(){return this.s.selections[this.id]();}ngDoCheck(){count('AssetRow');}}
+class AssetRow extends View {@Input() id!:number;get a(){return this.s.entities[this.id]();}get isWatched(){return this.s.memberships[this.id]();}get isSelected(){return this.s.selections[this.id]();}ngDoCheck(){count('hook:AssetRow');}checked(){count('view:AssetRow');return '';}}
 
 @Component({selector:'market-toolbar',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,],templateUrl:'./Toolbar.html'})
-class Toolbar extends View {ngDoCheck(){count('Toolbar');}}
+class Toolbar extends View {ngDoCheck(){count('hook:Toolbar');}checked(){count('view:Toolbar');return '';}}
 
 @Component({selector:'market-table',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,AssetRow],templateUrl:'./Table.html'})
-class Table extends View {ngAfterViewChecked(){const el=this.s.restoreFocus;if(el?.isConnected){el.focus({preventScroll:true});this.s.restoreFocus=null;}}ngDoCheck(){count('Table');}}
+class Table extends View {ngAfterViewChecked(){const el=this.s.restoreFocus;if(el?.isConnected){el.focus({preventScroll:true});this.s.restoreFocus=null;}}ngDoCheck(){count('hook:Table');}checked(){count('view:Table');return '';}}
 
 @Component({selector:'market-summary',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,],templateUrl:'./Summary.html'})
-class Summary extends View {@Input() logicalTick=0; @Input() settings="";ngDoCheck(){count('Summary');}}
+class Summary extends View {@Input() logicalTick=0; @Input() settings="";ngDoCheck(){count('hook:Summary');}checked(){count('view:Summary');return '';}}
 
 @Component({selector:'market-chart',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,],templateUrl:'./Chart.html'})
-class Chart extends View {ngDoCheck(){count('Chart');}}
+class Chart extends View {ngDoCheck(){count('hook:Chart');}checked(){count('view:Chart');return '';}}
 
 @Component({selector:'market-details',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,],templateUrl:'./Details.html'})
-class Details extends View {ngDoCheck(){count('Details');}}
+class Details extends View {ngDoCheck(){count('hook:Details');}checked(){count('view:Details');return '';}}
 
 @Component({selector:'market-app',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,Toolbar,Table,Summary,Chart,Details],templateUrl:'./Shell.html'})
-class Shell extends View {constructor(s:Store,cd:ChangeDetectorRef){super(s);s.shellChange=()=>cd.markForCheck();}ngDoCheck(){count('Shell');}}
+class Shell extends View {constructor(s:Store,cd:ChangeDetectorRef){super(s);s.shellChange=()=>cd.markForCheck();}ngDoCheck(){count('hook:Shell');}checked(){count('view:Shell');return '';}}
 bootstrapApplication(Shell,{providers:[]});

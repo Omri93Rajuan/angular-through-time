@@ -53,8 +53,8 @@ for(const v of matrix){
  const detailTemplate=details.replaceAll('selected.','selected!.');
  const definitions=[['AssetRow','tr[market-row]',rowTemplate,rowCode,rowHost,[]],['Toolbar','market-toolbar',toolbar,'','',[]],['Table','market-table',tableTemplate,'ngAfterViewChecked(){const el=this.s.restoreFocus;if(el?.isConnected){el.focus({preventScroll:true});this.s.restoreFocus=null;}}','',['AssetRow']],['Summary','market-summary',summary,'@Input() logicalTick=0; @Input() settings="";','',[]],['Chart','market-chart',chart,'','',[]],['Details','market-details',detailTemplate,'','',[]],['Shell','market-app',shell,`constructor(s:Store,cd:ChangeDetectorRef){super(s);s.shellChange=()=>cd.markForCheck();}`,'',['Toolbar','Table','Summary','Chart','Details']]];
  for(const [name,selector,template,body,host,deps] of definitions){
-   write(`v${v.major}/src/research/${track}/${name}.html`,modernize(template));
-   source+=`\n@Component({selector:'${selector}',standalone:${standalone},${portable?'':'changeDetection:ChangeDetectionStrategy.OnPush,'}${host}${standalone?`imports:[CommonModule,${deps.join(',')}],`:''}templateUrl:'./${name}.html'})\nclass ${name} extends View {${body}${diag?`ngDoCheck(){count('${name}');}`:''}}\n`;
+   write(`v${v.major}/src/research/${track}/${name}.html`,(diag?'{{checked()}}':'')+modernize(template));
+   source+=`\n@Component({selector:'${selector}',standalone:${standalone},${portable?'':'changeDetection:ChangeDetectionStrategy.OnPush,'}${host}${standalone?`imports:[CommonModule,${deps.join(',')}],`:''}templateUrl:'./${name}.html'})\nclass ${name} extends View {${body}${diag?`ngDoCheck(){count('hook:${name}');}checked(){count('view:${name}');return '';}`:''}}\n`;
  }
  const providers=zoneless&&v.major===20?'[provideZonelessChangeDetection()]':!zoneless&&v.major>=21?'[provideZoneChangeDetection()]':'[]';
  source+=standalone?`bootstrapApplication(Shell,{providers:${providers}});\n`:`@NgModule({declarations:[${graph.join(',')}],imports:[BrowserModule],bootstrap:[Shell]}) class AppModule {}\nplatformBrowserDynamic().bootstrapModule(AppModule);\n`;
