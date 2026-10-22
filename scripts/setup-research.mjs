@@ -4,5 +4,5 @@ function run(cmd,args,options={}){const r=spawnSync(cmd,args,{stdio:'inherit',..
 for(const v of matrix.filter(v=>versions.includes(v.major))){
  const runtime=path.resolve(`.runtimes/${v.node}`),bin=path.join(runtime,'node_modules/.bin'),npm=v.major===14?'8.19.4':v.major<18?'10.9.8':'11.6.2';
  if(!fs.existsSync(`${bin}/node`)||!fs.existsSync(`${runtime}/node_modules/npm/package.json`)||JSON.parse(fs.readFileSync(`${runtime}/node_modules/npm/package.json`)).version!==npm)run('npm',['install','--prefix',runtime,'--no-audit','--no-fund',`node@${v.node}`,`npm@${npm}`]);
- run(`${bin}/npm`,['ci','--engine-strict','--no-audit','--no-fund'],{cwd:`v${v.major}`,env:{...process.env,PATH:bin+path.delimiter+process.env.PATH}});
+ if(!process.env.RUNTIME_ONLY)run(`${bin}/npm`,['ci','--engine-strict','--no-audit','--no-fund'],{cwd:`v${v.major}`,env:{...process.env,PATH:bin+path.delimiter+process.env.PATH}});
 }
