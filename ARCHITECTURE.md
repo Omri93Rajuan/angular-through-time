@@ -22,3 +22,26 @@ flowchart LR
   B -->|Build durations and asset hashes| R
   R --> D[Descriptive summaries and dashboard]
 ```
+
+## Research v2 namespaces
+
+The legacy generator and source remain intact. `scripts/generate-research.mjs` emits independent B and portable C source under `v*/src/research`, with separate build recipes and manifests. `native/v*` retains exact CLI default configurations; `research/native/v*/scaffold` preserves the unmodified scaffold and `adaptation.json` records the changes. Default builders are observed from generated recipes, not inferred from installed packages.
+
+```mermaid
+flowchart TD
+  E[Unchanged canonical engine] --> P[Mutation-safe entity publication]
+  P --> I[14–16 immutable inputs + imperative selectors]
+  P --> S[17+ per-entity Signals + computed selectors]
+  I --> G[Shell / toolbar / table / row / summary / chart / details]
+  S --> G
+  O[Independent fixture-derived Node oracle] --> V[Expanded browser acceptance]
+  G --> V
+  V --> R[Separate v2 pilot attempts + failures]
+  M[Versioned manifest + build/input hashes] --> R
+  R --> A[Run-level audit + paired block uncertainty]
+  A --> D[Research v2 dashboard]
+  C[Exact CLI scaffold] --> N[Portable imperative graph + native defaults]
+  N --> B[Separate build/cache/diagnostic evidence]
+```
+
+Signal row consumers read only their own entity, watch and selection publications. The ordered-ID computed selector reads prices only for price sorting. The selected panel follows only the selected entity; aggregate work remains a full reduction. Older optimized components use immutable touched inputs and explicit invalidation rather than deliberately eager selectors. Both new designs preserve canonical mutation/allocation semantics and include UI publication cost in timings. See [v2 methods](docs/RESEARCH_V2_METHODS.md).

@@ -1,0 +1,1281 @@
+{
+  "batches": [
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "label": "historical",
+      "commit": null,
+      "sourceDirty": null,
+      "accepted": 4,
+      "rejected": 0,
+      "runtimeSamples": 2,
+      "ticks": 6,
+      "lateUpdates": 0,
+      "droppedUpdates": 0,
+      "maximumLatenessMs": 9.699999988079071,
+      "filesWithLateUpdates": [],
+      "profiles": [
+        "100 records / 5 Hz / records / 3 ticks"
+      ],
+      "checksumsByScenario": {
+        "A": [
+          "ba2bdece"
+        ],
+        "B": [
+          "0fa75590"
+        ]
+      }
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "label": "historical",
+      "commit": null,
+      "sourceDirty": null,
+      "accepted": 8,
+      "rejected": 1,
+      "runtimeSamples": 7,
+      "ticks": 28,
+      "lateUpdates": 12,
+      "droppedUpdates": 0,
+      "maximumLatenessMs": 6857,
+      "filesWithLateUpdates": [
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-H.json"
+      ],
+      "profiles": [
+        "100 records / 5 Hz / records / 4 ticks",
+        "500 records / 5 Hz / records / 4 ticks",
+        "5000 records / 5 Hz / array / 4 ticks",
+        "2000 records / 5 Hz / records / 4 ticks"
+      ],
+      "checksumsByScenario": {
+        "A": [
+          "ba2bdece"
+        ],
+        "B": [
+          "207b02f8"
+        ],
+        "C": [
+          "3e872f62"
+        ],
+        "D": [
+          "3e872f62"
+        ],
+        "E": [
+          "3e872f62"
+        ],
+        "F": [
+          "78168c62"
+        ],
+        "G": [
+          "3e872f62"
+        ],
+        "H": [
+          "edee693c"
+        ]
+      }
+    },
+    {
+      "experiment": "2026-10-18T14-10-28.721Z",
+      "label": "full-matrix-smoke",
+      "commit": "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c",
+      "sourceDirty": false,
+      "accepted": 144,
+      "rejected": 0,
+      "runtimeSamples": 126,
+      "ticks": 504,
+      "lateUpdates": 174,
+      "droppedUpdates": 0,
+      "maximumLatenessMs": 2273.900000035763,
+      "filesWithLateUpdates": [
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-D.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-F.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-G.json",
+        "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-H.json"
+      ],
+      "profiles": [
+        "100 records / 5 Hz / records / 4 ticks",
+        "500 records / 5 Hz / records / 4 ticks",
+        "5000 records / 5 Hz / array / 4 ticks",
+        "2000 records / 5 Hz / records / 4 ticks"
+      ],
+      "checksumsByScenario": {
+        "A": [
+          "ba2bdece"
+        ],
+        "B": [
+          "207b02f8"
+        ],
+        "C": [
+          "3e872f62"
+        ],
+        "D": [
+          "3e872f62"
+        ],
+        "E": [
+          "3e872f62"
+        ],
+        "F": [
+          "78168c62"
+        ],
+        "G": [
+          "3e872f62"
+        ],
+        "H": [
+          "edee693c"
+        ]
+      }
+    },
+    {
+      "experiment": "2026-10-18T14-24-28.363Z",
+      "label": "balanced-endpoint-repetitions",
+      "commit": "18f7f64b8865b2f2cabeebdebed82dddb8205643",
+      "sourceDirty": false,
+      "accepted": 32,
+      "rejected": 0,
+      "runtimeSamples": 32,
+      "ticks": 320,
+      "lateUpdates": 144,
+      "droppedUpdates": 0,
+      "maximumLatenessMs": 1393.199999988079,
+      "filesWithLateUpdates": [
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-1-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-2-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-3-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-1-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-2-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-3-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-1-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-2-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-3-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-0-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-1-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-2-H.json",
+        "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-3-H.json"
+      ],
+      "profiles": [
+        "100 records / 10 Hz / records / 10 ticks",
+        "2000 records / 10 Hz / records / 10 ticks"
+      ],
+      "checksumsByScenario": {
+        "B": [
+          "421eb30c"
+        ],
+        "H": [
+          "1bd2edae"
+        ]
+      }
+    },
+    {
+      "experiment": "2026-10-18T14-29-26.459Z",
+      "label": "zero-workload-control",
+      "commit": "3edbd769921676d93553b3de68c3179e9dc32f1a",
+      "sourceDirty": false,
+      "accepted": 1,
+      "rejected": 0,
+      "runtimeSamples": 1,
+      "ticks": 3,
+      "lateUpdates": 0,
+      "droppedUpdates": 0,
+      "maximumLatenessMs": 3.899999976158142,
+      "filesWithLateUpdates": [],
+      "profiles": [
+        "0 records / 1 Hz / mutation / 3 ticks"
+      ],
+      "checksumsByScenario": {
+        "B": [
+          "ba2bdece"
+        ]
+      }
+    }
+  ],
+  "failures": [
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-idiomatic-0-A-FAILED.json",
+      "version": 22,
+      "track": "idiomatic",
+      "rep": 0,
+      "scenario": "A",
+      "accepted": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /M0042/. Input:\n\n'ASSET DETAILS\\n' +\n  '\\n' +\n  'Explore the market\\n' +\n  '\\n' +\n  'Select an asset to inspect its live price and sector.'\n",
+      "errors": []
+    },
+    {
+      "file": "benchmark/results/diagnostic-failures/lighthouse-2026-10-19T08-31-20.494Z-14-baseline-0.json",
+      "experiment": "lighthouse-2026-10-19T08-31-20.494Z",
+      "version": 14,
+      "track": "baseline",
+      "rep": 0,
+      "accepted": false,
+      "error": "AssertionError [ERR_ASSERTION]: Lighthouse page must remain inspectable"
+    }
+  ],
+  "integrityErrors": [],
+  "outliers": [
+    {
+      "key": "2026-10-18T14-24-28.363Z|14|baseline|H|2000|10|records|10|presentationMs",
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-1-H.json",
+      "value": 130.3499999642372,
+      "lowFence": 131.02500005811453,
+      "highFence": 143.42499991506338,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "2026-10-18T14-24-28.363Z|14|idiomatic|H|2000|10|records|10|throughput",
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-2-H.json",
+      "value": 9236.168837013802,
+      "lowFence": 8188.682173683287,
+      "highFence": 9136.79844476984,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "2026-10-18T14-24-28.363Z|14|idiomatic|H|2000|10|records|10|maximumLatenessMs",
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-2-H.json",
+      "value": 1138.9000000357628,
+      "lowFence": 1153.9000000581145,
+      "highFence": 1384.4999999031425,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "2026-10-18T14-24-28.363Z|22|baseline|B|100|10|records|10|throughput",
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-3-B.json",
+      "value": 1013.3765707826526,
+      "lowFence": 1017.1005634822603,
+      "highFence": 1057.044331514273,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "2026-10-18T14-24-28.363Z|22|baseline|H|2000|10|records|10|processingMs",
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-0-H.json",
+      "value": 27.44999998807907,
+      "lowFence": 22.031249962747097,
+      "highFence": 26.981250010430813,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|14|idiomatic|coldBuildMs",
+      "file": "benchmark/results/builds/14-idiomatic-1792333817968.json",
+      "value": 12094.065147000001,
+      "lowFence": 8817.253144749993,
+      "highFence": 11997.795642749996,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|22|baseline|coldBuildMs",
+      "file": "benchmark/results/builds/22-baseline-1792333955648.json",
+      "value": 8922.517762000003,
+      "lowFence": 8936.518451874997,
+      "highFence": 10251.155432875,
+      "n": 4,
+      "handling": "Retained; small-n descriptive flag, not a rejection or significance test"
+    }
+  ],
+  "warnings": [
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "experiment": "2026-10-18T13-59-45.803Z",
+      "reason": "Unversioned historical smoke evidence"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-H.json",
+      "reason": "Historical artifact differs from current dist; retain its recorded hash"
+    },
+    {
+      "experiment": "2026-10-18T14-02-16.428Z",
+      "reason": "Unversioned historical smoke evidence"
+    },
+    {
+      "experiment": "build-2026-10-18T14-07-31.269Z",
+      "reason": "Historical build batch has no saved order; balance cannot be verified"
+    }
+  ],
+  "buildBatches": [
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|14|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "ba42d653bad634ed6783f5b7fde264e5dd665fc47ce5feae5794ce39fd0ff2e6"
+      ],
+      "artifactSignatures": [
+        "main.3a2e458e312d500f.js:909ab6764332d60cc988f016b445abbb86623c49c46330baadd7d1112e3a97da|runtime.f8b5ad77d599ee88.js:71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 11235.415975999998,
+        "q1": 11235.415975999998,
+        "q3": 11235.415975999998,
+        "iqr": 0,
+        "min": 11235.415975999998,
+        "max": 11235.415975999998
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|14|baseline",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ba42d653bad634ed6783f5b7fde264e5dd665fc47ce5feae5794ce39fd0ff2e6"
+      ],
+      "artifactSignatures": [
+        "main.3a2e458e312d500f.js:909ab6764332d60cc988f016b445abbb86623c49c46330baadd7d1112e3a97da|runtime.f8b5ad77d599ee88.js:71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "3edbd769921676d93553b3de68c3179e9dc32f1a",
+        "d0e79582f2e9479f9f83afa404da77c917035442"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 10258.790238500005,
+        "q1": 10105.380061000003,
+        "q3": 10636.908565750005,
+        "iqr": 531.528504750002,
+        "min": 10099.367998000002,
+        "max": 11317.045078000001
+      }
+    },
+    {
+      "key": "build-2026-10-19T08-27-42.151Z|14|baseline",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "b8d4be55797beb491073796b08088c3d7eca1b9b603e5f7c10d90e395fb8f51b"
+      ],
+      "artifactSignatures": [
+        "main.3a2e458e312d500f.js:909ab6764332d60cc988f016b445abbb86623c49c46330baadd7d1112e3a97da|runtime.f8b5ad77d599ee88.js:71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "abfbb18493798989ddd61af8ca9939caa421c1fb"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 10942.282782999995,
+        "q1": 10209.15856049999,
+        "q3": 11554.902918499998,
+        "iqr": 1345.744358000009,
+        "min": 9791.732720999978,
+        "max": 11610.816497
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|14|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "ba42d653bad634ed6783f5b7fde264e5dd665fc47ce5feae5794ce39fd0ff2e6"
+      ],
+      "artifactSignatures": [
+        "main.ee98f1ff30909487.js:3a78f22dc24a9f5873fd91d93567cd840c63ed054dcd592940cf4109cbf1df31|runtime.ee8056a77841e7ca.js:59b0620aff0a10d348c6261071cfa40a33902ca361543ba6ea25b7936c8a9e49|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 10540.673970999998,
+        "q1": 10540.673970999998,
+        "q3": 10540.673970999998,
+        "iqr": 0,
+        "min": 10540.673970999998,
+        "max": 10540.673970999998
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|14|idiomatic",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ba42d653bad634ed6783f5b7fde264e5dd665fc47ce5feae5794ce39fd0ff2e6"
+      ],
+      "artifactSignatures": [
+        "main.ee98f1ff30909487.js:3a78f22dc24a9f5873fd91d93567cd840c63ed054dcd592940cf4109cbf1df31|runtime.ee8056a77841e7ca.js:59b0620aff0a10d348c6261071cfa40a33902ca361543ba6ea25b7936c8a9e49|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "3edbd769921676d93553b3de68c3179e9dc32f1a",
+        "d0e79582f2e9479f9f83afa404da77c917035442"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 10228.446925999993,
+        "q1": 10009.956581499995,
+        "q3": 10805.092205999996,
+        "iqr": 795.1356245000006,
+        "min": 9795.448447000002,
+        "max": 12094.065147000001
+      }
+    },
+    {
+      "key": "build-2026-10-19T08-27-42.151Z|14|idiomatic",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "b8d4be55797beb491073796b08088c3d7eca1b9b603e5f7c10d90e395fb8f51b"
+      ],
+      "artifactSignatures": [
+        "main.ee98f1ff30909487.js:3a78f22dc24a9f5873fd91d93567cd840c63ed054dcd592940cf4109cbf1df31|runtime.ee8056a77841e7ca.js:59b0620aff0a10d348c6261071cfa40a33902ca361543ba6ea25b7936c8a9e49|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "abfbb18493798989ddd61af8ca9939caa421c1fb"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 10786.654619999998,
+        "q1": 10397.001579249994,
+        "q3": 11093.370417499998,
+        "iqr": 696.368838250004,
+        "min": 9699.78412299999,
+        "max": 11541.776143999996
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|15|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "8dd9c2b90a622bd70d93d3d19159daf7d09f51e7da5a0eb5d3e65f169748d0e5"
+      ],
+      "artifactSignatures": [
+        "main.c0feebcbf2ec2f92.js:f3fc58f379e7f13bf77a80328036f24e62e8cb588ee81f6941f80c2f0bfd5371|runtime.f8b5ad77d599ee88.js:71a98a792615dd06e26570967451bc5ca4f20cf4d5302385d4fc1e79243dc516|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9933.258921999997,
+        "q1": 9933.258921999997,
+        "q3": 9933.258921999997,
+        "iqr": 0,
+        "min": 9933.258921999997,
+        "max": 9933.258921999997
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|15|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "8dd9c2b90a622bd70d93d3d19159daf7d09f51e7da5a0eb5d3e65f169748d0e5"
+      ],
+      "artifactSignatures": [
+        "main.57e2ec8041b869da.js:0f83fb0b4d6997b3e0b059ee1fdc0bf806ee28438ecfaf7ac727bdaf363dbc67|runtime.ee8056a77841e7ca.js:59b0620aff0a10d348c6261071cfa40a33902ca361543ba6ea25b7936c8a9e49|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9378.164874999999,
+        "q1": 9378.164874999999,
+        "q3": 9378.164874999999,
+        "iqr": 0,
+        "min": 9378.164874999999,
+        "max": 9378.164874999999
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|16|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "394f24c3a64ceec48521c9ef38444680ec004309700d605357dccd6cdab112e6"
+      ],
+      "artifactSignatures": [
+        "main.21ce81af486cc7f7.js:a30164eccb77b79084ab62d3fe689683aaf7b1a9d0634a94f7ad9a01ebc36a61|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9305.53559,
+        "q1": 9305.53559,
+        "q3": 9305.53559,
+        "iqr": 0,
+        "min": 9305.53559,
+        "max": 9305.53559
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|16|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "394f24c3a64ceec48521c9ef38444680ec004309700d605357dccd6cdab112e6"
+      ],
+      "artifactSignatures": [
+        "main.f7b04492cd413911.js:036428f7dac209fcc1aeaaad368cc37d905f12808701c530319c47ec799db420|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "913cf16580d4e6c6d0c65e9acad18395303573cf"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9157.872536000003,
+        "q1": 9157.872536000003,
+        "q3": 9157.872536000003,
+        "iqr": 0,
+        "min": 9157.872536000003,
+        "max": 9157.872536000003
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|17|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "55f66a3317142058b225ab0b7ebda9533d52534d03a4fc4abc6c01502ba5bb63"
+      ],
+      "artifactSignatures": [
+        "main.08447b3dadbed4ce.js:847d888767f62a73768144aee184c31bf34fbbc740cbf61cf3407611ddc39d8f|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9889.575206999994,
+        "q1": 9889.575206999994,
+        "q3": 9889.575206999994,
+        "iqr": 0,
+        "min": 9889.575206999994,
+        "max": 9889.575206999994
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|17|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "55f66a3317142058b225ab0b7ebda9533d52534d03a4fc4abc6c01502ba5bb63"
+      ],
+      "artifactSignatures": [
+        "main.9a957737671f5008.js:b00cce123680f3f7b004d186c8aa37ba6ea2f0f567359108d0800f1ac7a1b331|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8760.952033000009,
+        "q1": 8760.952033000009,
+        "q3": 8760.952033000009,
+        "iqr": 0,
+        "min": 8760.952033000009,
+        "max": 8760.952033000009
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|18|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "4df000dae1f9bd864a1374dec23d2a1de2dede179e8c33455b853711ddb1f39d"
+      ],
+      "artifactSignatures": [
+        "main.368fa8a3021aaa4f.js:e4c3b3944bad717970792be8ec45e842cba7642ff2faec9512bc5aa339aa2470|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9494.432181000011,
+        "q1": 9494.432181000011,
+        "q3": 9494.432181000011,
+        "iqr": 0,
+        "min": 9494.432181000011,
+        "max": 9494.432181000011
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|18|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "4df000dae1f9bd864a1374dec23d2a1de2dede179e8c33455b853711ddb1f39d"
+      ],
+      "artifactSignatures": [
+        "main.5c442b58cf781b7f.js:b3789213a100dfbb5a7933d04432e815b62f064ed36d995d1e3c990ed8f13d16|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8845.257314999995,
+        "q1": 8845.257314999995,
+        "q3": 8845.257314999995,
+        "iqr": 0,
+        "min": 8845.257314999995,
+        "max": 8845.257314999995
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|19|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "a14b198fcd3092f109e4b477f4d188b2b1f93d3a5ac7108958d998443e096c2b"
+      ],
+      "artifactSignatures": [
+        "main.fd8d8c6bb851b58b.js:4895f9d4a62e6fb628895b450dc04d912a8b6b9fc17e49dee25efee37658d2a3|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8997.494079000011,
+        "q1": 8997.494079000011,
+        "q3": 8997.494079000011,
+        "iqr": 0,
+        "min": 8997.494079000011,
+        "max": 8997.494079000011
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|19|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "a14b198fcd3092f109e4b477f4d188b2b1f93d3a5ac7108958d998443e096c2b"
+      ],
+      "artifactSignatures": [
+        "main.71669e382272bc6b.js:0c94dfe16183cfbe27582793ea3876dd67f957eeecd1447bbdd245b2a20c2291|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8145.223440000002,
+        "q1": 8145.223440000002,
+        "q3": 8145.223440000002,
+        "iqr": 0,
+        "min": 8145.223440000002,
+        "max": 8145.223440000002
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|20|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "b0c1da01fac1219f21232226d75d65238474156d15795de8f346602fccbbd818"
+      ],
+      "artifactSignatures": [
+        "main.24a11521d54b607d.js:58f5a27f0d84ee84e4440cc0e32d90aff3ab4a69060771be0238177921cb7797|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "49bf801eb1bc1354d05dd501ca18a262fdbf903b"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8731.778139000002,
+        "q1": 8731.778139000002,
+        "q3": 8731.778139000002,
+        "iqr": 0,
+        "min": 8731.778139000002,
+        "max": 8731.778139000002
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|20|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "b0c1da01fac1219f21232226d75d65238474156d15795de8f346602fccbbd818"
+      ],
+      "artifactSignatures": [
+        "main.4cee665b2e763bfb.js:d12195e10d516c18c32de19baff721ad346592d2afa4bd19f46260b1c053f290|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8759.310611000008,
+        "q1": 8759.310611000008,
+        "q3": 8759.310611000008,
+        "iqr": 0,
+        "min": 8759.310611000008,
+        "max": 8759.310611000008
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|21|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "583464520d80ed6c43295b030c70ef2eab706937b8bed3d35fa2480b3c1f4b43"
+      ],
+      "artifactSignatures": [
+        "main.2c36982f856c41e5.js:2d2671361d2443a6f6628d3710e5af14909a180b4c7f1f84c03f109f5962236b|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8690.617938999989,
+        "q1": 8690.617938999989,
+        "q3": 8690.617938999989,
+        "iqr": 0,
+        "min": 8690.617938999989,
+        "max": 8690.617938999989
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|21|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "583464520d80ed6c43295b030c70ef2eab706937b8bed3d35fa2480b3c1f4b43"
+      ],
+      "artifactSignatures": [
+        "main.8b602cf3ed55f495.js:ba75e60573a7166c8973501459f2d57efeec8c4e86f151a19e9544413bc23a09|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8160.641466000001,
+        "q1": 8160.641466000001,
+        "q3": 8160.641466000001,
+        "iqr": 0,
+        "min": 8160.641466000001,
+        "max": 8160.641466000001
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|22|baseline",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.1ace5cbc25a276a5.js:f9c35eb2774a5cf29b5d64749d62fe8efdb5b739ccdafe1d89c8609ab44daf72|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 9371.765824000002,
+        "q1": 9371.765824000002,
+        "q3": 9371.765824000002,
+        "iqr": 0,
+        "min": 9371.765824000002,
+        "max": 9371.765824000002
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|22|baseline",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.1ace5cbc25a276a5.js:f9c35eb2774a5cf29b5d64749d62fe8efdb5b739ccdafe1d89c8609ab44daf72|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "3edbd769921676d93553b3de68c3179e9dc32f1a",
+        "d0e79582f2e9479f9f83afa404da77c917035442"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 9631.487862499998,
+        "q1": 9429.507319749999,
+        "q3": 9758.166565,
+        "iqr": 328.6592452500008,
+        "min": 8922.517762000003,
+        "max": 10039.250602
+      }
+    },
+    {
+      "key": "build-2026-10-19T08-27-42.151Z|22|baseline",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.1ace5cbc25a276a5.js:f9c35eb2774a5cf29b5d64749d62fe8efdb5b739ccdafe1d89c8609ab44daf72|runtime.c89e3bf830b07ed8.js:1626d33e6574bd276d7c5569ccd13f499493b60496fbb98ee84669c7c589abe8|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "abfbb18493798989ddd61af8ca9939caa421c1fb"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 10105.262834999998,
+        "q1": 9585.644964,
+        "q3": 10382.648467749998,
+        "iqr": 797.0035037499983,
+        "min": 8591.01582,
+        "max": 10650.580897
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-07-31.269Z|22|idiomatic",
+      "n": 1,
+      "repetitions": [
+        0
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.acd67a78520d32c8.js:8752999da82d3ee507662427887be82d8635cca2efa4c3596fb23708483d1887|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "aa2799ee8078c94a1bd37c44d4edb1a4bd39347c"
+      ],
+      "durationMs": {
+        "n": 1,
+        "median": 8474.474619999994,
+        "q1": 8474.474619999994,
+        "q3": 8474.474619999994,
+        "iqr": 0,
+        "min": 8474.474619999994,
+        "max": 8474.474619999994
+      }
+    },
+    {
+      "key": "build-2026-10-18T14-29-41.584Z|22|idiomatic",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.acd67a78520d32c8.js:8752999da82d3ee507662427887be82d8635cca2efa4c3596fb23708483d1887|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "3edbd769921676d93553b3de68c3179e9dc32f1a",
+        "d0e79582f2e9479f9f83afa404da77c917035442"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 8833.783143499997,
+        "q1": 8737.506172749992,
+        "q3": 8931.524377000003,
+        "iqr": 194.01820425001097,
+        "min": 8613.144060999999,
+        "max": 9060.279277000001
+      }
+    },
+    {
+      "key": "build-2026-10-19T08-27-42.151Z|22|idiomatic",
+      "n": 4,
+      "repetitions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "lockHashes": [
+        "ac60a53aea428634fe113e5ccc3473f2a258a893307c849ea73e73f8fa355b87"
+      ],
+      "artifactSignatures": [
+        "main.acd67a78520d32c8.js:8752999da82d3ee507662427887be82d8635cca2efa4c3596fb23708483d1887|runtime.ce17ae98a0b7fafd.js:54bb7a7d0839bff7a331d957a5f1e59ff8314a289404ab89750c38ecd35cb7d9|scripts.64ee708414c1c2e8.js:bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864"
+      ],
+      "commits": [
+        "abfbb18493798989ddd61af8ca9939caa421c1fb"
+      ],
+      "durationMs": {
+        "n": 4,
+        "median": 9540.858916499998,
+        "q1": 9255.767156249993,
+        "q3": 9764.172343000004,
+        "iqr": 508.4051867500111,
+        "min": 8791.977098999996,
+        "max": 10042.627399000005
+      }
+    }
+  ],
+  "lighthouse": [
+    {
+      "file": "benchmark/results/lighthouse/14-baseline-0-1792398909715.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 14,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1184.013,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/14-idiomatic-0-1792398937736.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 14,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1558.061,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/15-baseline-0-1792398966328.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 15,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1360.637,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/15-idiomatic-0-1792398994399.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 15,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1640.355,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/16-baseline-0-1792399024740.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 16,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1160.52,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/16-idiomatic-0-1792399054218.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 16,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1637.094,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/17-baseline-0-1792399083521.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 17,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1330.94,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/17-idiomatic-0-1792399111429.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 17,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1563.097,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/18-baseline-0-1792399140439.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 18,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1128.916,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/18-idiomatic-0-1792399169013.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 18,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1584.283,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/19-baseline-0-1792399197601.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 19,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1200.016,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/19-idiomatic-0-1792399227327.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 19,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1333.262,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/20-baseline-0-1792399256536.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 20,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1477.015,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/20-idiomatic-0-1792399288284.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 20,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1833.875,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/21-baseline-0-1792399318341.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 21,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1645.366,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/21-idiomatic-0-1792399346554.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 21,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1663.814,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/22-baseline-0-1792399375684.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 22,
+      "track": "baseline",
+      "rep": 0,
+      "lcpMs": 1497.317,
+      "cls": 0,
+      "tbtMs": 0,
+      "warnings": []
+    },
+    {
+      "file": "benchmark/results/lighthouse/22-idiomatic-0-1792399403899.json",
+      "experiment": "lighthouse-2026-10-19T08-34-40.295Z",
+      "version": 22,
+      "track": "idiomatic",
+      "rep": 0,
+      "lcpMs": 1313.824,
+      "cls": 0,
+      "tbtMs": 1.168999999999869,
+      "warnings": []
+    }
+  ],
+  "totals": {
+    "accepted": 189,
+    "rejected": 2,
+    "ticks": 861,
+    "lateUpdates": 330,
+    "droppedUpdates": 0,
+    "integrityErrors": 0,
+    "outlierFlags": 7,
+    "lighthouseReports": 18
+  }
+}

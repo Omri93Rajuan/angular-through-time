@@ -1,0 +1,14 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-JACCU3HP.js      | main          | 143.91 kB |                42.39 kB
+polyfills-B6TNHZQ6.js | polyfills     |  34.58 kB |                11.32 kB
+styles-BDFAUCSY.css   | styles        |   3.99 kB |                 1.15 kB
+scripts-LKIUZWFS.js   | scripts       |   1.39 kB |               687 bytes
+
+                      | Initial total | 183.87 kB |                55.55 kB
+
+Application bundle generation complete. [4.070 seconds]
+
+Output location: /home/kodcode/Desktop/angular/native/v19/dist/market-native
+

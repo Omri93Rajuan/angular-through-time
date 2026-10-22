@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "version": 21,
+  "track": "idiomatic-v2",
+  "kind": "functional-verification",
+  "verifierSources": [
+    {
+      "file": "benchmark/v2/verify.mjs",
+      "sha256": "9bad7ce997bb002e0f2f8bae54ef86492d54286c1a539eb1fb88cc1d6ba4b252"
+    },
+    {
+      "file": "benchmark/v2/functional.mjs",
+      "sha256": "1ffb742f2e9e0655e65e5627ee65878e52709f4b9108b8806b34ccf7bdd39539"
+    },
+    {
+      "file": "benchmark/v2/oracle.mjs",
+      "sha256": "1310d7ec06f16bee8c8f90a934ce0346d8df31353dfa3d05ad956dc183af8e14"
+    },
+    {
+      "file": "benchmark/harness/functional.mjs",
+      "sha256": "9aeb578bc851ce195ac4929fe37b579af4ecb53baf18fefd3dcbeaec1edbf88f"
+    }
+  ],
+  "browser": "148.0.7778.178",
+  "accepted": true,
+  "build": {
+    "schemaVersion": 2,
+    "kind": "compilation-verification",
+    "manifest": {
+      "schemaVersion": 2,
+      "track": "idiomatic-v2",
+      "architectureRevision": "market-components-2",
+      "experiment": "B-runtime",
+      "treatment": "idiomatic-v2",
+      "version": {
+        "major": 21,
+        "angular": "21.0.0",
+        "cli": "21.0.0",
+        "typescript": "5.9.3",
+        "node": "22.23.2",
+        "zone": "0.15.1"
+      },
+      "componentGraph": [
+        "Shell",
+        "Toolbar",
+        "Table",
+        "AssetRow",
+        "Summary",
+        "Chart",
+        "Details"
+      ],
+      "state": "per-entity signal + computed",
+      "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+      "equality": "Object.is; no custom comparator",
+      "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+      "changeDetection": "OnPush",
+      "flow": "@for/@if",
+      "scheduler": "zoneless",
+      "builder": "@angular-devkit/build-angular:browser",
+      "recipe": "controlled-webpack-v1",
+      "delivery": "serial-lossless",
+      "diagnostic": false,
+      "signalInputs": false
+    },
+    "inputs": [
+      [
+        "v21/src/research/idiomatic-v2/AssetRow.html",
+        "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Chart.html",
+        "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Details.html",
+        "1e1a797eb7de83b8055cda9d63bc1d3546ae2fef3671b2de7cd4c17444ea0138"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Shell.html",
+        "7ac6700a99108bdedca97f54edc0444a322fff2f6a8497063c9e0c1cff315d82"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Summary.html",
+        "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Table.html",
+        "6964f7c2be0032227e20260760bfa199cec8d75969f6faffe26176385d974825"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/Toolbar.html",
+        "2f58d6154254e8f3401ce1e722b95e70cc302dfc571f4e3a42ef684b6c8b8188"
+      ],
+      [
+        "v21/src/research/idiomatic-v2/main.ts",
+        "e6d2f7d6a3eab0e6704c9e8ce6328e02e8e09da8d6255133b1e7bc36a4a59358"
+      ],
+      [
+        "v21/src/engine.js",
+        "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+      ],
+      [
+        "v21/src/styles.css",
+        "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+      ],
+      [
+        "v21/src/research/index.html",
+        "5fb469a68f99f4772c6de3736b4f2bbdd0b8ba4af23840cfd74a7de05ecbf8e0"
+      ],
+      [
+        "v21/package-lock.json",
+        "583464520d80ed6c43295b030c70ef2eab706937b8bed3d35fa2480b3c1f4b43"
+      ],
+      [
+        "v21/research.angular.json",
+        "b5dd26fc036f507c8ea0226f6a2a745c1fae1cc86f05f55b7291225bbd7e465a"
+      ],
+      [
+        "v21/tsconfig.idiomatic-v2.json",
+        "a4329efe37362c92a0b308cfde495d5d002ed9d22687d6af3fb3399efe988f61"
+      ],
+      [
+        "v21/tsconfig.json",
+        "85edf6705aaa079048683ab69c3ad613422c368177b77beaf2e5c39fd0db9705"
+      ]
+    ],
+    "command": [
+      "/home/kodcode/Desktop/angular/.runtimes/22.23.2/node_modules/.bin/node",
+      "ng",
+      "build",
+      "idiomatic-v2",
+      "--configuration",
+      "production"
+    ],
+    "exitCode": 0,
+    "accepted": true,
+    "elapsedMs": 10527,
+    "at": "2026-10-22T04:19:43.151Z",
+    "assets": [
+      {
+        "file": "3rdpartylicenses.txt",
+        "sha256": "0e05cbc5b4a4c63358f0c831328e6e6698d041a31edb6bb7c243d6d11c2e43a4",
+        "bytes": 14467
+      },
+      {
+        "file": "index.html",
+        "sha256": "9b713a2a50b085b316cb9a50f4617720a074ef99720d3c8ac64bea0a3fd0e329",
+        "bytes": 841
+      },
+      {
+        "file": "main.497c4d4700b7d5b1.js",
+        "sha256": "ddc2e2034db1f809a56b807175795068acbf7c9af65de72f72ff2359a26ae5c6",
+        "bytes": 135269
+      },
+      {
+        "file": "runtime.408b7efe4728d2e1.js",
+        "sha256": "c4538975d213f12fb92b2565309d6aeb892e9d6ccc63b448546aa690cba3f4d1",
+        "bytes": 902
+      },
+      {
+        "file": "scripts.64ee708414c1c2e8.js",
+        "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864",
+        "bytes": 1382
+      },
+      {
+        "file": "styles.c5283d83a40bf06a.css",
+        "sha256": "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2",
+        "bytes": 3990
+      }
+    ]
+  },
+  "functional": {
+    "passed": true,
+    "oracle": "fixture-independent-v2",
+    "coverage": [
+      "legacy workflows",
+      "all row numeric cells",
+      "summary",
+      "chart",
+      "selected live updates",
+      "three modes",
+      "zero work",
+      "floor",
+      "price reorder after update",
+      "empty roundtrip",
+      "watch filter",
+      "external async",
+      "stable row identity/focus"
+    ]
+  }
+}

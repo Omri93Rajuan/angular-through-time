@@ -1,0 +1,17 @@
+❯ Building...
+✔ Building...
+Application bundle generation failed. [1.637 seconds] - 2026-10-22T04:23:51.661Z
+
+✘ [ERROR] TS2339: Property 'nonexistentResearchProperty' does not exist on type 'Asset'. [plugin angular-compiler]
+
+    src/research/AssetRow.html:2:4:
+      2 │ {{a.nonexistentResearchProperty}}
+        ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component AssetRow.
+
+    src/research/main.ts:85:153:
+      85 │ ...Selected'},imports:[CommonModule,],templateUrl:'./AssetRow.html'})
+         ╵                                                   ~~~~~~~~~~~~~~~~~
+
+

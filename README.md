@@ -22,24 +22,34 @@ Each `v14/` through `v22/` directory contains that Angular version's independent
 
 Market Terminal is a client-only monitoring interface for 5,000 fictional assets. Its seeded engine and deterministic event log make the same market updates replayable across versions. The UI includes search and filtering, sorting, watchlist and selected-asset details, summaries, and a price chart. It uses no real market feed, backend, credentials, CDN assets, or trading functionality.
 
-## What is implemented and what is proposed
+## Research tracks and evidence
 
-The repository currently contains **18 buildable variants**: Angular 14–22, each with two separately built implementations:
+The original 18 `baseline` / `idiomatic` variants and all their raw results remain intact. The historical idiomatic variant is a revision-signal adapter, not a fully reactive Signals architecture.
 
-| Implemented variant | What it represents |
-|---|---|
-| `baseline` | A common NgModule, Zone.js, eager-change-detection application using the shared Market Terminal and webpack browser builder. |
-| `idiomatic` | A conservative, version-aware variant: standalone bootstrap from Angular 15, a revision-signal notification adapter from Angular 17, built-in `@for` loops from Angular 18, and zoneless scheduling in Angular 21–22. It remains a single component with eager derivations and the same webpack builder; it is not a fully signal-driven or default-CLI implementation. |
+Research v2 adds separately generated component architectures and exact CLI-default workspaces. See the [v2 report](docs/RESEARCH_V2_REPORT.md) for executed verification, failures and outstanding work; [methods](docs/RESEARCH_V2_METHODS.md) and [replication guide](docs/RESEARCH_V2_SETUP.md) define the new protocol.
 
-The [research realignment](RESEARCH_REALIGNMENT.md) is a **design proposal**, not completed implementation or new experimental evidence. It recommends three separately identified future tracks:
-
-| Proposed track | Research question | Status |
+| Track | Implementation | Evidence boundary |
 |---|---|---|
-| **Controlled Framework Evolution** | How does a fixed eager, Zone-based application change across framework/compiler releases under a common webpack policy? | Proposed; the existing baseline provides related historical evidence, but is not a newly validated controlled-v1 protocol. |
-| **Idiomatic Angular Evolution** | What does a stable, deliberately optimized architecture appropriate to each Angular version deliver? | Proposed; the existing `idiomatic` variant does not implement the proposed component graph, computed state, or granular reactive architecture. |
-| **Default Toolchain Evolution** | What do exact CLI-generated defaults deliver for build output, startup, runtime, and developer feedback? | Proposed; existing variants all use webpack, so default builder evolution is not measured. |
+| Legacy controlled / conservative idiomatic | Original eager monoliths, controlled webpack | Original short historical observations only |
+| `idiomatic-v2` | OnPush component graph; optimized immutable state on 14–16; actual per-entity signals/computed on 17+; stable flow and zoneless transitions | New correctness checks and separately labeled pilots |
+| `default-cli-v1` | CLI-generated native defaults with a portable imperative graph and dedicated locks | Separate build/cache and diagnostic observations |
+| Matched `M4` | Angular 22 signal graph with Zone versus zoneless scheduling | Same-version pilot; no cross-version feature attribution |
 
-Do not interpret existing `baseline`/`idiomatic` results as results for the three proposed tracks or as isolated feature effects.
+The [historical dashboard](dashboard/) and [v2 evidence explorer](dashboard/research.html) do not pool results. The main confirmatory campaign has **not been authorized or run**. Small pilots do not support rankings or statistical-significance claims.
+
+To reproduce v2 after installing root dependencies:
+
+```bash
+VERSIONS=14,22 node scripts/setup-research.mjs
+npm run research:build
+npm run research:verify
+npm run research:pilot
+npm run research:audit
+```
+
+Use the [full setup guide](docs/RESEARCH_V2_SETUP.md) for all nine versions, native CLI workspaces, diagnostics and exact prerequisites. The original commands below reproduce the historical apparatus.
+
+![Research v2 evidence explorer](docs/previews/research-v2-desktop.png)
 
 ## Quick start
 
@@ -103,7 +113,7 @@ Each Angular application has pinned framework/toolchain dependencies and its own
 
 The recorded verification includes successful builds and functional checks for all 18 variants, a 144-sample one-repetition matrix, a separate 32-sample four-repetition endpoint batch, a narrow three-tick zero-workload control, and separate Lighthouse diagnostics. These are local descriptive checks, not statistically conclusive comparisons. The matrix sample count is small; some accepted updates were late; serial backpressure prevents dropped events by policy and is not an independent-arrival capacity test. Machine load, thermal state, CPU governor, and OS cache were not fully controlled. See the reports for exact commands, retained failures, and provenance limits. No performance ranking or general superiority claim is supported.
 
-The proposed three-track design, feature ablations, stronger UI oracle, and default-toolchain study have **not** been implemented or measured. Do not mix future results with the historical samples; use distinct experiment and architecture identifiers.
+Research v2 implementation and new observations are documented separately. The historical counts above do not validate new architectures, and are never pooled with v2 evidence.
 
 ## Reproducibility and development
 
@@ -127,3 +137,11 @@ Regenerate the documented version matrix with `node scripts/matrix-doc.mjs`. Ins
 The project's research organization was methodologically inspired by [Janirr/angular-evolution-benchmark](https://github.com/Janirr/angular-evolution-benchmark). Market Terminal, its seeded engine, UI, protocol, and results are original work; no implementation, prose, interface, dataset, or result was copied. See [ATTRIBUTION.md](ATTRIBUTION.md) for details and source references.
 
 This project is distributed under the [MIT License](LICENSE). Angular and third-party dependencies remain subject to their respective licenses; production build notices are retained with the build outputs.
+
+## Citation and public claims
+
+Use [CITATION.cff](CITATION.cff), crediting Omri Rajuan, and identify the exact commit and experiment. [Launch facts](docs/LAUNCH_FACTS.md) lists claims supported by retained evidence. No release, publication identifier or affiliation is implied.
+
+## Research CI
+
+[Research v2 correctness CI](.github/workflows/research-v2.yml) validates unit tests, generated source, historical integrity and all nine B and all nine native C production/browser variants on pull requests to `dev` or `main`. CI checks correctness, not research-grade performance. The separate legacy CI pull request #3 remains independent and unmerged.

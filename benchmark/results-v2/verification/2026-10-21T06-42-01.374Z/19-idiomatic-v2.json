@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "version": 19,
+  "track": "idiomatic-v2",
+  "kind": "functional-verification",
+  "browser": "148.0.7778.178",
+  "accepted": false,
+  "build": {
+    "schemaVersion": 2,
+    "kind": "compilation-verification",
+    "manifest": {
+      "schemaVersion": 2,
+      "track": "idiomatic-v2",
+      "architectureRevision": "market-components-1",
+      "experiment": "B-runtime",
+      "treatment": "idiomatic-v2",
+      "version": {
+        "major": 19,
+        "angular": "19.2.15",
+        "cli": "19.2.19",
+        "typescript": "5.8.3",
+        "node": "22.23.2",
+        "zone": "0.15.1"
+      },
+      "componentGraph": [
+        "Shell",
+        "Toolbar",
+        "Table",
+        "AssetRow",
+        "Summary",
+        "Chart",
+        "Details"
+      ],
+      "state": "per-entity signal + computed",
+      "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+      "equality": "Object.is; no custom comparator",
+      "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+      "changeDetection": "OnPush",
+      "flow": "@for/@if",
+      "scheduler": "zone",
+      "builder": "@angular-devkit/build-angular:browser",
+      "recipe": "controlled-webpack-v1",
+      "delivery": "serial-lossless",
+      "diagnostic": false,
+      "signalInputs": false
+    },
+    "inputs": [
+      [
+        "v19/src/research/idiomatic-v2/AssetRow.html",
+        "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Chart.html",
+        "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Details.html",
+        "1e1a797eb7de83b8055cda9d63bc1d3546ae2fef3671b2de7cd4c17444ea0138"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Shell.html",
+        "7ac6700a99108bdedca97f54edc0444a322fff2f6a8497063c9e0c1cff315d82"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Summary.html",
+        "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Table.html",
+        "6964f7c2be0032227e20260760bfa199cec8d75969f6faffe26176385d974825"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/Toolbar.html",
+        "2f58d6154254e8f3401ce1e722b95e70cc302dfc571f4e3a42ef684b6c8b8188"
+      ],
+      [
+        "v19/src/research/idiomatic-v2/main.ts",
+        "9139dc74b728a64e68cfd74ce05ae16e88c334106a548991e7c105028f66d717"
+      ],
+      [
+        "v19/src/engine.js",
+        "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+      ],
+      [
+        "v19/src/styles.css",
+        "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+      ],
+      [
+        "v19/src/research/index.html",
+        "5fb469a68f99f4772c6de3736b4f2bbdd0b8ba4af23840cfd74a7de05ecbf8e0"
+      ],
+      [
+        "v19/package-lock.json",
+        "a14b198fcd3092f109e4b477f4d188b2b1f93d3a5ac7108958d998443e096c2b"
+      ],
+      [
+        "v19/research.angular.json",
+        "b5dd26fc036f507c8ea0226f6a2a745c1fae1cc86f05f55b7291225bbd7e465a"
+      ],
+      [
+        "v19/tsconfig.idiomatic-v2.json",
+        "a4329efe37362c92a0b308cfde495d5d002ed9d22687d6af3fb3399efe988f61"
+      ],
+      [
+        "v19/tsconfig.json",
+        "85edf6705aaa079048683ab69c3ad613422c368177b77beaf2e5c39fd0db9705"
+      ]
+    ],
+    "command": [
+      "/home/kodcode/Desktop/angular/.runtimes/22.23.2/node_modules/.bin/node",
+      "ng",
+      "build",
+      "idiomatic-v2",
+      "--configuration",
+      "production"
+    ],
+    "exitCode": 0,
+    "accepted": true,
+    "elapsedMs": 10551,
+    "at": "2026-10-21T06:44:39.842Z",
+    "assets": [
+      {
+        "file": "3rdpartylicenses.txt",
+        "sha256": "933b54489dfd128249e9450955a3a535f0b331b6f54fe81cb28dbba5b9c3d380",
+        "bytes": 15588
+      },
+      {
+        "file": "index.html",
+        "sha256": "1672bba20479e39179854a2945188f6745c2fafd2495106ea6b0cd105c5265ae",
+        "bytes": 841
+      },
+      {
+        "file": "main.80d89fdc9c535453.js",
+        "sha256": "a9282546abd9653278be9d11ce42ca86cbd42e9d26d1aea1427092db7fa84dac",
+        "bytes": 170051
+      },
+      {
+        "file": "runtime.408b7efe4728d2e1.js",
+        "sha256": "c4538975d213f12fb92b2565309d6aeb892e9d6ccc63b448546aa690cba3f4d1",
+        "bytes": 902
+      },
+      {
+        "file": "scripts.64ee708414c1c2e8.js",
+        "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864",
+        "bytes": 1382
+      },
+      {
+        "file": "styles.b809f9167d711d60.css",
+        "sha256": "0b0fd7b509aedb08df0019ff68104bba34dfed73eeeaf626d3613bbc45a1a5bf",
+        "bytes": 3992
+      }
+    ]
+  },
+  "error": "browser.newContext: Target page, context or browser has been closed\n    at async file:///home/kodcode/Desktop/angular/benchmark/v2/verify.mjs:14:11",
+  "errors": []
+}

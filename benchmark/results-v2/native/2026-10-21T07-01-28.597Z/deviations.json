@@ -1,0 +1,5 @@
+{
+  "kind": "provenance-deviation",
+  "description": "The loaded build driver was the version at commit 977e0cf. Its source file was edited for CI verification mode while this process was still running. Per-record script hashes were read from disk and may therefore identify edited source rather than the code already loaded by the process.",
+  "consequence": "Retain compilation successes and raw attempts, but exclude this batch from source-frozen timing claims. A replacement driver captures provenance at launch and rejects driver/input changes."
+}

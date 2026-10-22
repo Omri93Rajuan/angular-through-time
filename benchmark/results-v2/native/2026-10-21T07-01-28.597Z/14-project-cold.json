@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 2,
+  "provenance": {
+    "commit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+    "dirty": true,
+    "scriptSha256": "747be1cf74e53702da90aa11759d10f5c75c030d23c406f0b8ae513f828f63da"
+  },
+  "kind": "native-build-pilot",
+  "version": {
+    "major": 14,
+    "angular": "14.2.12",
+    "cli": "14.2.13",
+    "typescript": "4.8.4",
+    "node": "16.20.2",
+    "zone": "0.11.8"
+  },
+  "inputs": [
+    [
+      "native/v14/src/app/app.component.css",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "native/v14/src/app/app.component.html",
+      "20a88a5f9adf8da2abf5a98a37f2a82a64bb7bed57f3162d20cdd383862360d9"
+    ],
+    [
+      "native/v14/src/app/app.component.spec.ts",
+      "14559343b89d3bf8f42dd084fe9e27d3079380b2829ae6ce137e67b6e8739ee2"
+    ],
+    [
+      "native/v14/src/app/app.component.ts",
+      "6c15323326aa30eece210a3ab3d275ae01adfeaee9b978aeddc11e641daa40ad"
+    ],
+    [
+      "native/v14/src/app/app.module.ts",
+      "818db05433b605fc691812e4f89f42d9ed63d0ab6ca79422021ae90e7a58e02c"
+    ],
+    [
+      "native/v14/src/assets/.gitkeep",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "native/v14/src/engine.js",
+      "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+    ],
+    [
+      "native/v14/src/environments/environment.prod.ts",
+      "365e9914fc285641a8c9152fa331c83164325564451bd2b05c73859ceaf54a3c"
+    ],
+    [
+      "native/v14/src/environments/environment.ts",
+      "3fa01c82af9ac445ad958c564ad026c766798cd3ff43220783c56bcdbb96748f"
+    ],
+    [
+      "native/v14/src/favicon.ico",
+      "2d0a4f5a77c788b084919b1b8cad5713d9dfc3388ef29969c4cb66c28092e683"
+    ],
+    [
+      "native/v14/src/index.html",
+      "d8ca60fb0a6981f7f014223a02dcdba4474955f228e4d40870cb37c6d2d57873"
+    ],
+    [
+      "native/v14/src/main.ts",
+      "0ab2a5cf809cd584767a54753dfb2d5f762bb66add713ce99db2a55c98c463d2"
+    ],
+    [
+      "native/v14/src/polyfills.ts",
+      "89ffc08dc7116a75e1540fa70018c4be63ac94cda5d76966e441dca3460c87c1"
+    ],
+    [
+      "native/v14/src/research/AssetRow.html",
+      "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+    ],
+    [
+      "native/v14/src/research/Chart.html",
+      "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+    ],
+    [
+      "native/v14/src/research/Details.html",
+      "dedbce4034940949630778e78e9380f107cc84fe56a68036d58ce7ac613f91db"
+    ],
+    [
+      "native/v14/src/research/Shell.html",
+      "cad78b580c0eac781d8606793f712e173f42a0b06b8bf8723de88d395f991e77"
+    ],
+    [
+      "native/v14/src/research/Summary.html",
+      "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+    ],
+    [
+      "native/v14/src/research/Table.html",
+      "f5076c993836b5e289c52605461a37b17f490cf6539650fe2ae64474392eed98"
+    ],
+    [
+      "native/v14/src/research/Toolbar.html",
+      "52dd3d7757ddea2ad6594101c6a9ca2979d81c9f929a24a8962cd65589a553e7"
+    ],
+    [
+      "native/v14/src/research/main.ts",
+      "9d21fdadfd0f0ae86bc17d734da513b4a21641ee73b6d721fdaa77af30c2d34a"
+    ],
+    [
+      "native/v14/src/styles.css",
+      "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+    ],
+    [
+      "native/v14/src/test.ts",
+      "575ab6cdde225894341054545b2575a07904d5a0f6bc006f9dcb5d7bcca6fc12"
+    ],
+    [
+      "native/v14/angular.json",
+      "b212e8dd5ccc6abd4badad14422246da7ee20c069b5a650beb91d3975100a121"
+    ],
+    [
+      "native/v14/package-lock.json",
+      "c2a7cb1ba1da85eccbc7bea29c7000df85db62f093d9ce8bbd73ed1ed5d05ce0"
+    ],
+    [
+      "native/v14/package.json",
+      "745e7bf5468e7d6e34add0a9dfcd43bf21b20a309409e30c9ad56fc460b24bd8"
+    ],
+    [
+      "native/v14/tsconfig.app.json",
+      "4565e3536a07fd9da5ce4292f5a2ae0cef541a394408011ce690383311e12df7"
+    ],
+    [
+      "native/v14/tsconfig.json",
+      "1971b4ce4908e6d09df02af43051c1b77f3b0e39f452ada6f87ec4cb341ac84a"
+    ],
+    [
+      "native/v14/tsconfig.spec.json",
+      "675a808e1665edc8de37d994740e7aaeb8869957e61b44b0a4fdff566f1e504c"
+    ]
+  ],
+  "environment": {
+    "node": "v16.20.2",
+    "npm": "8.19.4",
+    "os": "6.17.0-23-generic",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "load": [
+      3.49,
+      4.51,
+      4.23
+    ],
+    "power": "uncontrolled",
+    "thermal": "uncontrolled",
+    "backgroundLoad": "uncontrolled"
+  },
+  "cache": "project-cold",
+  "accepted": true,
+  "exitCode": 0,
+  "durationMs": 13344.220377,
+  "command": [
+    "node_modules/@angular/cli/bin/ng.js",
+    "build",
+    "--configuration",
+    "production"
+  ],
+  "builder": "@angular-devkit/build-angular:browser",
+  "configuration": {
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+      "market-native": {
+        "projectType": "application",
+        "schematics": {},
+        "root": "",
+        "sourceRoot": "src",
+        "prefix": "app",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:browser",
+            "options": {
+              "outputPath": "dist/market-native",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "polyfills": "src/polyfills.ts",
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": [
+                "src/engine.js"
+              ]
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kb",
+                    "maximumError": "1mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "2kb",
+                    "maximumError": "4kb"
+                  }
+                ],
+                "fileReplacements": [
+                  {
+                    "replace": "src/environments/environment.ts",
+                    "with": "src/environments/environment.prod.ts"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "browserTarget": "market-native:build:production"
+              },
+              "development": {
+                "browserTarget": "market-native:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "builder": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "browserTarget": "market-native:build"
+            }
+          },
+          "test": {
+            "builder": "@angular-devkit/build-angular:karma",
+            "options": {
+              "main": "src/test.ts",
+              "polyfills": "src/polyfills.ts",
+              "tsConfig": "tsconfig.spec.json",
+              "karmaConfig": "karma.conf.js",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "osCache": "uncontrolled",
+  "workers": "CLI default; no worker override",
+  "lockSha256": "c2a7cb1ba1da85eccbc7bea29c7000df85db62f093d9ce8bbd73ed1ed5d05ce0",
+  "assets": [
+    {
+      "file": "dist/market-native/3rdpartylicenses.txt",
+      "bytes": 12269,
+      "sha256": "e52d596ac1fa5e07d7433886ce25d44c5a88c61209fa25342d583bc47aa94fc9"
+    },
+    {
+      "file": "dist/market-native/favicon.ico",
+      "bytes": 948,
+      "sha256": "2d0a4f5a77c788b084919b1b8cad5713d9dfc3388ef29969c4cb66c28092e683"
+    },
+    {
+      "file": "dist/market-native/index.html",
+      "bytes": 906,
+      "sha256": "505f00f36e1a4a0b674267b2b544f9b96bc24644e89eb027c5e3322a4bf1ad52"
+    },
+    {
+      "file": "dist/market-native/main.629bcad44ffbd753.js",
+      "bytes": 136516,
+      "sha256": "9c2d14b17fe9671896f4773e16e08bfaa2188d0e452f2134204b573008b899f2",
+      "gzip": 44953,
+      "brotli": 40059
+    },
+    {
+      "file": "dist/market-native/polyfills.56feb11fdf3aac55.js",
+      "bytes": 33873,
+      "sha256": "b215cb461d1dc400fca21bf2f7b6ea106f59ad82b8afdb9a2e49b0012bd7cf9b",
+      "gzip": 12046,
+      "brotli": 10907
+    },
+    {
+      "file": "dist/market-native/runtime.ee17a613b291dce0.js",
+      "bytes": 1076,
+      "sha256": "edab629321341877ef3473a83bdd2d8b100175bdce6aa3bd5e18a480f86d10c3",
+      "gzip": 646,
+      "brotli": 596
+    },
+    {
+      "file": "dist/market-native/scripts.64ee708414c1c2e8.js",
+      "bytes": 1382,
+      "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864",
+      "gzip": 789,
+      "brotli": 697
+    },
+    {
+      "file": "dist/market-native/styles.b809f9167d711d60.css",
+      "bytes": 3992,
+      "sha256": "0b0fd7b509aedb08df0019ff68104bba34dfed73eeeaf626d3613bbc45a1a5bf"
+    }
+  ],
+  "scope": "All emitted artifacts recursively; compressed sizes per JS file; initial requested JS not measured"
+}

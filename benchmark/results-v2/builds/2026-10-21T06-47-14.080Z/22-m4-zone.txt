@@ -1,0 +1,18 @@
+
+Initial chunk files         | Names         |  Raw size | Estimated transfer size
+main.f947c7ce8e6a89ab.js    | main          | 178.74 kB |                53.68 kB
+styles.c5283d83a40bf06a.css | styles        |   3.99 kB |                 1.14 kB
+scripts.64ee708414c1c2e8.js | scripts       |   1.38 kB |               697 bytes
+runtime.2cd772c5f2e2aa91.js | runtime       | 892 bytes |               513 bytes
+
+                            | Initial total | 185.00 kB |                56.03 kB
+
+Build at: 2026-10-21T06:47:25.030Z - Hash: 7215fea64ea15c45 - Time: 9195ms
+The "@angular-devkit/build-angular:browser" builder is deprecated as part of Angular's Webpack support deprecation. Use "@angular/build:application" instead. For more information, see https://angular.dev/tools/cli/build-system-migration.
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.dev/tools/cli/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Generating index html...
+✔ Index html generation complete.

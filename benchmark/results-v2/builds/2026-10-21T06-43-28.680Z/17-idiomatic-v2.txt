@@ -1,0 +1,17 @@
+
+Initial chunk files         | Names         |  Raw size | Estimated transfer size
+main.d1d86d0e9fe6ea3e.js    | main          | 169.49 kB |                50.61 kB
+styles.b809f9167d711d60.css | styles        |   3.90 kB |                 1.12 kB
+scripts.64ee708414c1c2e8.js | scripts       |   1.35 kB |               697 bytes
+runtime.408b7efe4728d2e1.js | runtime       | 902 bytes |               520 bytes
+
+                            | Initial total | 175.62 kB |                52.92 kB
+
+Build at: 2026-10-21T06:44:18.919Z - Hash: 5023d9ae836cb096 - Time: 8293ms
+- Generating browser application bundles (phase: setup)...
+    TypeScript compiler options "target" and "useDefineForClassFields" are set to "ES2022" and "false" respectively by the Angular CLI. To control ECMA version and features use the Browserslist configuration. For more information, see https://angular.io/guide/build#configuring-browser-compatibility
+    NOTE: You can set the "target" to "ES2022" in the project's tsconfig to remove this warning.
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Generating index html...
+✔ Index html generation complete.

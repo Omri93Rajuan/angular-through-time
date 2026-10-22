@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "kind": "development-diagnostic",
+  "sourceCommit": "1ceb5ba42cf7bcc315b8963ea8f5c9ff443f0bd4",
+  "version": {
+    "major": 22,
+    "angular": "22.0.0",
+    "cli": "22.0.0",
+    "typescript": "6.0.3",
+    "node": "22.23.2",
+    "zone": "0.16.0"
+  },
+  "case": "typescript-error",
+  "expectedSuccess": false,
+  "exitCode": 1,
+  "durationMs": 2166.307754,
+  "policy": "sequential development rebuild processes; project cache retained; not watch/HMR latency",
+  "accepted": true
+}

@@ -1,0 +1,6 @@
+{
+  "kind": "environment-deviation",
+  "affected": "Angular 14 project-cold build",
+  "description": "A read-only historical replay audit ran briefly while the first native build was active. All native build samples already declare uncontrolled background load. Retain this attempt, but do not use its time for a controlled comparison.",
+  "consequence": "Build success and artifact inventory remain compilation evidence. Timings are feasibility-only and require a new isolated, balanced campaign."
+}
