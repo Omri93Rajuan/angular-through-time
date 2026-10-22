@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "track": "matched-v1",
-  "architectureRevision": "market-components-1",
+  "architectureRevision": "market-components-2",
   "experiment": "M4",
   "treatment": "m4-zone",
   "version": {

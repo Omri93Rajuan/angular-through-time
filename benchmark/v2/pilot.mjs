@@ -31,7 +31,7 @@ for(const [orderIndex,job] of order.entries()){
   }
   if(!gate)throw Error('No expanded functional acceptance for these exact source/artifact hashes');assert.equal(record.browser,gate.record.browser,'Browser differs from functional gate');
   await checkDOM(page,new Oracle());record.functional={passed:true,oracle:gate.record.functional.oracle,evidence:gate.file,policy:'Reuse exact artifact full gate; fresh-process initial and final full numeric oracle'};
-  const {warmupTicks,ticks,hz,count,mode}=protocol.pilot;record.workload={ticks,hz,count,mode,scenario:'B',delivery:'serial-lossless'};
+  const {warmupTicks,ticks,hz,count,mode}=protocol.pilot;record.workload={ticks,hz,count,mode,scenario:'B',delivery:'serial-lossless'};await page.evaluate(({count,hz,mode})=>window.market.configure(count,hz,mode),{count,hz,mode});await frames(page);
   for(let i=0;i<warmupTicks;i++){await page.evaluate(e=>window.market.apply(e,'mutation'),E.event(i,count));await frames(page);}await reset(page);
   const oracle=new Oracle(),start=await page.evaluate(()=>performance.now());
   for(let tick=0;tick<ticks;tick++){

@@ -84,7 +84,7 @@ class View {
   @Input() publication:unknown;
 }
 
-@Component({selector:'tr[market-row]',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,host:{'[attr.data-id]':'a.id','[class.selected]':'isSelected'},imports:[CommonModule,],templateUrl:'./AssetRow.html'})
+@Component({selector:'tr[market-row]',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,host:{'[attr.data-id]':'id','[class.selected]':'isSelected'},imports:[CommonModule,],templateUrl:'./AssetRow.html'})
 class AssetRow extends View {@Input() id!:number;get a(){return this.s.entities[this.id]();}get isWatched(){return this.s.memberships[this.id]();}get isSelected(){return this.s.selections[this.id]();}ngDoCheck(){count('hook:AssetRow');}checked(){count('view:AssetRow');return '';}}
 
 @Component({selector:'market-toolbar',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,imports:[CommonModule,],templateUrl:'./Toolbar.html'})

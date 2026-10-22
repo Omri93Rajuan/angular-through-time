@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "track": "idiomatic-v2",
-  "architectureRevision": "market-components-1",
+  "architectureRevision": "market-components-2",
   "experiment": "B-runtime",
   "treatment": "idiomatic-v2-diagnostic",
   "version": {
