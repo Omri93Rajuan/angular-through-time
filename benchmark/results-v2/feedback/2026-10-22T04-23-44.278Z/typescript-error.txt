@@ -1,0 +1,11 @@
+❯ Building...
+✔ Building...
+Application bundle generation failed. [1.744 seconds] - 2026-10-22T04:23:49.545Z
+
+✘ [ERROR] TS2322: Type 'number' is not assignable to type 'string'. [plugin angular-compiler]
+
+    src/research/main.ts:107:6:
+      107 │ const invalidResearchType: string = 42;
+          ╵       ~~~~~~~~~~~~~~~~~~~
+
+

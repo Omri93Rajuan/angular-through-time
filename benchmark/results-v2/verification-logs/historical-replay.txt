@@ -1,0 +1,1 @@
+{"accepted":189,"rejected":2,"ticks":861,"lateUpdates":330,"droppedUpdates":0,"integrityErrors":0,"outlierFlags":7,"lighthouseReports":18}

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "kind": "compilation-verification",
+  "manifest": {
+    "schemaVersion": 2,
+    "track": "idiomatic-v2",
+    "architectureRevision": "market-components-1",
+    "experiment": "B-runtime",
+    "treatment": "idiomatic-v2",
+    "version": {
+      "major": 18,
+      "angular": "18.2.14",
+      "cli": "18.2.21",
+      "typescript": "5.5.4",
+      "node": "22.23.2",
+      "zone": "0.14.10"
+    },
+    "componentGraph": [
+      "Shell",
+      "Toolbar",
+      "Table",
+      "AssetRow",
+      "Summary",
+      "Chart",
+      "Details"
+    ],
+    "state": "per-entity signal + computed",
+    "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+    "equality": "Object.is; no custom comparator",
+    "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+    "changeDetection": "OnPush",
+    "flow": "@for/@if",
+    "scheduler": "zone",
+    "builder": "@angular-devkit/build-angular:browser",
+    "recipe": "controlled-webpack-v1",
+    "delivery": "serial-lossless",
+    "diagnostic": false,
+    "signalInputs": false
+  },
+  "inputs": [
+    [
+      "v18/src/research/idiomatic-v2/AssetRow.html",
+      "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Chart.html",
+      "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Details.html",
+      "1e1a797eb7de83b8055cda9d63bc1d3546ae2fef3671b2de7cd4c17444ea0138"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Shell.html",
+      "7ac6700a99108bdedca97f54edc0444a322fff2f6a8497063c9e0c1cff315d82"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Summary.html",
+      "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Table.html",
+      "6964f7c2be0032227e20260760bfa199cec8d75969f6faffe26176385d974825"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/Toolbar.html",
+      "2f58d6154254e8f3401ce1e722b95e70cc302dfc571f4e3a42ef684b6c8b8188"
+    ],
+    [
+      "v18/src/research/idiomatic-v2/main.ts",
+      "3ca781e830516059d849e0e8b573e26527f2f8e173a9625c78a7b4ba4898864b"
+    ],
+    [
+      "v18/src/engine.js",
+      "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+    ],
+    [
+      "v18/src/styles.css",
+      "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+    ],
+    [
+      "v18/src/research/index.html",
+      "5fb469a68f99f4772c6de3736b4f2bbdd0b8ba4af23840cfd74a7de05ecbf8e0"
+    ],
+    [
+      "v18/package-lock.json",
+      "4df000dae1f9bd864a1374dec23d2a1de2dede179e8c33455b853711ddb1f39d"
+    ],
+    [
+      "v18/research.angular.json",
+      "b5dd26fc036f507c8ea0226f6a2a745c1fae1cc86f05f55b7291225bbd7e465a"
+    ],
+    [
+      "v18/tsconfig.idiomatic-v2.json",
+      "a4329efe37362c92a0b308cfde495d5d002ed9d22687d6af3fb3399efe988f61"
+    ],
+    [
+      "v18/tsconfig.json",
+      "85edf6705aaa079048683ab69c3ad613422c368177b77beaf2e5c39fd0db9705"
+    ]
+  ],
+  "command": [
+    "/home/kodcode/Desktop/angular/.runtimes/22.23.2/node_modules/.bin/node",
+    "ng",
+    "build",
+    "idiomatic-v2",
+    "--configuration",
+    "production"
+  ],
+  "exitCode": 0,
+  "accepted": true,
+  "elapsedMs": 10269,
+  "at": "2026-10-21T06:44:29.284Z",
+  "assets": [
+    {
+      "file": "3rdpartylicenses.txt",
+      "sha256": "34a713813f3e42fecd297d20c20697a4bef420d02664cd5536f8c9a58684f0f5",
+      "bytes": 15587
+    },
+    {
+      "file": "index.html",
+      "sha256": "d7e01edc28a6f2ccf9abaa63733e86ce78979423cf4f4677b0591f5bda5dc2b6",
+      "bytes": 841
+    },
+    {
+      "file": "main.94474ff7e76131b9.js",
+      "sha256": "eb6749775476a305be45c015b62d86fe22bd1dbf3302e4bab550020b70a4417d",
+      "bytes": 170699
+    },
+    {
+      "file": "runtime.408b7efe4728d2e1.js",
+      "sha256": "c4538975d213f12fb92b2565309d6aeb892e9d6ccc63b448546aa690cba3f4d1",
+      "bytes": 902
+    },
+    {
+      "file": "scripts.64ee708414c1c2e8.js",
+      "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864",
+      "bytes": 1382
+    },
+    {
+      "file": "styles.b809f9167d711d60.css",
+      "sha256": "0b0fd7b509aedb08df0019ff68104bba34dfed73eeeaf626d3613bbc45a1a5bf",
+      "bytes": 3992
+    }
+  ]
+}

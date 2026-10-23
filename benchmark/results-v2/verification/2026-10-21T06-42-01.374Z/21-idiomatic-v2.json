@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 2,
+  "version": 21,
+  "track": "idiomatic-v2",
+  "kind": "functional-verification",
+  "browser": "148.0.7778.178",
+  "accepted": false,
+  "error": "Error: ENOENT: no such file or directory, open 'v21/dist/idiomatic-v2/research-build.json'\n    at Object.openSync (node:fs:560:18)\n    at Object.readFileSync (node:fs:444:35)\n    at file:///home/kodcode/Desktop/angular/benchmark/v2/verify.mjs:12:69\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)",
+  "errors": []
+}

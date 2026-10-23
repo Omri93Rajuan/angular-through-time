@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 2,
+  "track": "idiomatic-v2",
+  "architectureRevision": "market-components-2",
+  "experiment": "B-runtime",
+  "treatment": "idiomatic-v2",
+  "version": {
+    "major": 22,
+    "angular": "22.0.0",
+    "cli": "22.0.0",
+    "typescript": "6.0.3",
+    "node": "22.23.2",
+    "zone": "0.16.0"
+  },
+  "componentGraph": [
+    "Shell",
+    "Toolbar",
+    "Table",
+    "AssetRow",
+    "Summary",
+    "Chart",
+    "Details"
+  ],
+  "state": "per-entity signal + computed",
+  "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+  "equality": "Object.is; no custom comparator",
+  "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+  "changeDetection": "OnPush",
+  "flow": "@for/@if",
+  "scheduler": "zoneless",
+  "builder": "@angular-devkit/build-angular:browser",
+  "recipe": "controlled-webpack-v1",
+  "delivery": "serial-lossless",
+  "diagnostic": false,
+  "signalInputs": false
+}

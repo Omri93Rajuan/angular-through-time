@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "version": 14,
+  "track": "idiomatic-v2",
+  "kind": "functional-verification",
+  "browser": "148.0.7778.178",
+  "accepted": true,
+  "build": {
+    "schemaVersion": 2,
+    "kind": "compilation-verification",
+    "manifest": {
+      "schemaVersion": 2,
+      "track": "idiomatic-v2",
+      "architectureRevision": "market-components-1",
+      "experiment": "B-runtime",
+      "treatment": "idiomatic-v2",
+      "version": {
+        "major": 14,
+        "angular": "14.2.12",
+        "cli": "14.2.13",
+        "typescript": "4.8.4",
+        "node": "16.20.2",
+        "zone": "0.11.8"
+      },
+      "componentGraph": [
+        "Shell",
+        "Toolbar",
+        "Table",
+        "AssetRow",
+        "Summary",
+        "Chart",
+        "Details"
+      ],
+      "state": "immutable publications + dependency-aware imperative selectors",
+      "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+      "equality": "Object.is; no custom comparator",
+      "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+      "changeDetection": "OnPush",
+      "flow": "ngFor/ngIf",
+      "scheduler": "zone",
+      "builder": "@angular-devkit/build-angular:browser",
+      "recipe": "controlled-webpack-v1",
+      "delivery": "serial-lossless",
+      "diagnostic": false,
+      "signalInputs": false
+    },
+    "inputs": [
+      [
+        "v14/src/research/idiomatic-v2/AssetRow.html",
+        "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Chart.html",
+        "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Details.html",
+        "dedbce4034940949630778e78e9380f107cc84fe56a68036d58ce7ac613f91db"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Shell.html",
+        "cad78b580c0eac781d8606793f712e173f42a0b06b8bf8723de88d395f991e77"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Summary.html",
+        "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Table.html",
+        "f5076c993836b5e289c52605461a37b17f490cf6539650fe2ae64474392eed98"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/Toolbar.html",
+        "52dd3d7757ddea2ad6594101c6a9ca2979d81c9f929a24a8962cd65589a553e7"
+      ],
+      [
+        "v14/src/research/idiomatic-v2/main.ts",
+        "69f760277a81f5cf153f1dc23e942b1ffbd1cfa061e7c1bf7d345cf5d8dea223"
+      ],
+      [
+        "v14/src/engine.js",
+        "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+      ],
+      [
+        "v14/src/styles.css",
+        "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+      ],
+      [
+        "v14/src/research/index.html",
+        "5fb469a68f99f4772c6de3736b4f2bbdd0b8ba4af23840cfd74a7de05ecbf8e0"
+      ],
+      [
+        "v14/package-lock.json",
+        "b8d4be55797beb491073796b08088c3d7eca1b9b603e5f7c10d90e395fb8f51b"
+      ],
+      [
+        "v14/research.angular.json",
+        "b5dd26fc036f507c8ea0226f6a2a745c1fae1cc86f05f55b7291225bbd7e465a"
+      ],
+      [
+        "v14/tsconfig.idiomatic-v2.json",
+        "a4329efe37362c92a0b308cfde495d5d002ed9d22687d6af3fb3399efe988f61"
+      ],
+      [
+        "v14/tsconfig.json",
+        "85edf6705aaa079048683ab69c3ad613422c368177b77beaf2e5c39fd0db9705"
+      ]
+    ],
+    "command": [
+      "/home/kodcode/Desktop/angular/.runtimes/16.20.2/node_modules/.bin/node",
+      "ng",
+      "build",
+      "idiomatic-v2",
+      "--configuration",
+      "production"
+    ],
+    "exitCode": 0,
+    "accepted": true,
+    "elapsedMs": 15093,
+    "at": "2026-10-21T06:43:43.780Z",
+    "assets": [
+      {
+        "file": "3rdpartylicenses.txt",
+        "sha256": "e52d596ac1fa5e07d7433886ce25d44c5a88c61209fa25342d583bc47aa94fc9",
+        "bytes": 12269
+      },
+      {
+        "file": "index.html",
+        "sha256": "b82f2c9332b1db98c136633f2bc24966166f4eac900c04bc8839fb6aaab1ea55",
+        "bytes": 817
+      },
+      {
+        "file": "main.e83d3adb60def6d4.js",
+        "sha256": "0e44abd3fffc217091bebd0f300bfeabef6832e132e27f6f3130fe44777f6dce",
+        "bytes": 171493
+      },
+      {
+        "file": "runtime.93d195bd2374e322.js",
+        "sha256": "76b07eb969b6f738ea0234c2711211396e5bb96517b426da1eb13ccaa31777a7",
+        "bytes": 902
+      },
+      {
+        "file": "scripts.64ee708414c1c2e8.js",
+        "sha256": "bda78aa50b65485710468ce5bfc851056b5781c880a6d28eac52dab9e7f2c864",
+        "bytes": 1382
+      },
+      {
+        "file": "styles.b809f9167d711d60.css",
+        "sha256": "0b0fd7b509aedb08df0019ff68104bba34dfed73eeeaf626d3613bbc45a1a5bf",
+        "bytes": 3992
+      }
+    ]
+  },
+  "functional": {
+    "passed": true,
+    "oracle": "fixture-independent-v2",
+    "coverage": [
+      "legacy workflows",
+      "all row numeric cells",
+      "summary",
+      "chart",
+      "selected live updates",
+      "three modes",
+      "zero work",
+      "floor",
+      "price reorder after update",
+      "empty roundtrip",
+      "watch filter",
+      "external async",
+      "stable row identity/focus"
+    ]
+  }
+}

@@ -1,0 +1,1311 @@
+{
+  "schemaVersion": 2,
+  "sourceCommit": "06a075503953b6ecbafed55861f5922e83a44959",
+  "labels": {
+    "baseline": "legacy controlled",
+    "idiomatic": "legacy conservative idiomatic (revision notification, not signal-state architecture)"
+  },
+  "policy": "Stored historical labels, raw bytes and experiment IDs are unchanged. Catalog labels are explanatory only.",
+  "files": [
+    {
+      "file": "benchmark/results/audits/dashboard.json",
+      "sha256": "bece24b70e784eddb6bbefdd64b4b346967d9cafeba045325147e71ef4258569"
+    },
+    {
+      "file": "benchmark/results/audits/installs.json",
+      "sha256": "9e9a2fab8cb43abe64f45622657642f6f1651a82218cf7309d4ec56dc81d6a64"
+    },
+    {
+      "file": "benchmark/results/audits/results.json",
+      "sha256": "0428b6f8114cbdf50d0171de2264a236d89987df0005f73167a2170783de3fd4"
+    },
+    {
+      "file": "benchmark/results/build-orders/build-2026-10-18T14-29-41.584Z.json",
+      "sha256": "6c7ecfecb9282a33b315c3149d0b9450a67acacae602ddb091f3635c855d6d3d"
+    },
+    {
+      "file": "benchmark/results/build-orders/build-2026-10-19T08-27-42.151Z.json",
+      "sha256": "6c7ecfecb9282a33b315c3149d0b9450a67acacae602ddb091f3635c855d6d3d"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792331899946.json",
+      "sha256": "cbee94be869ae5f0c2b458925739134b4be960b1d669b9737d5e4e32874436ef"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792332462765.json",
+      "sha256": "481d7994dbff7422bfcd48e4b605318af4218c81cf72631c5896e8eea0c0b0e7"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792333805608.json",
+      "sha256": "c1db2e952a040d915ff77df754845e2592a25a2694ec6f1fd470a0da091b09b7"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792333877835.json",
+      "sha256": "c82265a0e08e30f08858c52f5fa0975016f790e149e9a99ee0400b53a634c101"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792333906833.json",
+      "sha256": "205fcc3447c9d9fb89a503c8179a5d4fd30edce2b24cf340542bf60162a2a0b8"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792333936154.json",
+      "sha256": "d1261e1c7276559d4766b280045dd8817535d8d8fe677840efb6ccbb4f18878d"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792398474296.json",
+      "sha256": "5b2632a64bad60cd4d74cf0a4f5726b03c9124a63cbcb2766c5417b3dbd6405e"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792398549411.json",
+      "sha256": "ffae6d1e2d6d753c1db9a06c9b75a2abd6ac3a6a745fe05cf2f8399c1ea099cc"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792398580396.json",
+      "sha256": "bcce360031ead4bed09ddc2c08cd7ae05e472885dcf6f08d7669f7b2d932ebda"
+    },
+    {
+      "file": "benchmark/results/builds/14-baseline-1792398610853.json",
+      "sha256": "009a7a54831a28433d0313bf6a046eb975ff48653f61f84dbd7cb8d31920359d"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792331910295.json",
+      "sha256": "ed9d843552e68cd59543034d33b4f6da75e90b917608c95f960f1373d67b346b"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792332473598.json",
+      "sha256": "d30e9050d5da5658964415ee1d7f2292bb15f01e3b78e5bdcc69ff50b3c7846a"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792333817968.json",
+      "sha256": "91b8d3ae58471a28ae66e86b7a11ce8c8548ca9b921b2c093b33a6559fc0f431"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792333848234.json",
+      "sha256": "44b1ed235b374310bbddccce24f60ab3fa2908d08de9858bdc1b8c8e8df74b96"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792333916846.json",
+      "sha256": "a20497e8804668d45a38fe516f1616feadc77fcf9f69e9ac85c821c1f13d3c77"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792333946455.json",
+      "sha256": "2d2a18ada65aec23759b733115e004bacdef7acd6a060fde536a6f0375fc6765"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792398485470.json",
+      "sha256": "b2039b3a5fe432b7badf59b54fa3bb5838e44c2fa66db43d083e1bb381986131"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792398517657.json",
+      "sha256": "51be1989ba80e6efc874259d0db37b8ce6461ba5dea2cdbf9e4d6eb81ec3e038"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792398591246.json",
+      "sha256": "b8b70ad9c14190c3190ed71fbc13257e4766714901cb7c2adcd4192db65de6cf"
+    },
+    {
+      "file": "benchmark/results/builds/14-idiomatic-1792398620773.json",
+      "sha256": "14951504531829d42eb00f75011b10638f279e8037b9628f372f395a90003bee"
+    },
+    {
+      "file": "benchmark/results/builds/15-baseline-1792332177230.json",
+      "sha256": "6bb1721cd6aad81003229077289f6f553ea108c42823e1f6859035d2daaa71d3"
+    },
+    {
+      "file": "benchmark/results/builds/15-baseline-1792332483756.json",
+      "sha256": "0b5112e450a7901e4e9264293074669f5080f43427372af88ca2a43ac4214600"
+    },
+    {
+      "file": "benchmark/results/builds/15-idiomatic-1792332187947.json",
+      "sha256": "f1b549d08d46d425040bd379482fad21a09a92da9a903198720b22755fbe5f37"
+    },
+    {
+      "file": "benchmark/results/builds/15-idiomatic-1792332493364.json",
+      "sha256": "39ba32d327404445f79a853ea3ecf346c592a4f04cae99563cc4153c0a8bd6c4"
+    },
+    {
+      "file": "benchmark/results/builds/16-baseline-1792332217285.json",
+      "sha256": "6c963c62936a7386001e2296243113882130e1c90299580ceac8842be477c450"
+    },
+    {
+      "file": "benchmark/results/builds/16-baseline-1792332502904.json",
+      "sha256": "b42c257319f493db2ddfce9828cdd05cc2d4bfe27edaac4c00be3f9d3455428b"
+    },
+    {
+      "file": "benchmark/results/builds/16-idiomatic-1792332228142.json",
+      "sha256": "1e423954fe7ff0ee83c8ec3bead0cb0b7960e72a9a192538f0c476af4eabebde"
+    },
+    {
+      "file": "benchmark/results/builds/16-idiomatic-1792332512296.json",
+      "sha256": "13cdf9ae847bce0c07a240b4064f74b2b5b248fdb1a4258829f04d7134150211"
+    },
+    {
+      "file": "benchmark/results/builds/17-baseline-1792332266672.json",
+      "sha256": "011ae000c7497eb48dca7964e71ed9d4d4d0750455bdbe03c4ab4f3a8a61d7b3"
+    },
+    {
+      "file": "benchmark/results/builds/17-baseline-1792332522419.json",
+      "sha256": "bb87d5a46488fa18e8c4543b6ad9e61ccaafbfe9fbf9d244d3ca3fb22c6f618e"
+    },
+    {
+      "file": "benchmark/results/builds/17-idiomatic-1792332276213.json",
+      "sha256": "bce061c88c92d832810bf48723966aa14f14c79d44b087410945d024ff8e4909"
+    },
+    {
+      "file": "benchmark/results/builds/17-idiomatic-1792332531418.json",
+      "sha256": "f837f91ce179ea3e4f362fef319bbd242d6e45d781b848797f4090ef7faa086d"
+    },
+    {
+      "file": "benchmark/results/builds/18-baseline-1792332299907.json",
+      "sha256": "0c6efafe74d231ff76b77895bce1ce8fe0b33f141e9acd0bb824e46269e0d37e"
+    },
+    {
+      "file": "benchmark/results/builds/18-baseline-1792332541158.json",
+      "sha256": "814b9e13a50530255f8dcebf3f87c0df7cd9543c7e88d415bbe66c67c6248fb9"
+    },
+    {
+      "file": "benchmark/results/builds/18-idiomatic-1792332309269.json",
+      "sha256": "ffd4afcb3074c40841d972183d6e56283f56d382d32e9a7981826db9e45edc1b"
+    },
+    {
+      "file": "benchmark/results/builds/18-idiomatic-1792332550240.json",
+      "sha256": "6dcc127aa7412c214f9d39387951a12a07a4d5228eee6399f3e9bfdbb74bd166"
+    },
+    {
+      "file": "benchmark/results/builds/19-baseline-1792332347433.json",
+      "sha256": "af50c503baf38e625cf7ec4d393c9abb02117e7da59a79a6979f23ad88623f46"
+    },
+    {
+      "file": "benchmark/results/builds/19-baseline-1792332559496.json",
+      "sha256": "495a656ea741f01e712903d75c045d7afaf4d60414e706fc35962080873400bf"
+    },
+    {
+      "file": "benchmark/results/builds/19-idiomatic-1792332356693.json",
+      "sha256": "4922497116e158eb083993678b5ac9562f17401501e51bb195d07e0474c3ed87"
+    },
+    {
+      "file": "benchmark/results/builds/19-idiomatic-1792332567909.json",
+      "sha256": "499290bd150e9ce68f8ac97a786e1e3c120a8a91a9fc5f804b55fda0c8daa13a"
+    },
+    {
+      "file": "benchmark/results/builds/20-baseline-1792332382939.json",
+      "sha256": "f51de1ed78667f571735ec469619ad9e2306920bf0db303519e892cb564e365a"
+    },
+    {
+      "file": "benchmark/results/builds/20-baseline-1792332576885.json",
+      "sha256": "29fb7ad9d1c54f9a7eac0f8f2e1bf3a6f4c70c4bcfea5ea260a91c9d45e3d288"
+    },
+    {
+      "file": "benchmark/results/builds/20-idiomatic-1792332392524.json",
+      "sha256": "230d7abe37f9f106559e221b7e726a6c4bcd48146b7d34985a9a34aca4a65cc1"
+    },
+    {
+      "file": "benchmark/results/builds/20-idiomatic-1792332585866.json",
+      "sha256": "fb0dfac2cafdd9f7ab2899308f113c73a43e0380cebafa6845a6e011c4a68713"
+    },
+    {
+      "file": "benchmark/results/builds/21-baseline-1792332415819.json",
+      "sha256": "c0ad62a3a274929e7feb3e4e27e4db84e98eae50170b724d9c9e614d3e03dd6c"
+    },
+    {
+      "file": "benchmark/results/builds/21-baseline-1792332594803.json",
+      "sha256": "c6cd11814625c0e7ddba893bc03fd7dd42b0804390ccdf8356bfd757fa49d59a"
+    },
+    {
+      "file": "benchmark/results/builds/21-idiomatic-1792332424876.json",
+      "sha256": "15d6b5cc5b97147494445b33f06496a06952e49cc710dacd951c3bbaebc66888"
+    },
+    {
+      "file": "benchmark/results/builds/21-idiomatic-1792332603181.json",
+      "sha256": "e70048cdaa4a6be338942060fb339f0aeeb40d57c280838df5cebec53f274aaf"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792332047010.json",
+      "sha256": "c778f8e3116e2853e55b07aa2b057a899fb7df9b456fea23f63d2ec5a024fcfb"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792332612809.json",
+      "sha256": "4abbd7e5a50045d9463a5c3d642cebc4972cfd51ad80db1dbe9495dafd323db3"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792333828396.json",
+      "sha256": "cb18165d19b042ba5b590e498ba4199fee5e8e87dc872bc701959db67989eee0"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792333858135.json",
+      "sha256": "cba2b96854cf3d4b0600215302ceaea694c4df7c8b49e43a8c1932a82abd6be4"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792333887670.json",
+      "sha256": "6a924913033243c9b9debeb6b3df4e9d6d7cc4a43755225dfdebcccaf88526d8"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792333955648.json",
+      "sha256": "ae7d2fe6e561a280acfa8680e1a62704a519aab76f2a90ee97562d26de733205"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792398496017.json",
+      "sha256": "668f9322f60b067a3be082f087093517781db4a59d6b85dee67b7beeaf5ac519"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792398528590.json",
+      "sha256": "edb95a5316db3f88d46dc1fec0bfd23fb474c409b08900058d1d99bf123e6d7a"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792398559606.json",
+      "sha256": "001923e6e3b561d3ede1563956a665a0d23c48c9afebe78aa480cb5664dd9bbc"
+    },
+    {
+      "file": "benchmark/results/builds/22-baseline-1792398629602.json",
+      "sha256": "d3d72229229a15d2b5cc377210d65c7aaf8fa7f2fe31c1c3b4c26b1ac4f7e178"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792332056940.json",
+      "sha256": "db5c7879401f6bfc8ee6c4897aabd9b0e794bafe7e6505e975edcd34b4661164"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792332621456.json",
+      "sha256": "ca1ddfbb7dd5b2fb9d2c739888de493ffd7d8669b53dbf85301060a059140599"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792333837638.json",
+      "sha256": "3a4b46f3940c5c8ba44fbb719f6012230029bbdd105a52248d70f71d2fd5e9de"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792333867210.json",
+      "sha256": "45ebff75fe56e716476d685f5d9b77c0e33bcb02d5db062ff75fb3ec1340d61d"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792333896461.json",
+      "sha256": "2b0dbc60c84441c6b8daef4571b623b3a8bfa8a17f67fea0c1cb735b03d86caf"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792333925808.json",
+      "sha256": "a5202203888125cd8e8cf7f61714beac03ed771d00ccdc7bf32b1e29bace3ad2"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792398505887.json",
+      "sha256": "d04ddd4a0c162cd21e119bb704548b88901d4874f805cf3a4e8b271fed8594c0"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792398538834.json",
+      "sha256": "1f6afa3f7515b9201e6253adff0e09fc4717bc60c4875be8b72e66754bfd01e0"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792398568580.json",
+      "sha256": "806fbeb841346778f3f37e3f598e00a34959b4e18af1f67a851e391b2bebae70"
+    },
+    {
+      "file": "benchmark/results/builds/22-idiomatic-1792398600840.json",
+      "sha256": "ec5e627fa0161a4e4db30f9116bc538e433b10f5efc1fc525fe391a2c382d70f"
+    },
+    {
+      "file": "benchmark/results/diagnostic-failures/lighthouse-2026-10-19T08-31-20.494Z-14-baseline-0.json",
+      "sha256": "833b8d6f1f18989866a02ca07ade49aec34942867bdc1e2f8fee86bd916fd922"
+    },
+    {
+      "file": "benchmark/results/diagnostics/initial-angular14-build-failure.txt",
+      "sha256": "7dcf13c7d4786161e9c55057daa50674b6d6b4a7dbd8f250a714003f4626e43a"
+    },
+    {
+      "file": "benchmark/results/lighthouse-orders/lighthouse-2026-10-19T08-31-20.494Z.json",
+      "sha256": "8c506090f50824210b00a1ceb4130c2ab6d80769216b30a0047d865360b7e005"
+    },
+    {
+      "file": "benchmark/results/lighthouse-orders/lighthouse-2026-10-19T08-34-40.295Z.json",
+      "sha256": "8c506090f50824210b00a1ceb4130c2ab6d80769216b30a0047d865360b7e005"
+    },
+    {
+      "file": "benchmark/results/lighthouse/14-baseline-0-1792398909715.json",
+      "sha256": "6ab35391774636aa8c95ceb37fd58cbc23169a4fa6e1f0a10a3391d191f9a356"
+    },
+    {
+      "file": "benchmark/results/lighthouse/14-idiomatic-0-1792398937736.json",
+      "sha256": "76c85e77beb0d7f3b1d9b8d644a4638eda54748f7590fc04cb52f8efb6dba7a8"
+    },
+    {
+      "file": "benchmark/results/lighthouse/15-baseline-0-1792398966328.json",
+      "sha256": "7a0bb98b2be80d9c4b5d388ce43edc34582aa5eee855ee795e1c6f99523bf824"
+    },
+    {
+      "file": "benchmark/results/lighthouse/15-idiomatic-0-1792398994399.json",
+      "sha256": "0a50d4bcf0ac52fbeda264604dc81b01d886387183b5b82674b2861baf418be6"
+    },
+    {
+      "file": "benchmark/results/lighthouse/16-baseline-0-1792399024740.json",
+      "sha256": "70b221919221d5c170cc2f3ac42dbf48af6b3bf4b03334e2c82344ff666da424"
+    },
+    {
+      "file": "benchmark/results/lighthouse/16-idiomatic-0-1792399054218.json",
+      "sha256": "df954e3f0f6757c64789227e4db523c8bd4d03c5e530389ba1589ff90ea895db"
+    },
+    {
+      "file": "benchmark/results/lighthouse/17-baseline-0-1792399083521.json",
+      "sha256": "3c550b0c6e566aaceb49f82cd46e67bac098d71efdb397cd9752bfed15be89af"
+    },
+    {
+      "file": "benchmark/results/lighthouse/17-idiomatic-0-1792399111429.json",
+      "sha256": "574b5449d5a1a7b72fe986a3f3e65854413ce91bbe0745b56c4c8c48cc41018f"
+    },
+    {
+      "file": "benchmark/results/lighthouse/18-baseline-0-1792399140439.json",
+      "sha256": "3674a08f2db350ec6e564456a38a44ddd82eda6a6356d9d070f664ae8bdb9d74"
+    },
+    {
+      "file": "benchmark/results/lighthouse/18-idiomatic-0-1792399169013.json",
+      "sha256": "c4a9f58c648826f03ff845b7465e53d508bb1c18d3a0b1e8673649f1800582fb"
+    },
+    {
+      "file": "benchmark/results/lighthouse/19-baseline-0-1792399197601.json",
+      "sha256": "803db81554141abb0435901ee8c04b0156ce2e5a53313ad11cd97656face9a42"
+    },
+    {
+      "file": "benchmark/results/lighthouse/19-idiomatic-0-1792399227327.json",
+      "sha256": "b21258f3e8fa50b5bf34bc4586d8f42978c59377c9acabf6a93883e44f73e432"
+    },
+    {
+      "file": "benchmark/results/lighthouse/20-baseline-0-1792399256536.json",
+      "sha256": "ba0c497b76f95d1ad88cf894780f810821929e08a626f447db249980ab3b2d67"
+    },
+    {
+      "file": "benchmark/results/lighthouse/20-idiomatic-0-1792399288284.json",
+      "sha256": "52258f1d51cea35c243d4f3f956823719856322c54948235739f2ea110655601"
+    },
+    {
+      "file": "benchmark/results/lighthouse/21-baseline-0-1792399318341.json",
+      "sha256": "0d4cf400d9d1ac7eda709b0e16a6d59a80c9c59c3175de3bec860df97dcfb918"
+    },
+    {
+      "file": "benchmark/results/lighthouse/21-idiomatic-0-1792399346554.json",
+      "sha256": "f7053d8cf7c0faf4230954c1e5641b446b82bd18b199c778839e6a95f2f123c2"
+    },
+    {
+      "file": "benchmark/results/lighthouse/22-baseline-0-1792399375684.json",
+      "sha256": "deb970112173939060bfe7d24cdfbea4c336d99ba8d551250fd58e601ce07410"
+    },
+    {
+      "file": "benchmark/results/lighthouse/22-idiomatic-0-1792399403899.json",
+      "sha256": "6b5c820bd5d195ad190fae85c9efe26ee70c5c61ff2188fe3f930b4fc55d28e9"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-A.json",
+      "sha256": "40e0c3b6ef200ccd29bd3911b84d4cdfa8063702881655f98853c61d1a581dfc"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-baseline-0-B.json",
+      "sha256": "cadc53c48277baeceb57891f40fe82aa49fff2e0a6753a37ce5b0c5a3facbe3f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-A.json",
+      "sha256": "a9f3d9d5f82932436f63130d41b2375248eae77254b3cfaf2b18af0a63b2cef1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/14-idiomatic-0-B.json",
+      "sha256": "757af897dcdd9673411e4cf00b64d9af4af524cde7183abee6335f24665b2190"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/metadata.json",
+      "sha256": "b1dedfb36d61f16697cada1b7e714978681fa387e7f37cba43901bbdd136408f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T13-59-45.803Z/order.json",
+      "sha256": "2af00e2984d06d229641261a90c067d6e7b636035f7c7f5872e81c4de21b94b0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-A.json",
+      "sha256": "76d9ab04a979784974a390cda884d1525d083e302fd26c64875c2265cee8f8e4"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-B.json",
+      "sha256": "5a24357f8582dbd61feb35a7a056d9ffd8049f1c91795a2c78607ff435ee02aa"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-C.json",
+      "sha256": "9ce9a1e3eeaf4c1b715b2b1f2d1d26494e491c0e8b887910fb112978b31fe018"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-D.json",
+      "sha256": "e4e1db512f0c6e691c8d6b846dd62b391d482d001cc188f5ac09f0647c5bfc71"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-E.json",
+      "sha256": "37270f8550a3645ec8e168e529c40febe35deae11c964ca16462a8b865b34833"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-F.json",
+      "sha256": "fd7479d986a304dbcda46bcec84d41ce7a6e898aa6a012481940014ae36d9656"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-G.json",
+      "sha256": "58746b11be715176c2c716113499b7ba1c5a067d988afdbf33dc89760a333abb"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-baseline-0-H.json",
+      "sha256": "fd38ed09eb817ff47fbf11c2f8d187343b95f6d060696e3bf20a9d0a7f0211ab"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/22-idiomatic-0-A-FAILED.json",
+      "sha256": "ffb1aaa13d6cc03386bb01b8a785b3aab4cb7e458c07147b1c7a7a2ae45dc9aa"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/metadata.json",
+      "sha256": "05cc28a1d9d83396139bf35c2f85f5758fba616de70aaf2c7c6ca8a9be0d9d25"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-02-16.428Z/order.json",
+      "sha256": "8ffacd9fdeb5233eae63662620f964ec861d8af4f4cf2fb0bdbd43654834a792"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-A.json",
+      "sha256": "846001fe2379a4109a90b3bf25cac4d86c6b22d8eec8238d021671f85dfaabfe"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-B.json",
+      "sha256": "b72d735e3d681d1a5ab7a4608da04c2c678e9d5984abf8412bd90bfc17f73f40"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-C.json",
+      "sha256": "fd799cdea30b9f1a971d3609480dc39f7d7660c7da7c5c111300df684ce15963"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-D.json",
+      "sha256": "d5ff100d6b3594989f3a7acb2c066a8bc5bcc7205a902bb4f5790c8ff4ba5c76"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-E.json",
+      "sha256": "7a294cb92023d42b7a9862b185bd5316d5adf955c4296b093ec247ec98298e4b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-F.json",
+      "sha256": "9232704c5bf5e6e6e41af8c0c9a88ee9b36dd037be30bd5f1b57aaf362d6df56"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-G.json",
+      "sha256": "14a9974ab2b3cf6afd23d4916a4c184a686e3f49f2aa95affa9b7f0183c4682c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-baseline-0-H.json",
+      "sha256": "30526aa5d3eea48c94da20c719d2cdfae2a0e8beb2ffeda679f99f22e315e55e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-A.json",
+      "sha256": "b83ec4d853760b13de7a251c7ec651b9fb481794f296208183a3282042e91cb3"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-B.json",
+      "sha256": "d7a9974e21a8fa9b1396c53f4ac3e5d72b8f69f61c585555f9fd76d58b10d289"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-C.json",
+      "sha256": "4a789d2dbf5d3d02419b10d51f4636ac0490725192b9fa6ff37ff9404437c4f0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-D.json",
+      "sha256": "c38d68506f9cff1674dc6dfd96d9c63720b0330a925ae923aeb16a4feb883c98"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-E.json",
+      "sha256": "da7c0f01d0e93d843c56c0e0c9599e2dc583767517e0fc996e2a0a9a7ae64919"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-F.json",
+      "sha256": "3fe186ad6fff056e4cbf65701089c392cc16b2dcd7476c630c469a1236ab242f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-G.json",
+      "sha256": "d6ccf3c06b53dcbdff80f8abead30a0c0d1e9720999accf19c6f14961b9ff08b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/14-idiomatic-0-H.json",
+      "sha256": "3914d073b094b7bb44e10d4180ba3db0c081c2a7f7c5bc29e8f6828ffe1d03cb"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-A.json",
+      "sha256": "8f084c315060c36bd1259ed44403124150a7f82e5bb4d885251206356292c05c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-B.json",
+      "sha256": "b1705f1580e17243129ba6a1d8b777c3e075ada7a322f3cd529d122211d8c19b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-C.json",
+      "sha256": "66b78f770de4f01bb1a8d3bdaf59c96b533b1318806ad3e55e3fbb02a2e023e0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-D.json",
+      "sha256": "63b2eac72b0a939de95fb817c2b38d3302385c682e63ea8b5677a7df9cb7f188"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-E.json",
+      "sha256": "38a7ea4235ad9dfbdda2a7e64993373afd5cff0f6adce80ebc5e9a7f0b85142a"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-F.json",
+      "sha256": "c11f069ac5f10c1d70affa9d46788d96e2a1a9375838505c54b7660e6dee086d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-G.json",
+      "sha256": "0e0a547db1e970fc05e542a2c885c86846375e66409cd5e5da92cebdec2c873b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-baseline-0-H.json",
+      "sha256": "9a14edbacdc70ad2e785f3eeffc05997658abbfbe13cfebb2783d4428afc861f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-A.json",
+      "sha256": "e95a4135dc217a3e632601486549a1ebcbdfbb24ca71e9e9dac65c528849323f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-B.json",
+      "sha256": "5101ba0add17cd9ca6e3833e8220f5f5ff60f52be7587a5d82337492614f1a14"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-C.json",
+      "sha256": "2d6f736a9c28626ce0f6156bda4d34c5dd7b662111998617ea6887a7bdbc5c55"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-D.json",
+      "sha256": "d20f3d2ba18309c724eb9cc10fd5bda31b9292e8e01748093d056dd14d849886"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-E.json",
+      "sha256": "0bcf1ea1715c6a3fe8cad7bb395cf6ca38130f0ac021b1c91f6ce6a56d098947"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-F.json",
+      "sha256": "6d8d996a074fc013a78ac8be255300c02b6b5d3e2a381ac1d9fc7e02e65b834f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-G.json",
+      "sha256": "78ba4dcf1527980be669ea09c2e7df20da76241552b5356094da99db4c177f92"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/15-idiomatic-0-H.json",
+      "sha256": "0c61a7f42e949f2babbeaf25a25f94f5679e6442aec43e97c8d674e760e49534"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-A.json",
+      "sha256": "bd8bce7464992afdb70cf2680e2802c49bb715a75520b056e19d5a681546867b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-B.json",
+      "sha256": "1d314f2f5398eb8dac07ca990adbb485aa24e0604e13944945076c0108a8a3ce"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-C.json",
+      "sha256": "046081506509747f4a0fca79a1de2ddc1f3217623195dbdeba62bfcb8a4f4342"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-D.json",
+      "sha256": "39a33300296b4397943f4a6c18e724947e6f1304a4b0411ba167f00a7871c438"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-E.json",
+      "sha256": "f668e55547ef38b1a06518531dc3b19e0880b5d02b09d6554c94e5789eaf7106"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-F.json",
+      "sha256": "bb2dba1990ec1fed68dfbb2c77066e8aaeec244788591420118d9545d3f4d8e1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-G.json",
+      "sha256": "7680ac98f71378e828920e9bb5c0428530286dc3130f1f3642f64d80bdd252dd"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-baseline-0-H.json",
+      "sha256": "66220bd3a7f7d6a998a5989850663fa6f2ad5f8d3a58ee7d0f8d9216da874862"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-A.json",
+      "sha256": "43a7f5f6a5103328421aea80b5490d5eb556c806a2f35dcacd5c0a394f8e3dc3"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-B.json",
+      "sha256": "e12227e410ab9514eaa8a06e83d33f4dcb2345a8be48eb28cb70c4d7cc2026be"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-C.json",
+      "sha256": "136e80c09a1a81aed9819b106d57c035b8ee1605325a34e0547125630a674c37"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-D.json",
+      "sha256": "05ce6405fd46f189de84d40fb2e24c963f0f2af411fa5df6bb7e4c61434a7439"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-E.json",
+      "sha256": "1ab2e44cb68d8e8fb7bdad7a5772173cba9be6954a9402dc2f829fe7aa2e4a7d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-F.json",
+      "sha256": "4009a7f172d53778a7f6d08d68f9b215b090e98d31fe3013b551698fafff351e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-G.json",
+      "sha256": "16715a28c2cb891ef672ee6d208609be1862335a7696e98b7d8bcc10f766cd12"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/16-idiomatic-0-H.json",
+      "sha256": "7d7f44a3c3ded44ce9a330a684d5833e6b3cec2cae551f0d298180060d664fed"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-A.json",
+      "sha256": "f0facf5b06088a75ca2dcdf388883aee573fe1d8251cbd27dae94adcb806cdfb"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-B.json",
+      "sha256": "172b24eaef100b0e940e8d2b7b9daa79156aa811c7a391ca292831d8f8d80219"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-C.json",
+      "sha256": "1ebfd1639f60b04cc9971307a3d2aab90e1cedca2406e9b08b5603cd1eb8872c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-D.json",
+      "sha256": "dc5ca62e306abde200096c765cfecd3a2f872cac9366686812bb00b5a59ab71e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-E.json",
+      "sha256": "38c33567751d3eb28373a7d5757fe8b721e9040ed141a12d5ce34a43f8bf3335"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-F.json",
+      "sha256": "d67616133a5ede82453023dfa8f94e875c9d6a77b2f442d66c8cab105b0f7f10"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-G.json",
+      "sha256": "3cddaec92c8842caf808732e1ec022f94d9fc4534af070e45a16c1c26365a97c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-baseline-0-H.json",
+      "sha256": "cf232684f881b9b3a09aa907cf9fa158f626f987b095a15486d6c65eaa476c3d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-A.json",
+      "sha256": "50af1797e3f97d454656dde44a9422ae2a8990aca5ad8e9d5dbb3b0ba2507bbb"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-B.json",
+      "sha256": "d7f0a39ca692cd7656a551ceabc8f3e64b7c21e9cd567877cf6fd0d76d20aa1d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-C.json",
+      "sha256": "a8993aa1a5874296b3e4ccecfeb2d164b5421c8c35aa7bd970df9dbff1646d87"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-D.json",
+      "sha256": "ef95dd0bf1dadc41de6ef16616c78ee82845a28e871caa10082e396eb5110793"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-E.json",
+      "sha256": "59e705be5a0c685327b1e33bf6c8a2bb97df284eff8a22a7250fadae14e7ad1a"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-F.json",
+      "sha256": "dd5b4aa8b376c0bfee78115292020f75cbf5acb3d09a095fc5411e467bd89487"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-G.json",
+      "sha256": "426e8ee54d61f09e487d2aa2a6bfa2399df242d9bd68c49bf36cf677ff83d53e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/17-idiomatic-0-H.json",
+      "sha256": "4faede5013ac2b4e4a2fe5a3c9982a7c1b94ef9802215a2c675f04e0021b9227"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-A.json",
+      "sha256": "ecf539a160677686bb74390dc7270d8841c79e7b64bd5b5d56da2bb8d5823a59"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-B.json",
+      "sha256": "2946e3df390942ce2e64a94571d8015206da4b5489e376e3c915ef47f6a38b68"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-C.json",
+      "sha256": "3b44145595a005b3a49a6331a37468484967c912240eeef0ed9285e7418e6a99"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-D.json",
+      "sha256": "ffdc824125ca221f8d550b6ab8d7065efaab0b5c412ac23df22bbaf9e451c84f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-E.json",
+      "sha256": "b023fdea3e1517ae5044e407ba56357bcc3b940630c4588df2eacfcce32057c2"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-F.json",
+      "sha256": "a3ec9b2cb27e6504179f295ecbea76bfdb890bf5eaf917856aca80cd461b61e1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-G.json",
+      "sha256": "723a9575b7cb99beb6de82aa6c97b4e1e103209866d58360c46362e7c532450b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-baseline-0-H.json",
+      "sha256": "088c9c8d504a60c71add121876d2a2793db750b663464844a9eac0e2057e2d0c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-A.json",
+      "sha256": "6d06bd0bdcfc85243e7cd54dec50e0ce5e12c6bb85ca1ef333367bec8f8415db"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-B.json",
+      "sha256": "f81d4f065a34fabe7805a2addc4118c5d6ea273ef8017371d705b40be90ce7ea"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-C.json",
+      "sha256": "3a6e914c85b47bec71557b3001d6e24150590eb37a1d7fce2c6484f94d1a9f10"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-D.json",
+      "sha256": "51ad781403440c59a6de3980402e2d0ae0952907f97fa055565eeaf998e21b88"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-E.json",
+      "sha256": "1e10ac6d52f5010eb70eda4d68d9abfb6a061d048d0bea72e94ddfdce70f897a"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-F.json",
+      "sha256": "43a4bf38f0068e445598b4f0d2e1fd56f8e2ebaec5c009eca3bc06c6c0c97b4e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-G.json",
+      "sha256": "cde13e82cb3e707dc3457980102ccd39293676b4b35e75b6b7ce604cb36bc73b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/18-idiomatic-0-H.json",
+      "sha256": "de867a38778a2322cf1e08090458098ff295139a15032b1bddcd2ea4b825a979"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-A.json",
+      "sha256": "93f41738308e8591c47fbea2c9a57297d03dd5359ba60bad9138a7b6adae8983"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-B.json",
+      "sha256": "06749449fa85ebac08eb3298363d2666fc7385bd486011b9d99a8f789f9148ec"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-C.json",
+      "sha256": "20d5900a8d11e94cd16099d043d7200828dbb5808d277c6e6a7b24554c376133"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-D.json",
+      "sha256": "2e7504fc39918bce5af9202d351759880bd3c90fdf41547add4fe6bccdc64ba0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-E.json",
+      "sha256": "ed9000422d5855b653c999cdaddc0e6625d40259f408f0d04dc3657b8db7b288"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-F.json",
+      "sha256": "b08f1b0f6d2f3d2edbee0bf2f48cdaf633a0de66d3cc2a77c3f6a00aea9eb196"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-G.json",
+      "sha256": "c6c3fd1e190bac349c1dbb0c08f0d3343cf5e380789f3ad90558ea9742a0beec"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-baseline-0-H.json",
+      "sha256": "908f9f91a5aa722de4fd9eb9af1b4680f2a49d7b6b77ae9a128e051dfece39d6"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-A.json",
+      "sha256": "9433e819fbbb0b0059e7e03affc1a94e8a1104c8a6a58be31ea6da7523820b7d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-B.json",
+      "sha256": "d948e0d458ee7c8568eb497af757f66af176225b8165a12d5c0788bb7f0ce5ac"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-C.json",
+      "sha256": "769f1688fd61e9ed9cd73a9b5272490cad7114b32b1d27a1532fa306e1afb6aa"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-D.json",
+      "sha256": "8e32254638d8b33ade40476d4e48a8a95f2c7fec07e38b3aab77127fcc651ed0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-E.json",
+      "sha256": "f4e98a49f16e88f3ba522b09008211968bf1721314760a3d580e6e66513151ec"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-F.json",
+      "sha256": "0b4240a0c29d1af6625dfffbea8af8075ab5c2a079ba0b79618455b9c1e61776"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-G.json",
+      "sha256": "d5f18a5e5573bafde29e472d96059d69388443ede167edf50b3a816b361b4c1f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/19-idiomatic-0-H.json",
+      "sha256": "578c940a3baeed80fe752045986134806d5ce929408a7d2ac1252b65439cee15"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-A.json",
+      "sha256": "886bb2eab1712ea38a1c1203c8f81661feacb17e00a36345ddf15800a83f9515"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-B.json",
+      "sha256": "e82b0d4ada1a589d3a9b753cea58dfb8a301ce7c251c6de0b13dfda4047e417b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-C.json",
+      "sha256": "e193d63726db1f9c18962ffd41a63bcd3698721c42463d2c99019dadde501433"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-D.json",
+      "sha256": "c3a66ae3dd2faa567f8cce36d32eed5cd26fa58c590412ecb501f18f4e16424e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-E.json",
+      "sha256": "5f8ecef55cac48d61e2257ff391b9821b140dd476f6c7d1ff1d73e3fa049b51f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-F.json",
+      "sha256": "cec7a22de2890d0b58b99838f302c888e75a67cb8fc427f32ac6f14f6b1c0b22"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-G.json",
+      "sha256": "cf7aab355b9794ff24b59e4f942aeafbc2a04026026cefbd0f87937a27c7d28d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-baseline-0-H.json",
+      "sha256": "865d10f089ebc02c1607f71066458f6a887c722ac7f7d0ebcbf14baabd4d8ca4"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-A.json",
+      "sha256": "ab106ff0549c12ca46593e78999ef1f3be7d5907b25f94e9a0793a9e43d87bff"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-B.json",
+      "sha256": "9304560377c74f63cefb443439c7f11a0168472df9b3e22921326710b73c643b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-C.json",
+      "sha256": "2f80be9e2911cc1aa95a20e3305cb6b96c272f4f84d98edbb67be7a1f97ea895"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-D.json",
+      "sha256": "dd744e49e38b172cc560fbd8890999668c9c26fbd6c9fdbd6dedab30e4262938"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-E.json",
+      "sha256": "37a9974241e3678da3da1b9e75e65841b3b07edc5b3f55992990096ba8a56c1e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-F.json",
+      "sha256": "47d91ac860334356ae40246c9b928bd8da52822f42134815c0fe46f844bfdaff"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-G.json",
+      "sha256": "863461974ee8da49c54729c98b212d58389ac5c6563f658d7703f2835358e73d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/20-idiomatic-0-H.json",
+      "sha256": "1b06221be787ac819d22052c87965a91005cc5751f78cf063250a80bb3c8e84c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-A.json",
+      "sha256": "032b579d7d9d0c046e1f07bfb2fe130b6e0dbc7221edd006dd86b8f3b2ac9472"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-B.json",
+      "sha256": "4a2d77782348b6f22ed4fe1ccece42ec569025b1b5c292390f18d640f8ec7b18"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-C.json",
+      "sha256": "7b2cc78c3a97b7e9f1c6f7acc4fae5365fa0043a880b68112efa98e9cdb88a1e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-D.json",
+      "sha256": "157ae215c59f65fcbe6c5f4822ce19b32ed390db9c9f6981d60e2ec9d9b5a5cd"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-E.json",
+      "sha256": "05f00bfdce018526fc2d765cc3cd28163befb2e8360cf2b7d7e7acf93f589830"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-F.json",
+      "sha256": "843963bd4df7c2b27ef026e0188ce2eb4c9309cec57cf6eb81f4662904ae74d1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-G.json",
+      "sha256": "0a9fc94d8c23b945e1cc318fffb4f10d432d48db7abae93e5fe4d236b230e9b5"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-baseline-0-H.json",
+      "sha256": "306654ff9057618d21c17b608864955df9456dd1069920cff4b07c2a205013ce"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-A.json",
+      "sha256": "09dbfc8da71475c2cd9355fe35742e5c8153c434c34cc827a6238a9ba58cc4ab"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-B.json",
+      "sha256": "381f66022491f5eee7fa719ba76f4b37df21b42a191e0d4545e7c1804bda00fd"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-C.json",
+      "sha256": "e3db3606182ee60711ec1e2bd7a60c3990afaa491f687bca286714a6c45b9722"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-D.json",
+      "sha256": "ce8d406cf6e6d972fc2f323ba6a3a380e98ee34688b0997e7befc57a272703fd"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-E.json",
+      "sha256": "de9442105fe93a799a991bbabddf4b29857f7b026c7a6d1f5025ddfc3d7edeef"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-F.json",
+      "sha256": "c4743e4e452a9c3f20f560df8990905fea6e7d6a52cc6cbd2d71b513c855f1a5"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-G.json",
+      "sha256": "aebff4b71004c4482edf5a1ec730c84482221886f415bb7fa6451a89eb8ce278"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/21-idiomatic-0-H.json",
+      "sha256": "014de86ab5b85c380b75aaef3db2e64c18545423bcf6d1025ad27bd4cd102820"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-A.json",
+      "sha256": "ae2bc9bf13adfb2036db244beae872f441172f2942389145b792fe117710b8d5"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-B.json",
+      "sha256": "996f7849b2b5a3354b3a714b1f7aeecded7818d870a4656601323878eda9f4f0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-C.json",
+      "sha256": "fb6a996e57191f8df827852363fbc14d97c9c7b3c8b3bf68f8a18662f3c7c4e1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-D.json",
+      "sha256": "63ab1a5b74b3bf8cfef7e8cb0a17fdb16c1d78512cbb810f933829734d6b8278"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-E.json",
+      "sha256": "9707b97f7decb05b0ba277e27525e275016b2ed90df5bf4114c1457ca58a3b7b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-F.json",
+      "sha256": "6173047000ca6e1d4d39f30c180f15dacfb76370c3613425a439e61d99b221e3"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-G.json",
+      "sha256": "43cde40194dc0c172966611da0ce5c0c38a3cfba5f3e16f5c99b7818c6184fe8"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-baseline-0-H.json",
+      "sha256": "3ff213874415483207b1815be9c3bfdc1bb0fba4ea5de0b9afce62a75252a7f1"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-A.json",
+      "sha256": "28f8a11e23951b627f17bd8e68626f3702a65f33f444d83b29bc1252f1bcc2c4"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-B.json",
+      "sha256": "e05c16e5960f79608941774914cfe7eb886b6de9b8cff9824208ae78dd38c1ea"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-C.json",
+      "sha256": "7973345c182cf30710ca329b044065109cf5cdf891ec264263093dfcf5a56d28"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-D.json",
+      "sha256": "5641d0251ec742f50811b88d38ccae8363241729eb59ea0bb6e3a8322de40fb3"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-E.json",
+      "sha256": "ba3d21cf062e067239f53b25aaeb74267d9eedd9d5380c6b6c7dbb23db794ccf"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-F.json",
+      "sha256": "27242618f4cb5596a5d4ddd6339fe275ca9878484c88af1ed1ab09684056ad74"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-G.json",
+      "sha256": "c8be24b17aafe276409b6fdaf7d9a9ce6f0b1903928a271ff4b86135216b6a61"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/22-idiomatic-0-H.json",
+      "sha256": "6c02a2eac5ecd89023c672b8d7d8a309a7c9b35a027e97927e629530d7288a1d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/metadata.json",
+      "sha256": "3c82d11a786daf324507758e9f503716acd1226fbce2993cf71e88ccd03d9f1d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-10-28.721Z/order.json",
+      "sha256": "8c506090f50824210b00a1ceb4130c2ab6d80769216b30a0047d865360b7e005"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-0-B.json",
+      "sha256": "82e48814cbb8bce90c9d8e88967e4f580fdf5466d501f0dedf3e6a49554a85d6"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-0-H.json",
+      "sha256": "f2dffacc292aee70a02a57ab6faa9e16da41caafecf47b8340538c974ba4f2a8"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-1-B.json",
+      "sha256": "c427f991f4f28572a4bd7d62674792edaa3d362216dc43831a6def4ef31eb5c0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-1-H.json",
+      "sha256": "95087d378564454cc5bbe48fd5f9ac4cbd36d1d58c489f96acebf5c73df5d16a"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-2-B.json",
+      "sha256": "9888457431a8cb69757b444e9641f11c9866e6b743d9ec54b15a450b7c6fd0e5"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-2-H.json",
+      "sha256": "1ba132620f3022a94aac104d1be317ff92a1639e0fb2a4bab4becda5b3eea5e5"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-3-B.json",
+      "sha256": "52549f55650414dead3589fa690201514746058df78f00edc67b90d79eb53341"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-baseline-3-H.json",
+      "sha256": "57dc1ec319ee784a60e3ff9414af64e899374b8f32773cfa41babb28a3551c6e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-0-B.json",
+      "sha256": "237b45e5fbc4eb1f83582a1b853709c7a4fa0945c7ad81d0c15c4c14100f6aa2"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-0-H.json",
+      "sha256": "e56f00770d29c7ed402f5ec787d7288860b31bd3fce70e172a91ea9a72d1dbe8"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-1-B.json",
+      "sha256": "a9b1ea814232d865e8a9e29dcf3c4c8b4f124032ea0d8e406ab5e7159e841dd7"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-1-H.json",
+      "sha256": "bb8d8d053ab596df215d6b11290371b3f1a2abcdfd38999772a820e0364cdef2"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-2-B.json",
+      "sha256": "29087ea5287a51c4327ba0d1ddb28bf2fff49acd85f50e9f0c76c725d5b4873c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-2-H.json",
+      "sha256": "6cdcd1f4acd23fc14e88586a8c3b7fd72576248abe2bea8a39dfa139d0fd4829"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-3-B.json",
+      "sha256": "33e70bbe78d8ed47eda070635b0de6471b1ba30c24f234dd5068e4d357c8478b"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/14-idiomatic-3-H.json",
+      "sha256": "1fab7249df89223da9762486ba74e186527675c3102083866876dedc50ffad48"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-0-B.json",
+      "sha256": "dd76c4b43607106c6f43f4aeeaa01925e3b2b9de07cde125a301a798a426b808"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-0-H.json",
+      "sha256": "384111a2616d0bcbad762a6eca3c69e1e10eaccb12259c93328d8e05ff9cb46c"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-1-B.json",
+      "sha256": "5b89a183c830249357756dd01a93246f0099dbce146afefce394afdc168f48f2"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-1-H.json",
+      "sha256": "b00e40c25d82769eecacefe4956d65813bd4c348047f3700fa9646b456afa9a0"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-2-B.json",
+      "sha256": "63395962c6a3f35f7fbfeb3759c587d63902f2fbe7d72ff399cd80191c631978"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-2-H.json",
+      "sha256": "cf1b70ccff8f0b4f566187da72e6100e39ddb49c157145bf7fe985197e2bd037"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-3-B.json",
+      "sha256": "1f49000a601a48bf4e4eae2d4aeb22deaf7c8ab9f780fe84bbbe323c787bd15d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-baseline-3-H.json",
+      "sha256": "43d887f03e19eacb66e666f82f3455c1418ad0c02e50bd2a53c7786f0f1b31ed"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-0-B.json",
+      "sha256": "786a1680ac7c6b4e6f1241108186c1e2455459cbfa15a50e67cb4a8c694c807e"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-0-H.json",
+      "sha256": "9d12ed904a2aca49ee25d9dcf68641aa04e4e8eaf59dc5c5703aecd469f41d26"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-1-B.json",
+      "sha256": "238d26e918b652fdfbc8a2a46aef96285392d4ef44471a9fce3078d406e016fd"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-1-H.json",
+      "sha256": "a2aa63aae7bb17191d22ea274d9ad601f52cca3730b19591d3666e37f5b2dd7f"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-2-B.json",
+      "sha256": "87f8942eef18b8ff31167bbcde29165e164482e872045d655f367b85bdb29a13"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-2-H.json",
+      "sha256": "fe0b46bd372b54513a6d6609995600291930ff0effa8c456f227a38101dba0df"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-3-B.json",
+      "sha256": "d770aab11117841faf0d0820773259c3e082be8dad97c63eb99c4af1f8298785"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/22-idiomatic-3-H.json",
+      "sha256": "dda0a7af1d1151e01e1de4c535ad6281de915f1527957b7922a008d2d95a34ca"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/metadata.json",
+      "sha256": "348d009c1a844381cd5a878804886f0f3277e895d987098d444f4480292d7bf7"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-24-28.363Z/order.json",
+      "sha256": "6c7ecfecb9282a33b315c3149d0b9450a67acacae602ddb091f3635c855d6d3d"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-29-26.459Z/22-baseline-0-B.json",
+      "sha256": "f128f36943d4f28f72b1829c35eeb66dbb3f05a96a20b74a7243c642d57b0807"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-29-26.459Z/metadata.json",
+      "sha256": "0cbc931ecbde5036bd182f4f9fcdec01b507d75ac7c7731b4c616b92f4130433"
+    },
+    {
+      "file": "benchmark/results/runtime/2026-10-18T14-29-26.459Z/order.json",
+      "sha256": "2b88593014ee02ed022027f416511d9415ab2c67b6170747ad0d04d3ca47bf8b"
+    },
+    {
+      "file": "benchmark/results/samples.csv",
+      "sha256": "cd80fb4ec182182c164366d6899fdf5c93182f37802e966ae9abf8314c62b9c5"
+    },
+    {
+      "file": "benchmark/results/summary.csv",
+      "sha256": "2198aa35c41a6b90bf3e8773664fa6146298ea2d1b98d334a7bb6065552d3e81"
+    },
+    {
+      "file": "benchmark/results/summary.json",
+      "sha256": "1a4f719ef8d230fe82b1b6874d537fb20b2d78dc24f940b67fa7be1c120536e1"
+    },
+    {
+      "file": "benchmark/results/timings.csv",
+      "sha256": "e9352fbb85dac6b137569ec9cbdd0986ee19b2859392b66f9a41e9c5b3d5ee88"
+    },
+    {
+      "file": "benchmark/results/verification-logs/angular14-lock-repair.txt",
+      "sha256": "a8444da596b54fcc72e5cfd2ba7f0c630b75d359456859fb105ae419697efea8"
+    },
+    {
+      "file": "benchmark/results/verification-logs/dashboard-final.txt",
+      "sha256": "483c760ffd7f16de0b7914dc146d50d97d9926f91796b5174d65150809c4e57d"
+    },
+    {
+      "file": "benchmark/results/verification-logs/dashboard-option-wait-failure.txt",
+      "sha256": "94855a6cce36e2d3b5d7501af8f475681d8f711edf1593c5c0988db73217f922"
+    },
+    {
+      "file": "benchmark/results/verification-logs/generated-parity.txt",
+      "sha256": "752c44c0ec11d6f8e915e511f0d9c3bd6cad087c7dab3624a1778c064bbcc993"
+    },
+    {
+      "file": "benchmark/results/verification-logs/historical-endpoint-cold-builds.txt",
+      "sha256": "20b67c840ae4a51f10c1f27d28e588bbfa7a6743544faa417fe9670e759136c8"
+    },
+    {
+      "file": "benchmark/results/verification-logs/historical-root-ci.txt",
+      "sha256": "5464053aeda196a2e708be77e27168eb1611fb4ca82891d6929ad4d83d07497d"
+    },
+    {
+      "file": "benchmark/results/verification-logs/historical-zero-control.txt",
+      "sha256": "aea2fae967605c3fd638cac40b1196df322d5a9d0e136713becd89c16da66d05"
+    },
+    {
+      "file": "benchmark/results/verification-logs/lighthouse-all-variants.txt",
+      "sha256": "14b503d0a9ffe5249aa39f56f52514b598809b248b68c46471a0da86fb9c068e"
+    },
+    {
+      "file": "benchmark/results/verification-logs/lighthouse-owned-page.txt",
+      "sha256": "75b6b31cfdac7d2a004461afcbef954ba21d7bf0ed643e406735b7d8d5b2ab48"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-14.txt",
+      "sha256": "f465d4f9e5170b621c00241c75848575ffe1a790c8e5c6e2834215f9fa8c2d1d"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-15.txt",
+      "sha256": "087af65e97ea9b45cc290ba9921979fad8beec46025675e7863df5c6064afe28"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-16.txt",
+      "sha256": "cd0bf2e93abf204010714e078494522565a05dc95aad62a070da2d70b2c6d72e"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-17.txt",
+      "sha256": "4515abb8b1f0f599f46074aceffa570b2dccaa66d8542155d7c30062f8431a64"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-18.txt",
+      "sha256": "a30d94dab1eac7f19fec16c0a099ac98c0692223ebb1e3ddefaf03bace470eb4"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-19.txt",
+      "sha256": "03c0b6d932dafa29cf821470fd9c7ba2f0eaa0f53bbe7d1760db2c9a8af513fc"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-20.txt",
+      "sha256": "cc8371afb26fd71fd164abc360756e4810812ce46a99beaae50bf1459f6564c4"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-21.txt",
+      "sha256": "0ecaec48ede59a5a694ea2dcefe2c5f241a8073f8e5faa2951414e617d008be7"
+    },
+    {
+      "file": "benchmark/results/verification-logs/npm-ci-22.txt",
+      "sha256": "9dd151f9474034376ba3b20d5fe3f14e5a5ea6c74b81f8f8883ce4c7d516d530"
+    },
+    {
+      "file": "benchmark/results/verification-logs/puppeteer-pin.txt",
+      "sha256": "8ed2a8821f3fe701d344a5d8a37ec6a88732e8e1744e0768241d7cd0bac9b9a3"
+    },
+    {
+      "file": "benchmark/results/verification-logs/repaired-endpoint-cold-builds.txt",
+      "sha256": "cf3daa0eb320b5f18360ef7ec6397fdc857fbaaa017934cbf061addd9b1a5ddd"
+    },
+    {
+      "file": "benchmark/results/verification-logs/results-audit-missing-historical-order.txt",
+      "sha256": "a53cf1d27c221882b9bf57a92943685c8ace303d690ee09110e88f03904494e5"
+    },
+    {
+      "file": "benchmark/results/verification-logs/results-audit.txt",
+      "sha256": "a1a92774ba6a7bc7d9a585749101f7de79e3425a4a89aa37924de7920efcd5d8"
+    },
+    {
+      "file": "benchmark/results/verification-logs/root-ci-final.txt",
+      "sha256": "5464053aeda196a2e708be77e27168eb1611fb4ca82891d6929ad4d83d07497d"
+    },
+    {
+      "file": "benchmark/results/verification-logs/source-parity-final.txt",
+      "sha256": "4fabbf6ae3409298a452798d0e64a66d9a446e323dae358f697769b926ca2ad5"
+    },
+    {
+      "file": "benchmark/results/verification-logs/summarize-final.txt",
+      "sha256": "a1f336d77b925a3abb113e54e0e1c36a7f9531cbfb80612992e014cd95443254"
+    },
+    {
+      "file": "benchmark/results/verification-logs/unit-tests-final.txt",
+      "sha256": "70bff18d0f83d0f1a6bf6de1a1c83ac5380314fd2b93532cbce4649c8840e588"
+    }
+  ]
+}

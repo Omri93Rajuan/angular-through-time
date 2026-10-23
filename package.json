@@ -8,11 +8,16 @@
   },
   "scripts": {
     "generate": "node scripts/generate.mjs",
-    "test": "node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs",
+    "test": "node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs benchmark/v2/*.test.mjs",
     "build": "node scripts/build.mjs",
     "bench": "node benchmark/harness/run.mjs",
     "summarize": "node benchmark/harness/summarize.mjs",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "research:generate": "node scripts/generate-research.mjs",
+    "research:build": "node scripts/build-research.mjs",
+    "research:verify": "node benchmark/v2/verify.mjs",
+    "research:audit": "node benchmark/v2/audit.mjs",
+    "research:pilot": "node benchmark/v2/pilot.mjs"
   },
   "devDependencies": {
     "chrome-launcher": "1.2.2",

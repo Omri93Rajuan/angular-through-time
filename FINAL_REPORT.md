@@ -1,3 +1,5 @@
+> Historical protocol/report: the observations below remain unchanged. Research v2 methods, verification and limitations are documented in [the v2 report](docs/RESEARCH_V2_REPORT.md) and [methods](docs/RESEARCH_V2_METHODS.md). Do not treat old samples as validation of new implementations.
+
 # Angular Through Time — final verification report
 
 Continuation date: 2026-10-19. Existing code, Git history, raw samples, logs and emitted artifacts were inspected before work resumed. The zero-change control and historical endpoint cold builds had already finished; they were audited rather than repeated. No runtime matrix was restarted.

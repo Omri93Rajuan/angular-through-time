@@ -1,0 +1,1121 @@
+{
+  "schemaVersion": 2,
+  "nativeBuilds": [
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/14-project-cold.json",
+      "version": 14,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 15077.083301,
+      "emittedJSBytes": 172847,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/14-project-warm.json",
+      "version": 14,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 5434.3007290000005,
+      "emittedJSBytes": 172847,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/15-project-cold.json",
+      "version": 15,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 12743.365969999995,
+      "emittedJSBytes": 174359,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/15-project-warm.json",
+      "version": 15,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 5461.875587000002,
+      "emittedJSBytes": 174359,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/16-project-cold.json",
+      "version": 16,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 12337.076144999999,
+      "emittedJSBytes": 183470,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/16-project-warm.json",
+      "version": 16,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 4645.515362999999,
+      "emittedJSBytes": 183470,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/17-project-cold.json",
+      "version": 17,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 5595.5535820000005,
+      "emittedJSBytes": 172880,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/17-project-warm.json",
+      "version": 17,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4914.369952000008,
+      "emittedJSBytes": 172880,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/18-project-cold.json",
+      "version": 18,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4534.959847999999,
+      "emittedJSBytes": 179542,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/18-project-warm.json",
+      "version": 18,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2559.786829000004,
+      "emittedJSBytes": 179542,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/19-project-cold.json",
+      "version": 19,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 5026.828342000008,
+      "emittedJSBytes": 179875,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/19-project-warm.json",
+      "version": 19,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2367.556700999994,
+      "emittedJSBytes": 179875,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/20-project-cold.json",
+      "version": 20,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4587.97205099999,
+      "emittedJSBytes": 181789,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/20-project-warm.json",
+      "version": 20,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2353.8209720000013,
+      "emittedJSBytes": 181789,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/21-project-cold.json",
+      "version": 21,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4477.979759000009,
+      "emittedJSBytes": 143896,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/21-project-warm.json",
+      "version": 21,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2750.4217139999964,
+      "emittedJSBytes": 143896,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/22-project-cold.json",
+      "version": 22,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4634.433713000006,
+      "emittedJSBytes": 148527,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T06-47-54.192Z/22-project-warm.json",
+      "version": 22,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2428.381083,
+      "emittedJSBytes": 148527,
+      "sourceCommit": null,
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/14-project-cold.json",
+      "version": 14,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 13344.220377,
+      "emittedJSBytes": 172847,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/14-project-warm.json",
+      "version": 14,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 5095.079533999999,
+      "emittedJSBytes": 172847,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/15-project-cold.json",
+      "version": 15,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 11367.585033,
+      "emittedJSBytes": 174359,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/15-project-warm.json",
+      "version": 15,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 4295.437144000003,
+      "emittedJSBytes": 174359,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/16-project-cold.json",
+      "version": 16,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 10089.019919999999,
+      "emittedJSBytes": 183470,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/16-project-warm.json",
+      "version": 16,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 3754.4121620000005,
+      "emittedJSBytes": 183470,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/17-project-cold.json",
+      "version": 17,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4516.593899000007,
+      "emittedJSBytes": 172880,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/17-project-warm.json",
+      "version": 17,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4564.612932000004,
+      "emittedJSBytes": 172880,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/18-project-cold.json",
+      "version": 18,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 3944.618165,
+      "emittedJSBytes": 179542,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/18-project-warm.json",
+      "version": 18,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2139.423671999997,
+      "emittedJSBytes": 179542,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/19-project-cold.json",
+      "version": 19,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4019.202388999998,
+      "emittedJSBytes": 179875,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/19-project-warm.json",
+      "version": 19,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2082.393261999998,
+      "emittedJSBytes": 179875,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/20-project-cold.json",
+      "version": 20,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 3672.2441379999946,
+      "emittedJSBytes": 181789,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/20-project-warm.json",
+      "version": 20,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2131.798609000005,
+      "emittedJSBytes": 181789,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/21-project-cold.json",
+      "version": 21,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 3727.135534000001,
+      "emittedJSBytes": 143896,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/21-project-warm.json",
+      "version": 21,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2071.835740999988,
+      "emittedJSBytes": 143896,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/22-project-cold.json",
+      "version": 22,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 3522.722783999998,
+      "emittedJSBytes": 148527,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-21T07-01-28.597Z/22-project-warm.json",
+      "version": 22,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2154.3548230000015,
+      "emittedJSBytes": 148527,
+      "sourceCommit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+      "timingEligible": false
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/14-project-cold.json",
+      "version": 14,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 14074.464702,
+      "emittedJSBytes": 172847,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/14-project-warm.json",
+      "version": 14,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 6162.309336,
+      "emittedJSBytes": 172847,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/15-project-cold.json",
+      "version": 15,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 12974.085267999999,
+      "emittedJSBytes": 174359,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/15-project-warm.json",
+      "version": 15,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 4624.177624000004,
+      "emittedJSBytes": 174359,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/16-project-cold.json",
+      "version": 16,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 12123.682562000002,
+      "emittedJSBytes": 183470,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/16-project-warm.json",
+      "version": 16,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:browser",
+      "accepted": true,
+      "durationMs": 4526.025540999995,
+      "emittedJSBytes": 183470,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/17-project-cold.json",
+      "version": 17,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 5648.124457999998,
+      "emittedJSBytes": 172880,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/17-project-warm.json",
+      "version": 17,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4854.407254000005,
+      "emittedJSBytes": 172880,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/18-project-cold.json",
+      "version": 18,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4850.9282530000055,
+      "emittedJSBytes": 179542,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/18-project-warm.json",
+      "version": 18,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2307.077225999994,
+      "emittedJSBytes": 179542,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/19-project-cold.json",
+      "version": 19,
+      "cache": "project-cold",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 4611.076820000002,
+      "emittedJSBytes": 179875,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/19-project-warm.json",
+      "version": 19,
+      "cache": "project-warm",
+      "builder": "@angular-devkit/build-angular:application",
+      "accepted": true,
+      "durationMs": 2336.126032,
+      "emittedJSBytes": 179875,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/20-project-cold.json",
+      "version": 20,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4666.114073000004,
+      "emittedJSBytes": 181789,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/20-project-warm.json",
+      "version": 20,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 3070.980205,
+      "emittedJSBytes": 181789,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/21-project-cold.json",
+      "version": 21,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4552.966298999992,
+      "emittedJSBytes": 143896,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/21-project-warm.json",
+      "version": 21,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2386.583270999996,
+      "emittedJSBytes": 143896,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/22-project-cold.json",
+      "version": 22,
+      "cache": "project-cold",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 4980.8112459999975,
+      "emittedJSBytes": 148527,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    },
+    {
+      "file": "benchmark/results-v2/native/2026-10-22T04-16-15.490Z/22-project-warm.json",
+      "version": 22,
+      "cache": "project-warm",
+      "builder": "@angular/build:application",
+      "accepted": true,
+      "durationMs": 2435.300868999999,
+      "emittedJSBytes": 148527,
+      "sourceCommit": "6544dc96f6df08c0880c7bdd04fd5ab2585a7323",
+      "timingEligible": true
+    }
+  ],
+  "kind": "pilot-summary",
+  "historicalFilesVerified": 325,
+  "rows": [
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-24-34.076Z/0.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-24-34.076Z",
+      "version": 14,
+      "track": "idiomatic-v2",
+      "rep": 0,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-1",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 14,
+          "angular": "14.2.12",
+          "cli": "14.2.13",
+          "typescript": "4.8.4",
+          "node": "16.20.2",
+          "zone": "0.11.8"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "immutable publications + dependency-aware imperative selectors",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "ngFor/ngIf",
+        "scheduler": "zone",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 64.25,
+        "p95": 71.07499998807907
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-24-34.076Z/1.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-24-34.076Z",
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 0,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-2",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zoneless",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 65.14999997615814,
+        "p95": 80.3250000178814
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-24-34.076Z/2.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-24-34.076Z",
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 1,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-2",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zoneless",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 71.5,
+        "p95": 76.32499995827675
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-24-34.076Z/3.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-24-34.076Z",
+      "version": 14,
+      "track": "idiomatic-v2",
+      "rep": 1,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-1",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 14,
+          "angular": "14.2.12",
+          "cli": "14.2.13",
+          "typescript": "4.8.4",
+          "node": "16.20.2",
+          "zone": "0.11.8"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "immutable publications + dependency-aware imperative selectors",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "ngFor/ngIf",
+        "scheduler": "zone",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 72.44999998807907,
+        "p95": 86.125
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-25-28.693Z/0.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-25-28.693Z",
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 0,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-2",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zoneless",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 60.60000002384186,
+        "p95": 70.9500000178814
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-25-28.693Z/1.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-25-28.693Z",
+      "version": 22,
+      "track": "m4-zone",
+      "rep": 0,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "matched-v1",
+        "architectureRevision": "market-components-2",
+        "experiment": "M4",
+        "treatment": "m4-zone",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zone",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 93.44999998807907,
+        "p95": 121.12500002980232
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-25-28.693Z/2.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-25-28.693Z",
+      "version": 22,
+      "track": "m4-zone",
+      "rep": 1,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "matched-v1",
+        "architectureRevision": "market-components-2",
+        "experiment": "M4",
+        "treatment": "m4-zone",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zone",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 71.20000004768372,
+        "p95": 90.89999997615814
+      },
+      "lateUpdates": 0
+    },
+    {
+      "file": "benchmark/results-v2/pilots/2026-10-22T04-25-28.693Z/3.json",
+      "kind": "pilot",
+      "experiment": "2026-10-22T04-25-28.693Z",
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 1,
+      "accepted": true,
+      "status": "completed",
+      "error": null,
+      "manifest": {
+        "schemaVersion": 2,
+        "track": "idiomatic-v2",
+        "architectureRevision": "market-components-2",
+        "experiment": "B-runtime",
+        "treatment": "idiomatic-v2",
+        "version": {
+          "major": 22,
+          "angular": "22.0.0",
+          "cli": "22.0.0",
+          "typescript": "6.0.3",
+          "node": "22.23.2",
+          "zone": "0.16.0"
+        },
+        "componentGraph": [
+          "Shell",
+          "Toolbar",
+          "Table",
+          "AssetRow",
+          "Summary",
+          "Chart",
+          "Details"
+        ],
+        "state": "per-entity signal + computed",
+        "publication": "touched snapshots; all snapshots for array mode, including unchanged clones",
+        "equality": "Object.is; no custom comparator",
+        "selectors": "full aggregate once per tick; static filter/symbol order independent of prices",
+        "changeDetection": "OnPush",
+        "flow": "@for/@if",
+        "scheduler": "zoneless",
+        "builder": "@angular-devkit/build-angular:browser",
+        "recipe": "controlled-webpack-v1",
+        "delivery": "serial-lossless",
+        "diagnostic": false,
+        "signalInputs": false
+      },
+      "workload": {
+        "ticks": 6,
+        "hz": 5,
+        "count": 100,
+        "mode": "mutation",
+        "scenario": "B",
+        "delivery": "serial-lossless"
+      },
+      "statistics": {
+        "p50": 71.95000004768372,
+        "p95": 76.34999999403954
+      },
+      "lateUpdates": 0
+    }
+  ],
+  "pairs": [
+    {
+      "experiment": "2026-10-22T04-24-34.076Z",
+      "variants": [
+        "14/idiomatic-v2",
+        "22/idiomatic-v2"
+      ],
+      "outcome": "run p95 presentationMs",
+      "n": 2,
+      "estimate": -0.2750000059604645,
+      "interval": [
+        -9.800000041723251,
+        9.250000029802322
+      ],
+      "method": "paired block percentile bootstrap; 10000 draws; seed 14022",
+      "warning": "Pilot uncertainty is unstable at small n; no confirmatory inference",
+      "missingBlocks": 0
+    },
+    {
+      "experiment": "2026-10-22T04-25-28.693Z",
+      "variants": [
+        "22/idiomatic-v2",
+        "22/m4-zone"
+      ],
+      "outcome": "run p95 presentationMs",
+      "n": 2,
+      "estimate": 32.36249999701977,
+      "interval": [
+        14.549999982118607,
+        50.17500001192093
+      ],
+      "method": "paired block percentile bootstrap; 10000 draws; seed 14022",
+      "warning": "Pilot uncertainty is unstable at small n; no confirmatory inference",
+      "missingBlocks": 0
+    }
+  ],
+  "errors": [],
+  "policy": "Pilots only; no pooling with historical data; rejected attempts retained; no performance ranking"
+}

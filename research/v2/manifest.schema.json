@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Angular Through Time research application manifest v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "track",
+    "version",
+    "componentGraph",
+    "diagnostic",
+    "architectureRevision",
+    "experiment",
+    "treatment",
+    "state",
+    "publication",
+    "equality",
+    "selectors",
+    "changeDetection",
+    "flow",
+    "scheduler",
+    "builder",
+    "recipe",
+    "delivery"
+  ],
+  "properties": {
+    "architectureRevision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "experiment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "treatment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publication": {
+      "type": "string",
+      "minLength": 1
+    },
+    "equality": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selectors": {
+      "type": "string",
+      "minLength": 1
+    },
+    "changeDetection": {
+      "type": "string",
+      "minLength": 1
+    },
+    "flow": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scheduler": {
+      "type": "string",
+      "minLength": 1
+    },
+    "builder": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recipe": {
+      "type": "string",
+      "minLength": 1
+    },
+    "delivery": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "track": {
+      "enum": [
+        "idiomatic-v2",
+        "matched-v1",
+        "default-cli-v1"
+      ]
+    },
+    "version": {
+      "type": "object",
+      "required": [
+        "major",
+        "angular",
+        "cli",
+        "typescript",
+        "node",
+        "zone"
+      ],
+      "properties": {
+        "major": {
+          "type": "integer",
+          "minimum": 14,
+          "maximum": 22
+        }
+      }
+    },
+    "componentGraph": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "diagnostic": {
+      "type": "boolean"
+    },
+    "signalInputs": {
+      "type": "boolean"
+    }
+  }
+}

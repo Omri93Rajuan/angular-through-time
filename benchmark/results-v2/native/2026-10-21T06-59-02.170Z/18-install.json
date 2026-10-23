@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 2,
+  "kind": "native-install",
+  "version": {
+    "major": 18,
+    "angular": "18.2.14",
+    "cli": "18.2.21",
+    "typescript": "5.5.4",
+    "node": "22.23.2",
+    "zone": "0.14.10"
+  },
+  "inputs": [
+    [
+      "native/v18/src/app/app.component.css",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "native/v18/src/app/app.component.html",
+      "cbcff2b60679fd672257cf91c574486c6155277395672068a60b17005611ebd0"
+    ],
+    [
+      "native/v18/src/app/app.component.spec.ts",
+      "c1e47806fa85dfac30299c70e39fb6beb410ae6852e5af105d2fb26b593bd068"
+    ],
+    [
+      "native/v18/src/app/app.component.ts",
+      "8444339fe955c74daf9750466f48f36c20521899ef315f45161b59d230b1430b"
+    ],
+    [
+      "native/v18/src/app/app.config.ts",
+      "9600c2ff6a955ddb67330116fa8a59e3f391691bbda84d7380a72c97056b9420"
+    ],
+    [
+      "native/v18/src/engine.js",
+      "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+    ],
+    [
+      "native/v18/src/index.html",
+      "d8ca60fb0a6981f7f014223a02dcdba4474955f228e4d40870cb37c6d2d57873"
+    ],
+    [
+      "native/v18/src/main.ts",
+      "0ab2a5cf809cd584767a54753dfb2d5f762bb66add713ce99db2a55c98c463d2"
+    ],
+    [
+      "native/v18/src/research/AssetRow.html",
+      "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+    ],
+    [
+      "native/v18/src/research/Chart.html",
+      "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+    ],
+    [
+      "native/v18/src/research/Details.html",
+      "dedbce4034940949630778e78e9380f107cc84fe56a68036d58ce7ac613f91db"
+    ],
+    [
+      "native/v18/src/research/Shell.html",
+      "cad78b580c0eac781d8606793f712e173f42a0b06b8bf8723de88d395f991e77"
+    ],
+    [
+      "native/v18/src/research/Summary.html",
+      "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+    ],
+    [
+      "native/v18/src/research/Table.html",
+      "f5076c993836b5e289c52605461a37b17f490cf6539650fe2ae64474392eed98"
+    ],
+    [
+      "native/v18/src/research/Toolbar.html",
+      "52dd3d7757ddea2ad6594101c6a9ca2979d81c9f929a24a8962cd65589a553e7"
+    ],
+    [
+      "native/v18/src/research/main.ts",
+      "771b4485f496bd2193b42e457278c60c6e7d340cacb7159b9786dfa16f7cc6bf"
+    ],
+    [
+      "native/v18/src/styles.css",
+      "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+    ],
+    [
+      "native/v18/angular.json",
+      "01ec86aafe3c529ec03c7fc1e624ccecc99bd54fb81d733d6d80749b4aa58398"
+    ],
+    [
+      "native/v18/package-lock.json",
+      "47c01af1ea4f49c14bad6a81a5b00911f4e249f6665183d0ed18d2de548d209b"
+    ],
+    [
+      "native/v18/package.json",
+      "967f5ea39e1e26caf5f9a9bfaefbabe216b69eace31b7986e2c7f7cd3892cdc8"
+    ],
+    [
+      "native/v18/tsconfig.app.json",
+      "7c030d64833de2975bdbc63e5fe2e7aff3177ca781b976840baff34a70be9eef"
+    ],
+    [
+      "native/v18/tsconfig.json",
+      "41ba99dbbfb1325ef2f080495aa8ed78c03feeb52edf00d9103af1715cef1d9f"
+    ],
+    [
+      "native/v18/tsconfig.spec.json",
+      "c6ba2c144471c65b935adf89961dbc9b4e7ad235983556c3baf95b19de135a1c"
+    ]
+  ],
+  "environment": {
+    "node": "v22.23.2",
+    "npm": "11.6.2",
+    "os": "6.17.0-23-generic",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "load": [
+      5.33,
+      5.22,
+      4.39
+    ],
+    "power": "uncontrolled",
+    "thermal": "uncontrolled",
+    "backgroundLoad": "uncontrolled"
+  },
+  "cache": "install",
+  "accepted": false,
+  "exitCode": 1,
+  "durationMs": 937.4914869999993,
+  "command": [
+    "ci",
+    "--engine-strict",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "builder": "@angular-devkit/build-angular:application",
+  "configuration": {
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+      "market-native": {
+        "projectType": "application",
+        "schematics": {},
+        "root": "",
+        "sourceRoot": "src",
+        "prefix": "app",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:application",
+            "options": {
+              "outputPath": "dist/market-native",
+              "index": "src/index.html",
+              "browser": "src/main.ts",
+              "polyfills": [
+                "zone.js"
+              ],
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "public"
+                }
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": [
+                "src/engine.js"
+              ]
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kB",
+                    "maximumError": "1MB"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "2kB",
+                    "maximumError": "4kB"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "optimization": false,
+                "extractLicenses": false,
+                "sourceMap": true
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "buildTarget": "market-native:build:production"
+              },
+              "development": {
+                "buildTarget": "market-native:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "builder": "@angular-devkit/build-angular:extract-i18n"
+          },
+          "test": {
+            "builder": "@angular-devkit/build-angular:karma",
+            "options": {
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ],
+              "tsConfig": "tsconfig.spec.json",
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "public"
+                }
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "osCache": "uncontrolled",
+  "workers": "CLI default; no worker override",
+  "lockSha256": "47c01af1ea4f49c14bad6a81a5b00911f4e249f6665183d0ed18d2de548d209b"
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "files": [
+    "src/research/idiomatic-v2-diagnostic/main.ts"
+  ]
+}

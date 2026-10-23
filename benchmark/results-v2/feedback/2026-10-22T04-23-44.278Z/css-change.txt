@@ -1,0 +1,13 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names         | Raw size
+main.js             | main          |  1.10 MB | 
+styles.css          | styles        |  5.30 kB | 
+scripts.js          | scripts       |  2.12 kB | 
+
+                    | Initial total |  1.11 MB
+
+Application bundle generation complete. [1.953 seconds] - 2026-10-22T04:23:54.063Z
+
+Output location: /tmp/market-feedback-NG8pdc/dist/market-native
+

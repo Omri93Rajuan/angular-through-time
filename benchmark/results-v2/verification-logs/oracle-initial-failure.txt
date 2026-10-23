@@ -1,0 +1,45 @@
+TAP version 13
+# Subtest: independent oracle matches canonical engine across all publication modes
+ok 1 - independent oracle matches canonical engine across all publication modes
+  ---
+  duration_ms: 85.344179
+  type: 'test'
+  ...
+# Subtest: oracle handles floor, zero work, ties and independent derived values
+not ok 2 - oracle handles floor, zero work, ties and independent derived values
+  ---
+  duration_ms: 6.614387
+  type: 'test'
+  location: '/home/kodcode/Desktop/angular/benchmark/v2/oracle.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 99.98000023051034
+    - 99.98000023051036
+                      ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 99.98000023051036
+  actual: 99.98000023051034
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/kodcode/Desktop/angular/benchmark/v2/oracle.test.mjs:16:39)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 1
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 157.531795

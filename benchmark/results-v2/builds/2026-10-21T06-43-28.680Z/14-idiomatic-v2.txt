@@ -1,0 +1,15 @@
+
+Initial Chunk Files         | Names         |  Raw Size | Estimated Transfer Size
+main.e83d3adb60def6d4.js    | main          | 167.47 kB |                49.65 kB
+styles.b809f9167d711d60.css | styles        |   3.90 kB |                 1.12 kB
+scripts.64ee708414c1c2e8.js | scripts       |   1.35 kB |               697 bytes
+runtime.93d195bd2374e322.js | runtime       | 902 bytes |               523 bytes
+
+| Initial Total | 173.60 kB |                51.96 kB
+
+Build at: 2026-10-21T06:43:43.723Z - Hash: a26afaa656957e8d - Time: 12757ms
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Generating index html...
+✔ Index html generation complete.

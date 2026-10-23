@@ -57,12 +57,7 @@ jobs:
         env:
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          git diff --check
-          if [ -n "$PR_BASE_SHA" ]; then
-            git diff --check "$PR_BASE_SHA"...HEAD
-          else
-            git show --format= --check HEAD
-          fi
+          node scripts/check-whitespace.mjs
           git diff --exit-code
 
   production:

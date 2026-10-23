@@ -1,0 +1,1 @@
+An interrupt was sent to the obsolete-artifact verification process after repeated pre-favicon console 404 failures. All nine failure records in 2026-10-21T06-42-01.374Z were already saved and remain retained. The final rebuilt-artifact run is 2026-10-21T06-50-58.917Z. No failed observation was removed or treated as accepted.

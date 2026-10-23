@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "kind": "pilot",
+  "protocol": {
+    "schemaVersion": 2,
+    "id": "market-v2-pilot-1",
+    "status": "pilot-only",
+    "confirmatoryApproved": false,
+    "primaryOutcome": "run-level p95 presentation opportunity milliseconds",
+    "secondaryOutcomes": [
+      "run p50 presentation",
+      "synchronous apply-call duration",
+      "late updates",
+      "completion",
+      "interaction duration including automation"
+    ],
+    "delivery": "serial-lossless",
+    "deadline": "begin later than due plus one target interval",
+    "pilot": {
+      "warmupTicks": 3,
+      "ticks": 6,
+      "hz": 5,
+      "count": 100,
+      "mode": "mutation",
+      "minimumCompleteCycles": 1
+    },
+    "proposedConfirmatory": {
+      "warmupSeconds": 30,
+      "measurementSeconds": 60,
+      "minimumIndependentBlocks": 10,
+      "relativePracticalDifference": 0.1
+    },
+    "pendingDecisions": [
+      "prioritized experiments and scenarios",
+      "precision target and pilot-based sample size",
+      "multiplicity policy",
+      "hardware and environmental invalidity rules",
+      "duration feasibility",
+      "independent-arrival extension"
+    ],
+    "failurePolicy": "Preserve every attempt. Functional failure rejects performance. Correct late updates remain outcomes. Never exclude because slow.",
+    "uncertaintyUnit": "independent process/run blocks, never individual ticks",
+    "approval": "Main campaign requires explicit researcher approval of a frozen protocol and sample-size decisions; this runner only permits pilots."
+  },
+  "environment": {
+    "commit": "1ceb5ba42cf7bcc315b8963ea8f5c9ff443f0bd4",
+    "dirty": true,
+    "sourceDirty": false,
+    "node": "v22.23.2",
+    "platform": "linux",
+    "os": "6.17.0-23-generic",
+    "arch": "x64",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "cores": 16,
+    "memory": 16532312064,
+    "load": [
+      3.97,
+      4.05,
+      3.01
+    ],
+    "chromePath": "/opt/google/chrome/chrome",
+    "chromeSha256": "7ca9b0cc533891aa11db05f1aff828e6a85b680c5154323d24fa4c58a6a6528e",
+    "playwright": "1.64.1",
+    "rootLockSha256": "736fc17d3fae06a20108c8a2cfedc0939a0375a0545eba32ab865a8eaec6c7b1",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "locale": "en-US",
+    "power": "uncontrolled",
+    "thermal": "uncontrolled",
+    "governor": "uncontrolled",
+    "backgroundLoad": "uncontrolled",
+    "osCache": "uncontrolled",
+    "harnessHashes": [
+      {
+        "file": "benchmark/v2/pilot.mjs",
+        "sha256": "3d64be58c2b9118f1c9ee09b79252f5a9d65500a3b2d7a2e8b498a6093580548"
+      },
+      {
+        "file": "benchmark/v2/functional.mjs",
+        "sha256": "1ffb742f2e9e0655e65e5627ee65878e52709f4b9108b8806b34ccf7bdd39539"
+      },
+      {
+        "file": "benchmark/v2/oracle.mjs",
+        "sha256": "1310d7ec06f16bee8c8f90a934ce0346d8df31353dfa3d05ad956dc183af8e14"
+      },
+      {
+        "file": "benchmark/v2/statistics.mjs",
+        "sha256": "411aa6362067f4532ee6c9c42bbdf88ce49429ebbd794f685410a923128d7fee"
+      },
+      {
+        "file": "research/v2/protocol.json",
+        "sha256": "c21ec5b2a89357f0f3f527f3b11c68682e5c810f4abcee128f5ad287de21046e"
+      },
+      {
+        "file": "benchmark/v2/provenance.mjs",
+        "sha256": "5f2d83ff9fa411006dea2f93fef5a810a0e92dec63ac01d1d41746ac526f43e6"
+      },
+      {
+        "file": "benchmark/v2/manifest.mjs",
+        "sha256": "bce400c42ff397af2041130ce2882fb073c5e2d9fef0ffd8327ccacf0b97dd35"
+      },
+      {
+        "file": "benchmark/harness/order.mjs",
+        "sha256": "3d9217b75279263779b6533787d81724c92643feb4bbdafa83e35b487aab8dbf"
+      },
+      {
+        "file": "benchmark/harness/functional.mjs",
+        "sha256": "9aeb578bc851ce195ac4929fe37b579af4ecb53baf18fefd3dcbeaec1edbf88f"
+      },
+      {
+        "file": "packages/market-fixtures/engine.js",
+        "sha256": "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+      },
+      {
+        "file": "packages/market-fixtures/initial.json",
+        "sha256": "8ddadd272e760b1dc61399e23e9d0ce79a6e38deb1cc408a176503cfbf458dcb"
+      }
+    ]
+  },
+  "order": [
+    {
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 0
+    },
+    {
+      "version": 22,
+      "track": "m4-zone",
+      "rep": 0
+    },
+    {
+      "version": 22,
+      "track": "m4-zone",
+      "rep": 1
+    },
+    {
+      "version": 22,
+      "track": "idiomatic-v2",
+      "rep": 1
+    }
+  ]
+}
