@@ -11,7 +11,7 @@ const details=between('<section class="panel" id="details">','<section class="pa
 const row=table.slice(table.indexOf('<td>'),table.indexOf('</tr></tbody>'));
 const graph=['Shell','Toolbar','Table','AssetRow','Summary','Chart','Details'];
 for(const v of matrix){
- write(`v${v.major}/src/research/index.html`,fs.readFileSync(`v${v.major}/src/index.html`,'utf8').replace('</head>','<link rel="icon" href="data:,"></head>')); 
+ write(`v${v.major}/src/research/index.html`,fs.readFileSync(`v${v.major}/src/index.html`,'utf8').replace('</head>','<link rel="icon" href="data:,"></head>'));
  const variants=['idiomatic-v2','portable-default',...(v.major===22?['m4-zone','idiomatic-v2-diagnostic']:[])];
  for(const track of variants){
  const portable=track==='portable-default', signals=!portable&&v.major>=17, modern=!portable&&v.major>=18, standalone=portable?v.major>=17:v.major>=15, zoneless=(portable?v.major>=21:v.major>=20)&&track!=='m4-zone', diag=track.endsWith('diagnostic');
