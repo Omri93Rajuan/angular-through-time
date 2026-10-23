@@ -1,0 +1,80 @@
+
+> angular-through-time@0.1.0 test
+> node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs benchmark/v2/*.test.mjs
+
+TAP version 13
+# Subtest: each variant occupies every position once per complete cycle
+ok 1 - each variant occupies every position once per complete cycle
+  ---
+  duration_ms: 1.871995
+  type: 'test'
+  ...
+# Subtest: quartiles interpolate and retain outliers
+ok 2 - quartiles interpolate and retain outliers
+  ---
+  duration_ms: 1.649814
+  type: 'test'
+  ...
+# Subtest: CLS excludes input shifts and separates distant windows
+ok 3 - CLS excludes input shifts and separates distant windows
+  ---
+  duration_ms: 0.269892
+  type: 'test'
+  ...
+# Subtest: independent oracle matches canonical engine across all publication modes
+ok 4 - independent oracle matches canonical engine across all publication modes
+  ---
+  duration_ms: 129.58315
+  type: 'test'
+  ...
+# Subtest: oracle handles floor, zero work, ties and independent derived values
+ok 5 - oracle handles floor, zero work, ties and independent derived values
+  ---
+  duration_ms: 15.483958
+  type: 'test'
+  ...
+# Subtest: uncertainty uses independent pairs, not tick count
+ok 6 - uncertainty uses independent pairs, not tick count
+  ---
+  duration_ms: 16.646818
+  type: 'test'
+  ...
+# Subtest: empty measurements remain missing, invalid timing fails closed
+ok 7 - empty measurements remain missing, invalid timing fails closed
+  ---
+  duration_ms: 0.29126
+  type: 'test'
+  ...
+# Subtest: 5000 fixed assets and distinct deterministic changes
+ok 8 - 5000 fixed assets and distinct deterministic changes
+  ---
+  duration_ms: 32.73705
+  type: 'test'
+  ...
+# Subtest: mutation identities differ but replay values agree
+ok 9 - mutation identities differ but replay values agree
+  ---
+  duration_ms: 36.380225
+  type: 'test'
+  ...
+# Subtest: unsupported workloads fail closed
+ok 10 - unsupported workloads fail closed
+  ---
+  duration_ms: 0.335969
+  type: 'test'
+  ...
+# Subtest: canonical fixture and golden replay checksum are stable
+ok 11 - canonical fixture and golden replay checksum are stable
+  ---
+  duration_ms: 12.827746
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 235.847447

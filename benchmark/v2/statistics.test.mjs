@@ -1,0 +1,3 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {runStatistics,pairedInterval} from './statistics.mjs';
+test('uncertainty uses independent pairs, not tick count',()=>{assert.equal(pairedInterval([[1,2]]).interval,null);assert.deepEqual(pairedInterval([[1,3],[10,12],[20,22]]).interval,[2,2]);assert.equal(pairedInterval([[1,3],[10,12]]).n,2);assert.throws(()=>pairedInterval([[1,NaN],[2,3]]));});
+test('empty measurements remain missing, invalid timing fails closed',()=>{assert.deepEqual(runStatistics([]),{p50:null,p95:null});assert.throws(()=>runStatistics([{presentationMs:-1}]));assert.equal(runStatistics([{presentationMs:10},{presentationMs:30}]).p50,20);});

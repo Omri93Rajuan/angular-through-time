@@ -1,0 +1,13 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main-V5KDHCQS.js    | main          | 142.51 kB |                42.29 kB
+styles-FT44C6NM.css | styles        |   3.99 kB |                 1.14 kB
+scripts-LKIUZWFS.js | scripts       |   1.39 kB |               687 bytes
+
+                    | Initial total | 147.89 kB |                44.12 kB
+
+Application bundle generation complete. [1.943 seconds] - 2026-10-22T04:17:54.604Z
+
+Output location: /home/kodcode/Desktop/angular/native/v21/dist/market-native
+

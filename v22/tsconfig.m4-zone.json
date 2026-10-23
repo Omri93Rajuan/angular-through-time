@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "files": [
+    "src/research/m4-zone/main.ts"
+  ]
+}

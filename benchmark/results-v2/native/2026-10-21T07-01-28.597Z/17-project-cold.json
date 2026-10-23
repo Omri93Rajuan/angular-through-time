@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "provenance": {
+    "commit": "977e0cf05bf72836321364c2d99a25edbdfb9ef4",
+    "dirty": true,
+    "scriptSha256": "1a9e2bc538b01fc73bce665b93027f4577d95fd34135841660c7947c8b2e5888"
+  },
+  "kind": "native-build-pilot",
+  "version": {
+    "major": 17,
+    "angular": "17.3.12",
+    "cli": "17.3.17",
+    "typescript": "5.4.5",
+    "node": "20.19.5",
+    "zone": "0.14.10"
+  },
+  "inputs": [
+    [
+      "native/v17/src/app/app.component.css",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "native/v17/src/app/app.component.html",
+      "cbcff2b60679fd672257cf91c574486c6155277395672068a60b17005611ebd0"
+    ],
+    [
+      "native/v17/src/app/app.component.spec.ts",
+      "c1e47806fa85dfac30299c70e39fb6beb410ae6852e5af105d2fb26b593bd068"
+    ],
+    [
+      "native/v17/src/app/app.component.ts",
+      "8444339fe955c74daf9750466f48f36c20521899ef315f45161b59d230b1430b"
+    ],
+    [
+      "native/v17/src/app/app.config.ts",
+      "44ad3762c23a2892d9f3a4c9ccee7fe1064595ad86dfdc8aaf6087dee4dc972a"
+    ],
+    [
+      "native/v17/src/assets/.gitkeep",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "native/v17/src/engine.js",
+      "996e0abc06559ea7a26126d222799ec1b75d4ca0d0231f24aaebefcd7b31e5b5"
+    ],
+    [
+      "native/v17/src/favicon.ico",
+      "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f"
+    ],
+    [
+      "native/v17/src/index.html",
+      "d8ca60fb0a6981f7f014223a02dcdba4474955f228e4d40870cb37c6d2d57873"
+    ],
+    [
+      "native/v17/src/main.ts",
+      "0ab2a5cf809cd584767a54753dfb2d5f762bb66add713ce99db2a55c98c463d2"
+    ],
+    [
+      "native/v17/src/research/AssetRow.html",
+      "9f6f8db4ee5c64fc205a5f624772ad4b07c5b2c8c3bc884836bc7de4e11b61f7"
+    ],
+    [
+      "native/v17/src/research/Chart.html",
+      "6a0e9d1bc689f442d3ea7af1a983ed030e392f0083d0064c2ebce0bde407f013"
+    ],
+    [
+      "native/v17/src/research/Details.html",
+      "dedbce4034940949630778e78e9380f107cc84fe56a68036d58ce7ac613f91db"
+    ],
+    [
+      "native/v17/src/research/Shell.html",
+      "cad78b580c0eac781d8606793f712e173f42a0b06b8bf8723de88d395f991e77"
+    ],
+    [
+      "native/v17/src/research/Summary.html",
+      "f239613cfdee19ab89d8c43d35d88f8d60a038c6258c758a302dbf607331a4fc"
+    ],
+    [
+      "native/v17/src/research/Table.html",
+      "f5076c993836b5e289c52605461a37b17f490cf6539650fe2ae64474392eed98"
+    ],
+    [
+      "native/v17/src/research/Toolbar.html",
+      "52dd3d7757ddea2ad6594101c6a9ca2979d81c9f929a24a8962cd65589a553e7"
+    ],
+    [
+      "native/v17/src/research/main.ts",
+      "3c303bffb0ab12c6067c40f58b225d221a0df42d98fd26228040149782032b06"
+    ],
+    [
+      "native/v17/src/styles.css",
+      "5a5b9fe227ab13ef3ebcf58698b28a8a2afcfe1a20da31bb20b8bdc1a31e05f2"
+    ],
+    [
+      "native/v17/angular.json",
+      "0d682f7d91c8589911997e22692d8f26f63b7322bc8432131a4fe95a0dd6f5f8"
+    ],
+    [
+      "native/v17/package-lock.json",
+      "f7eca368fbef18f66e5b5e0a6fc8c0792f99404cefb8ef76bdb87b7c8d289ed5"
+    ],
+    [
+      "native/v17/package.json",
+      "5f01328878382cdfd4d5c688a43ed52b4d7e71e3c4a1e0a5237d3b2fa24096e8"
+    ],
+    [
+      "native/v17/tsconfig.app.json",
+      "a184f5fb7f000739dc69163beecad2de028802e3d89216a0351d86eb55156e45"
+    ],
+    [
+      "native/v17/tsconfig.json",
+      "0abc5c29a891021070c12193e24b248a0ae127e1f9996e1166962ae7a5722bf9"
+    ],
+    [
+      "native/v17/tsconfig.spec.json",
+      "cbb79fb4cee1e48dbe00f8c4c9bbbf00fb9ad966ce0a783143ae03d27381f760"
+    ]
+  ],
+  "environment": {
+    "node": "v20.19.5",
+    "npm": "10.9.8",
+    "os": "6.17.0-23-generic",
+    "cpu": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz",
+    "load": [
+      4.1,
+      4.57,
+      4.26
+    ],
+    "power": "uncontrolled",
+    "thermal": "uncontrolled",
+    "backgroundLoad": "uncontrolled"
+  },
+  "cache": "project-cold",
+  "accepted": true,
+  "exitCode": 0,
+  "durationMs": 4516.593899000007,
+  "command": [
+    "node_modules/@angular/cli/bin/ng.js",
+    "build",
+    "--configuration",
+    "production"
+  ],
+  "builder": "@angular-devkit/build-angular:application",
+  "configuration": {
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+      "market-native": {
+        "projectType": "application",
+        "schematics": {},
+        "root": "",
+        "sourceRoot": "src",
+        "prefix": "app",
+        "architect": {
+          "build": {
+            "builder": "@angular-devkit/build-angular:application",
+            "options": {
+              "outputPath": "dist/market-native",
+              "index": "src/index.html",
+              "browser": "src/main.ts",
+              "polyfills": [
+                "zone.js"
+              ],
+              "tsConfig": "tsconfig.app.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": [
+                "src/engine.js"
+              ]
+            },
+            "configurations": {
+              "production": {
+                "budgets": [
+                  {
+                    "type": "initial",
+                    "maximumWarning": "500kb",
+                    "maximumError": "1mb"
+                  },
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "2kb",
+                    "maximumError": "4kb"
+                  }
+                ],
+                "outputHashing": "all"
+              },
+              "development": {
+                "optimization": false,
+                "extractLicenses": false,
+                "sourceMap": true
+              }
+            },
+            "defaultConfiguration": "production"
+          },
+          "serve": {
+            "builder": "@angular-devkit/build-angular:dev-server",
+            "configurations": {
+              "production": {
+                "buildTarget": "market-native:build:production"
+              },
+              "development": {
+                "buildTarget": "market-native:build:development"
+              }
+            },
+            "defaultConfiguration": "development"
+          },
+          "extract-i18n": {
+            "builder": "@angular-devkit/build-angular:extract-i18n",
+            "options": {
+              "buildTarget": "market-native:build"
+            }
+          },
+          "test": {
+            "builder": "@angular-devkit/build-angular:karma",
+            "options": {
+              "polyfills": [
+                "zone.js",
+                "zone.js/testing"
+              ],
+              "tsConfig": "tsconfig.spec.json",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets"
+              ],
+              "styles": [
+                "src/styles.css"
+              ],
+              "scripts": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "osCache": "uncontrolled",
+  "workers": "CLI default; no worker override",
+  "lockSha256": "f7eca368fbef18f66e5b5e0a6fc8c0792f99404cefb8ef76bdb87b7c8d289ed5",
+  "assets": [
+    {
+      "file": "dist/market-native/3rdpartylicenses.txt",
+      "bytes": 12861,
+      "sha256": "a4087ec279d4d37ae877cc5be1e20e1ae85f5610410fb250ce2e870b92e993c3"
+    },
+    {
+      "file": "dist/market-native/browser/favicon.ico",
+      "bytes": 15086,
+      "sha256": "f9102be80297c0529207607be5277b4f90bca89d65988fa1771b91c7894e815f"
+    },
+    {
+      "file": "dist/market-native/browser/index.html",
+      "bytes": 828,
+      "sha256": "2bb159a06a309a855f77b724cfa599e003616ad9e365218af76cd42f68222567"
+    },
+    {
+      "file": "dist/market-native/browser/main-M5DOA2W7.js",
+      "bytes": 136973,
+      "sha256": "65c5ef57367cbefb8147380a393ed00b67546380f64fb9d964988a4d2306c5f2",
+      "gzip": 44997,
+      "brotli": 40240
+    },
+    {
+      "file": "dist/market-native/browser/polyfills-FFHMD2TL.js",
+      "bytes": 34519,
+      "sha256": "69dcea045643dd0de998a3cd0ccbbb46b46bff2651a87a56c73c28eb208e8f98",
+      "gzip": 12475,
+      "brotli": 11281
+    },
+    {
+      "file": "dist/market-native/browser/scripts-LKIUZWFS.js",
+      "bytes": 1388,
+      "sha256": "7247db0809f6f5b0dc4362ca9774de943115a5905b2dc96134ba4acfd16518d5",
+      "gzip": 793,
+      "brotli": 687
+    },
+    {
+      "file": "dist/market-native/browser/styles-BDFAUCSY.css",
+      "bytes": 3992,
+      "sha256": "0b0fd7b509aedb08df0019ff68104bba34dfed73eeeaf626d3613bbc45a1a5bf"
+    }
+  ],
+  "scope": "All emitted artifacts recursively; compressed sizes per JS file; initial requested JS not measured"
+}

@@ -88,3 +88,17 @@ Dashboard verification passed 576 filter selections against 1,589 summary rows, 
 ## Repository layout migration
 
 The Angular applications now live at the repository root as `v14/` through `v22/`; before this refactor they were at `apps/angular-14/` through `apps/angular-22/`. Historical commit IDs and raw benchmark records intentionally retain their original provenance and are not rewritten. Commands in the historical records were run against the old layout; use the current scripts and root-level version directories when reproducing them from this checkout. This move does not change generated application contents, dependency pins, benchmark observations, or recorded hashes.
+
+## Research v2 — 2026-10-22
+
+The historical entries above are unchanged. New evidence is isolated under [`benchmark/results-v2/`](../benchmark/results-v2/) and summarized in the [v2 report](RESEARCH_V2_REPORT.md).
+
+- All nine B and all nine native C production variants passed expanded numeric/workflow browser acceptance; native Angular 18 was rechecked after a strict-clean-install lock-layout repair.
+- Final B signal revision 2 passed stable feature/active-Zone checks and 65-tick/60-point chart-history checks across the matrix. The separate Angular 22 M4 arm passed parity.
+- The instrumented Angular 22 diagnostic distinguished hook traversal from template refresh and verified one affected row template, no table template, cached order and one aggregate reduction for a sparse mutation. Earlier failed diagnostics remain retained.
+- 118 legacy and 218 research generated files matched scratch generation. Native defaults/configurations and adaptation hashes passed their dedicated check. Thirteen unit tests passed; workflow actionlint passed.
+- Eight short runtime pilot attempts passed, comprising 48 ticks and two balanced independent blocks per comparison. Source was clean and the browser binary consistent. The audit reports zero integrity errors and verifies all 325 historical files unchanged.
+- The final guarded native build batch passed 18/18 cold/warm attempts. Earlier batches with provenance/environment deviations are retained and excluded from timing eligibility.
+- Angular 22 development diagnostic cases passed for baseline, intentional TS/template errors, CSS output and recovery. The main confirmatory campaign remains NOT RUN pending researcher approval.
+
+Exact commands are in [the setup guide](RESEARCH_V2_SETUP.md); local logs and failed attempts remain alongside the successful evidence. Hosted CI status is distinct from these local checks and must be read from the pull request.

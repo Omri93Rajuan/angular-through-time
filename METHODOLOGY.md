@@ -1,3 +1,5 @@
+> Historical protocol/report: the observations below remain unchanged. Research v2 methods, verification and limitations are documented in [the v2 report](docs/RESEARCH_V2_REPORT.md) and [methods](docs/RESEARCH_V2_METHODS.md). Do not treat old samples as validation of new implementations.
+
 # Research protocol — Angular Through Time
 
 Protocol initiated 2026-10-18 and revised during implementation and validation on 2026-10-19; this is not a preregistered protocol. This is an exploratory local benchmark, not a published comparative conclusion.

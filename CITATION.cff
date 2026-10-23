@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this research apparatus, cite the repository and the exact commit and experiment identifiers you used."
+title: "Angular Through Time"
+type: software
+authors:
+  - family-names: Rajuan
+    given-names: Omri
+repository-code: "https://github.com/Omri93Rajuan/angular-through-time"
+url: "https://github.com/Omri93Rajuan/angular-through-time"
+license: MIT
+abstract: "A reproducible experimental apparatus for studying Angular framework, application architecture and toolchain evolution. Historical observations and research v2 pilots are separated; no universal performance ranking is claimed."

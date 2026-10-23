@@ -1,0 +1,14 @@
+❯ Building...
+✔ Building...
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-46DCKT7T.js      | main          | 143.63 kB |                41.96 kB
+polyfills-FFHMD2TL.js | polyfills     |  34.52 kB |                11.28 kB
+styles-BDFAUCSY.css   | styles        |   3.99 kB |                 1.15 kB
+scripts-LKIUZWFS.js   | scripts       |   1.39 kB |               687 bytes
+
+                      | Initial total | 183.53 kB |                55.07 kB
+
+Application bundle generation complete. [1.770 seconds]
+
+Output location: /home/kodcode/Desktop/angular/native/v18/dist/market-native
+
