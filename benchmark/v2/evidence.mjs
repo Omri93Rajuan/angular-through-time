@@ -64,6 +64,11 @@ function gitBytes(revision,file,cwd=process.cwd()){return execFileSync('git',['s
 
 export function verifyEvidenceCatalog(catalog,{workspace=process.cwd(),revision='HEAD'}={}) {
   validateEvidenceCatalog(catalog);
+  const pilotRoot=path.join(workspace,'benchmark','results-v2','pilots');
+  const entries=fs.readdirSync(pilotRoot,{withFileTypes:true}).sort((a,b)=>lexical(a.name,b.name));
+  for(const entry of entries)assert.ok(entry.isDirectory(),`Unexpected non-directory pilot evidence: ${entry.name}`);
+  const roots=entries.map(entry=>`benchmark/results-v2/pilots/${entry.name}`);
+  assertExactPaths(roots,catalog.entries.map(entry=>entry.root),'pilot evidence catalog');
   for(const entry of catalog.entries){
     const absoluteRoot=path.join(workspace,...entry.root.split('/'));
     const names=walkFiles(absoluteRoot).map(file=>posixPath(path.relative(absoluteRoot,file)));
