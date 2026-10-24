@@ -2,6 +2,7 @@ import fs from 'node:fs';import assert from 'node:assert/strict';import {chromiu
 import E from '../../packages/market-fixtures/engine.js';import {serve} from '../../scripts/serve.mjs';
 import {balancedOrder} from '../harness/order.mjs';import {frames,reset} from '../harness/functional.mjs';
 import {checkDOM} from './functional.mjs';import {Oracle} from './oracle.mjs';import {runStatistics} from './statistics.mjs';import {environment,validateBuild,hash} from './provenance.mjs';
+import {sealEvidenceDirectory} from './evidence.mjs';
 const protocol=JSON.parse(fs.readFileSync('research/v2/protocol.json'));
 if(process.env.CAMPAIGN&&process.env.CAMPAIGN!=='pilot')throw Error('Only pilots are implemented. Confirmatory campaign requires researcher-approved protocol.');
 const versions=(process.env.VERSIONS||'14,22').split(',').map(Number),tracks=(process.env.TRACKS||'idiomatic-v2').split(',');
@@ -46,4 +47,4 @@ for(const [orderIndex,job] of order.entries()){
  }catch(e){record.error=e.stack;failed=true;}finally{await browser?.close();if(server)await new Promise(r=>server.close(r));}
  record.status=record.accepted?'completed':'failed';fs.writeFileSync(file,JSON.stringify(record,null,2));console.log(orderIndex,job,record.status,record.error||record.statistics);
 }
-console.log(out);if(failed)process.exitCode=1;
+sealEvidenceDirectory(out);console.log(out);if(failed)process.exitCode=1;

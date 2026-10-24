@@ -16,7 +16,8 @@
     "research:generate": "node scripts/generate-research.mjs",
     "research:build": "node scripts/build-research.mjs",
     "research:verify": "node benchmark/v2/verify.mjs",
-    "research:audit": "node benchmark/v2/audit.mjs",
+    "research:audit": "node benchmark/v2/audit.mjs --check",
+    "research:evidence": "node scripts/verify-evidence.mjs",
     "research:pilot": "node benchmark/v2/pilot.mjs"
   },
   "devDependencies": {

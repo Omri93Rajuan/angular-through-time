@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "track": "default-cli-v1",
-  "architectureRevision": "market-components-1",
-  "experiment": "B-runtime",
+  "track": "portable-bridge-v1",
+  "architectureRevision": "portable-components-1",
+  "experiment": "C-source-bridge",
   "treatment": "portable-default",
   "version": {
     "major": 16,
@@ -29,7 +29,7 @@
   "flow": "ngFor/ngIf",
   "scheduler": "zone",
   "builder": "@angular-devkit/build-angular:browser",
-  "recipe": "controlled-webpack-v1",
+  "recipe": "controlled-webpack-portable-bridge-v1",
   "delivery": "serial-lossless",
   "diagnostic": false,
   "signalInputs": false
