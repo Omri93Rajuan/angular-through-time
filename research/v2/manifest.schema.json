@@ -28,12 +28,10 @@
       "minLength": 1
     },
     "experiment": {
-      "type": "string",
-      "minLength": 1
+      "enum": ["B-runtime", "C-source-bridge", "M4"]
     },
     "treatment": {
-      "type": "string",
-      "minLength": 1
+      "enum": ["idiomatic-v2", "idiomatic-v2-diagnostic", "m4-zone", "portable-default"]
     },
     "state": {
       "type": "string",
@@ -82,7 +80,7 @@
       "enum": [
         "idiomatic-v2",
         "matched-v1",
-        "default-cli-v1"
+        "portable-bridge-v1"
       ]
     },
     "version": {

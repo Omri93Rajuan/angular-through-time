@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
@@ -25,7 +26,13 @@ jobs:
       - run: npm test
       - run: node scripts/verify-generated.mjs && node scripts/check-parity.mjs && node scripts/verify-research-generated.mjs
       - run: node scripts/verify-native-recipes.mjs
-      - run: node benchmark/v2/audit.mjs && git diff --check
+      - name: Verify immutable evidence and read-only derived summary
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          node scripts/verify-evidence.mjs
+          node benchmark/v2/audit.mjs --check
+          git diff --exit-code
       - run: CHROME=/usr/bin/google-chrome node scripts/verify-research-dashboard.mjs
   browser:
     needs: validate
