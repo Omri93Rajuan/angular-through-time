@@ -45,7 +45,8 @@ After correctness passes, run small pilots sequentially on an otherwise idle mac
 VERSIONS=14,22 TRACKS=idiomatic-v2 REPS=2 node benchmark/v2/pilot.mjs
 # Same exact version; Zone treatment versus default zoneless.
 VERSIONS=22 TRACKS=idiomatic-v2,m4-zone REPS=2 node benchmark/v2/pilot.mjs
-node benchmark/v2/audit.mjs
+node scripts/verify-evidence.mjs
+node benchmark/v2/audit.mjs --check
 node scripts/audit-historical-readonly.mjs
 node scripts/verify-research-dashboard.mjs
 node scripts/serve.mjs .
