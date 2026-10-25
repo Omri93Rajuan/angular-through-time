@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Raw research evidence is byte-preserved. Validation reads historical Git
+# objects and future acquisition seals hash these files before commit.
+benchmark/results/** -text
+benchmark/results-v2/** -text
