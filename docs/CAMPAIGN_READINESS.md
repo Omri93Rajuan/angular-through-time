@@ -1,5 +1,7 @@
 # Confirmatory execution readiness
 
+**Historical assessment:** the execution gap described below is superseded by the dedicated [confirmatory implementation and frozen proposal](CONFIRMATORY_CAMPAIGN.md). Explicit researcher approval is still required; the historical assessment is retained for provenance.
+
 Assessment date: 2026-10-25. Inspected baseline: `cba40d6`.
 
 **NO-GO. No validated confirmatory execution command exists.**

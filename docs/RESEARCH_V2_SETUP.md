@@ -54,3 +54,5 @@ node scripts/serve.mjs .
 ```
 
 Each attempt launches a fresh browser process, requires exact-artifact expanded correctness evidence, checks initial state, warms three ticks, resets, and measures six ticks. This short pilot assesses feasibility only. `CAMPAIGN=confirmatory` fails closed. Approve and freeze the main protocol and precision/sample-size decisions before implementing or running the main campaign. Keep failed attempts and obsolete-artifact checks; do not reuse their timings after code changes.
+
+For the dedicated confirmatory runner, approval records, resume rules and deterministic analysis, use [CONFIRMATORY_CAMPAIGN.md](CONFIRMATORY_CAMPAIGN.md). The pilot commands above remain exploratory only.

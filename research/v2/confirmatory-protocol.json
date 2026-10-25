@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "market-confirmatory-runtime-1",
+  "status": "proposal-requires-explicit-approval",
+  "blocks": 36,
+  "experiments": [
+    {"id":"B-runtime","variants":["14/idiomatic-v2","15/idiomatic-v2","16/idiomatic-v2","17/idiomatic-v2","18/idiomatic-v2","19/idiomatic-v2","20/idiomatic-v2","21/idiomatic-v2","22/idiomatic-v2"],"reference":"14/idiomatic-v2"},
+    {"id":"M4","variants":["22/idiomatic-v2","22/m4-zone"],"reference":"22/idiomatic-v2"}
+  ],
+  "workload":{"warmupSeconds":30,"measurementSeconds":60,"hz":5,"count":100,"mode":"mutation","delivery":"serial-lossless"},
+  "primary":"mean paired log ratio of run p95 presentation opportunity; exponentiated as geometric mean ratio",
+  "secondary":["paired p95 difference milliseconds","run p50 presentation milliseconds","synchronous apply milliseconds","late updates over one interval","elapsed completion milliseconds","functional failures and incomplete blocks"],
+  "practicalDifference":0.1,
+  "uncertainty":{"draws":100000,"seed":14022,"familyAlpha":0.05,"contrasts":9,"method":"paired block percentile bootstrap with Bonferroni alpha/9; approximate simultaneous coverage"},
+  "order":"cyclic Latin-square rotation with alternate-cycle reversal; 36 blocks B then 36 blocks M4; no cross-experiment pooling",
+  "stopping":"fixed 36 blocks per experiment; no optional stopping or replacement runs; halt session on execution failure, preserve attempt and resume at next unattempted slot",
+  "incomplete":"report all attempts; primary inference withheld for an experiment unless all 36 complete blocks pass integrity and correctness",
+  "environment":"one pinned Linux host, browser binary, source commit and locks; AC power, fixed performance policy, no concurrent heavy workloads or thermal throttling; operator session attestation required on every invocation",
+  "exclusions":"only correctness, integrity, interruption or declared environment violation (invalidate the entire affected invocation session symmetrically); retain slow and late correct runs; never remove statistical outliers",
+  "approvalRequired":["scope and nine primary contrasts","fixed 36 blocks and precision limitations","30/60-second nominal windows at 5 Hz","10% practical threshold","approximate Bonferroni bootstrap inference","fixed balanced order and host/environment controls"]
+}
