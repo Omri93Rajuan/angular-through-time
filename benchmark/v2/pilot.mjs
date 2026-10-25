@@ -5,6 +5,8 @@ import {checkDOM} from './functional.mjs';import {Oracle} from './oracle.mjs';im
 import {sealEvidenceDirectory} from './evidence.mjs';
 const protocol=JSON.parse(fs.readFileSync('research/v2/protocol.json'));
 if(process.env.CAMPAIGN&&process.env.CAMPAIGN!=='pilot')throw Error('Only pilots are implemented. Confirmatory campaign requires researcher-approved protocol.');
+assert.equal(protocol.status,'pilot-only','Pilot runner requires a pilot-only protocol before collection');
+assert.equal(protocol.confirmatoryApproved,false,'Pilot runner cannot collect a confirmatory-approved protocol');
 const versions=(process.env.VERSIONS||'14,22').split(',').map(Number),tracks=(process.env.TRACKS||'idiomatic-v2').split(',');
 const base=versions.flatMap(version=>tracks.map(track=>({version,track}))),reps=Number(process.env.REPS||base.length);
 if(!Number.isInteger(reps)||reps<base.length||reps%base.length)throw Error('Pilot requires complete balanced cycles');
