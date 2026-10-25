@@ -39,7 +39,11 @@ export async function collect(directory,metadata,run,{resume=false,session={}}={
  try{
   const meta=path.join(directory,'metadata.json');
   if(fs.existsSync(meta)){assert.ok(resume,'Existing campaign requires --resume');assert.deepEqual(read(meta),metadata,'Campaign identity/protocol changed');}
-  else {assert.ok(!resume,'Cannot resume nonexistent campaign');exclusiveJSON(meta,metadata);}
+  else {assert.ok(!resume,'Cannot resume nonexistent campaign');assert.deepEqual(fs.readdirSync(directory),['.lock'],'New campaign directory must be empty');exclusiveJSON(meta,metadata);}
+  const expected=new Set(['.lock','metadata.json',...metadata.order.map(j=>String(j.index).padStart(4,'0'))]);
+  for(const name of fs.readdirSync(directory))assert.ok(expected.has(name)||/^(invalid-)?session-[\w-]+\.json$/.test(name),`Unexpected campaign entry: ${name}`);
+  // Check all already sealed attempts before allowing any new collection.
+  for(const job of metadata.order){const dir=path.join(directory,String(job.index).padStart(4,'0'));if(fs.existsSync(path.join(dir,'seal.json')))verifySeal(dir);}
   const sessionFile=`session-${Date.now()}-${process.pid}-${randomUUID()}.json`;exclusiveJSON(path.join(directory,sessionFile),session);
   const sessionHash=fingerprint(session);
   for(const job of metadata.order){

@@ -56,3 +56,6 @@ test('real CLI refuses missing authorization before creating output',async()=>{
  const r=spawnSync(process.execPath,['benchmark/confirmatory/run.mjs','--output',root],{encoding:'utf8',env:{...process.env,CHROME:process.execPath}});
  assert.equal(r.status,1);assert.match(r.stderr,/--approval and --session required/);assert.ok(!fs.existsSync(root));
 });
+test('nonempty new output directory fails before collection',async()=>{
+ const dir=temporary();let called=false;try{fs.writeFileSync(path.join(dir,'unrelated.json'),'{}');await assert.rejects(collect(dir,{order:[]},async()=>{called=true;}),/must be empty/);assert.equal(called,false);assert.equal(fs.readFileSync(path.join(dir,'unrelated.json'),'utf8'),'{}');assert.ok(!fs.existsSync(path.join(dir,'metadata.json')));}finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
