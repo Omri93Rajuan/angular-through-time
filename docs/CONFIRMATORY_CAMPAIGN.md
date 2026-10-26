@@ -2,7 +2,7 @@
 
 This is a concrete proposal, **not researcher approval**. The machine-readable
 [protocol](../research/v2/confirmatory-protocol.json) is bound by SHA-256 to an
-explicit approval, source commit/tree, Node, Chrome binary, root lock and host.
+explicit approval, campaign ID, source commit/tree, Node, Chrome binary, root lock and host.
 The existing pilot protocol and all existing evidence remain unchanged.
 
 ## Fixed scope and estimands
@@ -126,14 +126,14 @@ pilot command, override `REPS`, or edit the pilot protocol.
 
 ```bash
 # No collection: inspect the exact host/source/protocol identities.
-CHROME=/opt/google/chrome/chrome npm run --silent confirmatory:run -- --prepare \
+CHROME=/opt/google/chrome/chrome npm run --silent confirmatory:run -- --prepare --campaign-id runtime-1 \
   > /tmp/campaign-proposal.json
 ```
 
 A researcher must review this document, approve all listed decisions, and save
 the proposal's `approval` object to an **external** `approval.json`, setting
 `approved: true`, their name in `researcher`, and an ISO UTC `approvedAt`.
-Do not invent approval or edit identity/hash/accepted-decision fields. The
+Do not invent approval or edit campaign-ID/identity/hash/accepted-decision fields. An approval cannot be reused for a different campaign ID. The
 operator saves the `session` object separately to external `session.json`, fills
 `operator`, current ISO UTC `checkedAt`, and truthfully sets the four environment
 checks to true. These JSON records are explicit local authorization attestations,
@@ -151,7 +151,7 @@ CHROME=/opt/google/chrome/chrome npm run confirmatory:run -- \
 Resume uses **the same command plus `--resume`**, with a fresh truthful session
 attestation. A `.lock` prevents concurrent writers. After abrupt termination,
 inspect its recorded host/PID and verify that process is no longer running before
-removing **only** the stale `.lock`. Never remove an attempt directory or seal.
+removing **only** the stale `.lock`. Never remove an attempt directory, seal or `attempt-claims` marker. Each new attempt is claimed before collection. If a claimed directory disappears, resume records an interruption instead of collecting a replacement. Missing claim registries fail closed. The evidence storage revision is separate from the unchanged protocol identity.
 A changed source, host, browser, protocol, build, gate or approval fails closed.
 If interruption occurred before metadata was initialized, no trustworthy campaign
 exists: retain that directory and initialize a new ID rather than overwriting it.

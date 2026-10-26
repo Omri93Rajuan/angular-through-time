@@ -6,7 +6,7 @@ import {quantile} from '../harness/statistics.mjs';
 import {runStatistics} from '../v2/statistics.mjs';
 import {Oracle} from '../v2/oracle.mjs';
 import E from '../../packages/market-fixtures/engine.js';
-import {read,plan,verifySeal,fingerprint,authorize} from './core.mjs';
+import {read,plan,verifySeal,fingerprint,authorize,verifyClaims} from './core.mjs';
 const mean=a=>a.reduce((x,y)=>x+y,0)/a.length;
 export function estimate(pairs,u){
  assert.ok(pairs.length>=2);assert.ok(pairs.every(p=>p.length===2&&p.every(x=>Number.isFinite(x)&&x>0)));
@@ -17,18 +17,28 @@ export function estimate(pairs,u){
  const interval=[quantile(draws,tail),quantile(draws,1-tail)];
  return {n:pairs.length,ratio:Math.exp(mean(logs)),differenceMs:mean(diffs),interval,relativeHalfWidth:(interval[1]-interval[0])/(2*Math.exp(mean(logs))),method:'paired-block percentile bootstrap; Bonferroni across nine contrasts; approximate coverage'};
 }
+export function validateTimeline(timings,hz){
+ for(let i=0;i<timings.length;i++){
+  const t=timings[i];assert.equal(t.tick,i);
+  for(const key of ['due','begin','synchronousApplyMs','presentationMs','lateMs'])assert.ok(Number.isFinite(t[key]));
+  assert.ok(t.synchronousApplyMs>=0&&t.presentationMs>=t.synchronousApplyMs);assert.ok(t.begin>=t.due-2);
+  assert.ok(Math.abs(t.lateMs-Math.max(0,t.begin-t.due))<1e-6);
+  if(i){assert.ok(Math.abs(t.due-timings[0].due-i*1000/hz)<1e-6);assert.ok(t.begin>=timings[i-1].begin+timings[i-1].presentationMs-2);}
+ }
+}
 export function analyze(directory){
  assert.ok(!fs.existsSync(path.join(directory,'.lock')),'Cannot analyze a running campaign');
  const m=read(path.join(directory,'metadata.json')),p=m.protocol;
  assert.ok(['confirmatory','synthetic-validation','browser-validation'].includes(m.kind));
  assert.deepEqual(m.order,plan(p));
- if(m.kind==='confirmatory')authorize(p,m.approval,m.identity);
- const expected=new Set(['metadata.json',...m.order.map(j=>String(j.index).padStart(4,'0'))]);
+ if(m.kind==='confirmatory')authorize(p,m.approval,m.identity,m.campaignId);
+ if(m.evidenceVersion===2)verifyClaims(directory,m);
+ const expected=new Set(['metadata.json',...(m.evidenceVersion===2?['attempt-claims']:[]),...m.order.map(j=>String(j.index).padStart(4,'0'))]);
  for(const name of fs.readdirSync(directory))assert.ok(expected.has(name)||/^(invalid-)?session-[\w-]+\.json$/.test(name),`Unexpected campaign entry: ${name}`);
  const rows=[];
  for(const job of m.order){
   const dir=path.join(directory,String(job.index).padStart(4,'0'));
-  if(!fs.existsSync(dir)){rows.push({...job,accepted:false,reason:'not attempted'});continue;}
+  if(!fs.existsSync(dir)){if(m.evidenceVersion===2)assert.ok(!fs.existsSync(path.join(directory,'attempt-claims',String(job.index).padStart(4,'0'))),'Claimed attempt is missing; resume must record its interruption before analysis');rows.push({...job,accepted:false,reason:'not attempted'});continue;}
   verifySeal(dir);
   if(fs.existsSync(path.join(dir,'interrupted.json'))){assert.deepEqual(read(path.join(dir,'interrupted.json')).job,job);rows.push({...job,accepted:false,reason:'interrupted'});continue;}
   const started=read(path.join(dir,'start.json'));assert.deepEqual(started.job,job);assert.equal(started.kind,m.kind);assert.equal(started.metadataHash,fingerprint(m),'Campaign metadata changed');
@@ -45,20 +55,19 @@ export function analyze(directory){
   const timings=entries.filter(e=>e.type==='timing').map(e=>e.timing),events=entries.filter(e=>e.type==='request').map(e=>e.event);
   assert.equal(timings.length,p.workload.hz*p.workload.measurementSeconds);assert.equal(events.length,timings.length);
   const oracle=new Oracle();
-  for(let i=0;i<timings.length;i++){
-   assert.deepEqual(events[i],E.event(i,p.workload.count));oracle.apply(events[i]);const t=timings[i];
-   assert.equal(t.tick,i);for(const key of ['due','begin','synchronousApplyMs','presentationMs','lateMs'])assert.ok(Number.isFinite(t[key]));
-   assert.ok(t.synchronousApplyMs>=0&&t.presentationMs>=t.synchronousApplyMs);assert.ok(t.begin>=t.due-2);
-   assert.ok(Math.abs(t.lateMs-Math.max(0,t.begin-t.due))<1e-6);
-   if(i){assert.ok(Math.abs(t.due-timings[0].due-i*1000/p.workload.hz)<1e-6);assert.ok(t.begin>=timings[i-1].begin+timings[i-1].presentationMs-2);}
-  }
+  validateTimeline(timings,p.workload.hz);
+  for(let i=0;i<timings.length;i++){assert.deepEqual(events[i],E.event(i,p.workload.count));oracle.apply(events[i]);}
   if(m.kind==='synthetic-validation')assert.equal(r.finalRowsHash,fingerprint(oracle.rows));else assert.deepEqual(r.finalRows,oracle.rows);assert.deepEqual(r.statistics,runStatistics(timings));assert.equal(r.functional,true);assert.ok(Number.isFinite(r.elapsedMs)&&r.elapsedMs>=timings.at(-1).begin+timings.at(-1).presentationMs-timings[0].due-2);
   assert.equal(r.lateUpdates,timings.filter(t=>t.lateMs>1000/p.workload.hz).length);
   if(m.kind!=='synthetic-validation'){
    const provenance=entries.filter(e=>e.type==='provenance');assert.equal(provenance.length,1);
    const expectedBuild=m.builds[job.variant];assert.deepEqual(provenance[0].build,expectedBuild.build);assert.deepEqual(provenance[0].gate,expectedBuild.gate);
    assert.equal(r.browser,expectedBuild.gate.record.browser);
-   assert.equal(entries.filter(e=>e.type==='warmup').length,p.workload.warmupSeconds*p.workload.hz);
+   const warmup=entries.filter(e=>e.type==='warmup').map(e=>e.timing),warmEvents=entries.filter(e=>e.type==='warmup-request').map(e=>e.event);
+   assert.equal(warmup.length,p.workload.warmupSeconds*p.workload.hz);assert.equal(warmEvents.length,warmup.length);
+   validateTimeline(warmup,p.workload.hz);
+   warmEvents.forEach((event,i)=>assert.deepEqual(event,E.event(i,p.workload.count)));
+   if(warmup.length)assert.ok(timings[0].due>=warmup[0].due+p.workload.warmupSeconds*1000-2,'Warm-up duration shorter than protocol');
   }
   rows.push({...job,accepted:true,statistics:r.statistics,elapsedMs:r.elapsedMs,lateUpdates:r.lateUpdates,synchronousApplyMs:mean(timings.map(t=>t.synchronousApplyMs))});
  }

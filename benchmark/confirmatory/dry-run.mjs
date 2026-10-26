@@ -9,7 +9,7 @@ import {protocol,plan,collect,fingerprint} from './core.mjs';
 import {analyze} from './analysis.mjs';
 export async function synthetic(directory,{failAt,interruptAt}={}){
  const p=protocol();p.workload.warmupSeconds=0;p.workload.measurementSeconds=.6;
- const metadata={kind:'synthetic-validation',protocol:p,order:plan(p)};
+ const metadata={evidenceVersion:2,kind:'synthetic-validation',protocol:p,order:plan(p)};
  const oracle=new Oracle();for(let i=0;i<3;i++)oracle.apply(E.event(i,p.workload.count));
  const finalRowsHash=fingerprint(oracle.rows);
  const run=async(job,emit)=>{
@@ -24,6 +24,7 @@ export async function synthetic(directory,{failAt,interruptAt}={}){
  };
  if(interruptAt!==undefined){
   fs.mkdirSync(directory,{recursive:true});fs.writeFileSync(path.join(directory,'metadata.json'),JSON.stringify(metadata));
+  fs.mkdirSync(path.join(directory,'attempt-claims'));fs.writeFileSync(path.join(directory,'attempt-claims',String(interruptAt).padStart(4,'0')),'');
   const dir=path.join(directory,String(interruptAt).padStart(4,'0'));fs.mkdirSync(dir);fs.writeFileSync(path.join(dir,'start.json'),JSON.stringify({job:metadata.order[interruptAt],kind:metadata.kind,sessionFile:'session-0-0.json'}));fs.writeFileSync(path.join(directory,'session-0-0.json'),'{}');fs.writeFileSync(path.join(dir,'events.jsonl'),'partial interrupted journal');
  }
  try{await collect(directory,metadata,run,{resume:interruptAt!==undefined,session:{kind:'synthetic-validation'}});}catch(error){if(failAt===undefined)throw error;assert.match(String(error),/failed; retained/);await collect(directory,metadata,run,{resume:true,session:{kind:'synthetic-validation',recovery:true}});}
