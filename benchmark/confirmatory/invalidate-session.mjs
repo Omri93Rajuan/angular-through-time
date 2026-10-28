@@ -1,0 +1,12 @@
+import path from 'node:path';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {exclusiveJSON,read} from './core.mjs';
+const [directory,sessionFile,condition,operator,...detail]=process.argv.slice(2);
+assert.ok(directory&&sessionFile&&condition&&operator&&detail.length,'Usage: invalidate-session.mjs DIRECTORY SESSION_FILE CONDITION OPERATOR DETAILS');
+assert.match(sessionFile,/^session-[\w-]+\.json$/);
+assert.ok(['acPower','fixedPerformancePolicy','noHeavyWorkloads','noThermalThrottling'].includes(condition),'Only predeclared environmental violations may invalidate a session');
+assert.ok(!fs.existsSync(path.join(directory,'.lock')),'Stop collection before recording a violation');
+read(path.join(directory,sessionFile));
+exclusiveJSON(path.join(directory,`invalid-${sessionFile}`),{sessionFile,condition,operator,details:detail.join(' '),recordedAt:new Date().toISOString()});
+console.log('Entire session invalidated symmetrically; raw attempts preserved; no replacement authorized.');

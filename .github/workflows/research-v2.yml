@@ -24,6 +24,8 @@ jobs:
       - run: npm install --global npm@11.6.2 --no-audit --no-fund
       - run: npm ci --engine-strict --no-audit --no-fund
       - run: npm test
+      - name: Synthetic confirmatory schedule, recovery and deterministic analysis
+        run: npm run confirmatory:dry-run
       - run: node scripts/verify-generated.mjs && node scripts/check-parity.mjs && node scripts/verify-research-generated.mjs
       - run: node scripts/verify-native-recipes.mjs
       - name: Verify immutable evidence and read-only derived summary
@@ -59,12 +61,24 @@ jobs:
       - run: node scripts/setup-research.mjs
       - run: node scripts/build-research.mjs
       - run: node benchmark/v2/verify.mjs
+      - name: Prepare existing M4 arm for validation
+        if: matrix.angular == 22
+        run: |
+          TRACKS=m4-zone node scripts/build-research.mjs
+          TRACKS=m4-zone node benchmark/v2/verify.mjs
+      - name: Disposable browser validation of confirmatory execution path
+        run: |
+          node benchmark/confirmatory/run.mjs --browser-validation --output "$RUNNER_TEMP/confirmatory-browser-validation"
+          node benchmark/confirmatory/analysis.mjs "$RUNNER_TEMP/confirmatory-browser-validation" > "$RUNNER_TEMP/confirmatory-browser-analysis.json"
       - name: Preserve compilation and browser failures
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: research-v2-${{ matrix.angular }}
-          path: benchmark/results-v2/
+          path: |
+            benchmark/results-v2/
+            ${{ runner.temp }}/confirmatory-browser-validation/
+            ${{ runner.temp }}/confirmatory-browser-analysis.json
   native:
     needs: validate
     runs-on: ubuntu-24.04

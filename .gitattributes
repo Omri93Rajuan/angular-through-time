@@ -4,3 +4,4 @@
 # objects and future acquisition seals hash these files before commit.
 benchmark/results/** -text
 benchmark/results-v2/** -text
+benchmark/results-confirmatory/** -text
