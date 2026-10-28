@@ -8,7 +8,7 @@
   },
   "scripts": {
     "generate": "node scripts/generate.mjs",
-    "test": "node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs benchmark/v2/*.test.mjs",
+    "test": "node --test packages/market-fixtures/*.test.cjs benchmark/harness/*.test.mjs benchmark/v2/*.test.mjs benchmark/confirmatory/*.test.mjs",
     "build": "node scripts/build.mjs",
     "bench": "node benchmark/harness/run.mjs",
     "summarize": "node benchmark/harness/summarize.mjs",
@@ -18,7 +18,10 @@
     "research:verify": "node benchmark/v2/verify.mjs",
     "research:audit": "node benchmark/v2/audit.mjs --check",
     "research:evidence": "node scripts/verify-evidence.mjs",
-    "research:pilot": "node benchmark/v2/pilot.mjs"
+    "research:pilot": "node benchmark/v2/pilot.mjs",
+    "confirmatory:dry-run": "node benchmark/confirmatory/dry-run.mjs",
+    "confirmatory:run": "node benchmark/confirmatory/run.mjs",
+    "confirmatory:analyze": "node benchmark/confirmatory/analysis.mjs"
   },
   "devDependencies": {
     "chrome-launcher": "1.2.2",

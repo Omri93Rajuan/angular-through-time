@@ -157,3 +157,5 @@ Nine production jobs use the exact Node/npm pairs in [VERSION_MATRIX.md](VERSION
 CI checks correctness and compilation only. It does not run workload performance benchmarks or Lighthouse, create benchmark samples, or provide research-grade performance comparisons. Build failures remain visible per version; CI does not merge pull requests automatically.
 
 Whitespace validation covers every hand-maintained file. It excludes only byte-frozen v2 evidence, exact preserved CLI scaffolds and reproducibly generated application source; those paths remain protected by historical audits, generated-source verification and native-recipe fidelity checks instead of being reformatted.
+
+Confirmatory runtime execution (B14–22 and M4) is implemented with explicit approval gating. See the [frozen protocol proposal and execution commands](docs/CONFIRMATORY_CAMPAIGN.md). No real confirmatory data have been collected.
