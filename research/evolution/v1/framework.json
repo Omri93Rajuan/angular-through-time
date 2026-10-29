@@ -1,0 +1,2831 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1.0.0",
+  "asOf": "2026-10-29",
+  "claimType": "documented-framework-evolution",
+  "scope": {
+    "minMajor": 14,
+    "maxMajor": 22,
+    "coverage": "Major engineering milestones and selected breaking changes; not every patch or migration instruction."
+  },
+  "sources": [
+    {
+      "id": "compatibility",
+      "url": "https://angular.dev/reference/versions",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Angular/Node.js/TypeScript/RxJS compatibility table",
+      "availability": "verified"
+    },
+    {
+      "id": "support",
+      "url": "https://angular.dev/reference/releases",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Actively supported versions; release cadence; update paths",
+      "availability": "verified"
+    },
+    {
+      "id": "update",
+      "url": "https://angular.dev/update-guide",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Select source and destination versions; one major at a time",
+      "availability": "verified"
+    },
+    {
+      "id": "release-14",
+      "url": "https://github.com/angular/angular/releases/tag/14.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-15",
+      "url": "https://github.com/angular/angular/releases/tag/15.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-16",
+      "url": "https://github.com/angular/angular/releases/tag/16.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-17",
+      "url": "https://github.com/angular/angular/releases/tag/17.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-18",
+      "url": "https://github.com/angular/angular/releases/tag/18.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-19",
+      "url": "https://github.com/angular/angular/releases/tag/19.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-20",
+      "url": "https://github.com/angular/angular/releases/tag/20.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-21",
+      "url": "https://github.com/angular/angular/releases/tag/21.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release date, features, breaking changes and deprecations",
+      "availability": "verified"
+    },
+    {
+      "id": "release-17.1.0",
+      "url": "https://github.com/angular/angular/releases/tag/17.1.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "release-17.2.0",
+      "url": "https://github.com/angular/angular/releases/tag/17.2.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "release-17.3.0",
+      "url": "https://github.com/angular/angular/releases/tag/17.3.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "release-20.2.0",
+      "url": "https://github.com/angular/angular/releases/tag/20.2.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-14",
+      "url": "https://github.com/angular/angular-cli/releases/tag/14.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-15",
+      "url": "https://github.com/angular/angular-cli/releases/tag/15.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-16",
+      "url": "https://github.com/angular/angular-cli/releases/tag/16.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-17",
+      "url": "https://github.com/angular/angular-cli/releases/tag/17.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-18",
+      "url": "https://github.com/angular/angular-cli/releases/tag/18.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-19",
+      "url": "https://github.com/angular/angular-cli/releases/tag/19.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-20",
+      "url": "https://github.com/angular/angular-cli/releases/tag/20.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "cli-21",
+      "url": "https://github.com/angular/angular-cli/releases/tag/21.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "CLI builders, compiler integration and schematic changes",
+      "availability": "verified"
+    },
+    {
+      "id": "release-22-unavailable",
+      "url": "https://github.com/angular/angular/releases/tag/22.0.0",
+      "kind": "github-release",
+      "retrievedAt": "2026-10-29",
+      "locator": "API and webpage returned HTTP 404 during review",
+      "availability": "unavailable"
+    },
+    {
+      "id": "blog-15",
+      "url": "https://blog.angular.dev/angular-v15-is-now-available-df7be7f2f4c8",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-16",
+      "url": "https://blog.angular.dev/angular-v16-is-here-4d7a28ec680d",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-17",
+      "url": "https://blog.angular.dev/introducing-angular-v17-4d7033312e4b",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-18",
+      "url": "https://blog.angular.dev/angular-v18-is-now-available-e79d5ac0affe",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-19",
+      "url": "https://blog.angular.dev/meet-angular-v19-7b29dfd05b84",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-20",
+      "url": "https://blog.angular.dev/announcing-angular-v20-b5c9c06cf301",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-21",
+      "url": "https://blog.angular.dev/announcing-angular-v21-57946c34f14b",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "blog-22",
+      "url": "https://blog.angular.dev/announcing-angular-v22-c52bb83a4664",
+      "kind": "official-release-blog",
+      "retrievedAt": "2026-10-29",
+      "locator": "Release announcement feature/status sections",
+      "availability": "verified"
+    },
+    {
+      "id": "standalone-migration",
+      "url": "https://angular.dev/reference/migrations/standalone",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "control-migration",
+      "url": "https://angular.dev/reference/migrations/control-flow",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "typed-forms",
+      "url": "https://angular.dev/guide/forms/typed-forms",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "build-migration",
+      "url": "https://angular.dev/tools/cli/build-system-migration",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "signals",
+      "url": "https://angular.dev/guide/signals",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "component-strategy",
+      "url": "https://angular.dev/guide/components/advanced-configuration",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Named section matching the claim",
+      "availability": "verified"
+    },
+    {
+      "id": "v22-event",
+      "url": "https://angular.dev/events/v22",
+      "kind": "official-documentation",
+      "retrievedAt": "2026-10-29",
+      "locator": "Stable Signal Forms, asynchronous signals, Angular Aria",
+      "availability": "verified"
+    }
+  ],
+  "versions": [
+    {
+      "major": 14,
+      "release": {
+        "version": "14.0.0",
+        "date": "2022-06-02",
+        "sourceIds": [
+          "release-14"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "14.0.x || 14.1.x",
+          "node": "^14.15.0 || ^16.10.0",
+          "typescript": ">=4.6.2 <4.8.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "14.2.x || 14.3.x",
+          "node": "^14.15.0 || ^16.10.0",
+          "typescript": ">=4.6.2 <4.9.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "standalone",
+        "typed-forms",
+        "load-component",
+        "esbuild",
+        "initial-default-option"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 15,
+      "release": {
+        "version": "15.0.0",
+        "date": "2022-11-16",
+        "sourceIds": [
+          "release-15"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "15.0.x",
+          "node": "^14.20.0 || ^16.13.0 || ^18.10.0",
+          "typescript": "~4.8.2",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "15.1.x || 15.2.x",
+          "node": "^14.20.0 || ^16.13.0 || ^18.10.0",
+          "typescript": ">=4.8.2 <5.0.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "standalone",
+        "standalone-migration",
+        "directive-composition",
+        "http-providers",
+        "load-component",
+        "esbuild",
+        "enable-ivy",
+        "date-timezone-token"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 16,
+      "release": {
+        "version": "16.0.0",
+        "date": "2023-05-03",
+        "sourceIds": [
+          "release-16"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "16.0.x",
+          "node": "^16.14.0 || ^18.10.0",
+          "typescript": ">=4.9.3 <5.1.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "16.1.x || 16.2.x",
+          "node": "^16.14.0 || ^18.10.0",
+          "typescript": ">=4.9.3 <5.2.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "esbuild",
+        "signals",
+        "effects",
+        "hydration",
+        "ngcc",
+        "required-inputs",
+        "destroy-ref",
+        "injection-context"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 17,
+      "release": {
+        "version": "17.0.0",
+        "date": "2023-11-08",
+        "sourceIds": [
+          "release-17"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "17.0.x",
+          "node": "^18.13.0 || ^20.9.0",
+          "typescript": ">=5.2.0 <5.3.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "17.1.x || 17.2.x",
+          "node": "^18.13.0 || ^20.9.0",
+          "typescript": ">=5.2.0 <5.4.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "17.3.x",
+          "node": "^18.13.0 || ^20.9.0",
+          "typescript": ">=5.2.0 <5.5.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "standalone",
+        "esbuild",
+        "signals",
+        "signal-mutate",
+        "hydration",
+        "control-flow",
+        "defer",
+        "signal-inputs",
+        "signal-queries",
+        "model-inputs",
+        "output-function",
+        "ngswitch-equality",
+        "check-no-changes"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 18,
+      "release": {
+        "version": "18.0.0",
+        "date": "2024-05-22",
+        "sourceIds": [
+          "release-18"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "18.0.x",
+          "node": "^18.19.1 || ^20.11.1 || ^22.0.0",
+          "typescript": ">=5.4.0 <5.5.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "18.1.x || 18.2.x",
+          "node": "^18.19.1 || ^20.11.1 || ^22.0.0",
+          "typescript": ">=5.4.0 <5.6.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "esbuild",
+        "control-flow",
+        "defer",
+        "zoneless",
+        "zone-scheduler",
+        "event-coalescing",
+        "async-testing",
+        "http-modules"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 19,
+      "release": {
+        "version": "19.0.0",
+        "date": "2024-11-19",
+        "sourceIds": [
+          "release-19"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "unsupported",
+        "activeEnds": null,
+        "ltsEnds": null,
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "19.0.x",
+          "node": "^18.19.1 || ^20.11.1 || ^22.0.0",
+          "typescript": ">=5.5.0 <5.7.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "19.1.x",
+          "node": "^18.19.1 || ^20.11.1 || ^22.0.0",
+          "typescript": ">=5.5.0 <5.8.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "19.2.x",
+          "node": "^18.19.1 || ^20.11.1 || ^22.0.0",
+          "typescript": ">=5.5.0 <5.9.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "standalone",
+        "effects",
+        "signal-inputs",
+        "signal-queries",
+        "model-inputs",
+        "output-function",
+        "incremental-hydration",
+        "linked-signal",
+        "resource",
+        "template-hmr",
+        "server-transition",
+        "template-this"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 20,
+      "release": {
+        "version": "20.0.0",
+        "date": "2025-05-28",
+        "sourceIds": [
+          "release-20"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "lts",
+        "activeEnds": "2025-11-19",
+        "ltsEnds": "2026-11-28",
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "20.0.x || 20.1.x",
+          "node": "^20.19.0 || ^22.12.0 || ^24.0.0",
+          "typescript": ">=5.8.0 <5.9.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        },
+        {
+          "angular": "20.2.x || 20.3.x",
+          "node": "^20.19.0 || ^22.12.0 || ^24.0.0",
+          "typescript": ">=5.8.0 <6.0.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "effects",
+        "zoneless",
+        "incremental-hydration",
+        "linked-signal",
+        "vitest",
+        "template-hmr",
+        "legacy-control-directives",
+        "testbed-get",
+        "template-expressions"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 21,
+      "release": {
+        "version": "21.0.0",
+        "date": "2025-11-19",
+        "sourceIds": [
+          "release-21"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "lts",
+        "activeEnds": "2026-06-03",
+        "ltsEnds": "2027-06",
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "21.0.x || 21.1.x || 21.2.x",
+          "node": "^20.19.0 || ^22.12.0 || ^24.0.0",
+          "typescript": ">=5.9.0 <6.0.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "zoneless",
+        "signal-forms",
+        "aria",
+        "vitest",
+        "host-typechecking",
+        "router-navigation-signal",
+        "removed-component-options",
+        "http-status-text"
+      ],
+      "coverage": "curated-not-exhaustive"
+    },
+    {
+      "major": 22,
+      "release": {
+        "version": "22.0.0",
+        "date": "2026-06-03",
+        "sourceIds": [
+          "support",
+          "blog-22"
+        ]
+      },
+      "support": {
+        "asOf": "2026-10-29",
+        "status": "active",
+        "activeEnds": "2027-06",
+        "ltsEnds": "2028-06",
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "compatibility": [
+        {
+          "angular": "22.0.x",
+          "node": "^22.22.3 || ^24.15.0 || ^26.0.0",
+          "typescript": ">=6.0.0 <6.1.0",
+          "rxjs": "^6.5.3 || ^7.4.0",
+          "sourceIds": [
+            "compatibility"
+          ]
+        }
+      ],
+      "featureIds": [
+        "resource",
+        "signal-forms",
+        "aria",
+        "webpack-deprecation",
+        "onpush-default",
+        "template-comments",
+        "release-cadence"
+      ],
+      "coverage": "curated-not-exhaustive"
+    }
+  ],
+  "features": [
+    {
+      "id": "standalone",
+      "title": "Standalone declarations and bootstrap",
+      "category": "architecture",
+      "apis": [
+        "standalone",
+        "bootstrapApplication"
+      ],
+      "events": [
+        {
+          "version": "14.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Standalone declarations and bootstrap become available.",
+          "sourceIds": [
+            "release-14",
+            "blog-15"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "15.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Standalone APIs graduate to stable.",
+          "sourceIds": [
+            "blog-15"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "17.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "CLI generates standalone applications by default; this is not yet the decorator default.",
+          "sourceIds": [
+            "cli-17"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "Component, directive and pipe decorators default to standalone.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": true,
+          "migration": "ng update adds standalone:false to NgModule declarations."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Can reduce module boilerplate.",
+        "tradeoff": "Existing NgModule declarations require explicit standalone:false after migration.",
+        "sourceIds": [
+          "release-14",
+          "blog-15",
+          "cli-17",
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "typed-forms",
+      "title": "Typed reactive forms",
+      "category": "forms",
+      "apis": [
+        "FormControl",
+        "FormGroup",
+        "UntypedFormControl",
+        "nonNullable"
+      ],
+      "events": [
+        {
+          "version": "14.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Reactive forms gain typed models; Untyped aliases preserve opt-out behavior.",
+          "sourceIds": [
+            "release-14",
+            "typed-forms"
+          ],
+          "breaking": true,
+          "migration": "Use Untyped aliases during migration; opt into types incrementally."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Type checking catches invalid form values.",
+        "tradeoff": "Nullability and disabled controls require explicit handling; template-driven forms are not made typed.",
+        "sourceIds": [
+          "release-14",
+          "typed-forms"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "standalone-migration",
+      "title": "Standalone migration schematic",
+      "category": "migration",
+      "apis": [
+        "@angular/core:standalone"
+      ],
+      "events": [
+        {
+          "version": "15.2.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Standalone migration schematic supports projects using 15.2 or later.",
+          "sourceIds": [
+            "standalone-migration"
+          ],
+          "breaking": false,
+          "migration": "Run conversion, module removal and bootstrap migration in order."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Automates an incremental architectural migration.",
+        "tradeoff": "Manual fixes and verification remain necessary.",
+        "sourceIds": [
+          "standalone-migration"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "directive-composition",
+      "title": "Directive composition",
+      "category": "architecture",
+      "apis": [
+        "hostDirectives"
+      ],
+      "events": [
+        {
+          "version": "15.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "hostDirectives composes host behavior at compile time.",
+          "sourceIds": [
+            "release-15",
+            "blog-15"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Reuses behaviors without inheritance.",
+        "tradeoff": "Inputs and outputs must be exposed intentionally.",
+        "sourceIds": [
+          "release-15",
+          "blog-15"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "http-providers",
+      "title": "Functional HttpClient providers",
+      "category": "api",
+      "apis": [
+        "provideHttpClient",
+        "withInterceptors"
+      ],
+      "events": [
+        {
+          "version": "15.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Functional HttpClient configuration supports standalone bootstrapping.",
+          "sourceIds": [
+            "blog-15"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Provider configuration can be colocated with bootstrap.",
+        "tradeoff": "Interceptor and injector configuration still require migration review.",
+        "sourceIds": [
+          "blog-15"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "load-component",
+      "title": "Lazy standalone route components",
+      "category": "api",
+      "apis": [
+        "loadComponent"
+      ],
+      "events": [
+        {
+          "version": "14.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Routes can lazy-load standalone component classes.",
+          "sourceIds": [
+            "release-14"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "15.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Standalone router APIs graduate with the standalone model.",
+          "sourceIds": [
+            "blog-15"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Expresses lazy component boundaries directly.",
+        "tradeoff": "Lazy loading and standalone maturity are separate concerns.",
+        "sourceIds": [
+          "release-14",
+          "blog-15"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "esbuild",
+      "title": "CLI esbuild application pipeline",
+      "category": "build",
+      "apis": [
+        "browser-esbuild",
+        "application",
+        "dev-server"
+      ],
+      "events": [
+        {
+          "version": "14.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "CLI adds an experimental esbuild browser builder.",
+          "sourceIds": [
+            "cli-14"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "15.0.0",
+          "change": "expanded",
+          "status": "experimental",
+          "statement": "Experimental builder gains incremental rebuild and watch capabilities.",
+          "sourceIds": [
+            "cli-15"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "16.0.0",
+          "change": "promoted",
+          "status": "developer-preview",
+          "statement": "esbuild/Vite build pipeline reaches developer preview.",
+          "sourceIds": [
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "17.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "New CLI applications use the application builder with esbuild and Vite dev serving.",
+          "sourceIds": [
+            "cli-17",
+            "build-migration"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "18.0.0",
+          "change": "expanded",
+          "status": "stable",
+          "statement": "CLI offers migration of existing applications to the application builder.",
+          "sourceIds": [
+            "blog-18",
+            "build-migration"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Provides integrated browser/server tooling and modern output.",
+        "tradeoff": "Custom webpack integrations need review; no build speedup is inferred here.",
+        "sourceIds": [
+          "cli-14",
+          "cli-15",
+          "blog-16",
+          "cli-17",
+          "build-migration",
+          "blog-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "signals",
+      "title": "Writable and computed signals",
+      "category": "change-detection",
+      "apis": [
+        "signal",
+        "computed"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Signals expose tracked state and computed derivations.",
+          "sourceIds": [
+            "release-16",
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "17.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Core writable/computed signal APIs are stable; effect has a separate lifecycle.",
+          "sourceIds": [
+            "release-17"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Makes reactive dependencies explicit.",
+        "tradeoff": "State granularity and actual consumer design determine work; revision signals alone are not a full architecture.",
+        "sourceIds": [
+          "release-16",
+          "blog-16",
+          "release-17"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "signal-mutate",
+      "title": "WritableSignal.mutate removal",
+      "category": "breaking",
+      "apis": [
+        "WritableSignal.mutate",
+        "WritableSignal.update"
+      ],
+      "events": [
+        {
+          "version": "17.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "WritableSignal.mutate is removed.",
+          "sourceIds": [
+            "release-17"
+          ],
+          "breaking": true,
+          "migration": "Use update with immutable replacement values."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Encourages observable state replacement.",
+        "tradeoff": "In-place mutation code needs review.",
+        "sourceIds": [
+          "release-17"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "effects",
+      "title": "Signal effects",
+      "category": "change-detection",
+      "apis": [
+        "effect"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Effects are part of the preview reactive model.",
+          "sourceIds": [
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "behavior-changed",
+          "status": "developer-preview",
+          "statement": "Effect execution timing changes relative to change detection.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": true,
+          "migration": "Review effect ordering and tests; do not assume the old microtask timing."
+        },
+        {
+          "version": "20.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "effect reaches stable status.",
+          "sourceIds": [
+            "blog-20"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Provides a reactive side-effect mechanism.",
+        "tradeoff": "Scheduling semantics differ across preview versions; avoid using effects as derived-state storage.",
+        "sourceIds": [
+          "blog-16",
+          "release-19",
+          "blog-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "hydration",
+      "title": "Non-destructive hydration",
+      "category": "ssr",
+      "apis": [
+        "provideClientHydration"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Client hydration reuses server-rendered DOM.",
+          "sourceIds": [
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "17.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Hydration graduates from developer preview.",
+          "sourceIds": [
+            "blog-17"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Supports reuse of server output.",
+        "tradeoff": "DOM consistency is required; CSR-only timings do not measure this capability.",
+        "sourceIds": [
+          "blog-16",
+          "blog-17"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "ngcc",
+      "title": "Angular compatibility compiler removal",
+      "category": "compiler",
+      "apis": [
+        "ngcc"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "ngcc is removed; View Engine libraries no longer work.",
+          "sourceIds": [
+            "release-16"
+          ],
+          "breaking": true,
+          "migration": "Upgrade or replace View Engine libraries with Ivy-compatible packages."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Simplifies the supported compilation pipeline.",
+        "tradeoff": "Legacy library compatibility is lost.",
+        "sourceIds": [
+          "release-16"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "required-inputs",
+      "title": "Required component inputs",
+      "category": "compiler",
+      "apis": [
+        "@Input({required:true})"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Compiler supports required inputs.",
+          "sourceIds": [
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Finds missing bindings at build time.",
+        "tradeoff": "Adding required inputs can break consumer templates.",
+        "sourceIds": [
+          "blog-16"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "destroy-ref",
+      "title": "Lifecycle cleanup injection",
+      "category": "api",
+      "apis": [
+        "DestroyRef"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "DestroyRef exposes injectable destruction callbacks.",
+          "sourceIds": [
+            "blog-16"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Allows cleanup registration near resource allocation.",
+        "tradeoff": "Cleanup scope follows the injection context.",
+        "sourceIds": [
+          "blog-16"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "control-flow",
+      "title": "Built-in template control flow",
+      "category": "compiler",
+      "apis": [
+        "@if",
+        "@for",
+        "@switch"
+      ],
+      "events": [
+        {
+          "version": "17.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Compiler supports built-in control-flow blocks.",
+          "sourceIds": [
+            "blog-17"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "18.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Built-in control flow is stable.",
+          "sourceIds": [
+            "blog-18"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Reduces structural-directive imports and exposes explicit tracking.",
+        "tradeoff": "View reuse differs in some track/trackBy cases; migrate and test.",
+        "sourceIds": [
+          "blog-17",
+          "blog-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "defer",
+      "title": "Deferrable template views",
+      "category": "compiler",
+      "apis": [
+        "@defer"
+      ],
+      "events": [
+        {
+          "version": "17.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Deferrable views provide trigger-based lazy loading.",
+          "sourceIds": [
+            "blog-17"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "18.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Deferrable views are stable.",
+          "sourceIds": [
+            "blog-18"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Declares deferred loading in templates.",
+        "tradeoff": "Loading behavior depends on dependencies and triggers; not a measured runtime gain here.",
+        "sourceIds": [
+          "blog-17",
+          "blog-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "signal-inputs",
+      "title": "Signal inputs",
+      "category": "api",
+      "apis": [
+        "input"
+      ],
+      "events": [
+        {
+          "version": "17.1.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Signal inputs are introduced.",
+          "sourceIds": [
+            "release-17.1.0"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Signal inputs are stable and migration tooling is available.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Exposes input values as tracked reads.",
+        "tradeoff": "Consumers must call signal getters; migration can require manual fixes.",
+        "sourceIds": [
+          "release-17.1.0",
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "signal-queries",
+      "title": "Signal queries",
+      "category": "api",
+      "apis": [
+        "viewChild",
+        "viewChildren",
+        "contentChild",
+        "contentChildren"
+      ],
+      "events": [
+        {
+          "version": "17.2.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Signal-based queries are introduced.",
+          "sourceIds": [
+            "release-17.2.0"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Signal query APIs are stable.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Makes query changes available through reactive values.",
+        "tradeoff": "Required-query and query-timing semantics need review.",
+        "sourceIds": [
+          "release-17.2.0",
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "model-inputs",
+      "title": "Model inputs",
+      "category": "api",
+      "apis": [
+        "model"
+      ],
+      "events": [
+        {
+          "version": "17.2.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Model inputs support signal-based two-way binding.",
+          "sourceIds": [
+            "release-17.2.0"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "model API is stable.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Pairs writable component state with two-way binding.",
+        "tradeoff": "Two-way contracts still require explicit design.",
+        "sourceIds": [
+          "release-17.2.0",
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "output-function",
+      "title": "Function-based outputs",
+      "category": "api",
+      "apis": [
+        "output"
+      ],
+      "events": [
+        {
+          "version": "17.3.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Function-based output API becomes available.",
+          "sourceIds": [
+            "release-17.3.0"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "19.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "output API is stable.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Declares component event contracts without EventEmitter construction.",
+        "tradeoff": "output is not itself a signal; consumers still handle emitted events.",
+        "sourceIds": [
+          "release-17.3.0",
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "zoneless",
+      "title": "Zoneless scheduling",
+      "category": "change-detection",
+      "apis": [
+        "provideExperimentalZonelessChangeDetection",
+        "provideZonelessChangeDetection",
+        "provideZoneChangeDetection"
+      ],
+      "events": [
+        {
+          "version": "18.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "Zoneless scheduling is available experimentally.",
+          "sourceIds": [
+            "blog-18"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "20.0.0",
+          "change": "promoted",
+          "status": "developer-preview",
+          "statement": "Zoneless moves to preview and its provider is renamed.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": true,
+          "migration": "Replace provideExperimentalZonelessChangeDetection with provideZonelessChangeDetection."
+        },
+        {
+          "version": "20.2.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Zoneless scheduling becomes stable.",
+          "sourceIds": [
+            "release-20.2.0",
+            "blog-21"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "21.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "Zoneless is the default; existing Zone applications need migration review.",
+          "sourceIds": [
+            "release-21",
+            "blog-21"
+          ],
+          "breaking": true,
+          "migration": "Retain provideZoneChangeDetection when preserving Zone behavior; review notification paths before removing Zone."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Allows explicit change notifications without Zone patching.",
+        "tradeoff": "Libraries and mutation paths must notify Angular appropriately; benefits require measurement.",
+        "sourceIds": [
+          "blog-18",
+          "release-20",
+          "release-20.2.0",
+          "blog-21",
+          "release-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "zone-scheduler",
+      "title": "Scheduling outside Angular zone",
+      "category": "change-detection",
+      "apis": [
+        "markForCheck",
+        "provideZoneChangeDetection"
+      ],
+      "events": [
+        {
+          "version": "18.0.0",
+          "change": "behavior-changed",
+          "status": "stable",
+          "statement": "Angular can schedule change detection for notifications originating outside the zone.",
+          "sourceIds": [
+            "release-18"
+          ],
+          "breaking": true,
+          "migration": "Review tests that assume outside-zone updates never trigger checking."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Handles explicit notifications from outside-zone code.",
+        "tradeoff": "Legacy scheduling assumptions can fail.",
+        "sourceIds": [
+          "release-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "event-coalescing",
+      "title": "CLI event coalescing default",
+      "category": "change-detection",
+      "apis": [
+        "provideZoneChangeDetection"
+      ],
+      "events": [
+        {
+          "version": "18.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "New standalone CLI bootstrap configuration enables event coalescing.",
+          "sourceIds": [
+            "cli-18",
+            "blog-18"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Allows batching of some event-driven checks.",
+        "tradeoff": "It changes scheduling configuration, not all existing projects automatically.",
+        "sourceIds": [
+          "cli-18",
+          "blog-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "incremental-hydration",
+      "title": "Incremental hydration",
+      "category": "ssr",
+      "apis": [
+        "withIncrementalHydration",
+        "hydrate triggers"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Hydration can be deferred for selected server-rendered regions.",
+          "sourceIds": [
+            "blog-19"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "20.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Incremental hydration is stable.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Separates hydration of selected regions.",
+        "tradeoff": "Requires SSR/hydration-specific validation; not exercised by the runtime benchmark.",
+        "sourceIds": [
+          "blog-19",
+          "release-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "linked-signal",
+      "title": "Dependent writable signals",
+      "category": "api",
+      "apis": [
+        "linkedSignal"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "linkedSignal adds writable state linked to reactive sources.",
+          "sourceIds": [
+            "blog-19"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "20.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "linkedSignal becomes stable.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Expresses dependent writable state.",
+        "tradeoff": "Reset and override semantics need deliberate design.",
+        "sourceIds": [
+          "blog-19",
+          "release-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "resource",
+      "title": "Asynchronous reactive resources",
+      "category": "api",
+      "apis": [
+        "resource",
+        "rxResource"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "resource and RxJS-oriented resource support are experimental.",
+          "sourceIds": [
+            "blog-19"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "22.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Asynchronous resource APIs graduate to stable.",
+          "sourceIds": [
+            "v22-event",
+            "blog-22"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Models asynchronous state alongside signals.",
+        "tradeoff": "Experimental signatures changed; review exact target APIs.",
+        "sourceIds": [
+          "blog-19",
+          "v22-event",
+          "blog-22"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "signal-forms",
+      "title": "Signal Forms",
+      "category": "forms",
+      "apis": [
+        "@angular/forms/signals"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "Signal Forms introduce signal-based form modeling.",
+          "sourceIds": [
+            "release-21",
+            "blog-21"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "22.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Signal Forms graduate to stable.",
+          "sourceIds": [
+            "v22-event"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Connects form state to the reactive model.",
+        "tradeoff": "Preview examples may use superseded names; existing form migrations require review.",
+        "sourceIds": [
+          "release-21",
+          "blog-21",
+          "v22-event"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "aria",
+      "title": "Angular Aria",
+      "category": "accessibility",
+      "apis": [
+        "@angular/aria"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "introduced",
+          "status": "developer-preview",
+          "statement": "Angular Aria introduces unstyled accessible UI patterns.",
+          "sourceIds": [
+            "blog-21"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "22.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Angular Aria becomes stable.",
+          "sourceIds": [
+            "v22-event"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Supplies interaction primitives while leaving styling to applications.",
+        "tradeoff": "Accessibility of the complete application still needs testing.",
+        "sourceIds": [
+          "blog-21",
+          "v22-event"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "vitest",
+      "title": "CLI Vitest support",
+      "category": "testing",
+      "apis": [
+        "@angular/build:unit-test"
+      ],
+      "events": [
+        {
+          "version": "20.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "CLI adds experimental Vitest unit-test support.",
+          "sourceIds": [
+            "cli-20"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "21.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "Vitest becomes stable and the default for new CLI projects.",
+          "sourceIds": [
+            "cli-21",
+            "blog-21"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Integrates a modern test runner.",
+        "tradeoff": "Karma/Jasmine projects are not automatically equivalent; migration needs verification.",
+        "sourceIds": [
+          "cli-20",
+          "cli-21",
+          "blog-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "template-hmr",
+      "title": "Template hot module replacement",
+      "category": "build",
+      "apis": [
+        "template HMR"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "introduced",
+          "status": "experimental",
+          "statement": "Template hot replacement is available experimentally.",
+          "sourceIds": [
+            "blog-19"
+          ],
+          "breaking": false,
+          "migration": null
+        },
+        {
+          "version": "20.0.0",
+          "change": "stabilized",
+          "status": "stable",
+          "statement": "Template hot replacement becomes stable.",
+          "sourceIds": [
+            "blog-20"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Can preserve development state during edits.",
+        "tradeoff": "Development feedback is separate from production runtime performance.",
+        "sourceIds": [
+          "blog-19",
+          "blog-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "legacy-control-directives",
+      "title": "Legacy control-flow directive deprecation",
+      "category": "deprecation",
+      "apis": [
+        "NgIf",
+        "NgFor",
+        "NgSwitch"
+      ],
+      "events": [
+        {
+          "version": "20.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "Legacy control-flow directives are deprecated in favor of blocks.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": false,
+          "migration": "Use ng generate @angular/core:control-flow and verify tracking behavior."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Provides a supported migration direction.",
+        "tradeoff": "Deprecation is not removal; this dataset does not invent a removal version.",
+        "sourceIds": [
+          "release-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "webpack-deprecation",
+      "title": "Webpack builder deprecation",
+      "category": "deprecation",
+      "apis": [
+        "@angular-devkit/build-angular",
+        "@ngtools/webpack"
+      ],
+      "events": [
+        {
+          "version": "22.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "Webpack-based Angular build support is deprecated.",
+          "sourceIds": [
+            "blog-22"
+          ],
+          "breaking": false,
+          "migration": "Review the application-builder migration; custom builders need their own migration path."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Concentrates supported build evolution on the application builder.",
+        "tradeoff": "Pinned historical webpack measurements remain valid historical observations, not native-default v22 evidence.",
+        "sourceIds": [
+          "blog-22"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "onpush-default",
+      "title": "OnPush default",
+      "category": "change-detection",
+      "apis": [
+        "ChangeDetectionStrategy.OnPush",
+        "ChangeDetectionStrategy.Eager"
+      ],
+      "events": [
+        {
+          "version": "22.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "OnPush becomes the component default; the previous Default strategy is named Eager.",
+          "sourceIds": [
+            "component-strategy",
+            "blog-22"
+          ],
+          "breaking": true,
+          "migration": "Use the v22 update guide; explicitly preserve eager checking where required and verify notifications."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Makes selective checking the default.",
+        "tradeoff": "In-place mutations and missing notifications can expose stale UI; no speedup is assumed.",
+        "sourceIds": [
+          "component-strategy",
+          "blog-22"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "host-typechecking",
+      "title": "Host-binding type checking",
+      "category": "compiler",
+      "apis": [
+        "typeCheckHostBindings"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "default-changed",
+          "status": "stable",
+          "statement": "Host binding type checking is enabled by default.",
+          "sourceIds": [
+            "release-21"
+          ],
+          "breaking": true,
+          "migration": "Fix newly exposed type errors; the release documents a temporary typeCheckHostBindings opt-out."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Catches previously hidden host-binding errors.",
+        "tradeoff": "Upgrades can fail compilation until those errors are resolved.",
+        "sourceIds": [
+          "release-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "router-navigation-signal",
+      "title": "Router navigation state signal",
+      "category": "breaking",
+      "apis": [
+        "lastSuccessfulNavigation"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "behavior-changed",
+          "status": "stable",
+          "statement": "lastSuccessfulNavigation becomes a signal.",
+          "sourceIds": [
+            "release-21"
+          ],
+          "breaking": true,
+          "migration": "Invoke lastSuccessfulNavigation() when reading its value."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Supports reactive navigation-state reads.",
+        "tradeoff": "Property-style consumers need updates.",
+        "sourceIds": [
+          "release-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "removed-component-options",
+      "title": "Removed legacy component options",
+      "category": "breaking",
+      "apis": [
+        "moduleId",
+        "interpolation"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "Legacy moduleId and custom interpolation component metadata are removed.",
+          "sourceIds": [
+            "release-21"
+          ],
+          "breaking": true,
+          "migration": "Remove moduleId and migrate custom interpolation delimiters to the standard form."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Reduces legacy configuration surface.",
+        "tradeoff": "Custom template delimiters require migration.",
+        "sourceIds": [
+          "release-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "enable-ivy",
+      "title": "Removed enableIvy option",
+      "category": "compiler",
+      "apis": [
+        "enableIvy"
+      ],
+      "events": [
+        {
+          "version": "15.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "enableIvy compiler option is removed because Ivy is the rendering engine.",
+          "sourceIds": [
+            "release-15"
+          ],
+          "breaking": true,
+          "migration": "Remove the obsolete compiler option."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Avoids obsolete compiler configuration.",
+        "tradeoff": "Configuration cleanup is required.",
+        "sourceIds": [
+          "release-15"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "ngswitch-equality",
+      "title": "Strict NgSwitch equality",
+      "category": "breaking",
+      "apis": [
+        "NgSwitch"
+      ],
+      "events": [
+        {
+          "version": "17.0.0",
+          "change": "behavior-changed",
+          "status": "stable",
+          "statement": "NgSwitch comparisons use strict equality.",
+          "sourceIds": [
+            "release-17"
+          ],
+          "breaking": true,
+          "migration": "Align case and expression types instead of relying on coercion."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Makes matching rules explicit.",
+        "tradeoff": "Previously coercing cases can select a different view.",
+        "sourceIds": [
+          "release-17"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "async-testing",
+      "title": "Removed async testing helper",
+      "category": "breaking",
+      "apis": [
+        "async",
+        "waitForAsync"
+      ],
+      "events": [
+        {
+          "version": "18.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "Deprecated async testing helper is removed.",
+          "sourceIds": [
+            "release-18"
+          ],
+          "breaking": true,
+          "migration": "Use waitForAsync."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Uses an unambiguous test-helper name.",
+        "tradeoff": "Old imports fail after upgrade.",
+        "sourceIds": [
+          "release-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "server-transition",
+      "title": "Removed BrowserModule.withServerTransition",
+      "category": "breaking",
+      "apis": [
+        "BrowserModule.withServerTransition",
+        "APP_ID"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "BrowserModule.withServerTransition is removed.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": true,
+          "migration": "Provide APP_ID directly."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Uses the explicit application identity token.",
+        "tradeoff": "Older SSR bootstrap code needs migration.",
+        "sourceIds": [
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "testbed-get",
+      "title": "Removed TestBed.get",
+      "category": "breaking",
+      "apis": [
+        "TestBed.get",
+        "TestBed.inject"
+      ],
+      "events": [
+        {
+          "version": "20.0.0",
+          "change": "removed",
+          "status": "removed",
+          "statement": "TestBed.get is removed.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": true,
+          "migration": "Replace TestBed.get with TestBed.inject."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Uses typed dependency lookup.",
+        "tradeoff": "Legacy tests require changes.",
+        "sourceIds": [
+          "release-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "initial-default-option",
+      "title": "Form control default-value option",
+      "category": "deprecation",
+      "apis": [
+        "initialValueIsDefault",
+        "nonNullable"
+      ],
+      "events": [
+        {
+          "version": "14.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "initialValueIsDefault is deprecated in favor of nonNullable.",
+          "sourceIds": [
+            "release-14"
+          ],
+          "breaking": false,
+          "migration": "Replace initialValueIsDefault with nonNullable where equivalent."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "A common name aligns reset behavior and typing.",
+        "tradeoff": "Review reset-to-null expectations.",
+        "sourceIds": [
+          "release-14"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "date-timezone-token",
+      "title": "DatePipe default configuration",
+      "category": "deprecation",
+      "apis": [
+        "DATE_PIPE_DEFAULT_TIMEZONE",
+        "DATE_PIPE_DEFAULT_OPTIONS"
+      ],
+      "events": [
+        {
+          "version": "15.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "The timezone-only DatePipe default token is deprecated.",
+          "sourceIds": [
+            "release-15"
+          ],
+          "breaking": false,
+          "migration": "Move the timezone into DATE_PIPE_DEFAULT_OPTIONS.timezone."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "One options object can express default configuration.",
+        "tradeoff": "Provider configuration must be updated.",
+        "sourceIds": [
+          "release-15"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "injection-context",
+      "title": "Standalone injection-context execution",
+      "category": "deprecation",
+      "apis": [
+        "EnvironmentInjector.runInContext",
+        "runInInjectionContext"
+      ],
+      "events": [
+        {
+          "version": "16.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "EnvironmentInjector.runInContext is deprecated in favor of runInInjectionContext.",
+          "sourceIds": [
+            "release-16"
+          ],
+          "breaking": false,
+          "migration": "Use runInInjectionContext(environmentInjector, callback)."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "The function makes the injector argument explicit.",
+        "tradeoff": "Call sites need a function import and argument change.",
+        "sourceIds": [
+          "release-16"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "check-no-changes",
+      "title": "Direct change-detector assertion deprecation",
+      "category": "deprecation",
+      "apis": [
+        "ChangeDetectorRef.checkNoChanges",
+        "ComponentFixture"
+      ],
+      "events": [
+        {
+          "version": "17.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "Direct ChangeDetectorRef.checkNoChanges usage is deprecated.",
+          "sourceIds": [
+            "release-17"
+          ],
+          "breaking": false,
+          "migration": "Use ComponentFixture in tests; remove direct application calls."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Fixture-based checks fit test ownership.",
+        "tradeoff": "Applications should not rely on this assertion API.",
+        "sourceIds": [
+          "release-17"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "http-modules",
+      "title": "HTTP module configuration deprecation",
+      "category": "deprecation",
+      "apis": [
+        "HttpClientModule",
+        "HttpClientXsrfModule",
+        "HttpClientJsonpModule",
+        "provideHttpClient"
+      ],
+      "events": [
+        {
+          "version": "18.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "HTTP configuration modules are deprecated in favor of provider functions.",
+          "sourceIds": [
+            "release-18"
+          ],
+          "breaking": false,
+          "migration": "Migrate to provideHttpClient with matching features; retain DI interceptors explicitly when needed."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Provider functions support standalone composition.",
+        "tradeoff": "Interceptors, XSRF and JSONP options must be preserved.",
+        "sourceIds": [
+          "release-18"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "http-status-text",
+      "title": "HTTP status text deprecation",
+      "category": "deprecation",
+      "apis": [
+        "HttpResponseBase.statusText"
+      ],
+      "events": [
+        {
+          "version": "21.0.0",
+          "change": "deprecated",
+          "status": "deprecated",
+          "statement": "HttpResponseBase.statusText is deprecated.",
+          "sourceIds": [
+            "release-21"
+          ],
+          "breaking": false,
+          "migration": "Review status-text dependencies and use numeric status or application response data."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Encourages explicit application error handling.",
+        "tradeoff": "Existing text-based handling needs review.",
+        "sourceIds": [
+          "release-21"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "template-this",
+      "title": "Explicit template receiver semantics",
+      "category": "compiler",
+      "apis": [
+        "this"
+      ],
+      "events": [
+        {
+          "version": "19.0.0",
+          "change": "behavior-changed",
+          "status": "stable",
+          "statement": "this-qualified template reads no longer resolve local template-context variables.",
+          "sourceIds": [
+            "release-19"
+          ],
+          "breaking": true,
+          "migration": "Remove this. when the intended value is a template local."
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Explicit receivers distinguish component properties from locals.",
+        "tradeoff": "Templates relying on previous shadowing behavior need changes.",
+        "sourceIds": [
+          "release-19"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "template-expressions",
+      "title": "Additional template expression operators",
+      "category": "compiler",
+      "apis": [
+        "**",
+        "tagged template literals"
+      ],
+      "events": [
+        {
+          "version": "20.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Templates support exponentiation and tagged template expressions.",
+          "sourceIds": [
+            "release-20"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Some expressions can be expressed directly in templates.",
+        "tradeoff": "More expressive templates still require review for readability and evaluation costs.",
+        "sourceIds": [
+          "release-20"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "template-comments",
+      "title": "Comments within template element declarations",
+      "category": "compiler",
+      "apis": [
+        "//",
+        "/* */"
+      ],
+      "events": [
+        {
+          "version": "22.0.0",
+          "change": "introduced",
+          "status": "stable",
+          "statement": "Comments can appear among element attributes and bindings.",
+          "sourceIds": [
+            "blog-22"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "Binding-specific notes can sit next to the binding.",
+        "tradeoff": "This template syntax is version-specific and should not be assumed portable to older compilers.",
+        "sourceIds": [
+          "blog-22"
+        ]
+      },
+      "performanceConclusion": null
+    },
+    {
+      "id": "release-cadence",
+      "title": "Major-release and support cadence",
+      "category": "architecture",
+      "apis": [
+        "release policy"
+      ],
+      "events": [
+        {
+          "version": "22.0.0",
+          "change": "behavior-changed",
+          "status": "stable",
+          "statement": "From v22, the documented major cadence is annual with a typical 24-month support window.",
+          "sourceIds": [
+            "support"
+          ],
+          "breaking": false,
+          "migration": null
+        }
+      ],
+      "developerImpact": {
+        "kind": "editorial-interpretation",
+        "benefit": "A longer major cycle can give upgrade teams more scheduling room.",
+        "tradeoff": "Schedules remain guidance and older version support dates must be read individually.",
+        "sourceIds": [
+          "support"
+        ]
+      },
+      "performanceConclusion": null
+    }
+  ],
+  "examples": [
+    {
+      "id": "typed-control",
+      "featureId": "typed-forms",
+      "beforeVersion": "14.0.0",
+      "afterVersion": "14.0.0",
+      "language": "typescript",
+      "before": "const name = new UntypedFormControl('');",
+      "after": "const name = new FormControl('', {nonNullable: true});",
+      "note": "Alternative APIs within v14; imports omitted. nonNullable also changes reset behavior.",
+      "sourceIds": [
+        "typed-forms"
+      ]
+    },
+    {
+      "id": "signal-update",
+      "featureId": "signal-mutate",
+      "beforeVersion": "16.0.0",
+      "afterVersion": "17.0.0",
+      "language": "typescript",
+      "before": "items.mutate(xs => xs.push(next));",
+      "after": "items.update(xs => [...xs, next]);",
+      "note": "Migration snippet; items is a writable signal and next is a new item.",
+      "sourceIds": [
+        "release-17"
+      ]
+    },
+    {
+      "id": "control-flow",
+      "featureId": "control-flow",
+      "beforeVersion": "16.0.0",
+      "afterVersion": "18.0.0",
+      "language": "html",
+      "before": "<p *ngIf=\"ready\">Ready</p>",
+      "after": "@if (ready) { <p>Ready</p> }",
+      "note": "The after example targets stable control flow. NgIf import omitted in before.",
+      "sourceIds": [
+        "control-migration",
+        "blog-18"
+      ]
+    },
+    {
+      "id": "standalone-default",
+      "featureId": "standalone",
+      "beforeVersion": "18.0.0",
+      "afterVersion": "19.0.0",
+      "language": "typescript",
+      "before": "@Component({selector: 'app-item', template: ''})",
+      "after": "@Component({selector: 'app-item', template: '', standalone: false})",
+      "note": "Preserves an NgModule declaration after the default changes; class/imports omitted.",
+      "sourceIds": [
+        "release-19"
+      ]
+    },
+    {
+      "id": "router-signal",
+      "featureId": "router-navigation-signal",
+      "beforeVersion": "20.0.0",
+      "afterVersion": "21.0.0",
+      "language": "typescript",
+      "before": "const nav = router.lastSuccessfulNavigation;",
+      "after": "const nav = router.lastSuccessfulNavigation();",
+      "note": "Property-to-signal read migration.",
+      "sourceIds": [
+        "release-21"
+      ]
+    }
+  ],
+  "uncertainties": [
+    {
+      "id": "v22-github-release",
+      "description": "The v22.0.0 GitHub framework and CLI release endpoints returned HTTP 404; v22 claims use accessible official documentation/blog. Do not infer a tag record or release timestamp.",
+      "sourceIds": [
+        "release-22-unavailable",
+        "v22-event"
+      ]
+    },
+    {
+      "id": "minor-coverage",
+      "description": "Feature timeline is selective. Compatibility source lists 22.0.x only although the live site reports newer 22.x builds; do not extend that row to all 22.x without a source.",
+      "sourceIds": [
+        "compatibility"
+      ]
+    },
+    {
+      "id": "historical-support-end",
+      "description": "Exact historical end-of-support dates for 14\u201319 are not transcribed; null means not collected, not still supported.",
+      "sourceIds": [
+        "support"
+      ]
+    },
+    {
+      "id": "documentation-drift",
+      "description": "Live documentation can change. Support schedules are an as-of snapshot; month-only future dates retain their original precision.",
+      "sourceIds": [
+        "support"
+      ]
+    },
+    {
+      "id": "no-performance-inference",
+      "description": "Developer impacts are editorial interpretations of documented APIs. No claim here establishes a measured speedup.",
+      "sourceIds": [
+        "blog-17"
+      ]
+    },
+    {
+      "id": "not-exhaustive",
+      "description": "Material/CDK details, every patch fix, resource preview signature changes and complete per-package breaking lists remain outside the curated feature set. Consult release notes and update guide.",
+      "sourceIds": [
+        "update"
+      ]
+    },
+    {
+      "id": "deprecation-coverage",
+      "description": "No separate deprecation section was present in the reviewed v19.0.0 release record. This is not evidence that all 19.x APIs were free of deprecations; minor/patch lifecycle coverage remains selective.",
+      "sourceIds": [
+        "release-19"
+      ]
+    }
+  ]
+}
