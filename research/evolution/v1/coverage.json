@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "1.0.0",
+  "asOf": "2026-10-29",
+  "claimType": "derived-coverage-not-performance",
+  "inputs": {
+    "framework.json": "02584325498a82ac53dd77a4d581c3048703a39e9e9a78a3fc8a39b30e121f6b",
+    "evidence.json": "660ae8f175771a3e66b84bb4920713e4eb1f7890e70b253c89c7db3ac5e84821"
+  },
+  "versions": [
+    {
+      "major": 14,
+      "features": 5,
+      "events": 5,
+      "breakingEvents": 1,
+      "deprecations": 1,
+      "compatibilityRows": 2,
+      "categories": [
+        "api",
+        "architecture",
+        "build",
+        "deprecation",
+        "forms"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "change-detection",
+        "compiler",
+        "ssr",
+        "testing",
+        "breaking"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 15,
+      "features": 8,
+      "events": 8,
+      "breakingEvents": 1,
+      "deprecations": 1,
+      "compatibilityRows": 2,
+      "categories": [
+        "api",
+        "architecture",
+        "build",
+        "compiler",
+        "deprecation",
+        "migration"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "change-detection",
+        "forms",
+        "ssr",
+        "testing",
+        "breaking"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 16,
+      "features": 8,
+      "events": 8,
+      "breakingEvents": 1,
+      "deprecations": 1,
+      "compatibilityRows": 2,
+      "categories": [
+        "api",
+        "build",
+        "change-detection",
+        "compiler",
+        "deprecation",
+        "ssr"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "architecture",
+        "forms",
+        "testing",
+        "breaking"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 17,
+      "features": 13,
+      "events": 13,
+      "breakingEvents": 2,
+      "deprecations": 1,
+      "compatibilityRows": 3,
+      "categories": [
+        "api",
+        "architecture",
+        "breaking",
+        "build",
+        "change-detection",
+        "compiler",
+        "deprecation",
+        "ssr"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "forms",
+        "testing"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 18,
+      "features": 8,
+      "events": 8,
+      "breakingEvents": 2,
+      "deprecations": 1,
+      "compatibilityRows": 2,
+      "categories": [
+        "breaking",
+        "build",
+        "change-detection",
+        "compiler",
+        "deprecation"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "architecture",
+        "api",
+        "forms",
+        "ssr",
+        "testing"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 19,
+      "features": 12,
+      "events": 12,
+      "breakingEvents": 4,
+      "deprecations": 0,
+      "compatibilityRows": 3,
+      "categories": [
+        "api",
+        "architecture",
+        "breaking",
+        "build",
+        "change-detection",
+        "compiler",
+        "ssr"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "forms",
+        "testing",
+        "deprecation"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 20,
+      "features": 9,
+      "events": 10,
+      "breakingEvents": 2,
+      "deprecations": 1,
+      "compatibilityRows": 2,
+      "categories": [
+        "api",
+        "breaking",
+        "build",
+        "change-detection",
+        "compiler",
+        "deprecation",
+        "ssr",
+        "testing"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "architecture",
+        "forms"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 21,
+      "features": 8,
+      "events": 8,
+      "breakingEvents": 4,
+      "deprecations": 1,
+      "compatibilityRows": 1,
+      "categories": [
+        "accessibility",
+        "breaking",
+        "change-detection",
+        "compiler",
+        "deprecation",
+        "forms",
+        "testing"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "architecture",
+        "build",
+        "api",
+        "ssr"
+      ],
+      "exhaustive": false
+    },
+    {
+      "major": 22,
+      "features": 7,
+      "events": 7,
+      "breakingEvents": 1,
+      "deprecations": 1,
+      "compatibilityRows": 1,
+      "categories": [
+        "accessibility",
+        "api",
+        "architecture",
+        "change-detection",
+        "compiler",
+        "deprecation",
+        "forms"
+      ],
+      "categoriesWithoutDedicatedEntry": [
+        "build",
+        "ssr",
+        "testing",
+        "breaking"
+      ],
+      "exhaustive": false
+    }
+  ],
+  "evidence": {
+    "files": 667,
+    "groups": 50,
+    "numericRecords": 404,
+    "recordsMissingSourceCommit": 109,
+    "recordsMissingEnvironmentMetadata": 57,
+    "byClassification": [
+      {
+        "classification": "compilation-verification",
+        "files": 86,
+        "groups": 9,
+        "numericRecords": 43
+      },
+      {
+        "classification": "diagnostic-workflow",
+        "files": 10,
+        "groups": 1,
+        "numericRecords": 5
+      },
+      {
+        "classification": "exploratory-runtime-pilot",
+        "files": 10,
+        "groups": 2,
+        "numericRecords": 8
+      },
+      {
+        "classification": "historical-build",
+        "files": 68,
+        "groups": 1,
+        "numericRecords": 68
+      },
+      {
+        "classification": "historical-lighthouse",
+        "files": 18,
+        "groups": 1,
+        "numericRecords": 18
+      },
+      {
+        "classification": "historical-runtime",
+        "files": 200,
+        "groups": 5,
+        "numericRecords": 189
+      },
+      {
+        "classification": "instrumented-diagnostic",
+        "files": 3,
+        "groups": 1,
+        "numericRecords": 0
+      },
+      {
+        "classification": "native-toolchain-feasibility",
+        "files": 148,
+        "groups": 6,
+        "numericRecords": 73
+      },
+      {
+        "classification": "supporting-or-derived",
+        "files": 124,
+        "groups": 24,
+        "numericRecords": 0
+      }
+    ],
+    "confirmatoryAttempts": 0,
+    "samplingWarning": "File, group, numeric-record and event counts are not independent sample sizes. Derived copies and incidental verification timings must not be pooled."
+  },
+  "gaps": [
+    {
+      "area": "framework",
+      "id": "v22-github-release",
+      "description": "The v22.0.0 GitHub framework and CLI release endpoints returned HTTP 404; v22 claims use accessible official documentation/blog. Do not infer a tag record or release timestamp.",
+      "sourceIds": [
+        "release-22-unavailable",
+        "v22-event"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "minor-coverage",
+      "description": "Feature timeline is selective. Compatibility source lists 22.0.x only although the live site reports newer 22.x builds; do not extend that row to all 22.x without a source.",
+      "sourceIds": [
+        "compatibility"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "historical-support-end",
+      "description": "Exact historical end-of-support dates for 14–19 are not transcribed; null means not collected, not still supported.",
+      "sourceIds": [
+        "support"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "documentation-drift",
+      "description": "Live documentation can change. Support schedules are an as-of snapshot; month-only future dates retain their original precision.",
+      "sourceIds": [
+        "support"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "no-performance-inference",
+      "description": "Developer impacts are editorial interpretations of documented APIs. No claim here establishes a measured speedup.",
+      "sourceIds": [
+        "blog-17"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "not-exhaustive",
+      "description": "Material/CDK details, every patch fix, resource preview signature changes and complete per-package breaking lists remain outside the curated feature set. Consult release notes and update guide.",
+      "sourceIds": [
+        "update"
+      ]
+    },
+    {
+      "area": "framework",
+      "id": "deprecation-coverage",
+      "description": "No separate deprecation section was present in the reviewed v19.0.0 release record. This is not evidence that all 19.x APIs were free of deprecations; minor/patch lifecycle coverage remains selective.",
+      "sourceIds": [
+        "release-19"
+      ]
+    },
+    {
+      "area": "evidence",
+      "id": "missing-1",
+      "description": "No real confirmatory campaign or primary conclusions.",
+      "sourceIds": []
+    },
+    {
+      "area": "evidence",
+      "id": "missing-2",
+      "description": "No long-window paired runtime evidence across all nine v2 B treatments.",
+      "sourceIds": []
+    },
+    {
+      "area": "evidence",
+      "id": "missing-3",
+      "description": "Pilot p95 uses six events, insufficient for stable tail inference.",
+      "sourceIds": []
+    },
+    {
+      "area": "evidence",
+      "id": "missing-4",
+      "description": "No cross-host replication or automatically certified thermal/power stability.",
+      "sourceIds": []
+    },
+    {
+      "area": "evidence",
+      "id": "missing-5",
+      "description": "No complete balanced native build campaign or reliable HMR latency campaign.",
+      "sourceIds": []
+    },
+    {
+      "area": "evidence",
+      "id": "missing-6",
+      "description": "External preparation artifacts and disposable CI validation are excluded; their absence here is not absence of verification.",
+      "sourceIds": []
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Angular evolution v1 evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "datasetVersion",
+    "asOf",
+    "claimType",
+    "inventoryBaseCommit",
+    "scope",
+    "datasets",
+    "files",
+    "records",
+    "confirmatory",
+    "missing",
+    "conclusions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "datasetVersion": {
+      "const": "1.0.0"
+    },
+    "asOf": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "claimType": {
+      "const": "performance-evidence-inventory"
+    },
+    "inventoryBaseCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "classification",
+          "originalBatchId",
+          "root",
+          "limitations",
+          "confirmatoryEligible"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "enum": [
+              "historical-runtime",
+              "historical-build",
+              "historical-lighthouse",
+              "exploratory-runtime-pilot",
+              "native-toolchain-feasibility",
+              "compilation-verification",
+              "diagnostic-workflow",
+              "instrumented-diagnostic",
+              "supporting-or-derived"
+            ]
+          },
+          "originalBatchId": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "root": {
+            "type": "string",
+            "minLength": 1
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confirmatoryEligible": {
+            "const": false
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256",
+          "bytes",
+          "datasetId"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "datasetId": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "file",
+          "datasetId",
+          "claimType",
+          "kind",
+          "experiment",
+          "version",
+          "track",
+          "scenario",
+          "rep",
+          "accepted",
+          "status",
+          "sourceCommit",
+          "sourceDirty",
+          "metadataPath",
+          "artifactIdentityPointers",
+          "missingProvenance",
+          "timingEligibleAsRecorded",
+          "usage",
+          "confirmatoryEligible",
+          "measurements"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "datasetId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claimType": {
+            "const": "recorded-observation"
+          },
+          "kind": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "experiment": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "version": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 14,
+                "maximum": 22
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "track": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "scenario": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "rep": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "accepted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "sourceCommit": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sourceDirty": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "metadataPath": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "artifactIdentityPointers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^/"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "missingProvenance": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "sourceCommit",
+                "environmentMetadata"
+              ]
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "timingEligibleAsRecorded": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "usage": {
+            "enum": [
+              "verification-only",
+              "descriptive-only"
+            ]
+          },
+          "confirmatoryEligible": {
+            "const": false
+          },
+          "measurements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "pointer",
+                "value",
+                "unit"
+              ],
+              "properties": {
+                "pointer": {
+                  "type": "string",
+                  "pattern": "^/"
+                },
+                "value": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "confirmatory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "available",
+        "attempts",
+        "reason"
+      ],
+      "properties": {
+        "available": {
+          "const": false
+        },
+        "attempts": {
+          "const": 0
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "conclusions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "maxItems": 0
+    }
+  }
+}

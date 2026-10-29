@@ -6,6 +6,11 @@
 
 The project is an experimental apparatus, not a claim that one Angular release or architecture is universally faster.
 
+The [Angular Evolution Dataset](docs/ANGULAR_EVOLUTION.md) adds sourced Angular
+14–22 release/API/compatibility metadata, a separate inventory of saved performance
+evidence, JSON schemas and comparison tools. See its [coverage and missing-data
+report](docs/ANGULAR_EVOLUTION_COVERAGE.md) before interpreting either dataset.
+
 ## Repository layout
 
 ```text
