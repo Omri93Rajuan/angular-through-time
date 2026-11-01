@@ -20,7 +20,7 @@
       "const": 1
     },
     "datasetVersion": {
-      "const": "1.0.0"
+      "const": "1.0.1"
     },
     "asOf": {
       "type": "string",
@@ -248,7 +248,8 @@
               "pattern": "^[a-z0-9]+(?:[-.][a-z0-9]+)*$"
             },
             "minItems": 1,
-            "uniqueItems": true
+            "uniqueItems": true,
+            "description": "Features with a documented event in this major; not an index of all available capabilities."
           },
           "coverage": {
             "const": "curated-not-exhaustive"

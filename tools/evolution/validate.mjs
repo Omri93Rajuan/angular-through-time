@@ -21,6 +21,12 @@ function date(value) {
   const parsed = new Date(value);
   assert.ok(Number.isFinite(+parsed) && parsed.toISOString().startsWith(value), `Invalid date ${value}`);
 }
+function dateBounds(value) {
+  date(value);
+  if (value.length === 10) return [value, value];
+  const [year, month] = value.split('-').map(Number);
+  return [`${value}-01`, new Date(Date.UTC(year, month, 0)).toISOString().slice(0, 10)];
+}
 
 export function validateFramework(data) {
   schema('framework', data);
@@ -56,26 +62,55 @@ export function validateFramework(data) {
           assert.ok(!['experimental', 'developer-preview'].includes(event.status), `Regressed status ${feature.id}`);
         }
       }
-      if (event.change === 'stabilized') assert.equal(event.status, 'stable', `Stabilized status ${feature.id}`);
-      if (event.change === 'removed') assert.equal(event.status, 'removed', `Removed status ${feature.id}`);
+      if (event.change === 'stabilized') {
+        assert.equal(event.status, 'stable', `Stabilized status ${feature.id}`);
+        if (previous) assert.ok(['experimental', 'developer-preview'].includes(previous.status), `Already stabilized ${feature.id}`);
+      }
+      if (event.change === 'introduced') assert.ok(!['deprecated', 'removed'].includes(event.status), `Invalid introduction ${feature.id}`);
+      if (event.change === 'promoted') {
+        assert.equal(event.status, 'developer-preview', `Invalid promotion ${feature.id}`);
+        if (previous) assert.equal(previous.status, 'experimental', `Invalid promotion predecessor ${feature.id}`);
+      }
+      if (event.change === 'removed') {
+        assert.equal(event.status, 'removed', `Removed status ${feature.id}`);
+        assert.equal(event.breaking, true, `Removal missing upgrade warning ${feature.id}`);
+      }
+      if (event.status === 'removed') assert.equal(event.change, 'removed', `Removal mislabeled ${feature.id}`);
       if (event.change === 'deprecated') assert.equal(event.status, 'deprecated', `Deprecated status ${feature.id}`);
-      if (event.breaking) assert.ok(event.migration, `Missing migration ${feature.id}`);
+      if (event.breaking || event.change === 'deprecated') assert.ok(event.migration, `Missing migration ${feature.id}`);
       previous = event;
     }
   }
   assert.deepEqual(data.versions.map(v => v.major), [14,15,16,17,18,19,20,21,22], 'Version coverage/order');
+  let previousRelease;
   for (const version of data.versions) {
     assert.equal(version.release.version, `${version.major}.0.0`, 'Major release identity');
     date(version.release.date);
     assert.ok(version.release.date <= data.asOf, 'Future release presented as available');
+    if (previousRelease) assert.ok(previousRelease < version.release.date, 'Release dates out of order');
+    previousRelease = version.release.date;
     refs(version.release.sourceIds);
     refs(version.support.sourceIds);
     assert.equal(version.support.asOf, data.asOf, 'Support snapshot date');
     for (const d of [version.support.activeEnds, version.support.ltsEnds]) if (d) date(d);
+    const active = version.support.activeEnds && dateBounds(version.support.activeEnds);
+    const lts = version.support.ltsEnds && dateBounds(version.support.ltsEnds);
+    if (active) assert.ok(active[1] >= version.release.date, 'Active support ends before release');
+    if (lts) assert.ok(lts[1] >= version.release.date && (!active || lts[1] >= active[0]), 'LTS support ends before active support/release');
+    // Month-only dates permit the whole month; do not invent a precise cutoff.
+    if (version.support.status === 'active' && active) assert.ok(data.asOf <= active[1], 'Active status after active support');
+    if (version.support.status === 'lts') {
+      if (active) assert.ok(data.asOf >= active[0], 'LTS status before active support ends');
+      if (lts) assert.ok(data.asOf <= lts[1], 'LTS status after support ends');
+    }
+    if (version.support.status === 'unsupported' && lts) assert.ok(data.asOf >= lts[0], 'Unsupported status before support ends');
     const ranges = [];
     for (const row of version.compatibility) {
       refs(row.sourceIds);
-      for (const key of ['angular', 'node', 'typescript', 'rxjs']) assert.ok(semver.validRange(row[key]), `Invalid ${key} range`);
+      for (const key of ['angular', 'node', 'typescript', 'rxjs']) {
+        assert.ok(semver.validRange(row[key]), `Invalid ${key} range`);
+        assert.ok(semver.minVersion(row[key]), `Empty ${key} range`);
+      }
       assert.ok(semver.subset(row.angular, `${version.major}.x`), 'Compatibility major mismatch');
       for (const range of ranges) assert.ok(!semver.intersects(range, row.angular), 'Overlapping compatibility rows');
       ranges.push(row.angular);

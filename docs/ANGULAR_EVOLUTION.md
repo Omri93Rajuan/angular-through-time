@@ -1,6 +1,6 @@
 # Angular Evolution Dataset v1
 
-Snapshot date: **2026-10-29**. This dataset describes Angular 14–22 and indexes
+Reviewed snapshot date: **2026-11-01** (content revision 1.0.1). This dataset describes Angular 14–22 and indexes
 the repository's existing measurements. Framework documentation and experimental
 evidence are separate inputs. An API introduction, a stable designation or a CLI
 default change is not evidence of a measured performance improvement.
@@ -10,17 +10,21 @@ default change is not evidence of a measured performance improvement.
 | File | Purpose |
 |---|---|
 | [framework.json](../research/evolution/v1/framework.json) | Releases, dated support snapshot, minor-specific compatibility, feature lifecycle, migration concerns, editorial benefits/trade-offs and small code examples |
-| [evidence.json](../research/evolution/v1/evidence.json) | Every tracked historical/v2 evidence file, byte count, SHA-256, original batch identity, selected raw numeric values and provenance gaps |
+| [evidence.json](../research/evolution/v1/evidence.json) | Every historical/v2 evidence file at the inventory baseline, byte count, SHA-256, original batch identity, selected raw numeric values and provenance gaps |
 | [coverage.json](../research/evolution/v1/coverage.json) | Deterministic coverage counts, input hashes and explicit missing information |
 | [Schemas](../research/evolution/schemas/) | Draft-07 JSON Schemas for framework and evidence datasets |
 | [Coverage report](ANGULAR_EVOLUTION_COVERAGE.md) | Human-readable evidence audit and interpretation limits |
 | [Tools](../tools/evolution/) | Validation, evidence indexing, coverage generation and JSON queries; isolated dependency lock |
 
-`schemaVersion: 1` identifies the data contract; `datasetVersion: "1.0.0"`
+`schemaVersion: 1` identifies the data contract; `datasetVersion: "1.0.1"`
 identifies this content snapshot. The inventory was prepared from dev commit
 `a6043de92d675d7bb7d76140f64a2dad0dd9df03`. That is an inventory anchor,
 **not** the acquisition commit of any observation. Per-record `sourceCommit`
 comes only from saved provenance; missing values remain null.
+
+Revision 1.0.1 corrects extraction and validation before the initial PR merge;
+it does not revise experimental observations. Existing record/query fields are
+retained; evidence `context` and query interpretation metadata are additive.
 
 The confirmatory protocol's approval-binding SHA-256 remains
 `60ae7ed6133b61848783fedaed96c316ea635625f295f83466dea8d3a493d702`.
@@ -64,6 +68,25 @@ is a research aid, not a complete migration plan. The
 [official update guide](https://angular.dev/update-guide) and intervening release
 notes remain necessary for a real upgrade.
 
+`versions[].featureIds` indexes features **changed in that major**, not all
+features available there. Use lifecycle events for comparisons. Every CLI mode
+retains scope, uncertainty and interpretation warnings, including empty upgrades.
+
+Evidence `context` exposes saved workload dimensions, cache condition, protocol
+ID and order index; unavailable values remain null. `manifestExperiment` is the
+application manifest's label, not the acquisition experiment: an M4 zoneless
+attempt legitimately reuses a B application. Use the original `experiment` batch
+and `datasetId` to keep B and M4 runs separate. Do not infer comparable workloads
+from equal major versions, track names or metric units alone. Exact dependency,
+host, browser and artifact identities remain in the hashed raw file/metadata.
+
+`usage: verification-only` includes installations, diagnostics, rejected records
+and native builds not eligible for timing in the existing audit. Display them as
+verification/failure records, not performance graph points. `descriptive-only`
+permits contextual display of observations, not pooling, causal claims or
+confirmatory inference. Native build timing also requires
+`timingEligibleAsRecorded: true`; null never means eligible.
+
 To regenerate only derived files after a reviewed inventory/metadata edit:
 
 ```bash
@@ -76,8 +99,11 @@ git diff -- research/evolution
 
 Neither writer touches raw results. `--write` is not an evidence-repair tool.
 Investigate unexpected differences before accepting a new dataset snapshot.
-The v1 writer deliberately rejects tracked confirmatory archives; their import
-requires the separately reviewed process below.
+The v1 writer enumerates the exact `inventoryBaseCommit` tree and requires its
+667 files to match the original Git blobs. Later files are outside this snapshot;
+their presence cannot rewrite v1 or break its validation. A different snapshot
+or confirmatory archive requires the separately reviewed process below. Full Git
+history containing the inventory anchor is required (CI checks out full history).
 
 ## Source and validation policy
 
@@ -92,7 +118,8 @@ omitted as stated; they are not a compiled cross-version example test suite.
 
 Validation checks required fields, types, unknown properties, primary-source
 URLs, missing/unavailable citations, unique identifiers/titles, event ordering,
-status regressions, semver relationships, compatibility overlap, version indexes,
+status regressions, semver relationships, nonempty compatibility sets and overlap,
+support/date consistency, version indexes,
 raw hashes, JSON pointers, numeric values, provenance gaps and classification.
 Coverage must exactly match its inputs. Negative tests mutate in-memory copies;
 they never alter saved evidence. CI runs the new checks plus the existing evidence

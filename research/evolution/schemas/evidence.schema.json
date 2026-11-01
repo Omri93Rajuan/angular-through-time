@@ -22,7 +22,7 @@
       "const": 1
     },
     "datasetVersion": {
-      "const": "1.0.0"
+      "const": "1.0.1"
     },
     "asOf": {
       "type": "string",
@@ -154,7 +154,8 @@
           "timingEligibleAsRecorded",
           "usage",
           "confirmatoryEligible",
-          "measurements"
+          "measurements",
+          "context"
         ],
         "properties": {
           "id": {
@@ -316,6 +317,95 @@
               }
             },
             "minItems": 1
+          },
+          "context": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "manifestExperiment",
+              "protocolId",
+              "cache",
+              "orderIndex",
+              "workload"
+            ],
+            "properties": {
+              "manifestExperiment": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "protocolId": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "cache": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "orderIndex": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "workload": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "mode",
+                  "hz",
+                  "count",
+                  "ticks",
+                  "delivery"
+                ],
+                "properties": {
+                  "mode": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "minLength": 1
+                  },
+                  "hz": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "count": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "ticks": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "delivery": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "minLength": 1
+                  }
+                }
+              }
+            }
           }
         }
       },

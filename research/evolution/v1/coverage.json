@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "1.0.0",
-  "asOf": "2026-10-29",
+  "datasetVersion": "1.0.1",
+  "asOf": "2026-11-01",
   "claimType": "derived-coverage-not-performance",
   "inputs": {
-    "framework.json": "02584325498a82ac53dd77a4d581c3048703a39e9e9a78a3fc8a39b30e121f6b",
-    "evidence.json": "660ae8f175771a3e66b84bb4920713e4eb1f7890e70b253c89c7db3ac5e84821"
+    "framework.json": "2748f98c2e2136b3ac85b5697617b9cd5b7e55669cb2a9d80293e1c401bb7fd8",
+    "evidence.json": "7b9957329cb59a2a1573c2c9674dd0dad841f301a8466ec57807827aa9289d53"
   },
   "versions": [
     {
@@ -345,7 +345,7 @@
     {
       "area": "evidence",
       "id": "missing-1",
-      "description": "No real confirmatory campaign or primary conclusions.",
+      "description": "No real confirmatory campaign or primary conclusions in this snapshot.",
       "sourceIds": []
     },
     {

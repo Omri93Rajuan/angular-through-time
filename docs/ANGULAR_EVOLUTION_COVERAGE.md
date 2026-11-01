@@ -1,6 +1,6 @@
 # Evolution data coverage and evidence audit
 
-Snapshot: 2026-10-29; inventory baseline dev
+Reviewed snapshot: 2026-11-01, content revision 1.0.1; inventory baseline dev
 `a6043de92d675d7bb7d76140f64a2dad0dd9df03`.
 The [machine-readable coverage](../research/evolution/v1/coverage.json) is derived
 from the two datasets and checks their SHA-256 identities.
@@ -8,7 +8,7 @@ from the two datasets and checks their SHA-256 identities.
 ## Framework coverage
 
 The [framework dataset](../research/evolution/v1/framework.json) contains all nine
-majors, 51 named features, 79 lifecycle events, 39 source entries, 18 compatibility
+majors, 51 named features, 79 lifecycle events, 40 source entries, 18 compatibility
 rows and five code examples. Release dates, support states and compatibility are
 individually cited. Source entries include one explicitly unavailable release
 record; unavailable sources cannot support factual feature claims.
@@ -55,13 +55,15 @@ Known omissions and uncertainty:
 
 ## Saved evidence inventory
 
-Every one of the **667 tracked files** beneath `benchmark/results`,
+Every one of the **667 files tracked at the inventory baseline** beneath `benchmark/results`,
 `benchmark/results-v2` and `benchmark/results-confirmatory` is indexed by path,
 original group/batch, byte count and SHA-256. There are 50 groups and 404 JSON
 records with selected numeric observations. These counts are **not sample
 sizes**. Full raw files remain authoritative, including failures and metadata
 that have no extracted metric. Logs and derived CSV/JSON summaries are included
 in the file manifest and must not be counted as additional observations.
+Later acquisitions belong in a separate versioned dataset. The v1 file set is
+anchored to the baseline commit, and its bytes are checked against that commit.
 
 | Dataset family | Files | Numeric records | Scientific use / missing information |
 |---|---:|---:|---|
@@ -94,6 +96,13 @@ filled with the dataset-generation commit. Numeric values are copied without
 rounding and linked by JSON Pointer to the original record. Metrics not selected
 by the extractor remain available in the hashed raw file.
 
+The review recovered already-recorded version/track identity for all 43
+compilation records and clean-source flags for 16 historical build records and
+all 18 Lighthouse reports.
+Workload/cache context is now explicit. No missing observation was invented.
+Nineteen installation records, 36 timing-ineligible native build records and
+five diagnostic records are verification-only, alongside the compilation records.
+
 Only the 18 cold/warm attempts in the final native batch have timing eligibility
 in the existing summary. Earlier/native installation records are retained;
 eligibility is neither re-adjudicated nor implied by the presence of elapsed
@@ -103,7 +112,7 @@ independent runs. Presentation opportunity is not a physical presentation time.
 
 ## Missing experimental coverage and isolation
 
-There are **zero tracked real confirmatory attempts** and no primary conclusions
+There are **zero tracked real confirmatory attempts at the inventory baseline** and no primary conclusions
 to import. Missing evidence includes long-window B measurements for all nine
 versions, adequately repeated M4 results, cross-host replication, a complete
 balanced native build campaign, controlled memory/startup-requested-byte studies

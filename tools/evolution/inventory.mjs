@@ -3,9 +3,13 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+export const inventoryBaseCommit='a6043de92d675d7bb7d76140f64a2dad0dd9df03';
+const evidenceRoots=['benchmark/results','benchmark/results-v2','benchmark/results-confirmatory'];
 export const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 export const tracked=(...paths)=>execFileSync('git',['ls-files','-z','--',...paths],{cwd:root,encoding:'utf8'}).split('\0').filter(Boolean).sort();
+export const snapshotFiles=(base=inventoryBaseCommit,directory=root)=>execFileSync('git',['ls-tree','-r','--name-only','-z',base,'--',...evidenceRoots],{cwd:directory,encoding:'utf8'}).split('\0').filter(Boolean).sort();
 export const pointer=(value,p)=>p.split('/').slice(1).reduce((o,k)=>o?.[k.replaceAll('~1','/').replaceAll('~0','~')],value);
 const units={durationMs:'ms',elapsedMs:'ms',renderReadyMs:'ms',throughputRecordsPerSecond:'records/s',lateUpdates:'count',dropped:'count',processedRecords:'count',p50:'ms',p95:'ms',processingMs:'ms',presentationMs:'ms',synchronousApplyMs:'ms',lateMs:'ms',heapBefore:'bytes',heapPeak:'bytes'};
 function measures(d){
@@ -19,7 +23,9 @@ function measures(d){
  return out;
 }
 export function buildInventory(){
- const paths=tracked('benchmark/results','benchmark/results-v2','benchmark/results-confirmatory');
+ // v1 is a snapshot of this commit, not a moving inventory of HEAD. Future
+ // evidence belongs in a new dataset and must neither rewrite nor break v1.
+ const paths=snapshotFiles();
  if(paths.some(p=>p.startsWith('benchmark/results-confirmatory/')))throw Error('A new confirmatory archive requires a separately versioned, reviewed import; v1 cannot reclassify it as exploratory evidence. See docs/ANGULAR_EVOLUTION.md.');
  const definitions={
   'benchmark/results/runtime':['historical-runtime','Legacy controlled/limited-idiomatic tracks; preserve original labels. Short and mixed workloads, failures and per-run provenance vary; no v2 equivalence or confirmatory inference.'],
@@ -38,7 +44,10 @@ export function buildInventory(){
   const batch=parts.length>4?parts[3]:null;const id=prefix+(batch?'/'+batch:'');
   const [classification,limitation]=definitions[prefix]||['supporting-or-derived','Metadata, logs, functional acceptance or derived summaries; not an independent performance sample. Inspect original record; do not count derived copies twice.'];
   if(!groups.has(id))groups.set(id,{id,classification,originalBatchId:batch,root:id,limitations:[limitation],confirmatoryEligible:false});
-  const bytes=fs.readFileSync(path.join(root,file));files.push({path:file,sha256:sha(bytes),bytes:bytes.length,datasetId:id});
+  const bytes=fs.readFileSync(path.join(root,file));
+  const original=execFileSync('git',['show',`${inventoryBaseCommit}:${file}`],{cwd:root,maxBuffer:16*1024*1024});
+  assert.ok(bytes.equals(original),`Snapshot evidence changed: ${file}`);
+  files.push({path:file,sha256:sha(bytes),bytes:bytes.length,datasetId:id});
   if(!file.endsWith('.json'))continue;const d=JSON.parse(bytes);if(Array.isArray(d)||!d||typeof d!=='object')continue;
   const measurements=measures(d);if(!measurements.length)continue;
   let metadataPath=path.posix.join(path.posix.dirname(file),'metadata.json');if(!paths.includes(metadataPath))metadataPath=null;
@@ -47,9 +56,20 @@ export function buildInventory(){
   const sourceCommit=d.provenance?.commit||d.sourceCommit||environment.commit||null;
   const missing=[];if(!sourceCommit)missing.push('sourceCommit');if(!metadataPath&&!d.environment&&!d.provenance)missing.push('environmentMetadata');
   const timing=native.get(file)?.timingEligible??null;
-  records.push({id:file,file,datasetId:id,claimType:'recorded-observation',kind:d.kind||null,experiment:d.experiment||null,version:typeof d.version==='number'?d.version:d.version?.major??null,track:d.track??null,scenario:d.scenario??d.workload?.scenario??null,rep:d.rep??null,accepted:d.accepted??null,status:d.status??null,sourceCommit,sourceDirty:environment.sourceDirty??environment.dirty??d.provenance?.dirty??null,metadataPath,artifactIdentityPointers:['/artifactSha256','/build/assets','/assets','/inputs','/build/inputs'].filter(p=>pointer(d,p)!==undefined),missingProvenance:missing,timingEligibleAsRecorded:timing,usage:classification==='compilation-verification'||classification==='supporting-or-derived'?'verification-only':'descriptive-only',confirmatoryEligible:false,measurements});
+  const verificationOnly=['compilation-verification','supporting-or-derived','diagnostic-workflow','instrumented-diagnostic'].includes(classification)||
+   (classification==='native-toolchain-feasibility'&&timing!==true)||d.accepted===false||d.functionalPassed===false||d.functional?.passed===false;
+  const manifest=d.manifest??d.build?.manifest;
+  const workload=d.workload??d;
+  records.push({id:file,file,datasetId:id,claimType:'recorded-observation',kind:d.kind||null,experiment:d.experiment||null,
+   version:typeof d.version==='number'?d.version:d.version?.major??manifest?.version?.major??null,
+   track:d.track??manifest?.track??null,scenario:d.scenario??d.workload?.scenario??null,rep:d.rep??null,accepted:d.accepted??null,status:d.status??null,
+   sourceCommit,sourceDirty:d.provenance?.sourceDirty??environment.sourceDirty??d.provenance?.dirty??environment.dirty??null,
+   metadataPath,artifactIdentityPointers:['/artifactSha256','/build/assets','/assets','/inputs','/build/inputs'].filter(p=>pointer(d,p)!==undefined),missingProvenance:missing,timingEligibleAsRecorded:timing,
+   context:{manifestExperiment:manifest?.experiment??null,protocolId:d.protocolId??null,cache:d.cache??null,orderIndex:d.orderIndex??null,
+    workload:Object.fromEntries(['mode','hz','count','ticks','delivery'].map(k=>[k,workload[k]??null]))},
+   usage:verificationOnly?'verification-only':'descriptive-only',confirmatoryEligible:false,measurements});
  }
- return {schemaVersion:1,datasetVersion:'1.0.0',asOf:'2026-10-29',claimType:'performance-evidence-inventory',inventoryBaseCommit:'a6043de92d675d7bb7d76140f64a2dad0dd9df03',scope:'All Git-tracked files in benchmark/results, results-v2 and results-confirmatory; local external preparation packages and temporary validation artifacts are not public evidence.',datasets:[...groups.values()],files,records,confirmatory:{available:false,attempts:0,reason:'No tracked real campaign exists. Frozen protocol and human approval remain separate; this inventory grants no authorization.'},missing:['No real confirmatory campaign or primary conclusions.','No long-window paired runtime evidence across all nine v2 B treatments.','Pilot p95 uses six events, insufficient for stable tail inference.','No cross-host replication or automatically certified thermal/power stability.','No complete balanced native build campaign or reliable HMR latency campaign.','External preparation artifacts and disposable CI validation are excluded; their absence here is not absence of verification.'],conclusions:[]};
+ return {schemaVersion:1,datasetVersion:'1.0.1',asOf:'2026-11-01',claimType:'performance-evidence-inventory',inventoryBaseCommit,scope:'All files in benchmark/results, results-v2 and results-confirmatory at inventoryBaseCommit; later archives, local preparation packages and temporary validation artifacts are outside this snapshot.',datasets:[...groups.values()],files,records,confirmatory:{available:false,attempts:0,reason:'No tracked real campaign exists at inventoryBaseCommit. Frozen protocol and human approval remain separate; this inventory grants no authorization.'},missing:['No real confirmatory campaign or primary conclusions in this snapshot.','No long-window paired runtime evidence across all nine v2 B treatments.','Pilot p95 uses six events, insufficient for stable tail inference.','No cross-host replication or automatically certified thermal/power stability.','No complete balanced native build campaign or reliable HMR latency campaign.','External preparation artifacts and disposable CI validation are excluded; their absence here is not absence of verification.'],conclusions:[]};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  if(process.argv[2]!=='--write')throw Error('Use --write to regenerate only research/evolution/v1/evidence.json; never raw evidence.');
