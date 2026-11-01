@@ -1,0 +1,41 @@
+name: Evolution dataset
+
+on:
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data:
+    name: Evolution schema, provenance and queries
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out data and historical evidence anchors
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up pinned runtime
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: tools/evolution/package-lock.json
+      - name: Install isolated data tooling from its own lock
+        run: npm ci --prefix tools/evolution --engine-strict --ignore-scripts --no-audit --no-fund
+      - name: Validate data and negative fixtures
+        run: |
+          npm test --prefix tools/evolution
+          npm run validate --prefix tools/evolution
+          node tools/evolution/coverage.mjs --check
+      - name: Independently verify existing evidence catalogs
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          node scripts/verify-evidence.mjs
+          node benchmark/v2/audit.mjs --check
+          git diff --exit-code
