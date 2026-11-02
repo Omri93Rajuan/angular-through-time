@@ -15,6 +15,9 @@ const labels = {
   'behavior-changed': 'Behavior changed'
 };
 let data, comparison, sourceMap;
+let activePanel = 'features';
+const panelRenderers = {features: renderFeatures, timeline: renderTimeline, migration: renderMigration};
+const dirtyPanels = new Set(Object.keys(panelRenderers));
 
 function node(tag, text, className) {
   const element = document.createElement(tag);
@@ -194,9 +197,17 @@ function render() {
   $('change-count').textContent = comparison.eventsBetween.length;
   $('concern-count').textContent = comparison.upgradeConcerns.length;
   $('feature-count').textContent = data.features.length;
-  renderFeatures();
-  renderTimeline();
-  renderMigration();
+  for (const panel of Object.keys(panelRenderers)) dirtyPanels.add(panel);
+  renderActivePanel();
+}
+function renderActivePanel(panel = activePanel) {
+  if (!dirtyPanels.has(panel)) return;
+  panelRenderers[panel]();
+  dirtyPanels.delete(panel);
+}
+function invalidatePanel(panel) {
+  dirtyPanels.add(panel);
+  renderActivePanel();
 }
 function showError() {
   $('explorer').hidden = true;
@@ -254,6 +265,11 @@ async function load() {
 
 const tabs = [...document.querySelectorAll('[role=tab]')];
 function selectTab(tab) {
+  const panel = tab.id.slice('tab-'.length);
+  // Refresh before revealing a previously hidden panel. Clean panels keep their
+  // DOM (including open disclosures); controls retain their own filter values.
+  renderActivePanel(panel);
+  activePanel = panel;
   for (const item of tabs) {
     const active = item === tab;
     item.setAttribute('aria-selected', String(active));
@@ -262,12 +278,12 @@ function selectTab(tab) {
   }
 }
 for (const [index, tab] of tabs.entries()) {
-  tab.addEventListener('click', () => selectTab(tab));
+  tab.addEventListener('click', () => guarded(() => selectTab(tab)));
   tab.addEventListener('keydown', event => {
     const next = {ArrowRight: (index + 1) % tabs.length, ArrowLeft: (index + tabs.length - 1) % tabs.length, Home: 0, End: tabs.length - 1}[event.key];
     if (next === undefined) return;
     event.preventDefault();
-    selectTab(tabs[next]);
+    guarded(() => selectTab(tabs[next]));
     tabs[next].focus();
   });
 }
@@ -278,12 +294,21 @@ $('swap').addEventListener('click', () => guarded(() => {
   $('to').value = from;
   render();
 }));
-$('search').addEventListener('input', () => guarded(renderFeatures));
-for (const id of ['category', 'feature-scope']) $(id).addEventListener('change', () => guarded(renderFeatures));
-for (const id of ['timeline-scope', 'timeline-version', 'timeline-category']) $(id).addEventListener('change', () => guarded(renderTimeline));
-for (const [id, refresh] of [['feature-filters', renderFeatures], ['timeline-filters', renderTimeline]]) {
+$('search').addEventListener('input', () => guarded(() => invalidatePanel('features')));
+for (const id of ['category', 'feature-scope']) $(id).addEventListener('change', () => guarded(() => invalidatePanel('features')));
+for (const id of ['timeline-scope', 'timeline-version', 'timeline-category']) $(id).addEventListener('change', () => guarded(() => invalidatePanel('timeline')));
+for (const [id, panel, defaults] of [
+  ['feature-filters', 'features', {search: '', category: '', 'feature-scope': 'all'}],
+  ['timeline-filters', 'timeline', {'timeline-scope': 'comparison', 'timeline-version': '', 'timeline-category': ''}]
+]) {
   $(id).addEventListener('submit', event => event.preventDefault());
-  $(id).addEventListener('reset', () => setTimeout(() => guarded(refresh), 0));
+  $(id).addEventListener('reset', event => {
+    event.preventDefault();
+    guarded(() => {
+      for (const [control, value] of Object.entries(defaults)) $(control).value = value;
+      invalidatePanel(panel);
+    });
+  });
 }
 $('retry').addEventListener('click', load);
 await load();

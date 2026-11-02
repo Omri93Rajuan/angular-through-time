@@ -27,7 +27,9 @@ serve `.mjs` as JavaScript. Opening the HTML with `file://` is not supported.
   are supported. Swap exchanges endpoints. Major selectors include all
   catalogued minor events in that major. Exact boundaries are offered for major
   releases and catalogued event releases; the CLI continues to accept arbitrary
-  supported exact stable versions. Lower boundaries are exclusive for changes;
+  syntactically valid exact stable versions within majors 14–22 (for example,
+  `20.0.1`). Accepting an endpoint does not verify that a release exists or that
+  it is covered by this catalog. Lower boundaries are exclusive for changes;
   upper boundaries follow the existing major/exact query rules.
 - **Feature explorer:** search titles, APIs, event statements and editorial
   impacts; filter by category or changes in the comparison. Cards show the last
@@ -73,6 +75,14 @@ request timeout and retry state handle unavailable data. Schema-version/claim
 checks and rendering failures hide incomplete comparisons; authoritative full
 schema, semantic and evidence validation remains in the data tooling/CI.
 
+Only the active panel renders. Version changes invalidate all panels and refresh
+the visible one; a hidden panel refreshes before it is revealed. Filter changes
+invalidate only their own panel. Reopening a clean panel retains its DOM and open
+disclosures. Filters remain in their controls across tab/version changes. Reload
+invalidates every panel, and a failed deferred render cannot commit a new tab
+selection. Filter resets set explicit defaults and refresh synchronously, without
+queued timers or changes to the comparison versions/other panel's filters.
+
 To run validation (Chrome required for browser tests):
 
 ```bash
@@ -94,6 +104,29 @@ boundaries, full-catalog timeline, missing states, citations, compatibility,
 loading/failure/retry, unsafe data, keyboard/mobile behavior and both original
 dashboards. Research-v2 CI runs these checks after its existing dashboard smoke
 test. Tests do not collect benchmark measurements or alter research evidence.
+
+### Focused PR #14 verification
+
+Two reviewed issues were corrected: unnecessary hidden-panel rendering
+([original render calls](https://github.com/Omri93Rajuan/angular-through-time/blob/4b9d15dad937bba3cc03259fee34f8c5ff3c617e/dashboard/evolution.mjs#L197),
+Medium / should fix) and timer-dependent form resets
+([original reset handler](https://github.com/Omri93Rajuan/angular-through-time/blob/4b9d15dad937bba3cc03259fee34f8c5ff3c617e/dashboard/evolution.mjs#L286),
+Low / maintainability). The reset change makes control values and rendered
+results consistent within the same call stack; no prior user-visible data error
+is claimed. No additional blocking issue was independently confirmed.
+
+A diagnostic on dataset 1.0.1 changed the default comparison's destination from
+22 to 21 with Features active. Instrumenting `document.createElement` counted
+2,988 calls on the original head above and 2,137 with active-panel rendering.
+MutationObserver records in the hidden Timeline/Migration panels fell from 2/4
+to 0/0. This is an engineering DOM-work observation, **not elapsed-time evidence,
+an Angular performance comparison or a scientific benchmark result**.
+
+Regression tests verify zero hidden-panel mutations, deferred refresh with the
+latest comparison, preserved filters/disclosures, synchronous and hidden-panel
+resets, deferred-error recovery and the exact selector/CLI domain distinction.
+The existing keyboard/mobile, citation, empty-state and dashboard-regression
+tests continue to run. Selector choices and CLI behavior are unchanged.
 
 ## Limits and preserved boundaries
 
