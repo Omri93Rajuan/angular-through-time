@@ -7,6 +7,8 @@ import {execFileSync} from 'node:child_process';
 import {read, validateFramework, validateEvidence, validateProtectedIdentities} from './validate.mjs';
 import {buildInventory, snapshotFiles, root} from './inventory.mjs';
 import {compare, timeline} from './query.mjs';
+import {compare as browserCompare, timeline as browserTimeline} from './query-core.mjs';
+import semver from 'semver';
 
 const framework = read('research/evolution/v1/framework.json');
 const evidence = read('research/evolution/v1/evidence.json');
@@ -159,5 +161,33 @@ test('all CLI query modes retain uncertainty and interpretation warnings, includ
     assert.deepEqual(result.uncertainties, framework.uncertainties);
     assert.match(result.interpretation, /Empty results do not establish an upgrade is safe/);
     if (args[0] === 'upgrade') assert.deepEqual(result.result, []);
+  }
+});
+
+test('browser and CLI share one query engine with the established semver boundary behavior', () => {
+  assert.equal(browserCompare, compare);
+  assert.equal(browserTimeline, timeline);
+  const endpoints = [...new Set(['14', '22', ...framework.versions.map(v => String(v.major)),
+    ...framework.features.flatMap(f => f.events.map(e => e.version)), 'v20.2.0', '20.2.0+build.1', '20.0.1'])];
+  const bound = input => /^\d+$/.test(input) ? {upper: `${Number(input) + 1}.0.0`, inclusive: false} : {upper: input, inclusive: true};
+  const contains = (end, version) => end.inclusive ? semver.lte(version, end.upper) : semver.lt(version, end.upper);
+  const all = framework.features.flatMap(f => f.events.map(e => ({featureId: f.id, title: f.title, category: f.category, ...e})))
+    .sort((a, b) => semver.compare(a.version, b.version) || a.featureId.localeCompare(b.featureId, 'en'));
+  assert.deepEqual(timeline(framework), all);
+  for (const from of endpoints) for (const to of endpoints) {
+    const a = bound(from), b = bound(to);
+    const reverse = semver.gt(a.upper, b.upper) || (a.upper === b.upper && a.inclusive && !b.inclusive);
+    const [low, high] = reverse ? [b, a] : [a, b];
+    const result = compare(framework, from, to);
+    assert.equal(result.direction, reverse ? 'descending-comparison' : 'ascending-comparison');
+    assert.deepEqual(result.eventsBetween, all.filter(e => !contains(low, e.version) && contains(high, e.version)));
+    for (const feature of framework.features) {
+      const actual = result.features.find(f => f.id === feature.id);
+      assert.deepEqual(actual.fromLastDocumentedEvent, feature.events.filter(e => contains(a, e.version)).at(-1) ?? null);
+      assert.deepEqual(actual.toLastDocumentedEvent, feature.events.filter(e => contains(b, e.version)).at(-1) ?? null);
+    }
+  }
+  for (const input of ['14.01.0', '20.0.0-next.1', '20.0.0+', '20.9007199254740992.0', 'v23.0.0', '=20.0.0', ' 20.0.0', '20.0.0+bad..id']) {
+    assert.throws(() => compare(framework, input, '22'));
   }
 });

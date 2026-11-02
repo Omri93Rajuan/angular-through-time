@@ -36,6 +36,8 @@ jobs:
           node benchmark/v2/audit.mjs --check
           git diff --exit-code
       - run: CHROME=/usr/bin/google-chrome node scripts/verify-research-dashboard.mjs
+      - name: Evolution Explorer browser interactions and dashboard regressions
+        run: CHROME=/usr/bin/google-chrome npm run test:explorer
   browser:
     needs: validate
     runs-on: ubuntu-24.04
