@@ -11,6 +11,11 @@ The [Angular Evolution Dataset](docs/ANGULAR_EVOLUTION.md) adds sourced Angular
 evidence, JSON schemas and comparison tools. See its [coverage and missing-data
 report](docs/ANGULAR_EVOLUTION_COVERAGE.md) before interpreting either dataset.
 
+Explore documented capabilities in the [Evolution Explorer](dashboard/evolution.html):
+version comparisons, feature lifecycles, migration concerns and official sources.
+Run `node scripts/serve.mjs .` and open `/dashboard/evolution.html`.
+See the [Explorer guide](docs/EVOLUTION_EXPLORER.md) for controls, limitations and tests.
+
 ## Repository layout
 
 ```text

@@ -21,7 +21,8 @@
     "research:pilot": "node benchmark/v2/pilot.mjs",
     "confirmatory:dry-run": "node benchmark/confirmatory/dry-run.mjs",
     "confirmatory:run": "node benchmark/confirmatory/run.mjs",
-    "confirmatory:analyze": "node benchmark/confirmatory/analysis.mjs"
+    "confirmatory:analyze": "node benchmark/confirmatory/analysis.mjs",
+    "test:explorer": "node --test dashboard/evolution.test.mjs"
   },
   "devDependencies": {
     "chrome-launcher": "1.2.2",

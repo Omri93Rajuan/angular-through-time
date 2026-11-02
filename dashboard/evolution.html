@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore documented Angular 14–22 features, lifecycle transitions and migration concerns, with official sources and explicit research limitations.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="evolution.css">
+  <title>Evolution Explorer · Angular Through Time</title>
+</head>
+<body class="evolution">
+  <a class="skip-link" href="#explorer">Skip to explorer</a>
+  <header>
+    <a href="./" class="brand">◈ ANGULAR THROUGH TIME</a>
+    <nav aria-label="Dashboards">
+      <a href="evolution.html" aria-current="page">Evolution</a>
+      <a href="./">Historical evidence</a>
+      <a href="research.html">Research v2</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">THE FRAMEWORK ATLAS <span>/ 01</span></p>
+        <h1 id="page-title">Understand<br>what <em>changed.</em></h1>
+        <p class="lead">Nine Angular generations. One documented journey.<br>Trace capabilities, understand trade-offs, plan your next upgrade.</p>
+      </div>
+      <aside class="snapshot" aria-label="Dataset identity">
+        <span class="eyebrow">A SOURCED SNAPSHOT</span>
+        <strong>14 <span aria-hidden="true">—</span> 22</strong>
+        <p id="dataset-meta">Loading dataset identity…</p>
+        <a href="../research/evolution/v1/framework.json">Inspect framework JSON ↗</a>
+      </aside>
+    </section>
+    <aside class="integrity-note"><strong>Documented capabilities, not measured speedups.</strong> Benefits are editorial interpretations. Historical measurements and research pilots stay in their separate dashboards.</aside>
+    <div id="load-status" role="status" aria-live="polite">Loading documented Angular changes…</div>
+    <div id="load-error" role="alert" hidden></div>
+    <button id="retry" type="button" hidden>Retry loading dataset</button>
+    <noscript><p>This explorer requires JavaScript. Read the <a href="../docs/ANGULAR_EVOLUTION.md">dataset documentation</a> or inspect the JSON above.</p></noscript>
+    <div id="explorer" tabindex="-1" aria-busy="true" hidden>
+      <section class="comparison" aria-label="Version comparison">
+        <div class="comparison-heading"><h2>Choose your perspective</h2><span id="direction"></span></div>
+        <div class="version-controls">
+          <label>From version<select id="from" aria-describedby="boundary"></select></label>
+          <button id="swap" type="button" aria-label="Swap comparison versions">⇄ <span>Swap</span></button>
+          <label>To version<select id="to" aria-describedby="boundary"></select></label>
+        </div>
+        <p id="boundary" class="muted"></p>
+        <div class="comparison-stats" aria-label="Comparison summary">
+          <p><strong id="change-count">—</strong><span>documented transitions</span></p>
+          <p><strong id="concern-count">—</strong><span>upgrade concerns</span></p>
+          <p><strong id="feature-count">—</strong><span>catalogued features</span></p>
+        </div>
+      </section>
+      <div class="section-tabs" role="tablist" aria-label="Explore framework evolution">
+        <button id="tab-features" type="button" role="tab" aria-selected="true" aria-controls="panel-features">Feature explorer</button>
+        <button id="tab-timeline" type="button" role="tab" aria-selected="false" aria-controls="panel-timeline" tabindex="-1">Evolution timeline</button>
+        <button id="tab-migration" type="button" role="tab" aria-selected="false" aria-controls="panel-migration" tabindex="-1">Migration insights</button>
+      </div>
+      <section id="panel-features" role="tabpanel" aria-labelledby="tab-features" tabindex="0">
+        <div class="section-intro"><div><p class="eyebrow">CAPABILITIES & CONTEXT</p><h2>Explore the framework</h2></div><p>Latest documented events at each boundary.<br>A missing entry never means a missing capability.</p></div>
+        <form id="feature-filters" class="explorer-filters" role="search" aria-label="Filter features">
+          <label class="search">Search features or APIs<input id="search" type="search" placeholder="Try signals, hydration, OnPush…" autocomplete="off"></label>
+          <label>Category<select id="category"></select></label>
+          <label>Show<select id="feature-scope"><option value="all">All catalogued features</option><option value="changed">Changed in comparison</option></select></label>
+          <button type="reset">Clear filters</button>
+        </form>
+        <p id="feature-results" class="result-count" role="status"></p>
+        <div id="feature-list"></div>
+      </section>
+      <section id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline" tabindex="0" hidden>
+        <div class="section-intro"><div><p class="eyebrow">FROM INTRODUCTION TO DEFAULT</p><h2>A timeline of transitions</h2></div><p>Explore the comparison interval or the full catalog.<br>Reverse comparisons retain chronological order.</p></div>
+        <form id="timeline-filters" class="explorer-filters" aria-label="Filter timeline">
+          <label>Timeline scope<select id="timeline-scope"><option value="comparison">Comparison interval</option><option value="all">Full catalog · 14–22</option></select></label>
+          <label>Event major version<select id="timeline-version"></select></label>
+          <label>Category<select id="timeline-category"></select></label>
+          <button type="reset">Clear filters</button>
+        </form>
+        <p id="timeline-results" class="result-count" role="status"></p>
+        <div id="timeline-list"></div>
+      </section>
+      <section id="panel-migration" role="tabpanel" aria-labelledby="tab-migration" tabindex="0" hidden>
+        <div class="section-intro"><div><p class="eyebrow">PLAN WITH THE SOURCES</p><h2>Migration insights</h2></div><a id="update-guide" class="button">Official update guide ↗</a></div>
+        <p id="migration-warning" class="integrity-note"></p>
+        <h3>Compatibility at the selected majors</h3>
+        <p class="muted">All documented minor ranges are retained. Match your exact Angular release to a row; missing ranges are unknown, not compatible by assumption. Support is a dated snapshot.</p>
+        <div id="compatibility" class="compatibility-grid"></div>
+        <h3>Breaking changes, deprecations & removals</h3>
+        <p id="migration-results" class="result-count" role="status"></p>
+        <div id="migration-list"></div>
+      </section>
+      <details class="limitations"><summary>Coverage, sources & uncertainty</summary><p id="coverage"></p><ul id="uncertainties"></ul><a href="../docs/ANGULAR_EVOLUTION_COVERAGE.md">Read the complete coverage report ↗</a></details>
+    </div>
+    <footer><span>ANGULAR THROUGH TIME · OPEN-SOURCE RESEARCH</span><a href="../docs/EVOLUTION_EXPLORER.md">Explorer guide</a><a href="../ATTRIBUTION.md">Attribution</a></footer>
+  </main>
+  <script type="module" src="evolution.mjs"></script>
+</body>
+</html>
